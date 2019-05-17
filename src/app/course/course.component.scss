@@ -4,4 +4,8 @@ table {
 
 tr[mat-row] {
   cursor: pointer;
+
+  &:hover {
+    background: #f5f5f5;
+  }
 }
