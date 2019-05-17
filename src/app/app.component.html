@@ -1,0 +1,34 @@
+<div class="container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1>iit-www</h1>
+  </mat-toolbar>
+
+  <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+      <mat-nav-list>
+        <mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">
+          <mat-icon matListIcon>home</mat-icon>
+          <a matLine>Home</a>
+        </mat-list-item>
+
+        <div *ngFor="let course of courses$ | async" class="course-menu">
+          <h3 matSubheader>{{ course.name }}</h3>
+          <a mat-list-item [routerLink]="['/courses', course.id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">Index</a>
+          <a *ngFor="let lab of course.labs" mat-list-item [routerLink]="['/courses', course.id, 'labs', lab.index]" routerLinkActive="active" (click)="closeSidenavOnMobile()">{{ lab.title }}</a>
+          <mat-divider></mat-divider>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+
+      <footer>© Gábor Szabó {{ currentYear }}</footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

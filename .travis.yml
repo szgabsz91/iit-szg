@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - "12"
+addons:
+  chrome: stable
+
+before_install:
+  - npm install -g yarn
+
+install:
+  - yarn
+
+script:
+  - yarn lint
+  - yarn test
+  - yarn e2e
+  - yarn build:prod --base-href https://szgabsz91.github.io/iit-www/
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/iit-www
+  on:
+    only:
+      - master

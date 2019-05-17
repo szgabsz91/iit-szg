@@ -1,0 +1,9 @@
+<mat-card *ngIf="lab$ | async; let lab">
+
+  <mat-card-title>Lab {{ lab.index }}: {{ lab.title }}</mat-card-title>
+
+  <mat-card-content>
+    <markdown src="./assets/courses/{{ lab.courseId }}/lab{{ lab.index.toString().padStart(2, '0') }}.md"></markdown>
+  </mat-card-content>
+
+</mat-card>

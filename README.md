@@ -1,2 +1,7 @@
 # iit-www
-An Angular application that contains a collection of courses and labs for various topics
+
+[![Build Status](https://travis-ci.org/szgabsz91/iit-www.svg?branch=master)](https://travis-ci.org/szgabsz91/iit-www)
+
+An Angular application that contains a collection of courses and labs for various topics.
+
+Can be viewed here: <a href="https://szgabsz91.github.io/iit-www" target="_blank">https://szgabsz91.github.io/iit-www</a>
