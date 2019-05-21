@@ -5,7 +5,6 @@ import { MarkdownModule } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
 import { LabRoutingModule } from './lab-routing.module';
 import { LabMaterialModule } from './lab-material.module';
-import { CourseServiceModule } from '../course/course-service.module';
 import { LabService } from './lab.service';
 
 @NgModule({
@@ -15,7 +14,6 @@ import { LabService } from './lab.service';
     MarkdownModule.forRoot({
       loader: HttpClient
     }),
-    CourseServiceModule,
     LabRoutingModule,
     LabMaterialModule
   ],
