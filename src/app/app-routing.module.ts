@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { CourseComponent } from './course/course.component';
-import { LabComponent } from './lab/lab.component';
 import { CourseParentComponent } from './course-parent/course-parent.component';
 
 const routes: Routes = [{
@@ -14,10 +12,10 @@ const routes: Routes = [{
   component: CourseParentComponent,
   children: [{
     path: '',
-    component: CourseComponent
+    loadChildren: './course/course.module#CourseModule'
   }, {
     path: 'labs/:labIndex',
-    component: LabComponent
+    loadChildren: './lab/lab.module#LabModule'
   }]
 }];
 

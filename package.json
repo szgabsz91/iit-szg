@@ -11,7 +11,7 @@
     "test:watch": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "cli": "yarn lint && yarn test && yarn e2e && yarn build:prod"
+    "ci": "yarn lint && yarn test && yarn e2e && yarn build:prod"
   },
   "dependencies": {
     "@angular/animations": "~7.2.0",

@@ -1,7 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CourseComponent } from './course.component';
-import { AppService } from '../app.service';
-import { AppMaterialModule } from '../app-material.module';
+import { CourseService } from '../course.service';
+import { CourseMaterialModule } from '../course-material.module';
+import { CourseServiceModule } from '../course-service.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -45,7 +46,8 @@ describe('CourseComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
-        AppMaterialModule
+        CourseMaterialModule,
+        CourseServiceModule
       ],
       providers: [{
         provide: ActivatedRoute,
@@ -56,8 +58,8 @@ describe('CourseComponent', () => {
   }));
 
   beforeEach(() => {
-    const appService = TestBed.get(AppService);
-    spyOn(appService, 'getCourse').and.callFake((...args) => {
+    const courseService = TestBed.get(CourseService);
+    spyOn(courseService, 'getCourse').and.callFake((...args) => {
       const courseId = args[0];
 
       if (courseId === mockedCourse.id) {

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { AppService } from '../app.service';
+import { LabService } from '../lab.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { Lab } from '../model/lab';
+import { Lab } from '../../model/lab';
 
 @Component({
   selector: 'app-lab',
@@ -14,14 +14,14 @@ export class LabComponent implements OnInit {
 
   lab$: Observable<Lab>;
 
-  constructor(private appService: AppService, private route: ActivatedRoute) { }
+  constructor(private labService: LabService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.lab$ = this.route.paramMap
       .pipe(switchMap(params => {
         const courseId = params.get('courseId');
         const labIndex = +params.get('labIndex');
-        return this.appService.getLab(courseId, labIndex);
+        return this.labService.getLab(courseId, labIndex);
       }));
   }
 

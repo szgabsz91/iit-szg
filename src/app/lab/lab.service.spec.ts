@@ -1,12 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { AppService } from './app.service';
+import { LabService } from './lab.service';
 import { HttpClient } from '@angular/common/http';
+import { CourseServiceModule } from '../course/course-service.module';
 
-describe('AppService', () => {
+describe('LabService', () => {
 
-  let appService: AppService;
+  let labService: LabService;
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
@@ -30,20 +31,29 @@ describe('AppService', () => {
   }];
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule]
+    imports: [
+      HttpClientTestingModule,
+      CourseServiceModule
+    ],
+    providers: [LabService]
   }));
 
   beforeEach(() => {
-    appService = TestBed.get(AppService);
+    labService = TestBed.get(LabService);
     httpClient = TestBed.get(HttpClient);
     httpTestingController = TestBed.get(HttpTestingController);
   });
 
-  describe('getCourses', () => {
+  describe('getLab', () => {
 
-    it('should return the courses', () => {
-      appService.getCourses().subscribe(courses => {
-        expect(courses).toEqual(mockedCourses);
+    it('should return the lab with the given index in the course with the given id', () => {
+      labService.getLab(mockedCourses[0].id, mockedCourses[0].labs[1].index).subscribe(lab => {
+        const mockedLab = {
+          ...mockedCourses[0].labs[1],
+          courseId: mockedCourses[0].id
+        };
+
+        expect(lab).toEqual(mockedLab);
       });
 
       const request = httpTestingController.expectOne('./assets/metadata.json');
