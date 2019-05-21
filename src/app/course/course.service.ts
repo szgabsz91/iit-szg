@@ -3,8 +3,11 @@ import { AppService } from '../app.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../model/course';
+import { CourseServiceModule } from './course-service.module';
 
-@Injectable()
+@Injectable({
+  providedIn: CourseServiceModule
+})
 export class CourseService {
 
   constructor(private appService: AppService) { }
