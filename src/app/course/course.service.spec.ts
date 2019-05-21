@@ -1,12 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
-import { AppService } from './app.service';
+import { CourseService } from './course.service';
 import { HttpClient } from '@angular/common/http';
 
-describe('AppService', () => {
+describe('CourseService', () => {
 
-  let appService: AppService;
+  let courseService: CourseService;
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
@@ -30,20 +30,21 @@ describe('AppService', () => {
   }];
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientTestingModule]
+    imports: [HttpClientTestingModule],
+    providers: [CourseService]
   }));
 
   beforeEach(() => {
-    appService = TestBed.get(AppService);
+    courseService = TestBed.get(CourseService);
     httpClient = TestBed.get(HttpClient);
     httpTestingController = TestBed.get(HttpTestingController);
   });
 
-  describe('getCourses', () => {
+  describe('getCourse', () => {
 
-    it('should return the courses', () => {
-      appService.getCourses().subscribe(courses => {
-        expect(courses).toEqual(mockedCourses);
+    it('should return the course with the given id', () => {
+      courseService.getCourse(mockedCourses[1].id).subscribe(course => {
+        expect(course).toEqual(mockedCourses[1]);
       });
 
       const request = httpTestingController.expectOne('./assets/metadata.json');

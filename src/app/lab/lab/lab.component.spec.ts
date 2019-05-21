@@ -1,12 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
-import { AppMaterialModule } from '../app-material.module';
 import { MarkdownModule } from 'ngx-markdown';
+import { LabMaterialModule } from '../lab-material.module';
+import { CourseServiceModule } from 'src/app/course/course-service.module';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of, EMPTY } from 'rxjs';
-import { AppService } from '../app.service';
+import { LabService } from '../lab.service';
 
 describe('LabComponent', () => {
 
@@ -26,37 +27,41 @@ describe('LabComponent', () => {
       declarations: [LabComponent],
       imports: [
         HttpClientTestingModule,
-        AppMaterialModule,
         MarkdownModule.forRoot({
           loader: HttpClient
         }),
+        LabMaterialModule,
+        CourseServiceModule
       ],
-      providers: [{
-        provide: ActivatedRoute,
-        useValue: {
-          paramMap: of({
-            get: (paramName: string) => {
-              switch (paramName) {
-                case 'courseId':
-                  return mockedLab.courseId;
+      providers: [
+        LabService,
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            paramMap: of({
+              get: (paramName: string) => {
+                switch (paramName) {
+                  case 'courseId':
+                    return mockedLab.courseId;
 
-                case 'labIndex':
-                  return mockedLab.index;
+                  case 'labIndex':
+                    return mockedLab.index;
 
-                default:
-                  throw new Error(`Unknown parameter name: ${paramName}`);
+                  default:
+                    throw new Error(`Unknown parameter name: ${paramName}`);
+                }
               }
-            }
-          })
+            })
+          }
         }
-      }]
+      ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    const appService = TestBed.get(AppService);
-    spyOn(appService, 'getLab').and.callFake((...args) => {
+    const labService = TestBed.get(LabService);
+    spyOn(labService, 'getLab').and.callFake((...args) => {
       const [courseId, labIndex] = args;
 
       if (courseId === mockedLab.courseId && labIndex === mockedLab.index) {
