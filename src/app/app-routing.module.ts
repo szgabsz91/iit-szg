@@ -12,10 +12,10 @@ const routes: Routes = [{
   component: CourseParentComponent,
   children: [{
     path: '',
-    loadChildren: './course/course.module#CourseModule'
+    loadChildren: () => import('./course/course.module').then(m => m.CourseModule)
   }, {
     path: 'labs/:labIndex',
-    loadChildren: './lab/lab.module#LabModule'
+    loadChildren: () => import('./lab/lab.module').then(m => m.LabModule)
   }]
 }];
 

@@ -3,7 +3,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
 import { AppService } from './app.service';
-import { MatSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +12,7 @@ import { MatSidenav } from '@angular/material';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  @ViewChild(MatSidenav)
+  @ViewChild(MatSidenav, { static: true })
   sidenav: MatSidenav;
 
   mobileQuery: MediaQueryList;
