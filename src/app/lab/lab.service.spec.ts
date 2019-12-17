@@ -2,13 +2,11 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { LabService } from './lab.service';
-import { HttpClient } from '@angular/common/http';
 import { CourseServiceModule } from '../course/course-service.module';
 
 describe('LabService', () => {
 
   let labService: LabService;
-  let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
   const mockedCourses = [{
@@ -40,7 +38,6 @@ describe('LabService', () => {
 
   beforeEach(() => {
     labService = TestBed.get(LabService);
-    httpClient = TestBed.get(HttpClient);
     httpTestingController = TestBed.get(HttpTestingController);
   });
 

@@ -41,6 +41,8 @@ describe('CourseComponent', () => {
   };
 
   beforeEach(async(() => {
+    router = jasmine.createSpyObj('router', ['navigate']);
+
     TestBed.configureTestingModule({
       declarations: [CourseComponent],
       imports: [
@@ -52,6 +54,9 @@ describe('CourseComponent', () => {
       providers: [{
         provide: ActivatedRoute,
         useValue: route
+      }, {
+        provide: Router,
+        useValue: router
       }]
     })
     .compileComponents();
@@ -73,7 +78,6 @@ describe('CourseComponent', () => {
     courseComponent = fixture.debugElement.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
-    router = TestBed.get(Router);
   });
 
   describe('component', () => {
@@ -95,8 +99,6 @@ describe('CourseComponent', () => {
     describe('navigateToLab', () => {
 
       it('should navigate to the appropriate lab page', () => {
-        spyOn(router, 'navigate').and.callFake(() => {});
-
         const lab = {
           index: 1,
           title: 'Lab 1'
@@ -104,7 +106,7 @@ describe('CourseComponent', () => {
 
         courseComponent.navigateToLab(lab);
 
-        expect(router.navigate).toHaveBeenCalledWith(['./labs', lab.index], { relativeTo: route });
+        expect(router.navigate).toHaveBeenCalledWith(['./labs', lab.index], { relativeTo: route } as any);
       });
 
     });
