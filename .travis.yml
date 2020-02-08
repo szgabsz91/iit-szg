@@ -9,7 +9,7 @@ before_install:
   - npm install -g yarn
 
 install:
-  - rm -rf node_modules
+  - rm -rf dist node_modules
   - yarn
   - rm -rf node_modules/protractor/node_modules/webdriver-manager
   - mv node_modules/webdriver-manager node_modules/protractor/node_modules
