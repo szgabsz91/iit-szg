@@ -4,7 +4,7 @@ import { CourseService } from '../course.service';
 import { CourseMaterialModule } from '../course-material.module';
 import { CourseServiceModule } from '../course-service.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, EMPTY } from 'rxjs';
 
@@ -58,7 +58,7 @@ describe('CourseComponent', () => {
   }));
 
   beforeEach(() => {
-    const courseService = TestBed.get(CourseService);
+    const courseService = TestBed.inject(CourseService);
     spyOn(courseService, 'getCourse').and.callFake((...args) => {
       const courseId = args[0];
 
@@ -73,7 +73,7 @@ describe('CourseComponent', () => {
     courseComponent = fixture.debugElement.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
-    router = TestBed.get(Router);
+    router = TestBed.inject(Router);
   });
 
   describe('component', () => {
@@ -95,7 +95,7 @@ describe('CourseComponent', () => {
     describe('navigateToLab', () => {
 
       it('should navigate to the appropriate lab page', () => {
-        spyOn(router, 'navigate').and.callFake(() => {});
+        spyOn(router, 'navigate').and.callFake((_commands: any[], _extras: NavigationExtras) => Promise.resolve(true));
 
         const lab = {
           index: 1,
@@ -104,7 +104,7 @@ describe('CourseComponent', () => {
 
         courseComponent.navigateToLab(lab);
 
-        expect(router.navigate).toHaveBeenCalledWith(['./labs', lab.index], { relativeTo: route });
+        expect(router.navigate).toHaveBeenCalledWith(['./labs', lab.index], jasmine.any(Object));
       });
 
     });

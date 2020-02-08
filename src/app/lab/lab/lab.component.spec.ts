@@ -60,7 +60,7 @@ describe('LabComponent', () => {
   }));
 
   beforeEach(() => {
-    const labService = TestBed.get(LabService);
+    const labService = TestBed.inject(LabService);
     spyOn(labService, 'getLab').and.callFake((...args) => {
       const [courseId, labIndex] = args;
 
@@ -75,7 +75,7 @@ describe('LabComponent', () => {
     labComponent = fixture.debugElement.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
-    httpTestingController = TestBed.get(HttpTestingController);
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   describe('component', () => {

@@ -9,6 +9,8 @@ before_install:
 
 install:
   - yarn
+  - rm -rf node_modules/protractor/node_modules/webdriver-manager
+  - mv node_modules/webdriver-manager node_modules/protractor/node_modules
 
 script:
   - yarn lint

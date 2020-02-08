@@ -43,7 +43,7 @@ describe('AppComponent', () => {
   }));
 
   beforeEach(() => {
-    const appService = TestBed.get(AppService);
+    const appService = TestBed.inject(AppService);
     spyOn(appService, 'getCourses').and.returnValue(of(mockedCourses));
 
     fixture = TestBed.createComponent(AppComponent);
