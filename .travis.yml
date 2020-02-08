@@ -21,7 +21,8 @@ script:
   - yarn build:prod --base-href https://szgabsz91.github.io/iit-www/
 
 deploy:
-  provider: pages
-  cleanup: false
+  provider: pages:git
   token: $GITHUB_TOKEN
+  edge: true
+  cleanup: false
   local_dir: dist/iit-www
