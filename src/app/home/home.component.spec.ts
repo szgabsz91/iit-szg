@@ -5,7 +5,6 @@ import { AppMaterialModule } from '../app-material.module';
 describe('HomeComponent', () => {
 
   let fixture: ComponentFixture<HomeComponent>;
-  let homeComponent: HomeComponent;
   let compiled: HTMLElement;
 
   beforeEach(async(() => {
@@ -18,7 +17,6 @@ describe('HomeComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HomeComponent);
-    homeComponent  = fixture.debugElement.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
