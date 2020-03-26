@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { LabService } from '../lab.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -8,7 +8,8 @@ import { Lab } from '../../model/lab';
 @Component({
   selector: 'app-lab',
   templateUrl: './lab.component.html',
-  styleUrls: ['./lab.component.scss']
+  styleUrls: ['./lab.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabComponent implements OnInit {
 

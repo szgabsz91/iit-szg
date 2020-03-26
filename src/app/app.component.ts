@@ -1,4 +1,4 @@
-import { Component, ChangeDetectorRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
@@ -8,7 +8,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit, OnDestroy {
 
