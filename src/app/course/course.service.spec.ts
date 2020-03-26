@@ -37,6 +37,10 @@ describe('CourseService', () => {
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
+  afterEach(() => {
+    httpTestingController.verify();
+  });
+
   describe('getCourse', () => {
 
     it('should return the course with the given id', () => {
@@ -49,7 +53,6 @@ describe('CourseService', () => {
       request.flush({
         courses: mockedCourses
       });
-      httpTestingController.verify();
     });
 
   });
