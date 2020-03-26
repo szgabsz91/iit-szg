@@ -23,6 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(private appService: AppService, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    // istanbul ignore next
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
   }
@@ -40,6 +41,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   closeSidenavOnMobile() {
+    // istanbul ignore if
     if (this.mobileQuery.matches) {
       this.sidenav.close();
     }
