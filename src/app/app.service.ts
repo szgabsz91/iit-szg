@@ -15,6 +15,7 @@ export class AppService {
   constructor(private httpClient: HttpClient) { }
 
   getCourses(): Observable<Course[]> {
+    // istanbul ignore else
     if (!this.courseCache$) {
       this.courseCache$ = this.httpClient.get<Metadata>('./assets/metadata.json').pipe(
         map(metadata => metadata.courses),
