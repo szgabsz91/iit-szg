@@ -4,7 +4,7 @@ import { CourseService } from '../course.service';
 import { CourseMaterialModule } from '../course-material.module';
 import { CourseServiceModule } from '../course-service.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, EMPTY } from 'rxjs';
 
@@ -95,7 +95,7 @@ describe('CourseComponent', () => {
     describe('navigateToLab', () => {
 
       it('should navigate to the appropriate lab page', () => {
-        spyOn(router, 'navigate').and.callFake((_commands: any[], _extras: NavigationExtras) => Promise.resolve(true));
+        spyOn(router, 'navigate').and.returnValue(Promise.resolve(true));
 
         const lab = {
           index: 1,
