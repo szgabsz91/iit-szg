@@ -41,6 +41,10 @@ describe('LabService', () => {
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
+  afterEach(() => {
+    httpTestingController.verify();
+  });
+
   describe('getLab', () => {
 
     it('should return the lab with the given index in the course with the given id', () => {
@@ -58,7 +62,6 @@ describe('LabService', () => {
       request.flush({
         courses: mockedCourses
       });
-      httpTestingController.verify();
     });
 
   });

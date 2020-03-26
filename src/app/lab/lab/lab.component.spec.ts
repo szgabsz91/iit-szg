@@ -78,6 +78,17 @@ describe('LabComponent', () => {
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
+  beforeEach(() => {
+    const markdownUrl = `./assets/courses/${mockedLab.courseId}/lab${mockedLab.index.toString().padStart(2, '0')}.md`;
+    const request = httpTestingController.expectOne(markdownUrl);
+    expect(request.request.method).toEqual('GET');
+    request.flush('Markdown content');
+  });
+
+  afterEach(() => {
+    httpTestingController.verify();
+  });
+
   describe('component', () => {
 
     describe('properties', () => {
@@ -100,12 +111,6 @@ describe('LabComponent', () => {
     });
 
     it('should render the appropriate lab markdown content', () => {
-      const markdownUrl = `./assets/courses/${mockedLab.courseId}/lab${mockedLab.index.toString().padStart(2, '0')}.md`;
-      const request = httpTestingController.expectOne(markdownUrl);
-      expect(request.request.method).toEqual('GET');
-      request.flush('Markdown content');
-      httpTestingController.verify();
-
       const markdownContentLength = compiled.querySelectorAll('markdown *').length;
       expect(markdownContentLength).toBeGreaterThan(0);
     });
