@@ -26,17 +26,9 @@ describe('CourseComponent', () => {
       title: 'Lab 2'
     }]
   };
-  const route = {
-    paramMap: of({
-      get: (paramName: string) => {
-        switch (paramName) {
-          case 'courseId':
-            return mockedCourse.id;
-
-          default:
-            throw new Error(`Unknown parameter name: ${paramName}`);
-        }
-      }
+  const activatedRoute = {
+    data: of({
+      course: mockedCourse
     })
   };
 
@@ -51,7 +43,7 @@ describe('CourseComponent', () => {
       ],
       providers: [{
         provide: ActivatedRoute,
-        useValue: route
+        useValue: activatedRoute
       }]
     })
     .compileComponents();

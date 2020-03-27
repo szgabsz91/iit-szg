@@ -6,7 +6,7 @@ import { CourseServiceModule } from 'src/app/course/course-service.module';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ActivatedRoute } from '@angular/router';
-import { of, EMPTY } from 'rxjs';
+import { of } from 'rxjs';
 import { LabService } from '../lab.service';
 
 describe('LabComponent', () => {
@@ -20,6 +20,11 @@ describe('LabComponent', () => {
     courseId: 'course1',
     index: 2,
     title: 'Lab 2'
+  };
+  const activatedRoute = {
+    data: of({
+      lab: mockedLab
+    })
   };
 
   beforeEach(async(() => {
@@ -37,22 +42,7 @@ describe('LabComponent', () => {
         LabService,
         {
           provide: ActivatedRoute,
-          useValue: {
-            paramMap: of({
-              get: (paramName: string) => {
-                switch (paramName) {
-                  case 'courseId':
-                    return mockedLab.courseId;
-
-                  case 'labIndex':
-                    return mockedLab.index;
-
-                  default:
-                    throw new Error(`Unknown parameter name: ${paramName}`);
-                }
-              }
-            })
-          }
+          useValue: activatedRoute
         }
       ]
     })
@@ -60,17 +50,6 @@ describe('LabComponent', () => {
   }));
 
   beforeEach(() => {
-    const labService = TestBed.inject(LabService);
-    spyOn(labService, 'getLab').and.callFake((...args) => {
-      const [courseId, labIndex] = args;
-
-      if (courseId === mockedLab.courseId && labIndex === mockedLab.index) {
-        return of(mockedLab);
-      }
-
-      return EMPTY;
-    });
-
     fixture = TestBed.createComponent(LabComponent);
     labComponent = fixture.debugElement.componentInstance;
     fixture.detectChanges();
