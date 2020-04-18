@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="appTitle" datatype="html">
+        <source>IIT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">The title of the application</note>
+        <note priority="1" from="meaning">app.title</note>
+      </trans-unit>
+      <trans-unit id="appCourseIndex" datatype="html">
+        <source>Index</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">The label of the course index pages</note>
+        <note priority="1" from="meaning">app.course.index</note>
+      </trans-unit>
+      <trans-unit id="appFooter" datatype="html">
+        <source>© Gabor Szabo <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <note priority="1" from="description">The footer of the application</note>
+        <note priority="1" from="meaning">app.footer</note>
+      </trans-unit>
+      <trans-unit id="homeTitle" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">The title of the home page</note>
+        <note priority="1" from="meaning">home.title</note>
+      </trans-unit>
+      <trans-unit id="homeParagraph1" datatype="html">
+        <source>This application is a collection of courses of various topics. Each course contains a number of labs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <note priority="1" from="description">The first paragraph of the home page</note>
+        <note priority="1" from="meaning">home.parapgrahp1</note>
+      </trans-unit>
+      <trans-unit id="homeParagraph2" datatype="html">
+        <source>The labs contain exercises for the given topic, and optionally a starter project that you can open in an IDE and work on it during the lab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <note priority="1" from="description">The second paragraph of the home page</note>
+        <note priority="1" from="meaning">home.parapgrahp2</note>
+      </trans-unit>
+      <trans-unit id="courseTableHeaderTitle" datatype="html">
+        <source>Title</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/course/course/course.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <note priority="1" from="description">The header of the title column on the course page</note>
+        <note priority="1" from="meaning">course.table.header.title</note>
+      </trans-unit>
+      <trans-unit id="labTitle" datatype="html">
+        <source>Lab <x id="INTERPOLATION" equiv-text="{{ lab.index }}"/>: <x id="INTERPOLATION_1" equiv-text="{{ lab.title }}"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lab/lab/lab.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description">The title of the lab</note>
+        <note priority="1" from="meaning">lab.title</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

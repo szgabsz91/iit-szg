@@ -3,7 +3,7 @@
     <button mat-icon-button (click)="toggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
-    <h1>iit-www</h1>
+    <h1 i18n="app.title|The title of the application@@appTitle">IIT</h1>
   </mat-toolbar>
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -16,7 +16,7 @@
 
         <div *ngFor="let course of courses$ | async" class="course-menu">
           <h3 matSubheader>{{ course.name }}</h3>
-          <a mat-list-item [routerLink]="['/courses', course.id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">Index</a>
+          <a mat-list-item i18n="app.course.index|The label of the course index pages@@appCourseIndex" [routerLink]="['/courses', course.id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">Index</a>
           <a *ngFor="let lab of course.labs" mat-list-item [routerLink]="['/courses', course.id, 'labs', lab.index]" routerLinkActive="active" (click)="closeSidenavOnMobile()">{{ lab.title }}</a>
           <mat-divider></mat-divider>
         </div>
@@ -28,7 +28,7 @@
         <router-outlet></router-outlet>
       </div>
 
-      <footer>© Gábor Szabó {{ currentYear }}</footer>
+      <footer i18n="app.footer|The footer of the application@@appFooter">© Gabor Szabo {{ currentYear }}</footer>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
