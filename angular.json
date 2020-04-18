@@ -13,6 +13,12 @@
           "style": "scss"
         }
       },
+      "i18n": {
+        "sourceLocale": "en",
+        "locales": {
+          "hu": "src/locale/messages.hu.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -32,7 +38,8 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
+            "es5BrowserSupport": true,
+            "i18nMissingTranslation": "error"
           },
           "configurations": {
             "production": {
@@ -62,6 +69,9 @@
                   "maximumWarning": "6kb"
                 }
               ]
+            },
+            "hu": {
+              "localize": ["hu"]
             }
           }
         },
@@ -73,6 +83,9 @@
           "configurations": {
             "production": {
               "browserTarget": "iit-www:build:production"
+            },
+            "hu": {
+              "browserTarget": "iit-www:build:hu"
             }
           }
         },

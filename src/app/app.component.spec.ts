@@ -100,7 +100,7 @@ describe('AppComponent', () => {
 
     it('should render the appropriate title', () => {
       const title = compiled.querySelector('h1').textContent;
-      expect(title).toEqual('iit-www');
+      expect(title).toEqual('IIT');
     });
 
     it('should render the appropriate menu items', () => {
@@ -111,7 +111,7 @@ describe('AppComponent', () => {
 
     it('should render the appropriate footer', () => {
       const footerContent = compiled.querySelector('footer').textContent;
-      expect(footerContent).toEqual(`© Gábor Szabó ${new Date().getFullYear()}`);
+      expect(footerContent).toEqual(`© Gabor Szabo ${new Date().getFullYear()}`);
     });
 
   });

@@ -1,4 +1,5 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
@@ -21,7 +22,15 @@ export class AppComponent implements OnInit, OnDestroy {
   currentYear: number = new Date().getFullYear();
   courses$: Observable<Course[]>;
 
-  constructor(private appService: AppService, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    private appService: AppService,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+    @Inject(DOCUMENT) document: Document,
+    @Inject(LOCALE_ID) localeId: string,
+    renderer: Renderer2
+  ) {
+    renderer.setAttribute(document.documentElement, 'lang', localeId);
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     // istanbul ignore next
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();

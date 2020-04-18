@@ -10,8 +10,12 @@ describe('App', () => {
     return appPage.navigateTo();
   });
 
+  it('should have the appropriate lang attribute on the html element', () => {
+    expect(appPage.getLang()).toEqual('en-US');
+  });
+
   it('should display the appropriate title', () => {
-    expect(appPage.getTitle()).toEqual('iit-www');
+    expect(appPage.getTitle()).toEqual('IIT');
   });
 
   afterEach(async () => {
