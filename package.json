@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
+    "i18n:generate": "ng xi18n --output-path locale",
     "prestart": "./scripts/generate-static-content.js en",
     "start": "ng serve",
     "prestart:hu": "./scripts/generate-static-content.js hu",

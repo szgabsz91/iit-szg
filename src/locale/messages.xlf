@@ -11,6 +11,15 @@
         <note priority="1" from="description">The title of the application</note>
         <note priority="1" from="meaning">app.title</note>
       </trans-unit>
+      <trans-unit id="appMenuHome" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">The label of the home menu item</note>
+        <note priority="1" from="meaning">app.menu.home</note>
+      </trans-unit>
       <trans-unit id="appCourseIndex" datatype="html">
         <source>Index</source>
         <context-group purpose="location">
