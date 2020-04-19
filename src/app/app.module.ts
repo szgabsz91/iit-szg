@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CourseServiceModule } from './course/course-service.module';
+import { WINDOW } from './injection-tokens';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,9 @@ import { CourseServiceModule } from './course/course-service.module';
     AppRoutingModule,
     AppMaterialModule,
     CourseServiceModule
+  ],
+  providers: [
+    { provide: WINDOW, useValue: window }
   ],
   bootstrap: [AppComponent]
 })

@@ -3,7 +3,18 @@
     <button mat-icon-button (click)="toggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
+
     <h1 i18n="app.title|The title of the application@@appTitle">IIT</h1>
+
+    <mat-select [(value)]="selectedLocale" (selectionChange)="onSelectedLanguageChanged($event)" class="language-selector" [ngClass]="'language-selector-selected-' + selectedLocale">
+      <mat-option *ngFor="let locale of locales" [value]="locale">
+        <img
+          [src]="'assets/flags/' + locale + '.png'"
+          [alt]="removeHtmlComments(alt.innerHTML)"
+        >
+        <span #alt class="hidden" i18n="app.languageSelector|The selected language in the language selector@@appLanguageSelector">{locale, select, hu {Hungarian} en {English} other {}}</span>
+      </mat-option>
+    </mat-select>
   </mat-toolbar>
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
