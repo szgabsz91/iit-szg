@@ -11,7 +11,7 @@
       <mat-nav-list>
         <mat-list-item routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">
           <mat-icon matListIcon>home</mat-icon>
-          <a matLine>Home</a>
+          <a matLine i18n="app.menu.home|The label of the home menu item@@appMenuHome">Home</a>
         </mat-list-item>
 
         <div *ngFor="let course of courses$ | async" class="course-menu">

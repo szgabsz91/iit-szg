@@ -42,6 +42,16 @@
         <note priority="1" from="description">The title of the home page</note>
         <note priority="1" from="meaning">home.title</note>
       </trans-unit>
+      <trans-unit id="appMenuHome" datatype="html">
+        <source>Home</source>
+        <target>Főoldal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <note priority="1" from="description">The label of the home menu item</note>
+        <note priority="1" from="meaning">app.menu.home</note>
+      </trans-unit>
       <trans-unit id="homeParagraph1" datatype="html">
         <source>This application is a collection of courses of various topics. Each course contains a number of labs.</source>
         <target>Ez az alkalmazás különböző gyakorlati anyagokat tartalmaz változó témákban.</target>
