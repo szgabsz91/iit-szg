@@ -1,0 +1,59 @@
+{
+  "courses": [{
+    "id": "course1",
+    "name": {
+      "en": "Course 1",
+      "hu": "Kurzus 1"
+    },
+    "labs": [{
+      "index": 1,
+      "title": {
+        "en": "Lab 1",
+        "hu": "Gyakorlat 1"
+      }
+    }, {
+      "index": 2,
+      "title": {
+        "en": "Lab 2",
+        "hu": "Gyakorlat 2"
+      }
+    }, {
+      "index": 3,
+      "title": {
+        "en": "Lab 3",
+        "hu": "Gyakorlat 3"
+      }
+    }]
+  }, {
+    "id": "course2",
+    "name": {
+      "en": "Course 2",
+      "hu": "Kurzus 2"
+    },
+    "labs": [{
+      "index": 1,
+      "title": {
+        "en": "Lab 1",
+        "hu": "Gyakorlat 1"
+      }
+    }, {
+      "index": 2,
+      "title": {
+        "en": "Lab 2",
+        "hu": "Gyakorlat 2"
+      }
+    }, {
+      "index": 3,
+      "title": {
+        "en": "Lab 3",
+        "hu": "Gyakorlat 3"
+      }
+    }, {
+      "index": 4,
+      "title": {
+        "en": "Lab 4",
+        "hu": "Gyakorlat 4"
+      }
+    }]
+  }]
+}
