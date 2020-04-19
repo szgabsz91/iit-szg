@@ -48,3 +48,4 @@ Thumbs.db
 # Application
 /src/assets-en/metadata.json
 /src/assets-hu/metadata.json
+/src/assets/**/*.zip

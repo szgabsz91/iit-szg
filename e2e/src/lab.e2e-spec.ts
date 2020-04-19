@@ -17,7 +17,11 @@ describe('Lab', () => {
 
   it('should display the appropriate markdown content', () => {
     const markdownContent = labPage.getMarkdownContent();
-    expect(markdownContent).toEqual(['Course 1 - Lab 1']);
+    expect(markdownContent).toEqual([
+      'Course 1 - Lab 1',
+      'Starter project',
+      'Solution project'
+    ]);
   });
 
   afterEach(async () => {
