@@ -11,11 +11,15 @@ describe('App', () => {
   });
 
   it('should have the appropriate lang attribute on the html element', () => {
-    expect(appPage.getLang()).toEqual('en-US');
+    expect(appPage.getLang()).toEqual('en');
   });
 
   it('should display the appropriate title', () => {
     expect(appPage.getTitle()).toEqual('IIT');
+  });
+
+  it('should display the language selector with the appropriate title', () => {
+    expect(appPage.getSelectedLanguage()).toEqual('English');
   });
 
   afterEach(async () => {

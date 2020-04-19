@@ -14,4 +14,8 @@ export class AppPage {
     return element(by.css('mat-toolbar h1')).getText() as Promise<string>;
   }
 
+  getSelectedLanguage() {
+    return element(by.css('.mat-select-value-text')).getAttribute('textContent') as Promise<string>;
+  }
+
 }

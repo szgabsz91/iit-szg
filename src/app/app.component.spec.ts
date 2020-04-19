@@ -5,12 +5,15 @@ import { AppMaterialModule } from './app-material.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppService } from './app.service';
 import { of } from 'rxjs';
+import { WINDOW } from './injection-tokens';
+import { LOCALE_ID } from '@angular/core';
 
 describe('AppComponent', () => {
 
   let fixture: ComponentFixture<AppComponent>;
   let appComponent: AppComponent;
   let compiled: HTMLElement;
+  let mockWindow: Window;
 
   const mockedCourses = [{
     id: 'course1',
@@ -32,12 +35,22 @@ describe('AppComponent', () => {
   }];
 
   beforeEach(async(() => {
+    mockWindow = {
+      location: {
+        href: '/hu/something'
+      }
+    } as any;
+
     TestBed.configureTestingModule({
       declarations: [AppComponent],
       imports: [
         RouterTestingModule,
         HttpClientTestingModule,
         AppMaterialModule
+      ],
+      providers: [
+        { provide: WINDOW, useValue: mockWindow },
+        { provide: LOCALE_ID, useValue: 'hu' }
       ]
     }).compileComponents();
   }));
@@ -90,6 +103,18 @@ describe('AppComponent', () => {
         if (appComponent.mobileQuery.matches) {
           expect(appComponent.sidenav.close).toHaveBeenCalledTimes(1);
         }
+      });
+
+    });
+
+    describe('onSelectedLanguageChanged', () => {
+
+      it('should navigate to the appropriate page with the selected language', () => {
+        appComponent.onSelectedLanguageChanged({
+          value: 'en'
+        } as any);
+
+        expect(mockWindow.location.href).toBe('/en/something');
       });
 
     });

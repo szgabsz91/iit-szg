@@ -26,7 +26,8 @@
     "lint": "ng lint",
     "pree2e": "./scripts/generate-static-content.js",
     "e2e": "ng e2e",
-    "ci": "yarn lint && yarn test && yarn e2e && yarn build:prod"
+    "prepare-deployment:gh-pages": "rm -rf dist && yarn build:prod --base-href https://szgabsz91.github.io/iit-www/en/ && yarn build:hu:prod --base-href https://szgabsz91.github.io/iit-www/ --deleteOutputPath=false",
+    "ci": "yarn lint && yarn test && yarn e2e && yarn prepare-deployment:gh-pages"
   },
   "dependencies": {
     "@angular/animations": "~9.1.0",

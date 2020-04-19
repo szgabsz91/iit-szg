@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { Course } from './model/course';
 import { AppService } from './app.service';
 import { MatSidenav } from '@angular/material/sidenav';
+import { MatSelectChange } from '@angular/material/select';
+import { WINDOW } from './injection-tokens';
 
 @Component({
   selector: 'app-root',
@@ -22,15 +24,22 @@ export class AppComponent implements OnInit, OnDestroy {
   currentYear: number = new Date().getFullYear();
   courses$: Observable<Course[]>;
 
+  locales = ['en', 'hu'];
+  selectedLocale: string;
+  currentLocale: string;
+
   constructor(
     private appService: AppService,
+    @Inject(LOCALE_ID) localeId: string,
+    @Inject(WINDOW) private window: Window,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
     @Inject(DOCUMENT) document: Document,
-    @Inject(LOCALE_ID) localeId: string,
-    renderer: Renderer2
+    renderer: Renderer2,
   ) {
-    renderer.setAttribute(document.documentElement, 'lang', localeId);
+    this.selectedLocale = localeId.substring(0, 2);
+    this.currentLocale = this.selectedLocale;
+    renderer.setAttribute(document.documentElement, 'lang', this.selectedLocale);
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     // istanbul ignore next
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -54,6 +63,17 @@ export class AppComponent implements OnInit, OnDestroy {
     if (this.mobileQuery.matches) {
       this.sidenav.close();
     }
+  }
+
+  onSelectedLanguageChanged(event: MatSelectChange): void {
+    const newLocaleId = event.value;
+    const currentUrl = this.window.location.href;
+    const newUrl = currentUrl.replace(`/${this.currentLocale}/`, `/${newLocaleId}/`);
+    this.window.location.href = newUrl;
+  }
+
+  removeHtmlComments(html: string): string {
+    return html.replace(/<!--[\s\S]*?-->/g, '');
   }
 
 }

@@ -7,17 +7,27 @@
         <target>IIT</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">7</context>
         </context-group>
         <note priority="1" from="description">The title of the application</note>
         <note priority="1" from="meaning">app.title</note>
+      </trans-unit>
+      <trans-unit id="appLanguageSelector" datatype="html">
+        <source>{VAR_SELECT, select, hu {Hungarian} en {English} other {} }</source>
+        <target>{VAR_SELECT, select, hu {Magyar} en {Angol} other {} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">The selected language in the language selector</note>
+        <note priority="1" from="meaning">app.languageSelector</note>
       </trans-unit>
       <trans-unit id="appCourseIndex" datatype="html">
         <source>Index</source>
         <target>Lista</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">30</context>
         </context-group>
         <note priority="1" from="description">The label of the course index pages</note>
         <note priority="1" from="meaning">app.course.index</note>
@@ -27,7 +37,7 @@
         <target>© Szabó Gábor <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.html</context>
-          <context context-type="linenumber">31</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <note priority="1" from="description">The footer of the application</note>
         <note priority="1" from="meaning">app.footer</note>
@@ -47,7 +57,7 @@
         <target>Főoldal</target>
         <context-group purpose="location">
           <context context-type="sourcefile">app/app.component.html</context>
-          <context context-type="linenumber">14</context>
+          <context context-type="linenumber">25</context>
         </context-group>
         <note priority="1" from="description">The label of the home menu item</note>
         <note priority="1" from="meaning">app.menu.home</note>
