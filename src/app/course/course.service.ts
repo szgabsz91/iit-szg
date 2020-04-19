@@ -10,7 +10,7 @@ import { CourseServiceModule } from './course-service.module';
 })
 export class CourseService {
 
-  constructor(private appService: AppService) { }
+  constructor(private readonly appService: AppService) {}
 
   getCourse(courseId: string): Observable<Course> {
     return this.appService.getCourses().pipe(

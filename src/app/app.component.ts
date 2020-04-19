@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID, OnDestroy, Renderer2, ViewChild } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
@@ -14,40 +14,36 @@ import { WINDOW } from './injection-tokens';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnDestroy {
 
   @ViewChild(MatSidenav, { static: true })
-  sidenav: MatSidenav;
+  readonly sidenav: MatSidenav;
 
-  mobileQuery: MediaQueryList;
-  private mobileQueryListener: () => void;
-  currentYear: number = new Date().getFullYear();
-  courses$: Observable<Course[]>;
+  readonly mobileQuery: MediaQueryList;
+  private readonly mobileQueryListener: () => void;
+  readonly currentYear: number = new Date().getFullYear();
+  readonly courses$: Observable<Course[]> = this.appService.getCourses();
 
-  locales = ['en', 'hu'];
+  readonly locales = ['en', 'hu'];
+  readonly currentLocale: string;
   selectedLocale: string;
-  currentLocale: string;
 
   constructor(
-    private appService: AppService,
-    @Inject(LOCALE_ID) localeId: string,
-    @Inject(WINDOW) private window: Window,
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher,
-    @Inject(DOCUMENT) document: Document,
-    renderer: Renderer2,
+    private readonly appService: AppService,
+    @Inject(LOCALE_ID) readonly localeId: string,
+    @Inject(WINDOW) private readonly window: Window,
+    readonly changeDetectorRef: ChangeDetectorRef,
+    readonly media: MediaMatcher,
+    @Inject(DOCUMENT) readonly document: Document,
+    readonly renderer: Renderer2,
   ) {
-    this.selectedLocale = localeId.substring(0, 2);
-    this.currentLocale = this.selectedLocale;
+    this.currentLocale = localeId.substring(0, 2);
+    this.selectedLocale = this.currentLocale;
     renderer.setAttribute(document.documentElement, 'lang', this.selectedLocale);
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     // istanbul ignore next
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
-  }
-
-  ngOnInit() {
-    this.courses$ = this.appService.getCourses();
   }
 
   ngOnDestroy() {

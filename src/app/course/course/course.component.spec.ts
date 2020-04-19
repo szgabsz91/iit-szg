@@ -7,6 +7,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, EMPTY } from 'rxjs';
+import { Course } from 'src/app/model/course';
 
 describe('CourseComponent', () => {
 
@@ -15,7 +16,7 @@ describe('CourseComponent', () => {
   let compiled: HTMLElement;
   let router: Router;
 
-  const mockedCourse = {
+  const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
     labs: [{

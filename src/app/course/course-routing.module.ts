@@ -16,4 +16,4 @@ const routes: Routes = [{
   exports: [RouterModule],
   providers: [CourseResolver]
 })
-export class CourseRoutingModule { }
+export class CourseRoutingModule {}

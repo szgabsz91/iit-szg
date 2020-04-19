@@ -12,4 +12,4 @@ import { CourseMaterialModule } from './course-material.module';
     CourseMaterialModule
   ]
 })
-export class CourseModule { }
+export class CourseModule {}

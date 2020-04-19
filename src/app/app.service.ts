@@ -10,19 +10,14 @@ import { Course } from './model/course';
 })
 export class AppService {
 
-  private courseCache$: Observable<Course[]>;
+  private readonly courseCache$: Observable<Course[]> = this.httpClient.get<Metadata>('./assets/metadata.json').pipe(
+    map(metadata => metadata.courses),
+    shareReplay(1)
+  );
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private readonly httpClient: HttpClient) {}
 
   getCourses(): Observable<Course[]> {
-    // istanbul ignore else
-    if (!this.courseCache$) {
-      this.courseCache$ = this.httpClient.get<Metadata>('./assets/metadata.json').pipe(
-        map(metadata => metadata.courses),
-        shareReplay(1)
-      );
-    }
-
     return this.courseCache$;
   }
 

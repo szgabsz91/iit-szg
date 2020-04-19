@@ -16,4 +16,4 @@ const routes: Routes = [{
   exports: [RouterModule],
   providers: [LabResolver]
 })
-export class LabRoutingModule { }
+export class LabRoutingModule {}

@@ -1,7 +1,7 @@
 import { Lab } from './lab';
 
 export interface Course {
-  id: string;
-  name: string;
-  labs?: Lab[];
+  readonly id: string;
+  readonly name: string;
+  readonly labs: Lab[];
 }

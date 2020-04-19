@@ -25,4 +25,4 @@ import { WINDOW } from './injection-tokens';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

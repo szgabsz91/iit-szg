@@ -9,4 +9,4 @@ import { MatTableModule } from '@angular/material/table';
     MatTableModule
   ]
 })
-export class CourseMaterialModule { }
+export class CourseMaterialModule {}

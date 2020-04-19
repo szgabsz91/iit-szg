@@ -13,7 +13,7 @@ describe('LabResolver', () => {
 
   let labResolver: LabResolver;
 
-  const mockedLab = {
+  const mockedLab: Lab = {
     courseId: 'course1',
     index: 2,
     title: 'Lab 2'

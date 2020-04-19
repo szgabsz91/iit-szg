@@ -7,7 +7,7 @@ import { Lab } from '../model/lab';
 @Injectable()
 export class LabService {
 
-  constructor(private courseService: CourseService) { }
+  constructor(private readonly courseService: CourseService) {}
 
   getLab(courseId: string, labIndex: number): Observable<Lab> {
     return this.courseService.getCourse(courseId).pipe(

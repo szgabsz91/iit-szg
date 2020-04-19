@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -10,16 +10,12 @@ import { Lab } from '../../model/lab';
   styleUrls: ['./lab.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LabComponent implements OnInit {
+export class LabComponent {
 
-  lab$: Observable<Lab>;
+  readonly lab$: Observable<Lab> = this.activatedRoute.data.pipe(
+    map((data: Data) => data.lab)
+  );
 
-  constructor(private activatedRoute: ActivatedRoute) { }
-
-  ngOnInit() {
-    this.lab$ = this.activatedRoute.data.pipe(
-      map((data: Data) => data.lab)
-    );
-  }
+  constructor(private readonly activatedRoute: ActivatedRoute) {}
 
 }
