@@ -24,7 +24,8 @@ script:
   - yarn lint
   - yarn test
   - yarn e2e
-  - yarn build:prod --base-href https://szgabsz91.github.io/iit-www/
+  - yarn build:prod --base-href https://szgabsz91.github.io/iit-www/en/
+  - yarn build:hu:prod --base-href https://szgabsz91.github.io/iit-www/ --deleteOutputPath=false
 
 deploy:
   provider: pages:git
