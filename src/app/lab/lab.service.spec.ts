@@ -3,13 +3,15 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 
 import { LabService } from './lab.service';
 import { CourseServiceModule } from '../course/course-service.module';
+import { Course } from '../model/course';
+import { Lab } from '../model/lab';
 
 describe('LabService', () => {
 
   let labService: LabService;
   let httpTestingController: HttpTestingController;
 
-  const mockedCourses = [{
+  const mockedCourses: Course[] = [{
     id: 'course1',
     name: 'Course 1',
     labs: [{
@@ -49,7 +51,7 @@ describe('LabService', () => {
 
     it('should return the lab with the given index in the course with the given id', () => {
       labService.getLab(mockedCourses[0].id, mockedCourses[0].labs[1].index).subscribe(lab => {
-        const mockedLab = {
+        const mockedLab: Lab = {
           ...mockedCourses[0].labs[1],
           courseId: mockedCourses[0].id
         };

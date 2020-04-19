@@ -2,13 +2,14 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { AppService } from './app.service';
+import { Course } from './model/course';
 
 describe('AppService', () => {
 
   let appService: AppService;
   let httpTestingController: HttpTestingController;
 
-  const mockedCourses = [{
+  const mockedCourses: Course[] = [{
     id: 'course1',
     name: 'Course 1',
     labs: [{

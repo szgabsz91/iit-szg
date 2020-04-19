@@ -12,7 +12,7 @@ describe('CourseResolver', () => {
 
   let courseResolver: CourseResolver;
 
-  const mockedCourse = {
+  const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
     labs: [{

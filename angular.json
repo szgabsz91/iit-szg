@@ -122,7 +122,8 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico"
+              "src/favicon.ico",
+              "src/assets"
             ]
           }
         },

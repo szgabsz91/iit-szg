@@ -6,7 +6,8 @@ import { CourseService } from './course.service';
 
 @Injectable()
 export class CourseResolver implements Resolve<Course> {
-  constructor(private courseService: CourseService) {}
+
+  constructor(private readonly courseService: CourseService) {}
 
   resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Course> {
     const courseId = activatedRouteSnapshot.paramMap.get('courseId');

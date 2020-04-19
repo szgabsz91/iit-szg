@@ -1,5 +1,5 @@
 import { Course } from './course';
 
 export interface Metadata {
-  courses: Course[];
+  readonly courses: Course[];
 }

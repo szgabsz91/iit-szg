@@ -19,4 +19,4 @@ import { LabService } from './lab.service';
   ],
   providers: [LabService]
 })
-export class LabModule { }
+export class LabModule {}

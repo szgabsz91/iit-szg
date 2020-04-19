@@ -7,6 +7,7 @@ import { AppService } from './app.service';
 import { of } from 'rxjs';
 import { WINDOW } from './injection-tokens';
 import { LOCALE_ID } from '@angular/core';
+import { Course } from './model/course';
 
 describe('AppComponent', () => {
 
@@ -15,7 +16,7 @@ describe('AppComponent', () => {
   let compiled: HTMLElement;
   let mockWindow: Window;
 
-  const mockedCourses = [{
+  const mockedCourses: Course[] = [{
     id: 'course1',
     name: 'Course 1',
     labs: [{

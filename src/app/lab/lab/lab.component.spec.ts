@@ -8,6 +8,7 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { LabService } from '../lab.service';
+import { Lab } from 'src/app/model/lab';
 
 describe('LabComponent', () => {
 
@@ -16,7 +17,7 @@ describe('LabComponent', () => {
   let compiled: HTMLElement;
   let httpTestingController: HttpTestingController;
 
-  const mockedLab = {
+  const mockedLab: Lab = {
     courseId: 'course1',
     index: 2,
     title: 'Lab 2'

@@ -1,5 +1,5 @@
 export interface Lab {
-  courseId?: string;
-  index: number;
-  title: string;
+  readonly courseId?: string;
+  readonly index: number;
+  readonly title: string;
 }
