@@ -58,6 +58,20 @@ footer {
   display: none;
 }
 
+.hamburger-menu-icon-button {
+  position: absolute;
+  will-change: transform;
+}
+
+.app-title {
+  transition: transform 500ms;
+  will-change: transform;
+
+  &.is-mobile {
+    transform: translateX(40px);
+  }
+}
+
 .language-selector-selected-en {
   background: url('../assets/flags/en.png');
   background-repeat: no-repeat;

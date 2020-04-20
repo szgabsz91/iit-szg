@@ -1,10 +1,10 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary">
-    <button mat-icon-button (click)="toggleSidenav()">
+    <button *ngIf="mobileQuery.matches" @hamburgerMenuButtonTrigger class="hamburger-menu-icon-button" mat-icon-button (click)="toggleSidenav()">
       <mat-icon>menu</mat-icon>
     </button>
 
-    <h1 i18n="app.title|The title of the application@@appTitle">IIT</h1>
+    <h1 class="app-title" [class.is-mobile]="mobileQuery.matches" i18n="app.title|The title of the application@@appTitle">IIT</h1>
 
     <mat-select [(value)]="selectedLocale" (selectionChange)="onSelectedLanguageChanged($event)" class="language-selector" [ngClass]="'language-selector-selected-' + selectedLocale">
       <mat-option *ngFor="let locale of locales" [value]="locale">
