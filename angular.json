@@ -43,7 +43,6 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "es5BrowserSupport": true,
             "i18nMissingTranslation": "error"
           },
           "configurations": {
