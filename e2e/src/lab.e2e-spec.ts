@@ -5,18 +5,18 @@ describe('Lab', () => {
 
   let labPage: LabPage;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     labPage = new LabPage();
-    return labPage.navigateTo();
+    await labPage.navigateTo();
   });
 
-  it('should display the appropriate title', () => {
-    const title = labPage.getTitle();
+  it('should display the appropriate title', async () => {
+    const title = await labPage.getTitle();
     expect(title).toEqual('Lab 1: Lab 1');
   });
 
-  it('should display the appropriate markdown content', () => {
-    const markdownContent = labPage.getMarkdownContent();
+  it('should display the appropriate markdown content', async () => {
+    const markdownContent = await labPage.getMarkdownContent();
     expect(markdownContent).toEqual([
       'Course 1 - Lab 1',
       'Starter project',

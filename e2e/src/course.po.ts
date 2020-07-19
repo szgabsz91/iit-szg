@@ -1,18 +1,18 @@
-import { browser, by, element } from 'protractor';
+import { browser, $, $$ } from 'protractor';
 
 export class CoursePage {
 
-  navigateTo() {
-    return browser.get(`${browser.baseUrl}/courses/course1`) as Promise<any>;
+  async navigateTo(): Promise<void> {
+    return browser.get(`${browser.baseUrl}/courses/course1`);
   }
 
-  getTitle() {
-    return element(by.css('h2')).getText() as Promise<string>;
+  async getTitle(): Promise<string> {
+    return $('h2').getText();
   }
 
-  getLabTitles() {
-    return element.all(by.css('table tbody tr td:last-child'))
-      .map(el => el.getText()) as Promise<string[]>;
+  async getLabTitles(): Promise<string[]> {
+    return $$('table tbody tr td:last-child')
+      .map(async el => await el.getText());
   }
 
 }

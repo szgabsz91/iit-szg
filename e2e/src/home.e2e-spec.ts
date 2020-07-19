@@ -5,18 +5,18 @@ describe('Home', () => {
 
   let homePage: HomePage;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     homePage = new HomePage();
-    return homePage.navigateTo();
+    await homePage.navigateTo();
   });
 
-  it('should display the appropriate title', () => {
-    const title = homePage.getTitle();
+  it('should display the appropriate title', async () => {
+    const title = await homePage.getTitle();
     expect(title).toEqual('Home');
   });
 
-  it('should display the appropriate number of paragraphs', () => {
-    const paragraphCount = homePage.getParagraphCount();
+  it('should display the appropriate number of paragraphs', async () => {
+    const paragraphCount = await homePage.getParagraphCount();
     expect(paragraphCount).toEqual(2);
   });
 
