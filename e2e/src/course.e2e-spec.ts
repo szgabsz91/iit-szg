@@ -5,18 +5,18 @@ describe('Course', () => {
 
   let coursePage: CoursePage;
 
-  beforeEach(() => {
+  beforeEach(async () => {
     coursePage = new CoursePage();
-    return coursePage.navigateTo();
+    await coursePage.navigateTo();
   });
 
-  it('should display the appropriate title', () => {
-    const title = coursePage.getTitle();
+  it('should display the appropriate title', async () => {
+    const title = await coursePage.getTitle();
     expect(title).toEqual('Course 1');
   });
 
-  it('should display the appropriate labs', () => {
-    const labTitles = coursePage.getLabTitles();
+  it('should display the appropriate labs', async () => {
+    const labTitles = await coursePage.getLabTitles();
     expect(labTitles).toEqual(['Lab 1', 'Lab 2', 'Lab 3']);
   });
 

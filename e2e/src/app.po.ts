@@ -1,21 +1,21 @@
-import { browser, by, element } from 'protractor';
+import { browser, $ } from 'protractor';
 
 export class AppPage {
 
-  navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+  async navigateTo(): Promise<string> {
+    return browser.get(browser.baseUrl);
   }
 
-  getLang() {
-    return element(by.css('html')).getAttribute('lang') as Promise<string>;
+  async getLang(): Promise<string> {
+    return $('html').getAttribute('lang');
   }
 
-  getTitle() {
-    return element(by.css('mat-toolbar h1')).getText() as Promise<string>;
+  async getTitle(): Promise<string> {
+    return $('mat-toolbar h1').getText();
   }
 
-  getSelectedLanguage() {
-    return element(by.css('.mat-select-value-text')).getAttribute('textContent') as Promise<string>;
+  async getSelectedLanguage(): Promise<string> {
+    return $('.mat-select-value-text').getAttribute('textContent');
   }
 
 }

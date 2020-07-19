@@ -1,17 +1,17 @@
-import { browser, by, element } from 'protractor';
+import { browser, $, $$ } from 'protractor';
 
 export class HomePage {
 
-  navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
+  async navigateTo(): Promise<void> {
+    return browser.get(browser.baseUrl);
   }
 
-  getTitle() {
-    return element(by.css('mat-card-title')).getText() as Promise<string>;
+  async getTitle(): Promise<string> {
+    return $('mat-card-title').getText();
   }
 
-  getParagraphCount() {
-    return element.all(by.css('mat-card-content p')).count() as Promise<number>;
+  async getParagraphCount(): Promise<number> {
+    return $$('mat-card-content p').count();
   }
 
 }
