@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
 import { MarkdownModule } from 'ngx-markdown';
 import { LabMaterialModule } from '../lab-material.module';
@@ -28,7 +28,7 @@ describe('LabComponent', () => {
     })
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [LabComponent],
       imports: [

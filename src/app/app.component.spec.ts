@@ -1,4 +1,4 @@
-import { TestBed, async, ComponentFixture } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material.module';
@@ -35,7 +35,7 @@ describe('AppComponent', () => {
     }]
   }];
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockWindow = {
       location: {
         href: '/hu/something'
