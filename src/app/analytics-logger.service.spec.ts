@@ -5,6 +5,7 @@ describe('AnalyticsLogger', () => {
   const googleAnalyticsTrackingId = 'trackingId';
 
   let analyticsLogger: AnalyticsLogger;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   let mockGtag: (arg1: string, arg2: string, arg3: { readonly 'page_path': string }) => void;
 
   beforeEach(() => {
@@ -21,6 +22,7 @@ describe('AnalyticsLogger', () => {
 
       expect(mockGtag).toHaveBeenCalledTimes(1);
       expect(mockGtag).toHaveBeenCalledWith('config', googleAnalyticsTrackingId, {
+        // eslint-disable-next-line @typescript-eslint/naming-convention
         page_path: url
       });
     });
