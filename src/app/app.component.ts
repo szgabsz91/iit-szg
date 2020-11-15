@@ -22,13 +22,14 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   readonly sidenav: MatSidenav;
 
   readonly mobileQuery: MediaQueryList;
-  private readonly handleSidenav: (mediaQueryListEvent: MediaQueryListEvent) => void;
   readonly currentYear: number = new Date().getFullYear();
   readonly courses$: Observable<Course[]> = this.appService.getCourses();
 
   readonly locales = ['en', 'hu'];
   readonly currentLocale: string;
   selectedLocale: string;
+
+  private readonly handleSidenav: (mediaQueryListEvent: MediaQueryListEvent) => void;
 
   constructor(
     private readonly appService: AppService,

@@ -13,6 +13,7 @@ import { AnalyticsLogger } from './analytics-logger.service';
 import { AnalyticsLoggerMock } from './analytics-logger.mock';
 import { environment } from 'src/environments/environment';
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void;
 
 @NgModule({
@@ -44,12 +45,13 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
     {
       provide: AnalyticsLogger,
       useFactory: (
-        // tslint:disable-next-line: no-shadowed-variable
+        // eslint-disable-next-line no-shadow, @typescript-eslint/naming-convention
         gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void,
         googleAnalyticsTrackingId
-      ) => {
-        return environment.production ? new AnalyticsLogger(gtag, googleAnalyticsTrackingId) : new AnalyticsLoggerMock();
-      },
+      ) =>
+        environment.production ?
+          new AnalyticsLogger(gtag, googleAnalyticsTrackingId) :
+          new AnalyticsLoggerMock(),
       deps: [GTAG, GOOGLE_ANALYTICS_TRACKING_ID]
     },
     AnalyticsService,
