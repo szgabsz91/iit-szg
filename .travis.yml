@@ -22,11 +22,9 @@ script:
   - yarn lint
   - yarn test
   - yarn e2e
-  - yarn build --base-href https://szgabsz91.github.io/iit-www/
+  - yarn build --base-href https://iit-szg.web.app/
 
 deploy:
-  provider: pages:git
-  token: $GITHUB_TOKEN
-  edge: true
-  cleanup: false
-  local_dir: dist/iit-www
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
