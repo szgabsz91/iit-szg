@@ -17,7 +17,7 @@ module.exports = function (config) {
     },
     coverageReporter: {
       type: 'html',
-      dir: require('path').join(__dirname, '../coverage/iit-www'),
+      dir: require('path').join(__dirname, '../coverage/iit-szg'),
       check: {
         each: {
           statements: 100,
