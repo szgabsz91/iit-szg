@@ -6,4 +6,4 @@
 
 An Angular application that contains a collection of courses and labs for various topics.
 
-Can be viewed here: [https://szgabsz91.github.io/iit-www](https://szgabsz91.github.io/iit-www)
+Can be viewed here: [https://iit-szg.web.app](https://iit-szg.web.app)

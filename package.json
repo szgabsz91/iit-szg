@@ -11,12 +11,13 @@
     "start:hu": "ng serve --configuration=hu",
     "prebuild": "./scripts/generate-static-content.js",
     "build": "ng build --prod --localize",
-    "postbuild": "cp deployment/github-pages/* dist/iit-www && cp -R ./src/assets-hu/* ./dist/iit-www/hu/assets",
+    "postbuild": "cp -R ./src/assets-hu/* ./dist/iit-www/hu/assets",
     "test": "ng test --watch=false --code-coverage",
     "test:watch": "ng test",
     "lint": "ng lint",
     "pree2e": "./scripts/generate-static-content.js en",
     "e2e": "ng e2e",
+    "deploy": "firebase deploy",
     "ci": "yarn lint && yarn test && yarn e2e && yarn build"
   },
   "dependencies": {
@@ -56,6 +57,7 @@
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-jsdoc": "30.7.6",
     "eslint-plugin-prefer-arrow": "1.2.2",
+    "firebase-tools": "^8.16.2",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~6.0.0",
     "karma": "~5.2.3",

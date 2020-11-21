@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "dist/iit-www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "i18n": {
+      "root": "/"
+    },
+    "rewrites": [
+      {
+        "source": "/en/**",
+        "destination": "/en/index.html"
+      },
+      {
+        "source": "/hu/**",
+        "destination": "/hu/index.html"
+      }
+    ]
+  }
+}
