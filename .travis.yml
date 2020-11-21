@@ -22,7 +22,7 @@ script:
   - yarn lint
   - yarn test
   - yarn e2e
-  - yarn prepare-deployment:gh-pages
+  - yarn build --base-href https://szgabsz91.github.io/iit-www/
 
 deploy:
   provider: pages:git
