@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/iit-www",
+    "public": "dist/iit-szg",
     "ignore": [
       "firebase.json",
       "**/.*",

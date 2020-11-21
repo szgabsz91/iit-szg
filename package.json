@@ -1,5 +1,5 @@
 {
-  "name": "iit-www",
+  "name": "iit-szg",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
     "start:hu": "ng serve --configuration=hu",
     "prebuild": "./scripts/generate-static-content.js",
     "build": "ng build --prod --localize",
-    "postbuild": "cp -R ./src/assets-hu/* ./dist/iit-www/hu/assets",
+    "postbuild": "cp -R ./src/assets-hu/* ./dist/iit-szg/hu/assets",
     "test": "ng test --watch=false --code-coverage",
     "test:watch": "ng test",
     "lint": "ng lint",
