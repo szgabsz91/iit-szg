@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autok xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="b.xsd">
+  
+  <auto rendszam="ABC-123">
+    <marka>Honda</marka>
+    <gyartasi-datum>2013-01-01</gyartasi-datum>
+    <szin metalozott="true">fehér</szin>
+  </auto>
+  
+  <auto rendszam="ABC-124">
+    <marka>Mercedes</marka>
+    <gyartasi-datum>2014-01-01</gyartasi-datum>
+    <szin>ezüst</szin>
+  </auto>
+  
+  <auto rendszam="ABC-125">
+    <marka>BMW</marka>
+    <gyartasi-datum>2014-02-01</gyartasi-datum>
+  </auto>
+  
+</autok>

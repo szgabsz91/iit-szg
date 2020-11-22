@@ -1,58 +1,184 @@
 {
   "courses": [{
-    "id": "course1",
+    "id": "xml",
     "name": {
-      "en": "Course 1",
-      "hu": "Kurzus 1"
+      "en": "XML",
+      "hu": "XML"
     },
     "labs": [{
+      "index": 0,
+      "title": {
+        "en": "Setup of the Developer Environment",
+        "hu": "A fejlesztői környezet beállítása"
+      }
+    }, {
       "index": 1,
       "title": {
-        "en": "Lab 1",
-        "hu": "Gyakorlat 1"
+        "en": "XDM, XML",
+        "hu": "XDM, XML"
       }
     }, {
       "index": 2,
       "title": {
-        "en": "Lab 2",
-        "hu": "Gyakorlat 2"
+        "en": "DTD",
+        "hu": "DTD"
       }
     }, {
       "index": 3,
       "title": {
-        "en": "Lab 3",
-        "hu": "Gyakorlat 3"
-      }
-    }]
-  }, {
-    "id": "course2",
-    "name": {
-      "en": "Course 2",
-      "hu": "Kurzus 2"
-    },
-    "labs": [{
-      "index": 1,
-      "title": {
-        "en": "Lab 1",
-        "hu": "Gyakorlat 1"
-      }
-    }, {
-      "index": 2,
-      "title": {
-        "en": "Lab 2",
-        "hu": "Gyakorlat 2"
-      }
-    }, {
-      "index": 3,
-      "title": {
-        "en": "Lab 3",
-        "hu": "Gyakorlat 3"
+        "en": "XML Schema",
+        "hu": "XML Schema"
       }
     }, {
       "index": 4,
       "title": {
-        "en": "Lab 4",
-        "hu": "Gyakorlat 4"
+        "en": "XML Schema - Integrity Constraints",
+        "hu": "XML Schema - Integritási feltételek"
+      }
+    }, {
+      "index": 5,
+      "title": {
+        "en": "Test 1",
+        "hu": "1. teszt"
+      }
+    }, {
+      "index": 6,
+      "title": {
+        "en": "Java - SAX",
+        "hu": "Java - SAX"
+      }
+    }, {
+      "index": 7,
+      "title": {
+        "en": "Java - DOM",
+        "hu": "Java - DOM"
+      }
+    }, {
+      "index": 8,
+      "title": {
+        "en": "Test 2",
+        "hu": "2. teszt"
+      }
+    }, {
+      "index": 9,
+      "title": {
+        "en": "Java - JAXB",
+        "hu": "Java - JAXB"
+      }
+    }, {
+      "index": 10,
+      "title": {
+        "en": "C# - LINQ",
+        "hu": "C# - LINQ"
+      }
+    }, {
+      "index": 11,
+      "title": {
+        "en": "JSON, SVG",
+        "hu": "JSON, SVG"
+      }
+    }, {
+      "index": 12,
+      "title": {
+        "en": "XPath",
+        "hu": "XPath"
+      }
+    }, {
+      "index": 13,
+      "title": {
+        "en": "XSLT",
+        "hu": "XSLT"
+      }
+    }, {
+      "index": 14,
+      "title": {
+        "en": "XQuery",
+        "hu": "XQuery"
+      }
+    }, {
+      "index": 15,
+      "title": {
+        "en": "Test 3",
+        "hu": "3. teszt"
+      }
+    }, {
+      "index": 16,
+      "title": {
+        "en": "XML DB",
+        "hu": "XML DB"
+      }
+    }]
+  }, {
+    "id": "db-msc",
+    "name": {
+      "en": "DB-MSc",
+      "hu": "DB-MSc"
+    },
+    "labs": [{
+      "index": 0,
+      "title": {
+        "en": "Setup of the Developer Environment",
+        "hu": "A fejlesztői környezet beállítása"
+      }
+    }, {
+      "index": 1,
+      "title": {
+        "en": "XML",
+        "hu": "XML"
+      }
+    }, {
+      "index": 2,
+      "title": {
+        "en": "XQuery",
+        "hu": "XQuery"
+      }
+    }, {
+      "index": 3,
+      "title": {
+        "en": "LDAP",
+        "hu": "LDAP"
+      }
+    }, {
+      "index": 4,
+      "title": {
+        "en": "JPA",
+        "hu": "JPA"
+      }
+    }, {
+      "index": 5,
+      "title": {
+        "en": "LINQ",
+        "hu": "LINQ"
+      }
+    }, {
+      "index": 6,
+      "title": {
+        "en": "Oracle User-Defined Functions",
+        "hu": "TODO Oracle User-Defined Functions"
+      }
+    }, {
+      "index": 7,
+      "title": {
+        "en": "MongoDB",
+        "hu": "MongoDB"
+      }
+    }, {
+      "index": 8,
+      "title": {
+        "en": "Neo4j - Cypher",
+        "hu": "Neo4j - Cypher"
+      }
+    }, {
+      "index": 9,
+      "title": {
+        "en": "Neo4j JDBC",
+        "hu": "Neo4j JDBC"
+      }
+    }, {
+      "index": 10,
+      "title": {
+        "en": "Ontologies - SPARQL, OWL",
+        "hu": "Ontológiák - SPARQL, OWL"
       }
     }]
   }]

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="hallgatok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="hallgato" type="hallgatoType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="hallgatoType">
+    <xs:sequence>
+      <xs:element name="nev" type="xs:string"/>
+      <xs:element name="szuletesi-datum" type="xs:date"/>
+      <xs:element name="telefonszam" type="telefonszamType" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="neptun" type="neptunType" use="required"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="neptunType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{4}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="telefonszamSimpleType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="telefonszamType">
+    <xs:simpleContent>
+      <xs:extension base="telefonszamSimpleType">
+        <xs:attribute name="korzet" type="xs:int" default="46"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,9 @@
+<!ELEMENT organization (project+, employee+)>
+
+<!ELEMENT project (name, member+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT member (#PCDATA)>
+<!ATTLIST project pid ID #REQUIRED>
+
+<!ELEMENT employee (name)>
+<!ATTLIST employee eid ID #REQUIRED>

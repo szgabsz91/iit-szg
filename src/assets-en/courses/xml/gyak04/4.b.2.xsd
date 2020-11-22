@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:r="http://iit.uni-miskolc.hu/xml/redefine"
+           targetNamespace="http://iit.uni-miskolc.hu/xml/redefine"
+           elementFormDefault="qualified">
+  
+  <xs:redefine schemaLocation="4.b.xsd">
+    <xs:complexType name="personType">
+      <xs:complexContent>
+        <xs:extension base="r:personType">
+          <xs:sequence>
+            <xs:element name="middleName" type="xs:string"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:redefine>
+  
+  <xs:element name="person" type="r:personType"/>
+  
+</xs:schema>

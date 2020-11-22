@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="autok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="auto" type="autoTipus" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="autoTipus">
+    <xs:sequence>
+      <xs:element name="marka" type="xs:string"/>
+      <xs:element name="gyartasi-datum" type="xs:date"/>
+      <xs:element name="szin" type="szinTipus" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="rendszam" type="rendszamTipus" use="required"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="rendszamTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z]{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="szinSimpleTipus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="fehér"/>
+      <xs:enumeration value="ezüst"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="szinTipus">
+    <xs:simpleContent>
+      <xs:extension base="szinSimpleTipus">
+        <xs:attribute name="metalozott" type="xs:boolean" default="false"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+</xs:schema>

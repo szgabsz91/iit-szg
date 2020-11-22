@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="message.xsd">
+  
+  <subject>Weak data inside a DB?</subject>
+  <keywords>
+    <keyword>relational database</keyword>
+    <keyword>weak data</keyword>
+    <keyword>how to</keyword>
+  </keywords>
+  <text>I need a way to put weak data inside a relational database. Is there a standard way?</text>
+  
+</message>

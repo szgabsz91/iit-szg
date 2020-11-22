@@ -1,0 +1,55 @@
+1.  A keyref megszorítás nem hivatkozik key megszorításra, így nem lehet
+    értelmezni.
+
+2.  A keyref megszorítás field eleme nem egyértelmű, több elemre mutat.
+
+3.  A unique megszorítás nem úgy működik, ahogy várnánk, hiszen a kontextusa
+    megegyezik azzal az elemmel, amelynek az egyediségéért felel. Így csak egy
+    elem egyediségét vizsgálja, ami mindig teljesül, így az elemek valójában
+    ismétlődhetnek.
+
+4.  A key megszorítás field eleme nem létező elemre mutat. Itt az attribútumra
+    kellene mutatni: @id.
+
+5.  Az XML dokumentum megsérti a unique megszorítást, mert a tulajokon belüli
+    autó elemek értékei ismétlődnek.
+
+6.  Include elemmel csak azonos névtérben lévő sémákat lehet összekapcsolni!
+
+7.  Az első sémában nem szerepel elementFormDefault="qualified", ezért bár az "a"
+    elem az "ns1" névtérbe tartozik, a "b" elem már nem. Így a dokumentumban
+    szereplő "b" elem, amely az "ns1" névtérbe tartozik a default névtér gyökér
+    elemben történő felüldefiniálása miatt, nem egyezik meg a ténylegesen default
+    névtérbe tartozó, sémában szereplő "b" elemmel. Vagyis a dokumentum nem felel
+    meg a sémáknak, nem valid.
+
+8.  A harmadik névtérben lévő "b" elem az "ns3" névtérbe tartozik, ezért az XML
+    dokumentumban itt nem "ns1" alias, hanem "ns3" alias kellene. Hiába tartozik
+    a "b" elem típusa az "ns1" névtérbe, maga az elem az "ns3" névtérbe tartozik.
+
+9.  A sémában attributeFormDefault="qualified", ezért az attribútumok is a
+    névtérbe tartoznak. Ezért az XML dokumentumban létre kell hozni egy aliast
+    az "ns" névtérnek, és az attribútumnak ezzel az alias-szal kell szerepelnie.
+
+10. A sémában a "d" elem definíciójánál form="unqualified", ezért az XML
+    dokumentumban a "d" elemnek a default névtérben kell szerepelnie. Ezt vagy
+    úgy érhetjük el, hogy a default névtér felüldefiniálása helyett aliast
+    vezetünk be és ezt az aliast lehagyjuk a "d" elemről, vagy a "d" elemhez
+    beteszünk egy xmlns="" üres névtérhivatkozást.
+
+11. A séma az "ns" névteret definiálja, így az "a" és "b" típus is ebbe a
+    névtérbe kerül. Amikor létrehozunk a 8. sorban egy "b" elemet, annak típusa
+    helytelen, hiszen az a default névtérbe tartozik. A problémát megoldhatjuk,
+    ha a séma gyökerében felüldefiniáljuk a default névteret "ns"-re: xmlns="ns"
+
+12. A séma névtér nélküli, így az XML dokumentumban xsi:schemaLocation helyett
+    xsi:noNamespaceSchemaLocation attribútummal kell rá hivatkozni.
+
+13. A séma az "ns" névtér elemeit definiálja, és bár az XML dokumentumban
+    xsi:schemaLocation attribútummal hivatkozunk rá, lehagytuk a névtérmegadást.
+    A helyes hivatkozás: xsi:schemaLocation="ns 13.xsd".
+
+14. A séma az "ns" névtér elemeit definiálja, és bár az XML dokumentumban a
+    névtérre való hivatkozás helyes, a dokumentumban minden elem a default
+    névtérbe tartozik, így a dokumentum nem valid. Ezt feloldhatjuk, ha
+    felüldefiniáljuk a default névteret a gyökérben: xmlns="ns".

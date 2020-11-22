@@ -1,0 +1,40 @@
+Az összes cd nevű elem az XDM bármely szintjén.
+  //cd:cd
+  descendant-or-self::cd:cd
+
+Tetszőleges szinten lévő cd elemek artist gyerekei.
+  //cd:cd/cd:artist
+  descendant-or-self::cd:cd/child::cd:artist
+
+A catalog alatti cd elemek artist gyerekei.
+  /cd:catalog/cd:cd/cd:artist
+  child::cd:catalog/child::cd:cd/child::cd:artist
+
+A catalog alatti harmadik cd elem.
+  /cd:catalog/cd:cd[3]
+  child::cd:catalog/child::cd:cd[position() = 3]
+
+Azon cd-k címe, melyek artist eleme Bob Dylan.
+  //cd:cd[cd:artist = "Bob Dylan"]/cd:title
+  descendant-or-self::cd:cd[child::cd:artist = "Bob Dylan"]/child::cd:title
+
+80-as évek CD-inek átlagára
+  avg(/cd:catalog/cd:cd[cd:year/text() >= 1980 and cd:year/text() < 1990]/cd:price)
+  sum(/cd:catalog/cd:cd[cd:year/text() >= 1980 and cd:year/text() < 1990]/cd:price) div count(/cd:catalog/cd:cd[cd:year/text() >= 1980 and cd:year/text() < 1990]/cd:price)
+
+Első és utolsó CD árának összege
+  /cd:catalog/cd:cd[1]/cd:price + /cd:catalog/cd:cd[last()]/cd:price
+  /cd:catalog/cd:cd[position() = 1]/cd:price + /cd:catalog/cd:cd[last()]/cd:price
+
+26-os id-jű cd-re a következő string: "Előadó: Cím (évszám, kiadó)"
+  /cd:catalog/cd:cd[@id = 26]/concat(cd:artist/text(), ': ', cd:title/text(), ' (', cd:year/text(), ', ', cd:company/text(), ')')
+  /cd:catalog/cd:cd[@id = 26]/concat(cd:artist, ': ', cd:title, ' (', cd:year, ', ', cd:company, ')')
+
+Luciano Pavarotti lemezének id-je
+  /cd:catalog/cd:cd[cd:artist = "Luciano Pavarotti"]/@id
+  //cd:artist[text() = "Luciano Pavarotti"]/../@id
+  //cd:artist[text() = "Luciano Pavarotti"]/parent::node()/@id
+
+Akciós CD-k
+  descendant::cd:cd[attribute::bonus]
+  //cd:cd[@bonus]

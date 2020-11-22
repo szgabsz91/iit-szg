@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="contacts.xsd">
+  
+  <phoneNumber districtNumber="46">123-456</phoneNumber>
+  <phoneNumber districtNumber="46">123-457</phoneNumber>
+  <emailAddress>x.y@z.com</emailAddress>
+  <webSite>http://www.z.com</webSite>
+  
+</contacts>

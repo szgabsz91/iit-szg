@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:p="http://iit.uni-miskolc.hu/xml/namespace"
+        targetNamespace="http://iit.uni-miskolc.hu/xml/namespace"
+        elementFormDefault="qualified">
+  
+  <element name="people">
+    <complexType>
+      <sequence>
+        <element name="person" type="p:personType" maxOccurs="unbounded"/>
+      </sequence>
+    </complexType>
+  </element>
+  
+  <complexType name="personType">
+    <sequence>
+      <element name="firstName" type="string"/>
+      <element name="lastName" type="string"/>
+    </sequence>
+    <attribute name="id" type="positiveInteger" use="required"/>
+  </complexType>
+  
+</schema>

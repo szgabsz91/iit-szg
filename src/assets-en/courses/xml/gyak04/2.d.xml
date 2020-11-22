@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/namespace 2.d.xsd"
+          xmlns:p="http://iit.uni-miskolc.hu/xml/namespace">
+  <p:person p:id="1">
+    <p:firstName>First 1</p:firstName>
+    <p:lastName>Last 1</p:lastName>
+  </p:person>
+  
+  <p:person p:id="2">
+    <p:firstName>First 2</p:firstName>
+    <p:lastName>Last 2</p:lastName>
+  </p:person>
+</p:people>

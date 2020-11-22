@@ -1,0 +1,5 @@
+1. 47-es körzetszámú hallgatók Neptun-kódja
+   /hallgatoDB/hallgato[telefonszam/@korzet = "47"]/@neptun
+
+2. 1991-es születésû hallgatók létszáma
+   count(/hallgatoDB/hallgato[szuletesi-ev/text() = "1991"])

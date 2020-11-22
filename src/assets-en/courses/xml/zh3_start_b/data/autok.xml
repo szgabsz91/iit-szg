@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autoDB xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="autok.xsd">
+  
+  <auto rendszam="ABC-123">
+    <marka>Honda</marka>
+    <gyartasi-ev>2013</gyartasi-ev>
+    <szin metalozott="true">fehér</szin>
+  </auto>
+  
+  <auto rendszam="ABC-124" tulajdonos="1">
+    <marka>Mercedes</marka>
+    <gyartasi-ev>2014</gyartasi-ev>
+    <szin>ezüst</szin>
+  </auto>
+  
+  <auto rendszam="ABC-125" tulajdonos="1">
+    <marka>BMW</marka>
+    <gyartasi-ev>2013</gyartasi-ev>
+    <szin metalozott="true">fekete</szin>
+  </auto>
+  
+  <auto rendszam="ABC-126" tulajdonos="2">
+    <marka>BMW</marka>
+    <gyartasi-ev>2014</gyartasi-ev>
+  </auto>
+  
+  <auto rendszam="ABC-127">
+    <marka>Ferrari</marka>
+    <gyartasi-ev>2014</gyartasi-ev>
+    <szin metalozott="true">piros</szin>
+  </auto>
+  
+  <tulajdonos id="1">
+    <nev>
+      <vezeteknev>Kovács</vezeteknev>
+      <keresztnev>Béla</keresztnev>
+    </nev>
+  </tulajdonos>
+  
+  <tulajdonos id="2">
+    <nev>
+      <vezeteknev>Kis</vezeteknev>
+      <keresztnev>Elemér</keresztnev>
+    </nev>
+  </tulajdonos>
+  
+</autoDB>

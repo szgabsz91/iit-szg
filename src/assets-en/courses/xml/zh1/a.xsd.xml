@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hallgatok xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="a.xsd">
+  
+  <hallgato neptun="ABCD12">
+    <nev>X1 Y1</nev>
+    <szuletesi-datum>1990-01-01</szuletesi-datum>
+    <telefonszam korzet="46">123-456</telefonszam>
+  </hallgato>
+  
+  <hallgato neptun="ABCD13">
+    <nev>X2 Y2</nev>
+    <szuletesi-datum>1991-01-01</szuletesi-datum>
+    <telefonszam>123-457</telefonszam>
+  </hallgato>
+  
+  <hallgato neptun="ABCD14">
+    <nev>X2 Y2</nev>
+    <szuletesi-datum>1991-01-01</szuletesi-datum>
+  </hallgato>
+  
+</hallgatok>

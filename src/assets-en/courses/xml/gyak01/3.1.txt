@@ -1,0 +1,29 @@
+1. dokumentum
+  - Három darab "a" elem nincs lezárva.
+
+2. dokumentum
+  - Kettő darab "a" elem nincs lezárva.
+
+3. dokumentum
+  - Az XML PI "version" attribútumából hiányzik az idézőjel.
+  - Két "a" elem nincs lezárva.
+  - A "b" elem nincs lezárva.
+  - A "b" elem attribútumánál az idézőjelet preferáljuk az aposztróf helyett, de ez nem rontja el a jólformáltságot.
+
+4. dokumentum
+  - Az XML PI elemként van feltüntetve. A kezdő "<" karakter után hiányzik a kérdőjel, a perjel helyett is kérdőjel kellene.
+  - Az első "a" elem zárótagjében van az attribútum, aminek a kezdőtagben kellene lenni.
+  - A "b" attribútum esetén az aposztróf helyett az idézőjelet preferáljuk.
+  - Két darab "a" elem nincs lezárva.
+  - Az utolsó zárótag csak a "a" elemek egyikét zárja le, a gyökérelem ("A" elem) nincs lezárva. Az XML-ben a nevek case sensitive-ek!
+
+5. dokumentum
+  - Elem átlapolódás figyelhető meg. A dokumentum közepén az <a><d></a></d> sorozat helyett <a><d></d></a> kellene.
+  - A dokumentum sérti az egy gyökér szabályt, mert az "A" elem lezárása után még egy "a" elem is található. Ezt vagy törölni kell, vagy beemelni az "A" elembe.
+
+6. dokumentum
+  - Három darab "a" elem nincs lezárva.
+  - Az utolsó előtti "a" elem több hibát is tartalmaz:
+    - A 3 feltehetően egy attribútum értéke lenne, de hiányzik az attribútum neve.
+    - Az attribútum értéke nincs idézőjelben.
+    --> Egy helyes megoldás lenne például: <a b="3"/>

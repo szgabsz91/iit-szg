@@ -1,0 +1,7 @@
+<!ELEMENT hallgatok (hallgato*)>
+<!ELEMENT hallgato (nev, szuletesi-datum, telefonszam?)>
+<!ELEMENT nev (#PCDATA)>
+<!ELEMENT szuletesi-datum (#PCDATA)>
+<!ELEMENT telefonszam (#PCDATA)>
+<!ATTLIST telefonszam korzet CDATA #IMPLIED>
+<!ATTLIST hallgato neptun ID #REQUIRED>

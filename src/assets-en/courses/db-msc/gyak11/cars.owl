@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://iit.uni-miskolc.hu/db-msc/ontologies/cars"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://iit.uni-miskolc.hu/db-msc/ontologies/cars">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <DataProperty IRI="#lastName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#firstName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mercedes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#price"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ferrari"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#renault"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#john"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#plateNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#peter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#honda"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#ferrari"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#honda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#jack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#john"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#mercedes"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#peter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#renault"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ferrari"/>
+        <NamedIndividual IRI="#honda"/>
+        <NamedIndividual IRI="#mercedes"/>
+        <NamedIndividual IRI="#renault"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#jack"/>
+        <NamedIndividual IRI="#john"/>
+        <NamedIndividual IRI="#peter"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#ferrari"/>
+        <NamedIndividual IRI="#jack"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#honda"/>
+        <NamedIndividual IRI="#peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#mercedes"/>
+        <NamedIndividual IRI="#peter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#renault"/>
+        <NamedIndividual IRI="#john"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#ferrari"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Ferrari</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plateNumber"/>
+        <NamedIndividual IRI="#ferrari"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABC-124</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#ferrari"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">56</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#honda"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Honda</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plateNumber"/>
+        <NamedIndividual IRI="#honda"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABC-123</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#honda"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">28</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#jack"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Jack</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#jack"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Brown</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#john"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">John</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#john"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">White</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#mercedes"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Mercedes</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plateNumber"/>
+        <NamedIndividual IRI="#mercedes"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABC-125</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#mercedes"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">36</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#peter"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Peter</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#peter"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Black</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#renault"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">Renault</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#plateNumber"/>
+        <NamedIndividual IRI="#renault"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ABC-126</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#renault"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">19</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#owner"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#owner"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#firstName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#lastName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#manufacturer"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#plateNumber"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#price"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#firstName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#firstName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lastName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#lastName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#manufacturer"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#manufacturer"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#plateNumber"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#plateNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#price"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#plateNumber"/>
+            <Datatype abbreviatedIRI="xsd:decimal"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+

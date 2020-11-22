@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:i="http://iit.uni-miskolc.hu/xml/include"
+           targetNamespace="http://iit.uni-miskolc.hu/xml/include"
+           elementFormDefault="qualified">
+  
+  <xs:include schemaLocation="3.b.xsd"/>
+  
+  <xs:element name="xmlDB">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="szemely" type="i:szemelyTipus"/>
+        <xs:element ref="i:auto"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+</xs:schema>

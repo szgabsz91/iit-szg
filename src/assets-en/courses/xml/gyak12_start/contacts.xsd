@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="contacts" type="contactsType"/>
+  
+  <xs:complexType name="contactsType">
+    <xs:sequence>
+      <xs:element name="phoneNumber" type="phoneNumberType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="address" type="addressType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="emailAddress" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="webSite" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:simpleType name="phoneNumberSimpleType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{3}-\d{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="phoneNumberType">
+    <xs:simpleContent>
+      <xs:extension base="phoneNumberSimpleType">
+        <xs:attribute name="districtNumber" type="districtNumberType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="districtNumberType">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:totalDigits value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="city" type="xs:string"/>
+      <xs:element name="street" type="xs:string"/>
+      <xs:element name="houseNumber" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

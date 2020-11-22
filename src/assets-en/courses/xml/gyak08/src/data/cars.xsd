@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:element name="cars" type="cars"/>
+  
+  <xs:complexType name="cars">
+    <xs:sequence>
+      <xs:element name="car" type="car" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="car">
+    <xs:sequence>
+      <xs:element name="manufacturer" type="xs:string"/>
+      <xs:element name="color" type="xs:string"/>
+      <xs:element name="price" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cd:catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/catalog catalog.xsd"
+            xmlns:cd="http://iit.uni-miskolc.hu/xml/catalog">
+  
+  <cd:cd id="1">
+    <cd:title>Empire Burlesque</cd:title>
+    <cd:artist>Bob Dylan</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>Columbia</cd:company>
+    <cd:price>10.90</cd:price>
+    <cd:year>1985</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="2">
+    <cd:title>Hide your heart</cd:title>
+    <cd:artist>Bonnie Tyler</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>CBS Records</cd:company>
+    <cd:price>9.90</cd:price>
+    <cd:year>1988</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="3">
+    <cd:title>Greatest Hits</cd:title>
+    <cd:artist>Dolly Parton</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>RCA</cd:company>
+    <cd:price>9.90</cd:price>
+    <cd:year>1982</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="4">
+    <cd:title>Still got the blues</cd:title>
+    <cd:artist>Gary Moore</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Virgin records</cd:company>
+    <cd:price>10.20</cd:price>
+    <cd:year>1990</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="5">
+    <cd:title>Eros</cd:title>
+    <cd:artist>Eros Ramazzotti</cd:artist>
+    <cd:country>EU</cd:country>
+    <cd:company>BMG</cd:company>
+    <cd:price>9.90</cd:price>
+    <cd:year>1997</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="6">
+    <cd:title>One night only</cd:title>
+    <cd:artist>Bee Gees</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Polydor</cd:company>
+    <cd:price>10.90</cd:price>
+    <cd:year>1998</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="7">
+    <cd:title>Sylvias Mother</cd:title>
+    <cd:artist>Dr.Hook</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>CBS</cd:company>
+    <cd:price>8.10</cd:price>
+    <cd:year>1973</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="8">
+    <cd:title>Maggie May</cd:title>
+    <cd:artist>Rod Stewart</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Pickwick</cd:company>
+    <cd:price>8.50</cd:price>
+    <cd:year>1990</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="9">
+    <cd:title>Romanza</cd:title>
+    <cd:artist>Andrea Bocelli</cd:artist>
+    <cd:country>EU</cd:country>
+    <cd:company>Polydor</cd:company>
+    <cd:price>10.80</cd:price>
+    <cd:year>1996</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="10">
+    <cd:title>When a man loves a woman</cd:title>
+    <cd:artist>Percy Sledge</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>Atlantic</cd:company>
+    <cd:price>8.70</cd:price>
+    <cd:year>1987</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="11">
+    <cd:title>Black angel</cd:title>
+    <cd:artist>Savage Rose</cd:artist>
+    <cd:country>EU</cd:country>
+    <cd:company>Mega</cd:company>
+    <cd:price>10.90</cd:price>
+    <cd:year>1995</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="12" bonus="50%">
+    <cd:title>1999 Grammy Nominees</cd:title>
+    <cd:artist>Many</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>Grammy</cd:company>
+    <cd:price>10.20</cd:price>
+    <cd:year>1999</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="13" bonus="50%">
+    <cd:title>For the good times</cd:title>
+    <cd:artist>Kenny Rogers</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Mucik Master</cd:company>
+    <cd:price>8.70</cd:price>
+    <cd:year>1995</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="14">
+    <cd:title>Big Willie style</cd:title>
+    <cd:artist>Will Smith</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>Columbia</cd:company>
+    <cd:price>9.90</cd:price>
+    <cd:year>1997</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="15">
+    <cd:title>Tupelo Honey</cd:title>
+    <cd:artist>Van Morrison</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Polydor</cd:company>
+    <cd:price>8.20</cd:price>
+    <cd:year>1971</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="16">
+    <cd:title>Soulsville</cd:title>
+    <cd:artist>Jorn Hoel</cd:artist>
+    <cd:country>Norway</cd:country>
+    <cd:company>WEA</cd:company>
+    <cd:price>7.90</cd:price>
+    <cd:year>1996</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="17">
+    <cd:title>The very best of</cd:title>
+    <cd:artist>Cat Stevens</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Island</cd:company>
+    <cd:price>8.90</cd:price>
+    <cd:year>1990</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="18">
+    <cd:title>Stop</cd:title>
+    <cd:artist>Sam Brown</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>A and M</cd:company>
+    <cd:price>8.90</cd:price>
+    <cd:year>1988</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="19">
+    <cd:title>Bridge of Spies</cd:title>
+    <cd:artist>T`Pau</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Siren</cd:company>
+    <cd:price>7.90</cd:price>
+    <cd:year>1987</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="20">
+    <cd:title>Private Dancer</cd:title>
+    <cd:artist>Tina Turner</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>Capitol</cd:company>
+    <cd:price>8.90</cd:price>
+    <cd:year>1983</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="21">
+    <cd:title>Midt om natten</cd:title>
+    <cd:artist>Kim Larsen</cd:artist>
+    <cd:country>EU</cd:country>
+    <cd:company>Medley</cd:company>
+    <cd:price>7.80</cd:price>
+    <cd:year>1983</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="22" bonus="50%">
+    <cd:title>Pavarotti Gala Concert</cd:title>
+    <cd:artist>Luciano Pavarotti</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>DECCA</cd:company>
+    <cd:price>9.90</cd:price>
+    <cd:year>1991</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="23">
+    <cd:title>The dock of the bay</cd:title>
+    <cd:artist>Otis Redding</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>Atlantic</cd:company>
+    <cd:price>7.90</cd:price>
+    <cd:year>1987</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="24">
+    <cd:title>Picture book</cd:title>
+    <cd:artist>Simply Red</cd:artist>
+    <cd:country>EU</cd:country>
+    <cd:company>Elektra</cd:company>
+    <cd:price>7.20</cd:price>
+    <cd:year>1985</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="25">
+    <cd:title>Red</cd:title>
+    <cd:artist>The Communards</cd:artist>
+    <cd:country>UK</cd:country>
+    <cd:company>London</cd:company>
+    <cd:price>7.80</cd:price>
+    <cd:year>1987</cd:year>
+  </cd:cd>
+  
+  <cd:cd id="26">
+    <cd:title>Unchain my heart</cd:title>
+    <cd:artist>Joe Cocker</cd:artist>
+    <cd:country>USA</cd:country>
+    <cd:company>EMI</cd:company>
+    <cd:price>8.20</cd:price>
+    <cd:year>1987</cd:year>
+  </cd:cd>
+  
+</cd:catalog>

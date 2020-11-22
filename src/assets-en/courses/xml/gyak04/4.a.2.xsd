@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:redefine schemaLocation="4.a.xsd">
+    <xs:complexType name="personType">
+      <xs:complexContent>
+        <xs:extension base="personType">
+          <xs:sequence>
+            <xs:element name="middleName" type="xs:string"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:redefine>
+  
+  <xs:element name="person" type="personType"/>
+  
+</xs:schema>

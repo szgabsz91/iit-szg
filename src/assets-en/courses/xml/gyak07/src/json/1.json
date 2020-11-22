@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nev": "X1 Y1",
+    "ceg": {
+      "nev": "C1",
+      "cim": {
+        "iranyitoszam": "3534",
+        "varos": "Miskolc",
+        "utca": "X",
+        "hazszam": 10
+      },
+      "telefonszam": {
+        "korzet": 46,
+        "szam": "351-120"
+      },
+      "weblap": "http://www.c1.com"
+    },
+    "beosztas": "ügyvezetõ",
+    "telefonszam": {
+      "szam": "3532-45-12"
+    },
+    "email": "x1.y1@c1.com"
+  },
+  
+  {
+    "id": 2,
+    "nev": "X2 Y2",
+    "ceg": {
+      "nev": "C2",
+      "cim": {
+        "iranyitoszam": "3536",
+        "varos": "Miskolc",
+        "utca": "Y",
+        "hazszam": 20
+      },
+      "telefonszam": {
+        "korzet": 46,
+        "szam": "464-234"
+      },
+      "email": "info@c2.org"
+    },
+    "beosztas": "architect",
+    "telefonszam": {
+      "korzet": 20,
+      "szam": "3532-45-12"
+    },
+    "email": "x2.y2@c2.com"
+  }
+]

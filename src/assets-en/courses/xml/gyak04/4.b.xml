@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://iit.uni-miskolc.hu/xml/redefine 4.b.2.xsd"
+        xmlns="http://iit.uni-miskolc.hu/xml/redefine">
+  <firstName>First</firstName>
+  <lastName>Last</lastName>
+  <middleName>Middle</middleName>
+</person>

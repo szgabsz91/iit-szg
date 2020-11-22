@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE szemelyek [
+  <!ELEMENT szemelyek (szemely+)>
+  <!ELEMENT szemely (nev)>
+  <!ELEMENT nev (#PCDATA)>
+]>
+<szemelyek>
+  <szemely>
+    <nev>Kiss Géza</nev>
+  </szemely>
+  <szemely>
+    <nev>Nagy János</nev>
+  </szemely>
+  <szemely>
+    <nev>Kiss Géza</nev>
+  </szemely>
+  <szemely>
+    <nev>Nagy János</nev>
+  </szemely>
+</szemelyek>
