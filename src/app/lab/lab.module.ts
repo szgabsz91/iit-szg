@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LabComponent } from './lab/lab.component';
 import { MarkdownModule } from 'ngx-markdown';
@@ -12,7 +12,9 @@ import { LabService } from './lab.service';
   imports: [
     CommonModule,
     MarkdownModule.forRoot({
-      loader: HttpClient
+      loader: HttpClient,
+      // Note: to keep data attributes for pre[data-label]
+      sanitize: SecurityContext.NONE,
     }),
     LabRoutingModule,
     LabMaterialModule

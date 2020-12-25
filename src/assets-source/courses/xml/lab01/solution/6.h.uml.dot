@@ -1,0 +1,12 @@
+digraph emails_uml {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=record]; { node[label = "{<name>Attachment|- format: Format\l- data: InputStream|<methods>}"] attachment_class };
+  node [shape=record]; { node[label = "{<name>EmailMessage|<attributes>- date: Date\l- subject: String\l- content: String\l|<methods>}"] email_message_class };
+  node [shape=record]; { node[label = "{<name>Person|<attributes>- name: String\l- emailAddress: String\l|}"] person_class };
+
+  edge[arrowhead=none];
+  attachment_class:methods -> email_message_class:name [headlabel="1", taillabel="0..*"];
+  email_message_class:attributes -> person_class:attributes [headlabel="1", taillabel="1", label="sender"];
+  email_message_class:methods -> person_class:name [headlabel="1..*", taillabel="1", label="recipient"];
+}

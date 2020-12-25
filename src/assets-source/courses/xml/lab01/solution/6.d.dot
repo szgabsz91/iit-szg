@@ -1,0 +1,24 @@
+digraph directed_graph {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="directed-graph"] directed_graph_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="nodes"] nodes_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="node"] node_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] content_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="edges"] edges_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="edge"] edge_element; }
+  node [shape=diamond, peripheries=1]; { node[label="starting-node"] starting_node_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="ending-node"] ending_node_attribute; }
+
+  edge[arrowhead=normal]; directed_graph_element -> nodes_element;
+  edge[arrowhead=normal]; nodes_element -> node_element;
+  edge[arrowhead=normal]; node_element -> id_attribute;
+  edge[arrowhead=normal]; node_element -> content_element;
+  edge[arrowhead=none]; content_element -> content_text;
+  edge[arrowhead=normal]; directed_graph_element -> edges_element;
+  edge[arrowhead=normal]; edges_element -> edge_element;
+  edge[arrowhead=normal]; edge_element -> starting_node_attribute;
+  edge[arrowhead=normal]; edge_element -> ending_node_attribute;
+}

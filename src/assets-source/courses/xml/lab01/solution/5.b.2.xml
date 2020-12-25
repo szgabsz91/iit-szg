@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<education-system>
+  <students>
+    <student id="s1">
+      <name>John Doe</name>
+    </student>
+
+    <student id="s2">
+      <name>Jane Doe</name>
+    </student>
+  </students>
+
+  <courses>
+    <course id="c1">
+      <title>Object Oriented Programming</title>
+    </course>
+
+    <course id="c2">
+      <title>Linear Algebra</title>
+    </course>
+
+    <course id="c3">
+      <title>Discrete Mathematics</title>
+    </course>
+  </courses>
+
+  <grades>
+    <grade student-id="s1" course-id="c1">A</grade>
+    <grade student-id="s1" course-id="c2">B</grade>
+    <grade student-id="s2" course-id="c1">B</grade>
+    <grade student-id="s2" course-id="c3">C</grade>
+  </grades>
+</education-system>

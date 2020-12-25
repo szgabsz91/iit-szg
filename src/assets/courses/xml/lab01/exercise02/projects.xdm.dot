@@ -1,0 +1,40 @@
+digraph products {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="movie-database"] movie_database_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="actor"] actor_element; }
+  node [shape=diamond, peripheries=1]; { node[label="actor-id"] actor_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] actor_name_element; }
+  node [shape=box]; { node[label=""]; actor_name_text; }
+  node [shape=ellipse, peripheries=2]; { node[label="award"] award_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] award_name_element; }
+  node [shape=box]; { node[label=""]; award_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="year"] year_element; }
+  node [shape=box]; { node[label=""]; year_text; }
+  node [shape=ellipse, peripheries=2]; { node[label="movie"] movie_element; }
+  node [shape=diamond, peripheries=1]; { node[label="movie-id"] movie_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="title"] title_element; }
+  node [shape=box]; { node[label=""]; title_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="release-year"] release_year_element; }
+  node [shape=box]; { node[label=""]; release_year_text; }
+  node [shape=ellipse, peripheries=2]; { node[label="actor"] movie_actor_element; }
+  node [shape=box, peripheries=1]; { node[label=""]; movie_actor_text; }
+
+  edge[arrowhead=normal]; movie_database_element -> actor_element;
+  edge[arrowhead=normal]; actor_element -> actor_id_attribute;
+  edge[arrowhead=normal]; actor_element -> actor_name_element;
+  edge[arrowhead=none]; actor_name_element -> actor_name_text;
+  edge[arrowhead=normal]; actor_element -> award_element;
+  edge[arrowhead=normal]; award_element -> award_name_element;
+  edge[arrowhead=none]; award_name_element -> award_name_text;
+  edge[arrowhead=normal]; award_element -> year_element;
+  edge[arrowhead=none]; year_element -> year_text;
+  edge[arrowhead=normal]; movie_database_element -> movie_element;
+  edge[arrowhead=normal]; movie_element -> movie_id_attribute;
+  edge[arrowhead=normal]; movie_element -> title_element;
+  edge[arrowhead=none]; title_element -> title_text;
+  edge[arrowhead=normal]; movie_element -> release_year_element;
+  edge[arrowhead=none]; release_year_element -> release_year_text;
+  edge[arrowhead=normal]; movie_element -> movie_actor_element;
+  edge[arrowhead=none]; movie_actor_element -> movie_actor_text;
+}

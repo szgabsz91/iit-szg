@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<A>
+  <a>2</a>
+  <a></a>
+  <a><!-- Error #1: This a element is not closed anywhere -->
+    3
+    <d>aa</d>
+    <a><!-- Error #2: This a element is not closed anywhere -->
+      <a a="G"/>
+</A>

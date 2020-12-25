@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+  <student id="s1">
+    <name>John Doe</name>
+    <grades>
+      <grade course-id="c1">A</grade>
+      <grade course-id="c2">B</grade>
+    </grades>
+  </student>
+
+  <student id="s2">
+    <name>Jane Doe</name>
+    <grades>
+      <grade course-id="c1">B</grade>
+      <grade course-id="c3">C</grade>
+    </grades>
+  </student>
+</students>

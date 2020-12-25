@@ -1,0 +1,20 @@
+digraph weather_systems_xdm {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="weather-stations"] weather_stations_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="weather-station"] weather_station_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] weather_station_id_attribute; }
+  node [shape=ellipse, peripheries=2]; { node[label="device"] device_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] device_id_attribute; }
+  node [shape=ellipse, peripheries=2]; { node[label="data-item"] data_item_element; }
+  node [shape=diamond, peripheries=1]; { node[label="date-time"] date_time_attribute; }
+  node [shape=box, peripheries=1]; { node[label=""] data_item_text; }
+
+  edge[arrowhead=normal]; weather_stations_element -> weather_station_element;
+  edge[arrowhead=normal]; weather_station_element -> weather_station_id_attribute;
+  edge[arrowhead=normal]; weather_station_element -> device_element;
+  edge[arrowhead=normal]; device_element -> device_id_attribute;
+  edge[arrowhead=normal]; device_element -> data_item_element;
+  edge[arrowhead=normal]; data_item_element -> date_time_attribute;
+  edge[arrowhead=none]; data_item_element -> data_item_text;
+}

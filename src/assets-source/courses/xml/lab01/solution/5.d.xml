@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timetable>
+  <train id="t1" type="inter-city">
+    <departure>
+      <settlement>London</settlement>
+      <station>London Blackfriars</station>
+      <platform>2</platform>
+      <departure-time>2021-05-30T11:15:00</departure-time>
+    </departure>
+    <arrival>
+      <settlement>Croydon</settlement>
+      <station>East Croydon</station>
+      <platform>3</platform>
+      <arrival-time>2021-05-30T11:45:00</arrival-time>
+    </arrival>
+  </train>
+
+  <train id="t2" type="express">
+    <departure>
+      <settlement>Crawley</settlement>
+      <station>Gatwick Airport</station>
+      <platform>1</platform>
+      <departure-time>2021-06-01T14:30:00</departure-time>
+    </departure>
+    <arrival>
+      <settlement>London</settlement>
+      <station>West Hampstead Thameslink</station>
+      <platform>2</platform>
+      <arrival-time>2021-06-01T15:45:00</arrival-time>
+    </arrival>
+  </train>
+</timetable>

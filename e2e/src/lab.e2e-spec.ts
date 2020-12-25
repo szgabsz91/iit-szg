@@ -12,7 +12,7 @@ describe('Lab', () => {
 
   it('should display the appropriate title', async () => {
     const title = await labPage.getTitle();
-    expect(title).toEqual('Lab 1: Lab 1');
+    expect(title).toEqual('Lab 1: XDM, XML');
   });
 
   it('should display the appropriate markdown content', async () => {

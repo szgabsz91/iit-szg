@@ -1,0 +1,34 @@
+digraph binary_tree {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="binary-tree"] binary_tree_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="root"] root_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] root_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="children"] children_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] root_content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] root_content_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="left-child"] left_child_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] left_child_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] left_child_content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] left_child_content_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="right-child"] right_child_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] right_child_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] right_child_content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] right_child_content_text; }
+
+  edge[arrowhead=normal]; binary_tree_element -> root_element;
+  edge[arrowhead=normal]; root_element -> root_id_attribute;
+  edge[arrowhead=normal]; root_element -> children_element;
+  edge[arrowhead=normal]; root_element -> root_content_element;
+  edge[arrowhead=none]; root_content_element -> root_content_text;
+  edge[arrowhead=normal]; children_element -> left_child_element;
+  edge[arrowhead=normal]; left_child_element -> left_child_id_attribute;
+  edge[arrowhead=normal]; left_child_element -> children_element;
+  edge[arrowhead=normal]; left_child_element -> left_child_content_element;
+  edge[arrowhead=none]; left_child_content_element -> left_child_content_text;
+  edge[arrowhead=normal]; children_element -> right_child_element;
+  edge[arrowhead=normal]; right_child_element -> right_child_id_attribute;
+  edge[arrowhead=normal]; right_child_element -> children_element;
+  edge[arrowhead=normal]; right_child_element -> right_child_content_element;
+  edge[arrowhead=none]; right_child_content_element -> right_child_content_text;
+}

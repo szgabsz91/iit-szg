@@ -1,0 +1,48 @@
+digraph timetable {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="timetable"] timetable_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="train"] train_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="type"] type_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="departure"] departure_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="settlement"] departure_settlement_element; }
+  node [shape=box, peripheries=1]; { node[label=""] departure_settlement_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="station"] departure_station_element; }
+  node [shape=box, peripheries=1]; { node[label=""] departure_station_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="platform"] departure_platform_element; }
+  node [shape=box, peripheries=1]; { node[label=""] departure_platform_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="departure-time"] departure_time_element; }
+  node [shape=box, peripheries=1]; { node[label=""] departure_time_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="arrival"] arrival_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="settlement"] arrival_settlement_element; }
+  node [shape=box, peripheries=1]; { node[label=""] arrival_settlement_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="station"] arrival_station_element; }
+  node [shape=box, peripheries=1]; { node[label=""] arrival_station_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="platform"] arrival_platform_element; }
+  node [shape=box, peripheries=1]; { node[label=""] arrival_platform_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="arrival-time"] arrival_time_element; }
+  node [shape=box, peripheries=1]; { node[label=""] arrival_time_text; }
+
+  edge[arrowhead=normal]; timetable_element -> train_element;
+  edge[arrowhead=normal]; train_element -> id_attribute;
+  edge[arrowhead=normal]; train_element -> type_attribute;
+  edge[arrowhead=normal]; train_element -> departure_element;
+  edge[arrowhead=normal]; departure_element -> departure_settlement_element;
+  edge[arrowhead=none]; departure_settlement_element -> departure_settlement_text;
+  edge[arrowhead=normal]; departure_element -> departure_station_element;
+  edge[arrowhead=none]; departure_station_element -> departure_station_text;
+  edge[arrowhead=normal]; departure_element -> departure_platform_element;
+  edge[arrowhead=none]; departure_platform_element -> departure_platform_text;
+  edge[arrowhead=normal]; departure_element -> departure_time_element;
+  edge[arrowhead=none]; departure_time_element -> departure_time_text;
+  edge[arrowhead=normal]; train_element -> arrival_element;
+  edge[arrowhead=normal]; arrival_element -> arrival_settlement_element;
+  edge[arrowhead=none]; arrival_settlement_element -> arrival_settlement_text;
+  edge[arrowhead=normal]; arrival_element -> arrival_station_element;
+  edge[arrowhead=none]; arrival_station_element -> arrival_station_text;
+  edge[arrowhead=normal]; arrival_element -> arrival_platform_element;
+  edge[arrowhead=none]; arrival_platform_element -> arrival_platform_text;
+  edge[arrowhead=normal]; arrival_element -> arrival_time_element;
+  edge[arrowhead=none]; arrival_time_element -> arrival_time_text;
+}

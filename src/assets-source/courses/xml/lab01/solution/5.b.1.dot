@@ -1,0 +1,22 @@
+digraph students {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="students"] students_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="student"] student_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] student_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] name_element; }
+  node [shape=box]; { node[label=""] name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="grades"] grades_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="grade"] grade_element; }
+  node [shape=box, peripheries=1]; { node[label=""] grade_text; }
+  node [shape=diamond, peripheries=1]; { node[label="course-id"] course_id_attribute; }
+
+  edge[arrowhead=normal]; students_element -> student_element;
+  edge[arrowhead=normal]; student_element -> student_id_attribute;
+  edge[arrowhead=normal]; student_element -> name_element;
+  edge[arrowhead=none]; name_element -> name_text;
+  edge[arrowhead=normal]; student_element -> grades_element;
+  edge[arrowhead=normal]; grades_element -> grade_element;
+  edge[arrowhead=normal]; grade_element -> course_id_attribute;
+  edge[arrowhead=none]; grade_element -> grade_text;
+}

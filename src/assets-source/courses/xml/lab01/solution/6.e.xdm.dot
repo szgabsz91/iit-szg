@@ -1,0 +1,62 @@
+digraph business_cards_xdm {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="business-cards"] business_cards_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="business-card"] business_card_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] business_card_name_element; }
+  node [shape=box]; { node[label=""]; business_card_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="company"] company_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] company_name_element; }
+  node [shape=box]; { node[label=""] company_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="address"] address_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="zip-code"] zip_code_element; }
+  node [shape=box]; { node[label=""] zip_code_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="city"] city_element; }
+  node [shape=box]; { node[label=""] city_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="street"] street_element; }
+  node [shape=box]; { node[label=""] street_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="house-number"] house_number_element; }
+  node [shape=box]; { node[label=""] house_number_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] company_phone_number_element; }
+  node [shape=box]; { node[label=""] company_phone_number_text; }
+  node [shape=diamond]; { node[label="area-code"] company_area_code_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="website"] website_element; }
+  node [shape=box]; { node[label=""] website_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="position"] position_element; }
+  node [shape=box]; { node[label=""] position_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] business_card_phone_number_element; }
+  node [shape=box]; { node[label=""] business_card_phone_number_text; }
+  node [shape=diamond]; { node[label="area-code"] business_card_area_code_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="e-mail"] email_element; }
+  node [shape=box]; { node[label=""] email_text; }
+
+  edge[arrowhead=normal]; business_cards_element -> business_card_element;
+  edge[arrowhead=normal]; business_card_element -> id_attribute;
+  edge[arrowhead=normal]; business_card_element -> business_card_name_element;
+  edge[arrowhead=none]; business_card_name_element -> business_card_name_text;
+  edge[arrowhead=normal]; business_card_element -> company_element;
+  edge[arrowhead=normal]; company_element -> company_name_element;
+  edge[arrowhead=none]; company_name_element -> company_name_text;
+  edge[arrowhead=normal]; company_element -> address_element;
+  edge[arrowhead=normal]; address_element -> zip_code_element;
+  edge[arrowhead=none]; zip_code_element -> zip_code_text;
+  edge[arrowhead=normal]; address_element -> city_element;
+  edge[arrowhead=none]; city_element -> city_text;
+  edge[arrowhead=normal]; address_element -> street_element;
+  edge[arrowhead=none]; street_element -> street_text;
+  edge[arrowhead=normal]; address_element -> house_number_element;
+  edge[arrowhead=none]; house_number_element -> house_number_text;
+  edge[arrowhead=normal]; company_element -> company_phone_number_element;
+  edge[arrowhead=normal]; company_phone_number_element -> company_area_code_attribute;
+  edge[arrowhead=none]; company_phone_number_element -> company_phone_number_text;
+  edge[arrowhead=normal]; company_element -> website_element;
+  edge[arrowhead=none]; website_element -> website_text;
+  edge[arrowhead=normal]; business_card_element -> position_element;
+  edge[arrowhead=none]; position_element -> position_text;
+  edge[arrowhead=normal]; business_card_element -> business_card_phone_number_element;
+  edge[arrowhead=normal]; business_card_phone_number_element -> business_card_area_code_attribute;
+  edge[arrowhead=none]; business_card_phone_number_element -> business_card_phone_number_text;
+  edge[arrowhead=normal]; business_card_element -> email_element;
+  edge[arrowhead=none]; email_element -> email_text;
+}

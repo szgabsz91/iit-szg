@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<business-cards>
+  <business-card id="bc1">
+    <name>Steve Jobs</name>
+    <company>
+      <name>Apple</name>
+      <address>
+        <zip-code>CA 95014</zip-code>
+        <city>Cupertino</city>
+        <street>Apple Park Way</street>
+        <house-number>1</house-number>
+      </address>
+      <phone-number area-code="408">996-1010</phone-number>
+      <website>https://apple.com</website>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="408">996-1010</phone-number>
+    <e-mail>steve.jobs@apple.com</e-mail>
+  </business-card>
+
+  <business-card id="bc2">
+    <name>Bill Gates</name>
+    <company>
+      <name>Microsoft</name>
+      <address>
+        <zip-code>WA 98052</zip-code>
+        <city>Redmond</city>
+        <street>Microsoft Way</street>
+        <house-number>1</house-number>
+      </address>
+      <phone-number area-code="425">882-8080</phone-number>
+      <website>https://microsoft.com</website>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="425">882-8080</phone-number>
+    <e-mail>bill.gates@microsoft.com</e-mail>
+  </business-card>
+
+  <business-card id="bc3">
+    <name>Larry Page</name>
+    <company>
+      <name>Google</name>
+      <address>
+        <zip-code>CA 94043</zip-code>
+        <city>Mountain View</city>
+        <street>Amphitheatre Pkwy</street>
+        <house-number>1600</house-number>
+      </address>
+      <phone-number area-code="650">253-0000</phone-number>
+      <website>https://about.google</website>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="650">253-0000</phone-number>
+    <e-mail>larry.page@google.com</e-mail>
+  </business-card>
+</business-cards>

@@ -1,0 +1,40 @@
+# Note: since there is no double-arrow in Graphviz, I add two connections between entities in case of 1:n or n:m relationships
+
+digraph order_management_system_er {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=box, peripheries=1]; { node[label="product"] product_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label=<<u>id</u>>] product_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] product_name_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="price"] price_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label=""] product_order_relationship; }
+  node [shape=ellipse, peripheries=1]; { node[label="quantity"] quantity_attribute; }
+  node [shape=box, peripheries=1]; { node[label="order"] order_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label="date"] date_attribute; }
+  node [shape=ellipse, style="filled,dashed" peripheries=1]; { node[label="total-price"] total_price_attribute; }
+  node [style=filled]
+  node [shape=diamond, peripheries=1]; { node[label=""] order_customer_relationship; }
+  node [shape=box, peripheries=1]; { node[label="customer"] customer_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label=<<u>id</u>>] customer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] customer_name_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] phone_number_attribute; }
+
+  edge[arrowhead=normal]; product_entity -> product_order_relationship [dir=back];
+  edge[arrowhead=normal]; product_entity -> product_order_relationship [dir=back];
+  edge[arrowhead=none]; product_entity -> product_id_attribute;
+  edge[arrowhead=none]; product_entity -> product_name_attribute;
+  edge[arrowhead=none]; product_entity -> price_attribute;
+  edge[arrowhead=normal]; product_order_relationship -> order_entity;
+  edge[arrowhead=normal]; product_order_relationship -> order_entity;
+  edge[arrowhead=none]; quantity_attribute -> product_order_relationship;
+  edge[arrowhead=normal]; order_entity -> order_customer_relationship [dir=back];
+  edge[arrowhead=normal]; order_entity -> order_customer_relationship [dir=back];
+  edge[arrowhead=none]; order_entity -> date_attribute;
+  edge[arrowhead=none]; order_entity -> total_price_attribute;
+  edge[arrowhead=normal]; order_customer_relationship -> customer_entity;
+  edge[arrowhead=none]; customer_entity -> customer_id_attribute;
+  edge[arrowhead=none]; customer_entity -> customer_name_attribute;
+  edge[arrowhead=none]; customer_entity -> phone_number_attribute;
+
+  {rank=same; product_entity; product_order_relationship; order_entity; order_customer_relationship; customer_entity;}
+}
