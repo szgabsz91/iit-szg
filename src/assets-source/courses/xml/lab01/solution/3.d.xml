@@ -1,0 +1,9 @@
+<xml version="1.0"/><!-- Error #1: The XML prolog is an XML element here. It shouldn't be closed, and we are missing the question marks. -->
+<A><!-- Error #2: This A element is not closed anywhere -->
+  <a>2</a b='G'><!-- Error #3: Attributes can only be added to opening tags and not closing tags -->
+  <a>3</a>
+  <a><!-- Error #4: This a element is not closed anywhere -->
+    3
+    <d>aa</d>
+    <a><!-- Error #5: This a element is not closed anywhere -->
+      <a></a>

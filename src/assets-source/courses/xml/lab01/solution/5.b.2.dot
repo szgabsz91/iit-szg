@@ -1,0 +1,36 @@
+digraph education_system {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="education-system"] education_system_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="students"] students_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="student"] student_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] student_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="courses"] courses_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="course"] course_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] course_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="title"] title_element; }
+  node [shape=box, peripheries=1]; { node[label=""] title_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="grades"] grades_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="grade"] grade_element; }
+  node [shape=diamond, peripheries=1]; { node[label="student-id"] grade_student_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="course-id"] grade_course_id_attribute; }
+  node [shape=box, peripheries=1]; { node[label=""] grade_text; }
+
+  edge[arrowhead=normal]; education_system_element -> students_element;
+  edge[arrowhead=normal]; students_element -> student_element;
+  edge[arrowhead=normal]; student_element -> student_id_attribute;
+  edge[arrowhead=normal]; student_element -> name_element;
+  edge[arrowhead=none]; name_element -> name_text;
+  edge[arrowhead=normal]; education_system_element -> courses_element;
+  edge[arrowhead=normal]; courses_element -> course_element;
+  edge[arrowhead=normal]; course_element -> course_id_attribute;
+  edge[arrowhead=normal]; course_element -> title_element;
+  edge[arrowhead=none]; title_element -> title_text;
+  edge[arrowhead=normal]; education_system_element -> grades_element;
+  edge[arrowhead=normal]; grades_element -> grade_element;
+  edge[arrowhead=normal]; grade_element -> grade_student_id_attribute;
+  edge[arrowhead=normal]; grade_element -> grade_course_id_attribute;
+  edge[arrowhead=none]; grade_element -> grade_text;
+}

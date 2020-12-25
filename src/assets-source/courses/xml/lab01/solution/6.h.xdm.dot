@@ -1,0 +1,58 @@
+digraph emails_xdm {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="email-messages"] email_messages_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="email-message"] email_message_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="sender"] sender_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] sender_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] sender_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="email-address"] sender_email_address_element; }
+  node [shape=box, peripheries=1]; { node[label=""] sender_email_address_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="recipients"] recipients_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="recipient"] recipient_element; }
+  node [shape=diamond, peripheries=1]; { node[label="type"] type_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] recipient_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] recipient_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="email-address"] recipient_email_address_element; }
+  node [shape=box, peripheries=1]; { node[label=""] recipient_email_address_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="date-time"] date_time_element; }
+  node [shape=box, peripheries=1]; { node[label=""] date_time_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="subject"] subject_element; }
+  node [shape=box, peripheries=1]; { node[label=""] subject_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] content_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="attachments"] attachments_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="attachment"] attachment_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="format"] format_element; }
+  node [shape=box, peripheries=1]; { node[label=""] format_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="data"] data_element; }
+  node [shape=box, peripheries=1]; { node[label=""] data_text; }
+
+  edge[arrowhead=normal]; email_messages_element -> email_message_element;
+  edge[arrowhead=normal]; email_message_element -> id_attribute;
+  edge[arrowhead=normal]; email_message_element -> sender_element;
+  edge[arrowhead=normal]; sender_element -> sender_name_element;
+  edge[arrowhead=none]; sender_name_element -> sender_name_text;
+  edge[arrowhead=normal]; sender_element -> sender_email_address_element;
+  edge[arrowhead=none]; sender_email_address_element -> sender_email_address_text;
+  edge[arrowhead=normal]; email_message_element -> recipients_element;
+  edge[arrowhead=normal]; recipients_element -> recipient_element;
+  edge[arrowhead=normal]; recipient_element -> type_attribute;
+  edge[arrowhead=normal]; recipient_element -> recipient_name_element;
+  edge[arrowhead=none]; recipient_name_element -> recipient_name_text;
+  edge[arrowhead=normal]; recipient_element -> recipient_email_address_element;
+  edge[arrowhead=none]; recipient_email_address_element -> recipient_email_address_text;
+  edge[arrowhead=normal]; email_message_element -> date_time_element;
+  edge[arrowhead=none]; date_time_element -> date_time_text;
+  edge[arrowhead=normal]; email_message_element -> subject_element;
+  edge[arrowhead=none]; subject_element -> subject_text;
+  edge[arrowhead=normal]; email_message_element -> content_element;
+  edge[arrowhead=none]; content_element -> content_text;
+  edge[arrowhead=normal]; email_message_element -> attachments_element;
+  edge[arrowhead=normal]; attachments_element -> attachment_element;
+  edge[arrowhead=normal]; attachment_element -> format_element;
+  edge[arrowhead=none]; format_element -> format_text;
+  edge[arrowhead=normal]; attachment_element -> data_element;
+  edge[arrowhead=none]; data_element -> data_text;
+}

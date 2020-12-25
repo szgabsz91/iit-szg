@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a>
+    3
+    <d>aa</d>
+    <a>
+      <ns1:a
+        xmlns:ns1="NS1"
+        xmlns:ns2="NS2"
+        ns2:a="G"/>
+    </a>
+  </a>
+</A>

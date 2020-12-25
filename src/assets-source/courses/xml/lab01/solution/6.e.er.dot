@@ -1,0 +1,49 @@
+# Note: since there is no double-arrow in Graphviz, I add two connections between entities in case of 1:n or n:m relationships
+
+digraph business_cards_er {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=box, peripheries=1]; { node[label="business-card"] business_card_entity; }
+  node [shape=diamond, peripheries=1]; { node[label=""] business_card_company_relationship; }
+  node [shape=box, peripheries=2]; { node[label="company"] company_weak_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label=<<u>id</u>>] id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] business_card_name_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="position"] position_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] business_card_phone_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="area-code"] business_card_area_code_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="number"] business_card_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="e-mail"] email_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] company_name_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="address"] address_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="zip-code"] zip_code_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="city"] city_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="street"] street_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="house-number"] house_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] company_phone_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="area-code"] company_area_code_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="number"] company_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="website"] website_attribute; }
+
+  edge[arrowhead=normal]; business_card_entity -> business_card_company_relationship [dir=back];
+  edge[arrowhead=normal]; business_card_entity -> business_card_company_relationship [dir=back];
+  edge[arrowhead=normal]; business_card_company_relationship -> company_weak_entity;
+  edge[arrowhead=none]; business_card_entity -> id_attribute;
+  edge[arrowhead=none]; business_card_entity -> business_card_name_attribute;
+  edge[arrowhead=none]; business_card_entity -> position_attribute;
+  edge[arrowhead=none]; business_card_entity -> business_card_phone_number_attribute;
+  edge[arrowhead=none]; business_card_phone_number_attribute -> business_card_area_code_attribute;
+  edge[arrowhead=none]; business_card_phone_number_attribute -> business_card_number_attribute;
+  edge[arrowhead=none]; business_card_entity -> email_attribute;
+  edge[arrowhead=none]; company_weak_entity -> company_name_attribute;
+  edge[arrowhead=none]; company_weak_entity -> address_attribute;
+  edge[arrowhead=none]; address_attribute -> zip_code_attribute;
+  edge[arrowhead=none]; address_attribute -> city_attribute;
+  edge[arrowhead=none]; address_attribute -> street_attribute;
+  edge[arrowhead=none]; address_attribute -> house_number_attribute;
+  edge[arrowhead=none]; company_weak_entity -> company_phone_number_attribute;
+  edge[arrowhead=none]; company_phone_number_attribute -> company_area_code_attribute;
+  edge[arrowhead=none]; company_phone_number_attribute -> company_number_attribute;
+  edge[arrowhead=none]; company_weak_entity -> website_attribute;
+
+  {rank=same; business_card_entity; business_card_company_relationship; company_weak_entity;}
+}

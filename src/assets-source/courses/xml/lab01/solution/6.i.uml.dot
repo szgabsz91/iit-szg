@@ -1,0 +1,11 @@
+digraph reservation_system_uml {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=record]; { node[label = "{<name>Room|- id: int\l- suite: boolean\l- description: String|<methods>}"] room_class };
+  node [shape=record]; { node[label = "{<name>Reservation|<attributes>- room: Room\l- customer: Customer\l|<methods>}"] reservation_class };
+  node [shape=record]; { node[label = "{<name>Customer|<attributes>-id: int\l- name: String\l|}"] customer_class };
+
+  edge[arrowhead=none];
+  room_class:methods -> reservation_class:name [headlabel="1", taillabel="1"];
+  reservation_class:methods -> customer_class:name [headlabel="1", taillabel="1"];
+}

@@ -10,6 +10,8 @@ jobs:
     name: Release and Deploy
     runs-on: ubuntu-latest
     steps:
+      - name: Install Graphviz
+        run: sudo apt-get install graphviz
       - name: Checkout repository
         uses: actions/checkout@v2
         with:

@@ -1,0 +1,25 @@
+digraph heap {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="heap"] heap_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="root"] root_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] root_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="children"] children_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="child"] child_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] child_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] child_content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] child_content_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] root_content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] root_content_text; }
+
+  edge[arrowhead=normal]; heap_element -> root_element;
+  edge[arrowhead=normal]; root_element -> root_id_attribute;
+  edge[arrowhead=normal]; root_element -> children_element;
+  edge[arrowhead=normal]; children_element -> child_element;
+  edge[arrowhead=normal]; child_element -> child_id_attribute;
+  edge[arrowhead=normal]; child_element -> children_element;
+  edge[arrowhead=normal]; child_element -> child_content_element;
+  edge[arrowhead=none]; child_content_element -> child_content_text;
+  edge[arrowhead=normal]; root_element -> root_content_element;
+  edge[arrowhead=none]; root_content_element -> root_content_text;
+}

@@ -1,0 +1,32 @@
+digraph customer_relationship_management {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="customer-relationship-management"] customer_relationship_management_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="customer"] customer_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] customer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="complaints"] complaints_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="complaint"] complaint_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] complaint_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="date"] date_element; }
+  node [shape=box, peripheries=1]; { node[label=""] date_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="subject"] subject_element; }
+  node [shape=box, peripheries=1]; { node[label=""] subject_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="content"] content_element; }
+  node [shape=box, peripheries=1]; { node[label=""] content_text; }
+
+  edge[arrowhead=normal]; customer_relationship_management_element -> customer_element;
+  edge[arrowhead=normal]; customer_element -> customer_id_attribute;
+  edge[arrowhead=normal]; customer_element -> name_element;
+  edge[arrowhead=none]; name_element -> name_text;
+  edge[arrowhead=normal]; customer_element -> complaints_element;
+  edge[arrowhead=normal]; complaints_element -> complaint_element;
+  edge[arrowhead=normal]; complaint_element -> complaint_id_attribute;
+  edge[arrowhead=normal]; complaint_element -> date_element;
+  edge[arrowhead=none]; date_element -> date_text;
+  edge[arrowhead=normal]; complaint_element -> subject_element;
+  edge[arrowhead=none]; subject_element -> subject_text;
+  edge[arrowhead=normal]; complaint_element -> content_element;
+  edge[arrowhead=none]; content_element -> content_text;
+}

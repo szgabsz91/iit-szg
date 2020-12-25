@@ -1,0 +1,11 @@
+digraph weather_systems_er {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=record]; { node[label = "{<name>WeatherStation|- id: int\l|<methods>}"] weather_station_class };
+  node [shape=record]; { node[label = "{<name>Device|- id: int\l|<methods>}"] device_class };
+  node [shape=record]; { node[label = "{<name>DataItem|- dateTime: DateTime\l- data: double\l|}"] data_item_class };
+
+  edge[arrowhead=none];
+  weather_station_class:methods -> device_class:name [headlabel="1..*", taillabel="1"];
+  device_class:methods -> data_item_class:name [headlabel="0..*", taillabel="1"];
+}

@@ -3,7 +3,7 @@ import { browser, $, $$ } from 'protractor';
 export class CoursePage {
 
   async navigateTo(): Promise<void> {
-    return browser.get(`${browser.baseUrl}/courses/course1`);
+    return browser.get(`${browser.baseUrl}/courses/xml`);
   }
 
   async getTitle(): Promise<string> {

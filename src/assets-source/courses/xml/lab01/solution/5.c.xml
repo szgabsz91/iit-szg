@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customer-relationship-management>
+  <customer id="customer1">
+    <name>John Doe</name>
+    <complaints>
+      <complaint id="complaint1">
+        <date>2021-05-26</date>
+        <subject>Subject 1</subject>
+        <content><![CDATA[
+          Content 1
+        ]]></content>
+      </complaint>
+
+      <complaint id="complaint2">
+        <date>2021-05-27</date>
+        <subject>Subject 2</subject>
+        <content><![CDATA[
+          Content 2
+        ]]></content>
+      </complaint>
+    </complaints>
+  </customer>
+
+  <customer id="customer2">
+    <name>Jane Doe</name>
+    <complaints>
+      <complaint id="complaint3">
+        <date>2021-05-28</date>
+        <subject>Subject 3</subject>
+        <content><![CDATA[
+          Content 3
+        ]]></content>
+      </complaint>
+    </complaints>
+  </customer>
+</customer-relationship-management>

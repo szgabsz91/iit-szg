@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movie-database>
+  <actor actor-id="a1">
+    <name>Leonardo DiCaprio</name>
+    <award>
+      <name>Oscar</name>
+      <year>2016</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>2016</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>2014</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>2005</year>
+    </award>
+  </actor>
+
+  <actor actor-id="a2">
+    <name>Tom Hanks</name>
+    <award>
+      <name>Golden Globe</name>
+      <year>2001</year>
+    </award>
+    <award>
+      <name>Oscar</name>
+      <year>1995</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>1995</year>
+    </award>
+    <award>
+      <name>Oscar</name>
+      <year>1994</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>1994</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>1989</year>
+    </award>
+  </actor>
+
+  <actor actor-id="a3">
+    <name>Christian Bale</name>
+    <award>
+      <name>Golden Globe</name>
+      <year>2019</year>
+    </award>
+    <award>
+      <name>Oscar</name>
+      <year>2011</year>
+    </award>
+    <award>
+      <name>Golden Globe</name>
+      <year>2011</year>
+    </award>
+  </actor>
+
+  <actor actor-id="a4">
+    <name>Bradley Cooper</name>
+  </actor>
+
+  <movie movie-id="m1">
+    <title>Catch Me If You Can</title>
+    <release-year>2002</release-year>
+    <actor>a1</actor>
+    <actor>a2</actor>
+  </movie>
+
+  <movie movie-id="m2">
+    <title>The Dark Knight</title>
+    <release-year>2008</release-year>
+    <actor>a3</actor>
+  </movie>
+
+  <movie movie-id="m3">
+    <title>American Hustle</title>
+    <release-year>2013</release-year>
+    <actor>a3</actor>
+    <actor>a4</actor>
+  </movie>
+
+  <movie movie-id="m4">
+    <title>Silver Linings Playbook</title>
+    <release-year>2012</release-year>
+    <actor>a4</actor>
+  </movie>
+</movie-database>

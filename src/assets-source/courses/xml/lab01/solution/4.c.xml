@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:A xmlns:ns="NS">
+  <ns:a>2</ns:a>
+  <ns:a>3</ns:a>
+  <ns:a>
+    3
+    <ns:d>aa</ns:d>
+    <ns:a>
+      <ns:a ns:a="G"/>
+    </ns:a>
+  </ns:a>
+</ns:A>

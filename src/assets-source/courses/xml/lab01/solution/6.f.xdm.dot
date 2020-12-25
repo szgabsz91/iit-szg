@@ -1,0 +1,46 @@
+digraph order_management_system_xdm {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="order-management-system"] order_management_system_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="products"] products_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="product"] product_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="id"] product_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] product_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] product_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="price"] price_element; }
+  node [shape=box, peripheries=1]; { node[label=""] price_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="customers"] customers_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="customer"] customer_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] customer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] customer_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] customer_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="phone-number"] phone_number_element; }
+  node [shape=box, peripheries=1]; { node[label=""] phone_number_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="orders"] orders_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="order"] order_element; }
+  node [shape=diamond, peripheries=1]; { node[label="customer"] customer_attribute; }
+  node [shape=ellipse, peripheries=2]; { node[label="product"] order_product_element; }
+  node [shape=diamond, peripheries=1]; { node[label="product-id"] order_product_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="quantity"] quantity_attribute; }
+
+  edge[arrowhead=normal]; order_management_system_element -> products_element;
+  edge[arrowhead=normal]; products_element -> product_element;
+  edge[arrowhead=normal]; product_element -> product_id_attribute;
+  edge[arrowhead=normal]; product_element -> product_name_element;
+  edge[arrowhead=none]; product_name_element -> product_name_text;
+  edge[arrowhead=normal]; product_element -> price_element;
+  edge[arrowhead=none]; price_element -> price_text;
+  edge[arrowhead=normal]; order_management_system_element -> customers_element;
+  edge[arrowhead=normal]; customers_element -> customer_element;
+  edge[arrowhead=normal]; customer_element -> customer_id_attribute;
+  edge[arrowhead=normal]; customer_element -> customer_name_element;
+  edge[arrowhead=none]; customer_name_element -> customer_name_text;
+  edge[arrowhead=normal]; customer_element -> phone_number_element;
+  edge[arrowhead=none]; phone_number_element -> phone_number_text;
+  edge[arrowhead=normal]; order_management_system_element -> orders_element;
+  edge[arrowhead=normal]; orders_element -> order_element;
+  edge[arrowhead=normal]; order_element -> customer_attribute;
+  edge[arrowhead=normal]; order_element -> order_product_element;
+  edge[arrowhead=normal]; order_product_element -> order_product_id_attribute;
+  edge[arrowhead=normal]; order_product_element -> quantity_attribute;
+}

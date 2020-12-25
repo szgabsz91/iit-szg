@@ -1,0 +1,10 @@
+<?xml version=1.0?><!-- Error #1: The value (1.0) of the XML prolog's version attribute is not enclosed in quotes -->
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a><!-- Error #2: This a element is not closed anywhere -->
+    3
+    <d>aa</d>
+    <a><!-- Error #3: This a element is not closed anywhere -->
+      <b a='G'><!-- Error #4: This b element is not closed anywhere -->
+</A>

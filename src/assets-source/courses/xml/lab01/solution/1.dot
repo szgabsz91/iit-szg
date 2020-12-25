@@ -1,0 +1,40 @@
+digraph product_database {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="product-database"] product_database_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="manufacturers"] manufacturers_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="manufacturer"] manufacturer_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] manufacturer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] manufacturer_name_element; }
+  node [shape=box]; { node[label=""]; manufacturer_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="country"] country_element; }
+  node [shape=box]; { node[label=""]; country_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="products"] products_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="product"] product_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] product_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="manufacturer"] manufacturer_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] product_name_element; }
+  node [shape=box]; { node[label=""]; product_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="new"] new_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="price"] price_element; }
+  node [shape=diamond, peripheries=1]; { node[label="currency"] currency_attribute; }
+  node [shape=box]; { node[label=""]; price_text; }
+
+  edge[arrowhead=normal]; product_database_element -> manufacturers_element;
+  edge[arrowhead=normal]; manufacturers_element -> manufacturer_element;
+  edge[arrowhead=normal]; manufacturer_element -> manufacturer_id_attribute;
+  edge[arrowhead=normal]; manufacturer_element -> manufacturer_name_element;
+  edge[arrowhead=normal]; manufacturer_element -> country_element;
+  edge[arrowhead=none]; manufacturer_name_element -> manufacturer_name_text;
+  edge[arrowhead=none]; country_element -> country_text;
+  edge[arrowhead=normal]; product_database_element -> products_element;
+  edge[arrowhead=normal]; products_element -> product_element;
+  edge[arrowhead=normal]; product_element -> product_id_attribute;
+  edge[arrowhead=normal]; product_element -> manufacturer_attribute;
+  edge[arrowhead=normal]; product_element -> product_name_element;
+  edge[arrowhead=normal]; product_element -> new_element;
+  edge[arrowhead=normal]; product_element -> price_element;
+  edge[arrowhead=none]; product_name_element -> product_name_text;
+  edge[arrowhead=normal]; price_element -> currency_attribute;
+  edge[arrowhead=none]; price_element -> price_text;
+}

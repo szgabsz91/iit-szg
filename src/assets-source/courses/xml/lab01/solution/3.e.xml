@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<A>
+  <a>2</a>
+  <a>3</a>
+  <a><!-- Error #1: This a element and the next d element are overlapping each other -->
+    3
+    <d>aa</a>
+  </d>
+  <a/>
+</A>
+<a>2</a><!-- Error #2: There are 2 root nodes -->
