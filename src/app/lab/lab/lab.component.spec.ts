@@ -87,7 +87,7 @@ describe('LabComponent', () => {
 
     it('should render the appropriate lab title', () => {
       const title = compiled.querySelector('mat-card-title').textContent;
-      expect(title).toEqual(`Lab ${mockedLab.index}: ${mockedLab.title}`);
+      expect(title).toEqual(`Labx ${mockedLab.index}: ${mockedLab.title}`);
     });
 
     it('should render the appropriate lab markdown content', () => {
