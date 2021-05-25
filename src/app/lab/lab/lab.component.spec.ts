@@ -1,21 +1,21 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
-import { MarkdownModule } from 'ngx-markdown';
+import { MarkdownComponent, MarkdownModule, MarkdownService } from 'ngx-markdown';
 import { LabMaterialModule } from '../lab-material.module';
 import { CourseServiceModule } from 'src/app/course/course-service.module';
 import { HttpClient } from '@angular/common/http';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
-import { LabService } from '../lab.service';
-import { Lab } from 'src/app/model/lab';
+import { Lab } from '../../model/lab';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { By } from '@angular/platform-browser';
 
 describe('LabComponent', () => {
 
   let fixture: ComponentFixture<LabComponent>;
   let labComponent: LabComponent;
+  let markdownService: MarkdownService;
   let compiled: HTMLElement;
-  let httpTestingController: HttpTestingController;
 
   const mockedLab: Lab = {
     courseId: 'course1',
@@ -27,6 +27,11 @@ describe('LabComponent', () => {
       lab: mockedLab
     })
   };
+  const prettyPrintSpy = jasmine.createSpy('prettyPrint');
+
+  beforeEach(() => {
+    (window as any).prettyPrint = prettyPrintSpy;
+  });
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -40,7 +45,7 @@ describe('LabComponent', () => {
         CourseServiceModule
       ],
       providers: [
-        LabService,
+        MarkdownService,
         {
           provide: ActivatedRoute,
           useValue: activatedRoute
@@ -52,24 +57,21 @@ describe('LabComponent', () => {
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LabComponent);
+
+    markdownService = TestBed.inject(MarkdownService);
+    spyOn(markdownService, 'getSource').and.returnValue(of('Markdown content'));
+
     labComponent = fixture.debugElement.componentInstance;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
-    httpTestingController = TestBed.inject(HttpTestingController);
-  });
-
-  beforeEach(() => {
-    const markdownUrl = `./assets/courses/${mockedLab.courseId}/lab${mockedLab.index.toString().padStart(2, '0')}.md`;
-    const request = httpTestingController.expectOne(markdownUrl);
-    expect(request.request.method).toEqual('GET');
-    request.flush('Markdown content');
-  });
-
-  afterEach(() => {
-    httpTestingController.verify();
   });
 
   describe('component', () => {
+
+    it('should download the appropriate Markdown file', () => {
+      const markdownUrl = `./assets/courses/${mockedLab.courseId}/lab${mockedLab.index.toString().padStart(2, '0')}.md`;
+      expect(markdownService.getSource).toHaveBeenCalledOnceWith(markdownUrl);
+    });
 
     describe('properties', () => {
 
@@ -77,6 +79,20 @@ describe('LabComponent', () => {
         labComponent.lab$.subscribe(lab => {
           expect(lab).toEqual(mockedLab);
         });
+      });
+
+    });
+
+    describe('when the ready event is dispatched', () => {
+
+      beforeEach(() => {
+        prettyPrintSpy.calls.reset();
+        const markdownComponent: MarkdownComponent = fixture.debugElement.query(By.directive(MarkdownComponent)).componentInstance;
+        markdownComponent.ready.emit();
+      });
+
+      it('should invoke window.prettyPrint', () => {
+        expect(prettyPrintSpy).toHaveBeenCalledTimes(1);
       });
 
     });
