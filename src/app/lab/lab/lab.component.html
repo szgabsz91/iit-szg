@@ -1,9 +1,15 @@
-<mat-card *ngIf="lab$ | async; let lab">
+<ng-container *ngIf="labContent$ | async as labContent; else contentLoader">
+  <mat-card *ngIf="lab$ | async as lab">
 
-  <mat-card-title i18n="lab.title|The title of the lab@@labTitle">Lab {{ lab.index }}: {{ lab.title }}</mat-card-title>
+    <mat-card-title i18n="lab.title|The title of the lab@@labTitle">Lab {{ lab.index }}: {{ lab.title }}</mat-card-title>
 
-  <mat-card-content>
-    <markdown src="./assets/courses/{{ lab.courseId }}/lab{{ lab.index.toString().padStart(2, '0') }}.md"></markdown>
-  </mat-card-content>
+    <mat-card-content>
+      <markdown [data]="labContent" (ready)="onMarkdownReady()"></markdown>
+    </mat-card-content>
+  
+  </mat-card>
+</ng-container>
 
-</mat-card>
+<ng-template #contentLoader>
+  <mat-spinner></mat-spinner>
+</ng-template>
