@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE album SYSTEM "6.dtd" [
+  <!ENTITY % book "IGNORE">
+  <!ENTITY % album "INCLUDE">
+]>
+<!--
+  Note: Not every editor marks the document invalid
+  if the wrong elements are present in the XML document.
+-->
+<album>
+  <artist>Alter Bridge</artist>
+  <title>Fortress</title>
+  <genre>Alternative metal</genre>
+  <year>2013</year>
+</album>

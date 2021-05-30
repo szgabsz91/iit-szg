@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE people [
+  <!ELEMENT people (person+)>
+  <!ELEMENT person (name)>
+  <!ELEMENT name (#PCDATA)>
+
+  <!ENTITY john "John Doe">
+  <!ENTITY jane "Jane Doe">
+]>
+<people>
+  <person>
+    <name>&john;</name>
+  </person>
+  <person>
+    <name>&jane;</name>
+  </person>
+  <person>
+    <name>&john;</name>
+  </person>
+  <person>
+    <name>&jane;</name>
+  </person>
+</people>

@@ -1,0 +1,43 @@
+<!ELEMENT software-company (developers, teams, projects, worklogs)>
+
+<!ELEMENT developers (developer+)>
+<!ELEMENT developer (name, technologies)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT technologies (technology+)>
+<!ELEMENT technology (#PCDATA)>
+<!ATTLIST developer id ID #REQUIRED>
+
+<!ELEMENT teams (team+)>
+<!ELEMENT team (name, members)>
+<!ELEMENT members (member+)>
+<!ELEMENT member EMPTY>
+<!ATTLIST team id ID #REQUIRED>
+<!ATTLIST member developer-id IDREF #REQUIRED>
+
+<!ELEMENT projects (project+)>
+<!ELEMENT project (name, associated-teams)>
+<!ELEMENT associated-teams (associated-team+)>
+<!ELEMENT associated-team EMPTY>
+<!ATTLIST project id ID #REQUIRED>
+<!ATTLIST associated-team team-id IDREF #REQUIRED>
+
+<!ELEMENT worklogs (worklog*)>
+<!ELEMENT worklog (meeting+, ((designing?, programming, testing*) | (testing, (demo | bugfixing))))>
+<!ELEMENT meeting (#PCDATA)>
+<!ELEMENT designing (#PCDATA)>
+<!ELEMENT programming (#PCDATA)>
+<!ELEMENT testing (#PCDATA)>
+<!ELEMENT demo (#PCDATA)>
+<!ELEMENT bugfixing (#PCDATA)>
+<!ATTLIST worklog developer-id IDREF #REQUIRED>
+<!ATTLIST worklog date CDATA #REQUIRED>
+<!ATTLIST meeting project-id IDREF #REQUIRED>
+<!ATTLIST designing project-id IDREF #REQUIRED>
+<!ATTLIST programming project-id IDREF #REQUIRED>
+<!ATTLIST testing project-id IDREF #REQUIRED>
+<!ATTLIST demo project-id IDREF #REQUIRED>
+<!ATTLIST bugfixing project-id IDREF #REQUIRED>
+
+<!ENTITY cs "C#">
+<!ENTITY java "Java">
+<!ENTITY cpp "C++">

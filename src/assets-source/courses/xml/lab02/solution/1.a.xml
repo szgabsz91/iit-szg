@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE donation-database [
+  <!ELEMENT donation-database (donors, recipients, donations)>
+
+  <!ELEMENT donors (donor*)>
+  <!ELEMENT donor (name, address, birth, millionaire?)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT address (zip-code, city, street, house-number)>
+  <!ELEMENT zip-code (#PCDATA)>
+  <!ELEMENT city (#PCDATA)>
+  <!ELEMENT street (#PCDATA)>
+  <!ELEMENT house-number (#PCDATA)>
+  <!ELEMENT birth (place, date)>
+  <!ELEMENT place (#PCDATA)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT millionaire EMPTY>
+  <!ATTLIST donor id ID #REQUIRED>
+
+  <!ELEMENT recipients (recipient*)>
+  <!ELEMENT recipient (name)>
+  <!ATTLIST recipient id ID #REQUIRED>
+  <!ATTLIST recipient private-person (true | false) "false">
+
+  <!ELEMENT donations (donation*)>
+  <!ELEMENT donation (description, price)>
+  <!ELEMENT description (#PCDATA)>
+  <!ELEMENT price (#PCDATA)>
+  <!ATTLIST donation donor IDREF #REQUIRED>
+  <!ATTLIST donation recipient IDREF #REQUIRED>
+]>
+<donation-database>
+  <donors>
+    <donor id="d1">
+      <name>Leonardo Dicaprio</name>
+      <address>
+        <zip-code>CA 90069</zip-code>
+        <city>West Hollywood</city>
+        <street>Sunset Blvd.</street>
+        <house-number>9255</house-number>
+      </address>
+      <birth>
+        <place>Hollywood</place>
+        <date>1974-11-11</date>
+      </birth>
+      <millionaire/>
+    </donor>
+
+    <donor id="d2">
+      <name>Bill Gates</name>
+      <address>
+        <zip-code>WA 98039</zip-code>
+        <city>Medina</city>
+        <street>73rd Ave NE</street>
+        <house-number>1835</house-number>
+      </address>
+      <birth>
+        <place>Seattle</place>
+        <date>1955-10-28</date>
+      </birth>
+      <millionaire/>
+    </donor>
+  </donors>
+
+  <recipients>
+    <recipient id="r1" private-person="true">
+      <name>John Doe</name>
+    </recipient>
+
+    <recipient id="r2" private-person="true">
+      <name>Jane Doe</name>
+    </recipient>
+  </recipients>
+
+  <donations>
+    <donation donor="d1" recipient="r1">
+      <description>Donation 1</description>
+      <price>10000000</price>
+    </donation>
+
+    <donation donor="d2" recipient="r2">
+      <description>Donation 2</description>
+      <price>20000000</price>
+    </donation>
+  </donations>
+</donation-database>

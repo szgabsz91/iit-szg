@@ -1,0 +1,13 @@
+<!ELEMENT timetable (class+)>
+
+<!ELEMENT class (subject, day-time, classroom, teacher)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT day-time (day, start-hour, end-hour)>
+<!ELEMENT classroom (#PCDATA)>
+<!ELEMENT teacher (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT start-hour (#PCDATA)>
+<!ELEMENT end-hour (#PCDATA)>
+
+<!ATTLIST class id ID #REQUIRED>
+<!ATTLIST class type (theory | practice) "theory">

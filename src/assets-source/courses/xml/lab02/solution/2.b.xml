@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE business-cards SYSTEM "2.b.dtd">
+<business-cards>
+  <business-card id="bc1">
+    <name>Steve Jobs</name>
+    <company>
+      <name>Apple</name>
+      <address>
+        <zip-code>CA 95014</zip-code>
+        <city>Cupertino</city>
+        <street>Apple Park Way</street>
+        <house-number>1</house-number>
+      </address>
+      <phone-number area-code="408">996-1010</phone-number>
+      <email-address>info@apple.com</email-address>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="408">996-1010</phone-number>
+    <email-address>steve.jobs@apple.com</email-address>
+  </business-card>
+
+  <business-card id="bc2">
+    <name>Bill Gates</name>
+    <company>
+      <name>Microsoft</name>
+      <address>
+        <zip-code>WA 98052</zip-code>
+        <city>Redmond</city>
+        <street>Microsoft Way</street>
+        <house-number>1</house-number>
+      </address>
+      <phone-number area-code="425">882-8080</phone-number>
+      <website>https://microsoft.com</website>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="425">882-8080</phone-number>
+    <email-address>bill.gates@microsoft.com</email-address>
+  </business-card>
+
+  <business-card id="bc3">
+    <name>Larry Page</name>
+    <company>
+      <name>Google</name>
+      <address>
+        <zip-code>CA 94043</zip-code>
+        <city>Mountain View</city>
+        <street>Amphitheatre Pkwy</street>
+        <house-number>1600</house-number>
+      </address>
+      <phone-number area-code="650">253-0000</phone-number>
+      <website>https://about.google</website>
+    </company>
+    <position>CEO</position>
+    <phone-number area-code="650">253-0000</phone-number>
+    <email-address>larry.page@google.com</email-address>
+  </business-card>
+</business-cards>

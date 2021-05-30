@@ -1,0 +1,27 @@
+<!ELEMENT donation-database (donors, recipients, donations)>
+
+<!ELEMENT donors (donor*)>
+<!ELEMENT donor (name, address, birth, millionaire?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT address (zip-code, city, street, house-number)>
+<!ELEMENT zip-code (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT house-number (#PCDATA)>
+<!ELEMENT birth (place, date)>
+<!ELEMENT place (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT millionaire EMPTY>
+<!ATTLIST donor id ID #REQUIRED>
+
+<!ELEMENT recipients (recipient*)>
+<!ELEMENT recipient (name)>
+<!ATTLIST recipient id ID #REQUIRED>
+<!ATTLIST recipient private-person (true | false) "false">
+
+<!ELEMENT donations (donation*)>
+<!ELEMENT donation (description, price)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ATTLIST donation donor IDREF #REQUIRED>
+<!ATTLIST donation recipient IDREF #REQUIRED>

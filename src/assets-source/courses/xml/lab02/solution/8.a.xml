@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE timetable SYSTEM "8.a.dtd">
+<timetable>
+  <class id="c1" type="practice">
+    <subject>Object Oriented Programming</subject>
+    <day-time>
+      <day>Monday</day>
+      <start-hour>8</start-hour>
+      <end-hour>10</end-hour>
+    </day-time>
+    <classroom>103</classroom>
+    <teacher>John Doe</teacher>
+  </class>
+
+  <class id="c2">
+    <subject>Object Oriented Programming</subject>
+    <day-time>
+      <day>Tuesday</day>
+      <start-hour>10</start-hour>
+      <end-hour>12</end-hour>
+    </day-time>
+    <classroom>330</classroom>
+    <teacher>Jane Doe</teacher>
+  </class>
+</timetable>

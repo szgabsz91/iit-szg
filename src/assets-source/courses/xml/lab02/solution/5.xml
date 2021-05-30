@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email-messages SYSTEM "5.dtd">
+<email-messages>
+  <email-message id="e1">
+    <sender>
+      <name>John Doe</name>
+      <email-address>john.doe@gmail.com</email-address>
+    </sender>
+
+    <recipients>
+      <recipient type="to">
+        <name>Jane Doe</name>
+        <email-address>jane.doe@gmail.com</email-address>
+        <phone-number area-code="408">995-2030</phone-number>
+      </recipient>
+      <recipient type="cc">
+        <name>John Smith</name>
+        <email-address>john.smith@gmail.com</email-address>
+      </recipient>
+      <recipient type="bcc">
+        <name>Mr. Brown</name>
+        <email-address>mr.brown@gmail.com</email-address>
+      </recipient>
+    </recipients>
+
+    <date-time>2013-09-14T10:15:00</date-time>
+    <subject>Subject</subject>
+    <content>
+      <![CDATA[
+        Content
+      ]]>
+    </content>
+  </email-message>
+</email-messages>

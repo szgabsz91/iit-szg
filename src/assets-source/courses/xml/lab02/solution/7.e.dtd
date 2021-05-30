@@ -1,0 +1,3 @@
+<!ELEMENT entity (multi-valued-attribute)>
+<!ELEMENT multi-valued-attribute (value*)>
+<!ELEMENT value (#PCDATA)>

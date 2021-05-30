@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE library-database SYSTEM "8.b.dtd">
+<library-database>
+  <book isbn="i978-0201342857">
+    <author>Neil Bradley</author>
+    <title>The XML Companion</title>
+    <year>1998</year>
+    <length>440</length>
+  </book>
+</library-database>

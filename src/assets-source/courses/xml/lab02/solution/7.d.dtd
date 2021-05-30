@@ -1,0 +1,4 @@
+<!ELEMENT entity (composite-attribute)>
+<!ELEMENT composite-attribute (simple-attribute-1, simple-attribute-2)>
+<!ELEMENT simple-attribute-1 (#PCDATA)>
+<!ELEMENT simple-attribute-2 (#PCDATA)>

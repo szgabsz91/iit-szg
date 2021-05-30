@@ -1,0 +1,14 @@
+<!ELEMENT root (entity1-subtree, entity2-subtree, relationship-subtree)>
+
+<!ELEMENT entity1-subtree (entity1*)>
+<!ELEMENT entity1 EMPTY>
+<!ATTLIST entity1 id ID #REQUIRED>
+
+<!ELEMENT entity2-subtree (entity2*)>
+<!ELEMENT entity2 EMPTY>
+<!ATTLIST entity2 id ID #REQUIRED>
+
+<!ELEMENT relationship-subtree (relationship*)>
+<!ELEMENT relationship EMPTY>
+<!ATTLIST relationship entity1 IDREF #REQUIRED>
+<!ATTLIST relationship entity2 IDREF #REQUIRED>

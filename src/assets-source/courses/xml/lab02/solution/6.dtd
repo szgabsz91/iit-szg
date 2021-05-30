@@ -1,0 +1,18 @@
+<!ENTITY % book "INCLUDE">
+<!ENTITY % album "IGNORE">
+
+<![%book;[
+  <!ELEMENT book (author, title, publisher, year)>
+  <!ELEMENT author (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT publisher (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+]]>
+
+<![%album;[
+  <!ELEMENT album (artist, title, genre, year)>
+  <!ELEMENT artist (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT genre (#PCDATA)>
+  <!ELEMENT year (#PCDATA)>
+]]>
