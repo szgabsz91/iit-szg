@@ -1,0 +1,3 @@
+<!ELEMENT entity (attribute1, attribute2)>
+<!ELEMENT attribute1 (#PCDATA)>
+<!ELEMENT attribute2 (#PCDATA)>

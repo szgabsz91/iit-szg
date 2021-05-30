@@ -17,6 +17,12 @@
         "en": "XDM, XML",
         "hu": "XDM, XML"
       }
+    }, {
+      "index": 2,
+      "title": {
+        "en": "DTD",
+        "hu": "DTD"
+      }
     }]
   }]
 }

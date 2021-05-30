@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE entity SYSTEM "7.a.dtd">
+<entity>
+  <attribute1>x</attribute1>
+  <attribute2>y</attribute2>
+</entity>

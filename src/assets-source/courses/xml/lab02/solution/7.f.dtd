@@ -1,0 +1,2 @@
+<!ELEMENT entity1 (entity2*)>
+<!ELEMENT entity2 EMPTY>

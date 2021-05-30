@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root SYSTEM "7.g.dtd">
+<root>
+  <entity1-subtree>
+    <entity1 id="x1"/>
+    <entity1 id="x2"/>
+  </entity1-subtree>
+
+  <entity2-subtree>
+    <entity2 id="y1"/>
+    <entity2 id="y2"/>
+  </entity2-subtree>
+
+  <relationship-subtree>
+    <relationship entity1="x1" entity2="y1"/>
+    <relationship entity1="x1" entity2="y2"/>
+    <relationship entity1="x2" entity2="y1"/>
+  </relationship-subtree>
+</root>

@@ -1,0 +1,8 @@
+<!ELEMENT library-database (book+)>
+
+<!ELEMENT book (author, title, year, length)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT length (#PCDATA)>
+<!ATTLIST book isbn ID #REQUIRED>

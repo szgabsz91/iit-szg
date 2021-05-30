@@ -1,0 +1,17 @@
+<!ELEMENT business-cards (business-card+)>
+
+<!ELEMENT business-card (name, company, position, phone-number, email-address)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT company (name, address, phone-number, (website | email-address))>
+<!ELEMENT position (#PCDATA)>
+<!ELEMENT phone-number (#PCDATA)>
+<!ELEMENT email-address (#PCDATA)>
+<!ELEMENT address (zip-code, city, street, house-number)>
+<!ELEMENT zip-code (#PCDATA)>
+<!ELEMENT city (#PCDATA)>
+<!ELEMENT street (#PCDATA)>
+<!ELEMENT house-number (#PCDATA)>
+<!ELEMENT website (#PCDATA)>
+
+<!ATTLIST business-card id ID #REQUIRED>
+<!ATTLIST phone-number area-code CDATA #IMPLIED>

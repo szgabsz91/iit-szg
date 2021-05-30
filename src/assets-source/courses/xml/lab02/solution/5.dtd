@@ -1,0 +1,20 @@
+<!ELEMENT email-messages (email-message*)>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email-address (#PCDATA)>
+<!ELEMENT phone-number (#PCDATA)>
+<!ATTLIST phone-number area-code CDATA #IMPLIED>
+<!ENTITY % contact-info "name, email-address, phone-number?">
+
+<!ELEMENT email-message (sender, recipients, date-time, subject, content)>
+<!ATTLIST email-message id ID #REQUIRED>
+
+<!ELEMENT sender (%contact-info;)>
+
+<!ELEMENT recipients (recipient+)>
+<!ELEMENT recipient (%contact-info;)>
+<!ATTLIST recipient type (to | cc | bcc) "to">
+
+<!ELEMENT date-time (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT content (#PCDATA)>

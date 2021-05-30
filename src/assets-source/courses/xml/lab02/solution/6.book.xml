@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book SYSTEM "6.dtd">
+<!--
+  Note: Not every editor marks the document invalid
+  if the wrong elements are present in the XML document.
+-->
+<book>
+  <author>Walter Isaacson</author>
+  <title>Steve Jobs: The Exclusive Biography</title>
+  <publisher>Simon &amp; Schuster</publisher>
+  <year>2011</year>
+</book>

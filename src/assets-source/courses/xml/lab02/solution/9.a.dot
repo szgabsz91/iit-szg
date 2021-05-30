@@ -1,0 +1,66 @@
+digraph software_company {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="software-company"] software_company_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="developers"] developers_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="developer"] developer_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] developer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] developer_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] developer_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="technologies"] technologies_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="technology"] technology_element; }
+  node [shape=box, peripheries=1]; { node[label=""] technology_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="teams"] teams_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="team"] team_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] team_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] team_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] team_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="members"] members_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="member"] member_element; }
+  node [shape=diamond, peripheries=1]; { node[label="developer-id"] member_developer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="projects"] projects_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="project"] project_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] project_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] project_name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] project_name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="associated-teams"] associated_teams_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="associated-team"] associated_team_element; }
+  node [shape=diamond, peripheries=1]; { node[label="team-id"] associated_team_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="worklogs"] worklogs_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="worklog"] worklog_element; }
+  node [shape=diamond, peripheries=1]; { node[label="developer-id"] worklog_developer_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="date"] date_attribute; }
+  node [shape=ellipse, peripheries=2]; { node[label="activity"] activity_element; }
+  node [shape=box, peripheries=1]; { node[label=""] activity_text; }
+
+  edge[arrowhead=normal]; software_company_element -> developers_element;
+  edge[arrowhead=normal]; developers_element -> developer_element;
+  edge[arrowhead=normal]; developer_element -> developer_id_attribute;
+  edge[arrowhead=normal]; developer_element -> developer_name_element;
+  edge[arrowhead=none]; developer_name_element -> developer_name_text;
+  edge[arrowhead=normal]; developer_element -> technologies_element;
+  edge[arrowhead=normal]; technologies_element -> technology_element;
+  edge[arrowhead=none]; technology_element -> technology_text;
+  edge[arrowhead=normal]; software_company_element -> teams_element;
+  edge[arrowhead=normal]; teams_element -> team_element;
+  edge[arrowhead=normal]; team_element -> team_id_attribute;
+  edge[arrowhead=normal]; team_element -> team_name_element;
+  edge[arrowhead=none]; team_name_element -> team_name_text;
+  edge[arrowhead=normal]; team_element -> members_element;
+  edge[arrowhead=normal]; members_element -> member_element;
+  edge[arrowhead=normal]; member_element -> member_developer_id_attribute;
+  edge[arrowhead=normal]; software_company_element -> projects_element;
+  edge[arrowhead=normal]; projects_element -> project_element;
+  edge[arrowhead=normal]; project_element -> project_id_attribute;
+  edge[arrowhead=normal]; project_element -> project_name_element;
+  edge[arrowhead=none]; project_name_element -> project_name_text;
+  edge[arrowhead=normal]; project_element -> associated_teams_element;
+  edge[arrowhead=normal]; associated_teams_element -> associated_team_element;
+  edge[arrowhead=normal]; associated_team_element -> associated_team_id_attribute;
+  edge[arrowhead=normal]; software_company_element -> worklogs_element;
+  edge[arrowhead=normal]; worklogs_element -> worklog_element;
+  edge[arrowhead=normal]; worklog_element -> worklog_developer_id_attribute;
+  edge[arrowhead=normal]; worklog_element -> date_attribute;
+  edge[arrowhead=normal]; worklog_element -> activity_element;
+  edge[arrowhead=normal]; activity_element -> activity_text;
+}
