@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="list-with-custom-type" type="customListType"/>
+        <xsd:element name="union-with-custom-types" type="customUnionType" minOccurs="2" maxOccurs="2"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:simpleType name="customIntegerWithMinAndMaxExclusiveAndTotalDigitsType">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxExclusive value="100"/>
+      <xsd:totalDigits value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customListType">
+    <xsd:list itemType="customIntegerWithMinAndMaxExclusiveAndTotalDigitsType"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customUnionType">
+    <xsd:union memberTypes="customIntegerWithMinAndMaxExclusiveAndTotalDigitsType xsd:date"/>
+  </xsd:simpleType>
+
+</xsd:schema>

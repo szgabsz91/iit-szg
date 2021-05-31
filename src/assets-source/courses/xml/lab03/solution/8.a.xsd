@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="timetable">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="class" type="classType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="classType">
+    <xsd:sequence>
+      <xsd:element name="subject" type="xsd:string"/>
+      <xsd:element name="day-time" type="dayTimeType"/>
+      <xsd:element name="classroom" type="xsd:string"/>
+      <xsd:element name="teacher" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+    <xsd:attribute name="type" type="typeType" default="theory"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="typeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="theory"/>
+      <xsd:enumeration value="practice"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="dayTimeType">
+    <xsd:sequence>
+      <xsd:element name="day" type="dayType"/>
+      <xsd:element name="start-hour" type="hourType"/>
+      <xsd:element name="end-hour" type="hourType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="dayType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Monday"/>
+      <xsd:enumeration value="Tuesday"/>
+      <xsd:enumeration value="Wednesday"/>
+      <xsd:enumeration value="Thursday"/>
+      <xsd:enumeration value="Friday"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="hourType">
+    <xsd:restriction base="xsd:positiveInteger">
+      <xsd:minInclusive value="8"/>
+      <xsd:maxInclusive value="18"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

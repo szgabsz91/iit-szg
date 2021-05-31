@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="2.d.xsd">
+
+  <composite-attribute>
+    <simple-attribute-1>x</simple-attribute-1>
+    <simple-attribute-2>y</simple-attribute-2>
+  </composite-attribute>
+
+</entity>

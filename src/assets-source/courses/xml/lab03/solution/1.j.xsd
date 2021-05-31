@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="restricted-child-only-element" type="restrictedChildOnlyElementType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="childOnlyElementWithoutAttributeType">
+    <xsd:sequence>
+      <xsd:element name="a" type="xsd:dateTime"/>
+      <xsd:element name="b" minOccurs="2" maxOccurs="3"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="restrictedChildOnlyElementType">
+    <xsd:complexContent>
+      <xsd:restriction base="childOnlyElementWithoutAttributeType">
+        <xsd:sequence>
+          <!-- Note: although we don't restrict the a child element, we must put it here -->
+          <xsd:element name="a" type="xsd:dateTime"/>
+          <xsd:element name="b" minOccurs="2" maxOccurs="3">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:integer">
+                <xsd:minInclusive value="0"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:restriction>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+</xsd:schema>

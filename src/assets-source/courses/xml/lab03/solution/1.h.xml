@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.h.xsd">
+
+  <!--
+    Note: mixed-type elements are not recommended,
+    because we cannot restrict their text content's type!  
+  -->
+  <mixed-type-element x="1">
+    Time:
+    <a>10:05:26</a>
+  </mixed-type-element>
+
+</root>

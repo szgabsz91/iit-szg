@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="software-company">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="developers">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="developer" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="name"/>
+                    <xsd:element name="technologies">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="technology" maxOccurs="unbounded">
+                            <xsd:simpleType>
+                              <xsd:restriction base="xsd:string">
+                                <xsd:enumeration value="C#"/>
+                                <xsd:enumeration value="Java"/>
+                                <xsd:enumeration value="C++"/>
+                              </xsd:restriction>
+                            </xsd:simpleType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="id" type="xsd:int" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="teams">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="team" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string"/>
+                    <xsd:element name="members">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="member" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:attribute name="developer-id" type="xsd:int" use="required"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="id" type="xsd:int" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="projects">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="project" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="name" type="xsd:string"/>
+                    <xsd:element name="associated-teams">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="associated-team" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:attribute name="team-id" type="xsd:int" use="required"/>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute name="id" type="xsd:int" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+
+        <xsd:element name="worklogs">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="worklog" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="meeting" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:simpleContent>
+                          <xsd:extension base="xsd:int">
+                            <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                          </xsd:extension>
+                        </xsd:simpleContent>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:choice>
+                      <xsd:sequence>
+                        <xsd:element name="designing" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:int">
+                                <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="programming">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:int">
+                                <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="testing" minOccurs="0" maxOccurs="unbounded">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:int">
+                                <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                      <xsd:sequence>
+                        <xsd:element name="testing">
+                          <xsd:complexType>
+                            <xsd:simpleContent>
+                              <xsd:extension base="xsd:int">
+                                <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                              </xsd:extension>
+                            </xsd:simpleContent>
+                          </xsd:complexType>
+                        </xsd:element>
+                        <xsd:choice>
+                          <xsd:element name="demo">
+                            <xsd:complexType>
+                              <xsd:simpleContent>
+                                <xsd:extension base="xsd:int">
+                                  <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                                </xsd:extension>
+                              </xsd:simpleContent>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="bugfixing">
+                            <xsd:complexType>
+                              <xsd:simpleContent>
+                                <xsd:extension base="xsd:int">
+                                  <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+                                </xsd:extension>
+                              </xsd:simpleContent>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:choice>
+                      </xsd:sequence>
+                    </xsd:choice>
+                  </xsd:sequence>
+                  <xsd:attribute name="developer-id" type="xsd:int" use="required"/>
+                  <xsd:attribute name="date" type="xsd:date" use="required"/>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="2.g.xsd">
+
+  <entity1-subtree>
+    <entity1 id="1"/>
+    <entity1 id="2"/>
+    <!-- ERROR! Duplicate key value! -->
+    <!--<entity1 id="2"/>-->
+  </entity1-subtree>
+
+  <entity2-subtree>
+    <entity2 id="1"/>
+    <entity2 id="2"/>
+    <!-- ERROR! Duplicate key value! -->
+    <!--<entity2 id="2"/>-->
+  </entity2-subtree>
+
+  <relationship-subtree>
+    <relationship entity1="1" entity2="1"/>
+    <relationship entity1="1" entity2="2"/>
+    <relationship entity1="2" entity2="1"/>
+    <!-- ERROR! There is no entity1 with id 3, and there is no entity2 with id 3! -->
+    <!--<relationship entity1="3" entity2="3"/>-->
+  </relationship-subtree>
+
+</root>

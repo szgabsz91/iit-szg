@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car-database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="5.b.xsd">
+
+  <cars>
+    <car license-plate-number="AB12 CDE">
+      <manufacturer>Tesla</manufacturer>
+      <model>Model 3</model>
+    </car>
+
+    <car license-plate-number="AB12 CDF">
+      <manufacturer>Volkswagen</manufacturer>
+      <model>ID.4</model>
+    </car>
+
+    <car license-plate-number="AB12 CDG">
+      <manufacturer>Kia</manufacturer>
+      <model>e-Niro</model>
+    </car>
+  </cars>
+
+  <owners>
+    <owner id="1">
+      <name>John Doe</name>
+      <owned-cars>
+        <owned-car>AB12 CDE</owned-car>
+      </owned-cars>
+    </owner>
+
+    <owner id="2">
+      <name>Jane Doe</name>
+      <owned-cars>
+        <owned-car>AB12 CDF</owned-car>
+        <owned-car>AB12 CDG</owned-car>
+      </owned-cars>
+    </owner>
+  </owners>
+
+</car-database>

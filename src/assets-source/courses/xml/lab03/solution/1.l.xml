@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.l.xsd">
+
+  <phone-number area-code="408">995-2030</phone-number>
+  <!-- ERROR! The area code can have only up to 3 digits! -->
+  <!--<phone-number area-code="4080">995-2030</phone-number>-->
+  <!-- ERROR! The phone number must be 3 digits, hyphen, 4 digits! -->
+  <!--<phone-number area-code="408">995-203</phone-number>-->
+
+</root>

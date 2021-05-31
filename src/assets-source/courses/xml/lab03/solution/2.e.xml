@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="2.e.xsd">
+
+  <multi-valued-attribute>
+    <value>1</value>
+    <value>2</value>
+    <value>3</value>
+  </multi-valued-attribute>
+
+</entity>

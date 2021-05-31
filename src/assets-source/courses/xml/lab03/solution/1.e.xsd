@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="custom-string-with-enumeration" type="customStringWithEnumerationType" minOccurs="3" maxOccurs="3"/>
+        <xsd:element name="custom-string-with-min-and-max-length" type="customStringWithMinAndMaxLengthType" minOccurs="3" maxOccurs="3"/>
+        <xsd:element name="custom-string-with-length" type="customStringWithLengthType"/>
+        <xsd:element name="custom-string-with-pattern" type="customStringWithPatternType"/>
+        <xsd:element name="custom-integer-with-min-and-max-exclusive-and-total-digits" type="customIntegerWithMinAndMaxExclusiveAndTotalDigitsType" minOccurs="2" maxOccurs="2"/>
+        <xsd:element name="custom-decimal-with-min-and-max-inclusive-and-fraction-digits" type="customDecimalWithMinAndMaxInclusiveAndFractionDigitsType" minOccurs="2" maxOccurs="2"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:simpleType name="customStringWithEnumerationType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="a"/>
+      <xsd:enumeration value="b"/>
+      <xsd:enumeration value="c"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customStringWithMinAndMaxLengthType">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="3"/>
+      <xsd:maxLength value="5"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customStringWithLengthType">
+    <xsd:restriction base="xsd:string">
+      <xsd:length value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customStringWithPatternType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[a-z]{2}\d{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customIntegerWithMinAndMaxExclusiveAndTotalDigitsType">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxExclusive value="100"/>
+      <xsd:totalDigits value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="customDecimalWithMinAndMaxInclusiveAndFractionDigitsType">
+    <xsd:restriction base="xsd:decimal">
+      <xsd:minInclusive value="0.01"/>
+      <xsd:maxInclusive value="99.99"/>
+      <xsd:fractionDigits value="2"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

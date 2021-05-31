@@ -23,6 +23,12 @@
         "en": "DTD",
         "hu": "DTD"
       }
+    }, {
+      "index": 3,
+      "title": {
+        "en": "XML Schema",
+        "hu": "XML séma"
+      }
     }]
   }]
 }

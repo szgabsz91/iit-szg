@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="mixed-type-element" type="mixedTypeElementType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="mixedTypeElementType" mixed="true">
+    <xsd:sequence>
+      <xsd:element name="a" type="xsd:time"/>
+    </xsd:sequence>
+    <xsd:attribute name="x" type="xsd:integer"/>
+  </xsd:complexType>
+
+</xsd:schema>

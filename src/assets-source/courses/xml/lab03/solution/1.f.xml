@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.f.xsd">
+
+  <list-with-built-in-type>true false true</list-with-built-in-type>
+  <!-- ERROR! 3 is an integer, but only boolean values are allowed in this list type! -->
+  <!--<list-with-built-in-type>true false 3</list-with-built-in-type>-->
+
+  <union-with-built-in-types>1</union-with-built-in-types>
+  <union-with-built-in-types>1.1</union-with-built-in-types>
+  <!-- ERROR! foo is a string, but only integer and double values are allowed in this union type! -->
+  <!--<union-with-built-in-types>foo</union-with-built-in-types>-->
+
+</root>

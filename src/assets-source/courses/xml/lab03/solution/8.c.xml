@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library-database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="8.c.xsd">
+
+  <book isbn="978-0201342857">
+    <author>Neil Bradley</author>
+    <title>The XML Companion</title>
+    <year>1998</year>
+    <length>440</length>
+  </book>
+
+</library-database>
