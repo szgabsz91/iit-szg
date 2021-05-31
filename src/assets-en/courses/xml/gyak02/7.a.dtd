@@ -1,3 +1,0 @@
-<!ELEMENT egyed (tulajdonsag1, tulajdonsag2)>
-<!ELEMENT tulajdonsag1 (#PCDATA)>
-<!ELEMENT tulajdonsag2 (#PCDATA)>

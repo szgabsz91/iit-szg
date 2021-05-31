@@ -1,2 +1,0 @@
-<!ELEMENT egyed EMPTY>
-<!ATTLIST egyed kulcs ID #REQUIRED>
