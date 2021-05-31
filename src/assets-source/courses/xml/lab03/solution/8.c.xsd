@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="library-database">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="book" type="bookType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="bookType">
+    <xsd:sequence>
+      <xsd:element name="author" type="xsd:string"/>
+      <xsd:element name="title" type="xsd:string"/>
+      <xsd:element name="year" type="xsd:gYear"/>
+      <xsd:element name="length" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+    <xsd:attribute name="isbn" type="isbnType" use="required"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="isbnType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}-\d{10}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

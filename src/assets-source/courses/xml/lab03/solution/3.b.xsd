@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="software-company" type="softwareCompanyType"/>
+
+  <xsd:complexType name="softwareCompanyType">
+    <xsd:sequence>
+      <xsd:element name="developers" type="developersType"/>
+      <xsd:element name="teams" type="teamsType"/>
+      <xsd:element name="projects" type="projectsType"/>
+      <xsd:element name="worklogs" type="worklogsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!-- Developers -->
+
+  <xsd:complexType name="developersType">
+    <xsd:sequence>
+      <xsd:element name="developer" type="developerType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="developerType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="technologies" type="technologiesType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="technologiesType">
+    <xsd:sequence>
+      <xsd:element name="technology" type="technologyType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="technologyType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="C#"/>
+      <xsd:enumeration value="Java"/>
+      <xsd:enumeration value="C++"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <!-- Teams -->
+
+  <xsd:complexType name="teamsType">
+    <xsd:sequence>
+      <xsd:element name="team" type="teamType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="teamType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="members" type="membersType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="membersType">
+    <xsd:sequence>
+      <xsd:element name="member" type="memberType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="memberType">
+    <xsd:attribute name="developer-id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <!-- Projects -->
+
+  <xsd:complexType name="projectsType">
+    <xsd:sequence>
+      <xsd:element name="project" type="projectType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="projectType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="associated-teams" type="associatedTeamsType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="associatedTeamsType">
+    <xsd:sequence>
+      <xsd:element name="associated-team" type="associatedTeamType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="associatedTeamType">
+    <xsd:attribute name="team-id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <!-- Worklogs -->
+
+  <xsd:complexType name="worklogsType">
+    <xsd:sequence>
+      <xsd:element name="worklog" type="worklogType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="worklogType">
+    <xsd:sequence>
+      <xsd:element name="meeting" type="worklogItemType" maxOccurs="unbounded"/>
+
+      <xsd:choice>
+        <xsd:sequence>
+          <xsd:element name="designing" type="worklogItemType" minOccurs="0"/>
+          <xsd:element name="programming" type="worklogItemType"/>
+          <xsd:element name="testing" type="worklogItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+
+        <xsd:sequence>
+          <xsd:element name="testing" type="worklogItemType"/>
+          <xsd:choice>
+            <xsd:element name="demo" type="worklogItemType"/>
+            <xsd:element name="bugfixing" type="worklogItemType"/>
+          </xsd:choice>
+        </xsd:sequence>
+      </xsd:choice>
+    </xsd:sequence>
+
+    <xsd:attribute name="developer-id" type="xsd:int" use="required"/>
+    <xsd:attribute name="date" type="xsd:date" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="worklogItemType">
+    <xsd:simpleContent>
+      <xsd:extension base="xsd:int">
+        <xsd:attribute name="project-id" type="xsd:int" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+</xsd:schema>

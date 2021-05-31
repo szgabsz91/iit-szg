@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="auto" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="carType">
+    <xsd:attribute name="id" type="xsd:integer" use="required"/>
+  </xsd:complexType>
+
+  <xsd:element name="auto" type="carType"/>
+  <xsd:element name="car" substitutionGroup="auto"/>
+  <xsd:element name="wagen" substitutionGroup="auto"/>
+
+</xsd:schema>

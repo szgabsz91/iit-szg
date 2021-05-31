@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.j.xsd">
+
+  <restricted-child-only-element>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+    <!-- ERROR! The b element's content must not be negative! -->
+    <!--<b>-1</b>-->
+  </restricted-child-only-element>
+
+</root>

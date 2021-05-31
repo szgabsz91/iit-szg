@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<timetable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="8.a.xsd">
+
+  <class id="1" type="practice">
+    <subject>Object Oriented Programming</subject>
+    <day-time>
+      <day>Monday</day>
+      <start-hour>8</start-hour>
+      <end-hour>10</end-hour>
+    </day-time>
+    <classroom>103</classroom>
+    <teacher>John Doe</teacher>
+  </class>
+
+  <class id="2">
+    <subject>Object Oriented Programming</subject>
+    <day-time>
+      <day>Tuesday</day>
+      <start-hour>10</start-hour>
+      <end-hour>12</end-hour>
+    </day-time>
+    <classroom>330</classroom>
+    <teacher>Jane Doe</teacher>
+  </class>
+
+</timetable>

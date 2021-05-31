@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.c.xsd">
+
+  <empty-element-with-attributes />
+  <empty-element-with-attributes x="1"/>
+  <empty-element-with-attributes y="3"/>
+  <!-- ERROR! The value of a fixed attribute value cannot be modified! -->
+  <!--<empty-element-with-attributes x="2"/>-->
+
+</root>

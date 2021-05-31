@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="entity1-subtree" type="entity1SubtreeType"/>
+        <xsd:element name="entity2-subtree" type="entity2SubtreeType"/>
+        <xsd:element name="relationship-subtree" type="relationshipSubtreeType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:key name="entity1KeyRestriction">
+      <xsd:selector xpath="entity1-subtree/entity1"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+    <xsd:key name="entity2KeyRestriction">
+      <xsd:selector xpath="entity2-subtree/entity2"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+    <xsd:keyref name="entity1KeyrefRestriction" refer="entity1KeyRestriction">
+      <xsd:selector xpath="relationship-subtree/relationship"/>
+      <xsd:field xpath="@entity1"/>
+    </xsd:keyref>
+
+    <xsd:keyref name="entity2KeyrefRestriction" refer="entity2KeyRestriction">
+      <xsd:selector xpath="relationship-subtree/relationship"/>
+      <xsd:field xpath="@entity2"/>
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:complexType name="entity1SubtreeType">
+    <xsd:sequence>
+      <xsd:element name="entity1" type="entity1Type" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="entity2SubtreeType">
+    <xsd:sequence>
+      <xsd:element name="entity2" type="entity2Type" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="relationshipSubtreeType">
+    <xsd:sequence>
+      <xsd:element name="relationship" type="relationshipType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="entity1Type">
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="entity2Type">
+    <xsd:attribute name="id" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="relationshipType">
+    <xsd:attribute name="entity1" type="xsd:int" use="required"/>
+    <xsd:attribute name="entity2" type="xsd:int" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>

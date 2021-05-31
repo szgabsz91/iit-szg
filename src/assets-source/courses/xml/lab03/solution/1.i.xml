@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.i.xsd">
+
+  <child-only-element-without-attribute>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+  </child-only-element-without-attribute>
+
+  <child-only-element-with-attribute x="2">
+    <a>3</a>
+  </child-only-element-with-attribute>
+
+</root>

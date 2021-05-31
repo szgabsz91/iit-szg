@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.k.xsd">
+
+  <extended-child-only-element>
+    <a>2013-10-11T08:00:00</a>
+    <b>1</b>
+    <b>2</b>
+    <c>true</c>
+    <!-- ERROR! The value is a string and not a boolean! -->
+    <!--<c>foo</c>-->
+  </extended-child-only-element>
+
+</root>

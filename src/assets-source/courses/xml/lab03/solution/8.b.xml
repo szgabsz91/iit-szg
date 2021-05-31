@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<donation-database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:noNamespaceSchemaLocation="8.b.xsd">
+
+  <donors>
+    <donor id="1">
+      <name>Leonardo Dicaprio</name>
+      <address>
+        <zip-code>CA 90069</zip-code>
+        <city>West Hollywood</city>
+        <street>Sunset Blvd.</street>
+        <house-number>9255</house-number>
+      </address>
+      <birth>
+        <place>Hollywood</place>
+        <date>1974-11-11</date>
+      </birth>
+      <millionaire/>
+    </donor>
+
+    <donor id="2">
+      <name>Bill Gates</name>
+      <address>
+        <zip-code>WA 98039</zip-code>
+        <city>Medina</city>
+        <street>73rd Ave NE</street>
+        <house-number>1835</house-number>
+      </address>
+      <birth>
+        <place>Seattle</place>
+        <date>1955-10-28</date>
+      </birth>
+      <millionaire/>
+    </donor>
+  </donors>
+
+  <recipients>
+    <recipient id="1" private-person="true">
+      <name>John Doe</name>
+    </recipient>
+
+    <recipient id="2" private-person="true">
+      <name>Jane Doe</name>
+    </recipient>
+  </recipients>
+
+  <donations>
+    <donation donor="1" recipient="1">
+      <description>Donation 1</description>
+      <price>10000000</price>
+    </donation>
+
+    <donation donor="2" recipient="2">
+      <description>Donation 2</description>
+      <price>20000000</price>
+    </donation>
+  </donations>
+
+</donation-database>

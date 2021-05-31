@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.g.xsd">
+
+  <list-with-custom-type>1 99</list-with-custom-type>
+  <!-- ERROR! true is a boolean, but only custom integer values are allowed in this list type! -->
+  <!--<list-with-custom-type>1 99 true</list-with-custom-type>-->
+
+  <union-with-custom-types>50</union-with-custom-types>
+  <union-with-custom-types>2013-10-11</union-with-custom-types>
+  <!-- ERROR! foo is a string, but only custom integer and date values are allowed in this union type! -->
+  <!--<union-with-custom-types>foo</union-with-custom-types>-->
+
+</root>

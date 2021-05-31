@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="empty-element-with-attributes" type="emptyElementWithAttributesType" minOccurs="2" maxOccurs="2"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="emptyElementWithAttributesType">
+    <xsd:attribute name="x" type="xsd:integer" use="required"/>
+    <xsd:attribute name="y" type="xsd:integer" use="optional"/>
+    <xsd:attribute name="z" type="xsd:integer" use="prohibited"/>
+  </xsd:complexType>
+
+</xsd:schema>

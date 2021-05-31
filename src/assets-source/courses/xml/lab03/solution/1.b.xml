@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.b.xsd">
+
+  <empty-element-with-attributes x="1"/>
+  <empty-element-with-attributes x="1" y="2"/>
+
+  <!-- ERROR! The z attribute is prohibited! -->
+  <!--<empty-element-with-attributes x="1" y="2" z="3"/>-->
+
+</root>

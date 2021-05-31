@@ -1,0 +1,25 @@
+# Note: since there is no double-arrow in Graphviz, I add two connections between entities in case of 1:n or n:m relationships
+
+digraph car_database {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=box, peripheries=1]; { node[label="car"] car_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label=<<u>license-plate-number</u>>] license_plate_number_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="manufacturer"] manufacturer_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="model"] model_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="owner"] owner_relationship; }
+  node [shape=box, peripheries=1]; { node[label="owner"] owner_entity; }
+  node [shape=ellipse, peripheries=1]; { node[label=<<u>id</u>>] id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] name_attribute; }
+
+  edge[arrowhead=normal]; car_entity -> owner_relationship [dir=back];
+  edge[arrowhead=normal]; car_entity -> owner_relationship [dir=back];
+  edge[arrowhead=none]; car_entity -> license_plate_number_attribute;
+  edge[arrowhead=none]; car_entity -> manufacturer_attribute;
+  edge[arrowhead=none]; car_entity -> model_attribute;
+  edge[arrowhead=normal]; owner_relationship -> owner_entity;
+  edge[arrowhead=none]; owner_entity -> id_attribute;
+  edge[arrowhead=none]; owner_entity -> name_attribute;
+
+  {rank=same; car_entity; owner_relationship; owner_entity;}
+}

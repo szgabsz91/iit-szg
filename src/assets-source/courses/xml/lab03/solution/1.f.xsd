@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="root">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="list-with-built-in-type" type="builtInListType"/>
+        <xsd:element name="union-with-built-in-types" type="builtInUnionType" minOccurs="2" maxOccurs="2"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:simpleType name="builtInListType">
+    <xsd:list itemType="xsd:boolean"/>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="builtInUnionType">
+    <xsd:union memberTypes="xsd:integer xsd:double"/>
+  </xsd:simpleType>
+
+</xsd:schema>

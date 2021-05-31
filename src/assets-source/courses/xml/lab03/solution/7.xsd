@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="business-cards">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="business-card" type="businessCardType" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:complexType name="businessCardType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="company" type="companyType"/>
+      <xsd:element name="position" type="xsd:string"/>
+      <xsd:element name="phone-number" type="phoneNumberType"/>
+      <xsd:element name="email-address" type="emailAddressType"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:positiveInteger" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="companyType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="address" type="addressType"/>
+      <xsd:element name="phone-number" type="phoneNumberType"/>
+      <xsd:choice>
+        <xsd:element name="website" type="websiteType"/>
+        <xsd:element name="email-address" type="emailAddressType"/>
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="addressType">
+    <xsd:sequence>
+      <xsd:element name="zip-code" type="zipCodeType"/>
+      <xsd:element name="city" type="xsd:string"/>
+      <xsd:element name="street" type="xsd:string"/>
+      <xsd:element name="house-number" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="zipCodeType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]{2} \d{5}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="phoneNumberType">
+    <xsd:simpleContent>
+      <xsd:extension base="phoneNumberStringType">
+        <xsd:attribute name="area-code" type="areaCodeType" default="410"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="phoneNumberStringType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}-\d{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="areaCodeType">
+    <xsd:restriction base="xsd:positiveInteger">
+      <xsd:totalDigits value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="websiteType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="https://(.+)\.(.+)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:simpleType name="emailAddressType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(.*)@(.*)\.(com|org|hu)"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

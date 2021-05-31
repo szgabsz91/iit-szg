@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="1.e.xsd">
+
+  <custom-string-with-enumeration>a</custom-string-with-enumeration>
+  <custom-string-with-enumeration>b</custom-string-with-enumeration>
+  <custom-string-with-enumeration>c</custom-string-with-enumeration>
+  <!-- ERROR! The value 'd' is not in the enumeration list! -->
+  <!--<custom-string-with-enumeration>d</custom-string-with-enumeration>-->
+
+  <custom-string-with-min-and-max-length>abc</custom-string-with-min-and-max-length>
+  <custom-string-with-min-and-max-length>abcd</custom-string-with-min-and-max-length>
+  <custom-string-with-min-and-max-length>abcde</custom-string-with-min-and-max-length>
+  <!-- ERROR! Too short string! -->
+  <!--<custom-string-with-min-and-max-length>ab</custom-string-with-min-and-max-length>-->
+  <!-- ERROR! Too long string! -->
+  <!--<custom-string-with-min-and-max-length>abcdef</custom-string-with-min-and-max-length>-->
+
+  <custom-string-with-length>abc</custom-string-with-length>
+  <!-- ERROR! Too short string! -->
+  <!--<custom-string-with-length>ab</custom-string-with-length>-->
+  <!-- ERROR! Too long string! -->
+  <!--<custom-string-with-length>abcd</custom-string-with-length>-->
+
+  <custom-string-with-pattern>ab12</custom-string-with-pattern>
+  <!-- ERROR! The string does not match the required pattern! -->
+  <!--<custom-string-with-pattern>a1</custom-string-with-pattern>-->
+
+  <custom-integer-with-min-and-max-exclusive-and-total-digits>1</custom-integer-with-min-and-max-exclusive-and-total-digits>
+  <custom-integer-with-min-and-max-exclusive-and-total-digits>99</custom-integer-with-min-and-max-exclusive-and-total-digits>
+  <!-- ERROR! 0 is less than 1 which is the lowest valid number! -->
+  <!--<custom-integer-with-min-and-max-exclusive-and-total-digits>0</custom-integer-with-min-and-max-exclusive-and-total-digits>-->
+  <!-- ERROR! 100 is greater than 99 which is the highest valid number! -->
+  <!--<custom-integer-with-min-and-max-exclusive-and-total-digits>100</custom-integer-with-min-and-max-exclusive-and-total-digits>-->
+
+  <custom-decimal-with-min-and-max-inclusive-and-fraction-digits>0.01</custom-decimal-with-min-and-max-inclusive-and-fraction-digits>
+  <custom-decimal-with-min-and-max-inclusive-and-fraction-digits>99.99</custom-decimal-with-min-and-max-inclusive-and-fraction-digits>
+  <!-- ERROR! 0 is less than 0.01 which is the lowest valid number! -->
+  <!--<custom-decimal-with-min-and-max-inclusive-and-fraction-digits>0</custom-decimal-with-min-and-max-inclusive-and-fraction-digits>-->
+  <!-- ERROR! 100 is greater than 99.99 which is the highest valid number! -->
+  <!--<custom-decimal-with-min-and-max-inclusive-and-fraction-digits>100.0</custom-decimal-with-min-and-max-inclusive-and-fraction-digits>-->
+  <!-- ERROR! There are 3 fraction digits here, but only 2 fraction digits are permitted! -->
+  <!--<custom-decimal-with-min-and-max-inclusive-and-fraction-digits>0.011</custom-decimal-with-min-and-max-inclusive-and-fraction-digits>-->
+
+</root>
