@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car-database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:noNamespaceSchemaLocation="1.xsd">
+
+  <cars>
+    <car license-plate-number="AB12 CDE">
+      <manufacturer>Tesla</manufacturer>
+      <model>Model 3</model>
+    </car>
+
+    <car license-plate-number="AB12 CDF">
+      <manufacturer>Volkswagen</manufacturer>
+      <model>ID.4</model>
+    </car>
+
+    <car license-plate-number="AB12 CDG">
+      <manufacturer>Kia</manufacturer>
+      <model>e-Niro</model>
+    </car>
+
+    <!-- ERROR! Duplicate license plate number found! -->
+    <!--<car license-plate-number="AB12 CDG">
+      <manufacturer>Kia</manufacturer>
+      <model>e-Niro</model>
+    </car>-->
+  </cars>
+
+  <owners>
+    <owner id="1">
+      <name>John Doe</name>
+      <owned-cars>
+        <owned-car>AB12 CDE</owned-car>
+      </owned-cars>
+    </owner>
+
+    <owner id="2">
+      <name>Jane Doe</name>
+      <owned-cars>
+        <owned-car>AB12 CDF</owned-car>
+        <owned-car>AB12 CDG</owned-car>
+        <!-- ERROR! Unique constraint violated! -->
+        <!--<owned-car>AB12 CDG</owned-car>-->
+        <!-- ERROR! Non-existing license plate number referenced! -->
+        <!--<owned-car>AB12 CDH</owned-car>-->
+      </owned-cars>
+    </owner>
+
+    <!-- ERROR! Duplicate identifier found! -->
+    <!--<owner id="2">
+      <name>Mr. Smith</name>
+      <owned-cars>
+        <owned-car>AB12 CDF</owned-car>
+      </owned-cars>
+    </owner>-->
+  </owners>
+
+</car-database>

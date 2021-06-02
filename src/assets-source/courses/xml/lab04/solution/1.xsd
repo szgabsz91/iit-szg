@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="car-database">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="cars" type="carsType"/>
+        <xsd:element name="owners" type="ownersType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:key name="carLicensePlateNumberKey">
+      <xsd:selector xpath="cars/car"/>
+      <xsd:field xpath="@license-plate-number"/>
+    </xsd:key>
+
+    <xsd:key name="ownerIdKey">
+      <xsd:selector xpath="owners/owner"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+    <xsd:keyref name="ownerOwnedCarKeyref" refer="carLicensePlateNumberKey">
+      <xsd:selector xpath="owners/owner/owned-cars/owned-car"/>
+      <xsd:field xpath="."/>
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:complexType name="carsType">
+    <xsd:sequence>
+      <xsd:element name="car" type="carType" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ownersType">
+    <xsd:sequence>
+      <xsd:element name="owner" type="ownerType" minOccurs="0" maxOccurs="unbounded">
+        <xsd:unique name="ownerOwnedCarUnique">
+          <xsd:selector xpath="owned-cars/owned-car"/>
+          <xsd:field xpath="."/>
+        </xsd:unique>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="licensePlateNumberType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]{2}\d{2} [A-Z]{3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="carType">
+    <xsd:sequence>
+      <xsd:element name="manufacturer" type="xsd:string"/>
+      <xsd:element name="model" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="license-plate-number" type="licensePlateNumberType" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="ownerType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+      <xsd:element name="owned-cars">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="owned-car" type="licensePlateNumberType" maxOccurs="unbounded"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:positiveInteger" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>

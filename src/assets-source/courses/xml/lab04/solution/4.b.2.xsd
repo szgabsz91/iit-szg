@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns='NS'
+            targetNamespace="NS"
+            elementFormDefault="qualified">
+
+  <xsd:redefine schemaLocation="4.b.1.xsd">
+    <xsd:complexType name="personType">
+      <xsd:complexContent>
+        <xsd:extension base="ns:personType">
+          <xsd:sequence>
+            <xsd:element name="middle-name" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
+    </xsd:complexType>
+  </xsd:redefine>
+
+  <xsd:element name="person" type="ns:personType"/>
+
+</xsd:schema>

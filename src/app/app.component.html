@@ -28,7 +28,7 @@
         <div *ngFor="let course of courses$ | async" class="course-menu">
           <h3 matSubheader>{{ course.name }}</h3>
           <a mat-list-item i18n="app.course.index|The label of the course index pages@@appCourseIndex" [routerLink]="['/courses', course.id]" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeSidenavOnMobile()">Index</a>
-          <a *ngFor="let lab of course.labs" mat-list-item [routerLink]="['/courses', course.id, 'labs', lab.index]" routerLinkActive="active" (click)="closeSidenavOnMobile()">{{ lab.title }}</a>
+          <a *ngFor="let lab of course.labs" mat-list-item [routerLink]="['/courses', course.id, 'labs', lab.index]" routerLinkActive="active" (click)="closeSidenavOnMobile()">{{ lab.titles.short || lab.titles.long }}</a>
           <mat-divider></mat-divider>
         </div>
       </mat-nav-list>

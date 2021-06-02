@@ -17,10 +17,16 @@ describe('CourseResolver', () => {
     name: 'Course 1',
     labs: [{
       index: 1,
-      title: 'Lab 1'
+      titles: {
+        short: 'Lab 1 Short',
+        long: 'Lab 1 Long'
+      }
     }, {
       index: 2,
-      title: 'Lab 2'
+      titles: {
+        short: 'Lab 2 Short',
+        long: 'Lab 2 Long'
+      }
     }]
   };
   const activatedRouteSnapshot: ActivatedRouteSnapshot = {

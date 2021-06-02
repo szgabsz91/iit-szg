@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns="NS"
+            targetNamespace="NS"
+            elementFormDefault="qualified">
+
+  <xsd:include schemaLocation="3.b.1.xsd"/>
+
+  <xsd:element name="car-database">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="person" type="ns:personType"/>
+        <xsd:element ref="ns:car"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

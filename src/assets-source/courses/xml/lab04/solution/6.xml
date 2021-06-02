@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:reservation-system xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="NS 6.xsd"
+                       xmlns:ns="NS">
+
+  <ns:rooms>
+    <ns:room id="A-1-102" suite="true">
+      <ns:description>Description for room A-1-102</ns:description>
+    </ns:room>
+
+    <ns:room id="B-2-13">
+      <ns:description>Description for room B-2-13</ns:description>
+    </ns:room>
+  </ns:rooms>
+
+  <ns:customers>
+    <ns:customer id="123456AB">
+      <ns:name>John Doe</ns:name>
+    </ns:customer>
+
+    <ns:customer id="123456AC">
+      <ns:name>Jane Doe</ns:name>
+    </ns:customer>
+  </ns:customers>
+
+  <ns:reservations>
+    <ns:reservation customer-id="123456AB" room-id="A-1-102"/>
+    <ns:reservation customer-id="123456AC" room-id="B-2-13"/>
+    <ns:reservation customer-id="123456AB" room-id="B-2-13"/>
+    <ns:reservation customer-id="123456AB" room-id="A-1-102"/>
+  </ns:reservations>
+
+</ns:reservation-system>

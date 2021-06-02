@@ -16,7 +16,10 @@ describe('LabResolver', () => {
   const mockedLab: Lab = {
     courseId: 'course1',
     index: 2,
-    title: 'Lab 2'
+    titles: {
+      short: 'Lab 2 Short',
+      long: 'Lab 2 Long'
+    }
   };
   const activatedRouteSnapshot: ActivatedRouteSnapshot = {
     paramMap: {
