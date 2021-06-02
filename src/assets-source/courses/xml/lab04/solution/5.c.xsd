@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ns1="NS1"
+            xmlns:ns2="NS2"
+            targetNamespace="NS3"
+            elementFormDefault="qualified">
+
+  <xsd:import namespace="NS1" schemaLocation="5.a.xsd"/>
+  <xsd:import namespace="NS2" schemaLocation="5.b.xsd"/>
+
+  <xsd:element name="car-database">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="person" type="ns1:personType"/>
+        <xsd:element ref="ns2:car"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

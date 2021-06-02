@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<car-database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="NS3 5.c.xsd"
+              xmlns:ns1="NS1"
+              xmlns:ns2="NS2"
+              xmlns="NS3">
+
+  <person>
+    <ns1:first-name>John</ns1:first-name>
+    <ns1:last-name>Doe</ns1:last-name>
+  </person>
+
+  <ns2:car>
+    <ns2:manufacturer>Tesla</ns2:manufacturer>
+    <ns2:model>Model 3</ns2:model>
+  </ns2:car>
+
+</car-database>

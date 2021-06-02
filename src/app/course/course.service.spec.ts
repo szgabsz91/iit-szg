@@ -14,17 +14,26 @@ describe('CourseService', () => {
     name: 'Course 1',
     labs: [{
       index: 1,
-      title: 'Course 1 Lab 1'
+      titles: {
+        short: 'Course 1 Lab 1 Short',
+        long: 'Course 1 Lab 1 Long'
+      }
     }, {
       index: 2,
-      title: 'Course 1 Lab 2'
+      titles: {
+        short: 'Course 1 Lab 2 Short',
+        long: 'Course 1 Lab 2 Long'
+      }
     }]
   }, {
     id: 'course2',
     name: 'Course 2',
     labs: [{
       index: 1,
-      title: 'Course 2 Lab 1'
+      titles: {
+        short: 'Course 2 Lab 1 Short',
+        long: 'Course 2 Lab 1 Long'
+      }
     }]
   }];
 

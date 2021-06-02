@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:complexType name="personType">
+    <xsd:sequence>
+      <xsd:element name="first-name" type="xsd:string"/>
+      <xsd:element name="last-name" type="xsd:string"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="car">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="manufacturer" type="xsd:string"/>
+        <xsd:element name="model" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

@@ -20,7 +20,10 @@ describe('LabComponent', () => {
   const mockedLab: Lab = {
     courseId: 'course1',
     index: 2,
-    title: 'Lab 2'
+    titles: {
+      short: 'Lab 2 Short',
+      long: 'Lab 2 Long'
+    }
   };
   const activatedRoute = {
     data: of({
@@ -103,7 +106,7 @@ describe('LabComponent', () => {
 
     it('should render the appropriate lab title', () => {
       const title = compiled.querySelector('mat-card-title').textContent;
-      expect(title).toEqual(`Lab ${mockedLab.index}: ${mockedLab.title}`);
+      expect(title).toEqual(`Lab ${mockedLab.index}: ${mockedLab.titles.long}`);
     });
 
     it('should render the appropriate lab markdown content', () => {

@@ -7,7 +7,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { of, EMPTY } from 'rxjs';
-import { Course } from 'src/app/model/course';
+import { Course } from '../../model/course';
+import { Lab } from '../../model/lab';
 
 describe('CourseComponent', () => {
 
@@ -21,10 +22,16 @@ describe('CourseComponent', () => {
     name: 'Course 1',
     labs: [{
       index: 1,
-      title: 'Lab 1'
+      titles: {
+        short: 'Lab 1 Short',
+        long: 'Lab 1 Long'
+      }
     }, {
       index: 2,
-      title: 'Lab 2'
+      titles: {
+        short: 'Lab 2 Short',
+        long: 'Lab 2 Long'
+      }
     }]
   };
   const activatedRoute = {
@@ -90,9 +97,12 @@ describe('CourseComponent', () => {
       it('should navigate to the appropriate lab page', () => {
         spyOn(router, 'navigate').and.returnValue(Promise.resolve(true));
 
-        const lab = {
+        const lab: Lab = {
           index: 1,
-          title: 'Lab 1'
+          titles: {
+            short: 'Lab 1 Short',
+            long: 'Lab 1 Long'
+          }
         };
 
         courseComponent.navigateToLab(lab);
@@ -114,7 +124,7 @@ describe('CourseComponent', () => {
     it('should render the appropriate labs in a table', () => {
       const labTitles = Array.from(compiled.querySelectorAll('tbody td:last-child'))
         .map(el => el.textContent);
-      const expectedLabTitles = mockedCourse.labs.map(lab => lab.title);
+      const expectedLabTitles = mockedCourse.labs.map(lab => lab.titles.long);
       expect(labTitles).toEqual(expectedLabTitles);
     });
 

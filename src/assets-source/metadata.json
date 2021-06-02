@@ -29,6 +29,16 @@
         "en": "XML Schema",
         "hu": "XML séma"
       }
+    }, {
+      "index": 4,
+      "shortTitle": {
+        "en": "XML Schema 2",
+        "hu": "XML séma 2"
+      },
+      "title": {
+        "en": "XML Schema - Namespaces & Integrity Constraints",
+        "hu": "XML séma - Névterek & Integritási feltételek"
+      }
     }]
   }]
 }

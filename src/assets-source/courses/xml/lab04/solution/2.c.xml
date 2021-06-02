@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:people xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="NS 2.c.xsd"
+           xmlns:ns="NS">
+
+  <person id="1">
+    <first-name>Vincent</first-name>
+    <last-name>Vega</last-name>
+  </person>
+
+  <person id="2">
+    <first-name>Jules</first-name>
+    <last-name>Winnfield</last-name>
+  </person>
+
+</ns:people>

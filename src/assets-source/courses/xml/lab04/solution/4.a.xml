@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="4.a.2.xsd">
+
+  <first-name>John</first-name>
+  <last-name>Doe</last-name>
+  <middle-name>Dangerous</middle-name>
+
+</person>

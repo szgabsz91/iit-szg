@@ -1,0 +1,36 @@
+digraph reservation_system_xdm {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=ellipse, peripheries=1]; { node[label="reservation-system"] reservation_system_element; }
+  node [shape=ellipse, peripheries=1]; { node[label="rooms"] rooms_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="room"] room_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] room_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="suite"] suite_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="description"] description_element; }
+  node [shape=box, peripheries=1]; { node[label=""] description_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="customers"] customers_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="customer"] customer_element; }
+  node [shape=diamond, peripheries=1]; { node[label="id"] customer_id_attribute; }
+  node [shape=ellipse, peripheries=1]; { node[label="name"] name_element; }
+  node [shape=box, peripheries=1]; { node[label=""] name_text; }
+  node [shape=ellipse, peripheries=1]; { node[label="reservations"] reservations_element; }
+  node [shape=ellipse, peripheries=2]; { node[label="reservation"] reservation_element; }
+  node [shape=diamond, peripheries=1]; { node[label="customer-id"] reservation_customer_id_attribute; }
+  node [shape=diamond, peripheries=1]; { node[label="room-id"] reservation_room_id_attribute; }
+
+  edge[arrowhead=normal]; reservation_system_element -> rooms_element;
+  edge[arrowhead=normal]; rooms_element -> room_element;
+  edge[arrowhead=normal]; room_element -> room_id_attribute;
+  edge[arrowhead=normal]; room_element -> suite_attribute;
+  edge[arrowhead=normal]; room_element -> description_element;
+  edge[arrowhead=none]; description_element -> description_text;
+  edge[arrowhead=normal]; reservation_system_element -> customers_element;
+  edge[arrowhead=normal]; customers_element -> customer_element;
+  edge[arrowhead=normal]; customer_element -> customer_id_attribute;
+  edge[arrowhead=normal]; customer_element -> name_element;
+  edge[arrowhead=none]; name_element -> name_text;
+  edge[arrowhead=normal]; reservation_system_element -> reservations_element;
+  edge[arrowhead=normal]; reservations_element -> reservation_element;
+  edge[arrowhead=normal]; reservation_element -> reservation_customer_id_attribute;
+  edge[arrowhead=normal]; reservation_element -> reservation_room_id_attribute;
+}

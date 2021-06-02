@@ -21,17 +21,25 @@ describe('AppComponent', () => {
     name: 'Course 1',
     labs: [{
       index: 1,
-      title: 'Course 1 Lab 1'
+      titles: {
+        short: 'Course 1 Lab 1 Short',
+        long: 'Course 1 Lab 1 Long'
+      }
     }, {
       index: 2,
-      title: 'Course 1 Lab 2'
+      titles: {
+        long: 'Course 1 Lab 2 Long'
+      }
     }]
   }, {
     id: 'course2',
     name: 'Course 2',
     labs: [{
       index: 1,
-      title: 'Course 2 Lab 1'
+      titles: {
+        short: 'Course 2 Lab 1 Short',
+        long: 'Course 2 Lab 1 Long'
+      }
     }]
   }];
 
@@ -132,7 +140,7 @@ describe('AppComponent', () => {
     it('should render the appropriate menu items', () => {
       const menuItems = Array.from(compiled.querySelectorAll('[mat-list-item]'));
       const menuItemLabels = menuItems.map(menuItem => menuItem.textContent).sort();
-      expect(menuItemLabels).toEqual(['Course 1 Lab 1', 'Course 1 Lab 2', 'Course 2 Lab 1', 'Index', 'Index']);
+      expect(menuItemLabels).toEqual(['Course 1 Lab 1 Short', 'Course 1 Lab 2 Long', 'Course 2 Lab 1 Short', 'Index', 'Index']);
     });
 
     it('should render the appropriate footer', () => {

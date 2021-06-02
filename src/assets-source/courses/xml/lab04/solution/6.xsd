@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="NS"
+            xmlns:ns="NS"
+            elementFormDefault="qualified">
+
+  <xsd:element name="reservation-system" type="ns:reservationSystemType">
+    <xsd:key name="roomIdKey">
+      <xsd:selector xpath="ns:rooms/ns:room"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+    <xsd:key name="customerIdKey">
+      <xsd:selector xpath="ns:customers/ns:customer"/>
+      <xsd:field xpath="@id"/>
+    </xsd:key>
+
+    <xsd:keyref name="reservationCustomerIdKeyref" refer="ns:customerIdKey">
+      <xsd:selector xpath="ns:reservations/ns:reservation"/>
+      <xsd:field xpath="@customer-id"/>
+    </xsd:keyref>
+
+    <xsd:keyref name="reservationRoomIdKeyref" refer="ns:roomIdKey">
+      <xsd:selector xpath="ns:reservations/ns:reservation"/>
+      <xsd:field xpath="@room-id"/>
+    </xsd:keyref>
+  </xsd:element>
+
+  <xsd:complexType name="reservationSystemType">
+    <xsd:sequence>
+      <xsd:element name="rooms" type="ns:roomsType"/>
+      <xsd:element name="customers" type="ns:customersType"/>
+      <xsd:element name="reservations" type="ns:reservationsType"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="roomsType">
+    <xsd:sequence>
+      <xsd:element name="room" type="ns:roomType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="roomType">
+    <xsd:sequence>
+      <xsd:element name="description" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="ns:roomIdType" use="required"/>
+    <xsd:attribute name="suite" type="xsd:boolean" default="false"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="roomIdType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[A-Z]-\d-\d+"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="customersType">
+    <xsd:sequence>
+      <xsd:element name="customer" type="ns:customerType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="customerType">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:string"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="ns:customerIdType" use="required"/>
+  </xsd:complexType>
+
+  <xsd:simpleType name="customerIdType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{6}[A-Z]{2}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="reservationsType">
+    <xsd:sequence>
+      <xsd:element name="reservation" type="ns:reservationType" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="reservationType">
+    <xsd:attribute name="customer-id" type="ns:customerIdType" use="required"/>
+    <xsd:attribute name="room-id" type="ns:roomIdType" use="required"/>
+  </xsd:complexType>
+
+</xsd:schema>
