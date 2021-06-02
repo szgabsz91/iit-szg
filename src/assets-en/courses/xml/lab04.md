@@ -1,5 +1,7 @@
 a cím még nem jó, nemcsak integritás van itt plusszban, fixáljuk
 
+legyen egy olyan feladat is, amiben a software-company-t egészítjük ki integritással
+
 <p>A feladatokhoz sz�ks�ges f�jlok let�lthet�ek <a href="<?php echo getLink('xml/gyak04_start.zip'); ?>">innen</a>.</p>
   
   <h3>1. feladat</h3>
