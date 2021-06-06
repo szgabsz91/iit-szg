@@ -45,6 +45,12 @@
         "en": "Java SAX",
         "hu": "JAVA SAX"
       }
+    }, {
+      "index": 6,
+      "title": {
+        "en": "Java DOM",
+        "hu": "JAVA DOM"
+      }
     }]
   }]
 }
