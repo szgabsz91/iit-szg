@@ -51,6 +51,12 @@
         "en": "Java DOM",
         "hu": "JAVA DOM"
       }
+    }, {
+      "index": 7,
+      "title": {
+        "en": "Java JAXB",
+        "hu": "JAVA JAXB"
+      }
     }]
   }]
 }
