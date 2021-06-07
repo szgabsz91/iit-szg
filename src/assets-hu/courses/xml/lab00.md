@@ -24,3 +24,12 @@ Java alkalmazások futtatásához bármilyen Java IDE-t használhatunk, példáu
 
 * Visual Studio Code-ot a <a href="https://marketplace.visualstudio.com/items?itemName=redhat.java" target="_blank">Language Support for Java(TM) by Red Hat</a> extensionnel, vagy
 * az <a href="https://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a> fejlesztőeszközt.
+
+## C#
+
+C# alkalmazások futtatásához bármilyen C# IDE-t használhatunk, például
+
+* Visual Studio Code-ot a <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp" target="_blank">C#</a> extensionnel, vagy
+* a <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a> fejlesztőeszközt.
+
+A C# alkalmazásainkat Windows, Linux és macOS operációs rendszeren is futtathatjuk a <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> segítségével, ami egy platformfüggetlen .NET platform implementáció. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">Ez a tutorial</a> elmagyarázza, hogyan használhatjuk a .NET Core-t Visual Studio Code-ban.
