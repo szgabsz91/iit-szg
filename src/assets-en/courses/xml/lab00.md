@@ -24,3 +24,12 @@ To execute Java applications, we can use any Java IDEs, for instance
 
 * Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.java" target="_blank">Language Support for Java(TM) by Red Hat</a> extension, or
 * <a href="https://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a>.
+
+## C#
+
+To execute C# applications, we can use any C# IDEs, for instance
+
+* Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp" target="_blank">C#</a> extension, or
+* <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a>.
+
+These C# applications can also be executed on Window, Linux and macOS using <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> which is a platform independent .NET platform implementation. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">This tutorial</a> explains how to use Visual Studio Code to write .NET Core applications.

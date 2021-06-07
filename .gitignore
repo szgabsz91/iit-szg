@@ -54,3 +54,5 @@ src/app/constants/app.prod-constants.ts
 build
 .gradle
 .idea
+bin
+obj
