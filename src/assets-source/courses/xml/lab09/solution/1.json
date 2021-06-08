@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Steve Jobs",
+    "company": {
+      "name": "Apple",
+      "address": {
+        "zipCode": "CA 95014",
+        "city": "Cupertino",
+        "street": "Apple Park Way",
+        "houseNumber": 1
+      },
+      "phoneNumber": {
+        "areaCode": "408",
+        "number": "996-1010"
+      },
+      "emailAddress": "info@apple.com"
+    },
+    "position": "CEO",
+    "phoneNumber": {
+      "areaCode": "408",
+      "number": "996-1010"
+    },
+    "emailAddress": "steve.jobs@apple.com"
+  },
+  {
+    "id": 2,
+    "name": "Bill Gates",
+    "company": {
+      "name": "Microsoft",
+      "address": {
+        "zipCode": "WA 98052",
+        "city": "Redmond",
+        "street": "Microsoft Way",
+        "houseNumber": 1
+      },
+      "phoneNumber": {
+        "areaCode": "425",
+        "number": "882-8080"
+      },
+      "website": "https://microsoft.com"
+    },
+    "position": "CEO",
+    "phoneNumber": {
+      "areaCode": "425",
+      "number": "882-8080"
+    },
+    "emailAddress": "bill.gates@microsoft.com"
+  },
+  {
+    "id": 3,
+    "name": "Larry Page",
+    "company": {
+      "name": "Google",
+      "address": {
+        "zipCode": "CA 94043",
+        "city": "Mountain View",
+        "street": "Amphitheatre Pkwy",
+        "houseNumber": 1600
+      },
+      "phoneNumber": {
+        "number": "253-0000"
+      },
+      "website": "https://about.google"
+    },
+    "position": "CEO",
+    "phoneNumber": {
+      "number": "253-0000"
+    },
+    "emailAddress": "larry.page@google.com"
+  }
+]

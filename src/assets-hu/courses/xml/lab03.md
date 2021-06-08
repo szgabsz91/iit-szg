@@ -35,7 +35,7 @@ Adjuk meg az alábbi ER szerkezetek XML séma megfelelőjét:
 
 ## 3. feladat
 
-Hozzunk létre az [2. gyakorlat](/courses/xml/labs/2) 9. feladatához XML sémát és hozzá tartozó valid XML dokumentumot úgy, hogy az integritási feltételekkel még nem foglalkozunk, és
+Hozzunk létre az <a href="/courses/xml/labs/2" target="_blank">2. gyakorlat</a> 9. feladatához XML sémát és hozzá tartozó valid XML dokumentumot úgy, hogy az integritási feltételekkel még nem foglalkozunk, és
 
 <ol type="a">
   <li>névtelen típusokat használunk</li>
@@ -217,7 +217,7 @@ Mi a hiba a következő kódrészletekben?
 
 ## 7. feladat
 
-Készítsünk XML sémát nevesített típusokkal a [2. gyakorlat](/courses/xml/labs/2) 2. feladatához (névjegykártya adatbázis). A következő szabályokat valósítsuk meg:
+Készítsünk XML sémát nevesített típusokkal a <a href="/courses/xml/labs/2" target="_blank">2. gyakorlat</a> 2. feladatához (névjegykártya adatbázis). A következő szabályokat valósítsuk meg:
 
 * Az azonosítók pozitív számok legyenek.
 * Az irányítószámok formátuma: két betű, szóköz, 5 szám. Pl.: *CA 95014*

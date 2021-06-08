@@ -1,0 +1,20 @@
+[
+  {
+    "licensePlateNumber": "AB12 CDE",
+    "manufacturer": "Tesla",
+    "model": "Model 3",
+    "color": "red"
+  },
+  {
+    "licensePlateNumber": "AB12 CDF",
+    "manufacturer": "Volkswagen",
+    "model": "ID.4",
+    "color": "blue"
+  },
+  {
+    "licensePlateNumber": "AB12 CDG",
+    "manufacturer": "Kia",
+    "model": "e-Niro",
+    "color": "black"
+  }
+]

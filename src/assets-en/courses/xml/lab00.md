@@ -33,3 +33,7 @@ To execute C# applications, we can use any C# IDEs, for instance
 * <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a>.
 
 These C# applications can also be executed on Window, Linux and macOS using <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> which is a platform independent .NET platform implementation. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">This tutorial</a> explains how to use Visual Studio Code to write .NET Core applications.
+
+## Vue
+
+The solution of <a href="/courses/xml/labs/9" target="_blank">Lab 9</a> contains a Vue web application. For maximal editor support, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">Vetur</a> Visual Studio Code extension.

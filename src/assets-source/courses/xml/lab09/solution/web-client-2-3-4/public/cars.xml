@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns:cars xmlns:ns="NS">
+
+  <ns:car license-plate-number="AB12 CDE">
+    <ns:manufacturer>Tesla</ns:manufacturer>
+    <ns:model>Model 3</ns:model>
+    <ns:color>red</ns:color>
+  </ns:car>
+
+  <ns:car license-plate-number="AB12 CDF">
+    <ns:manufacturer>Volkswagen</ns:manufacturer>
+    <ns:model>ID.4</ns:model>
+    <ns:color>blue</ns:color>
+  </ns:car>
+
+  <ns:car license-plate-number="AB12 CDG">
+    <ns:manufacturer>Kia</ns:manufacturer>
+    <ns:model>e-Niro</ns:model>
+    <ns:color>black</ns:color>
+  </ns:car>
+
+</ns:cars>
