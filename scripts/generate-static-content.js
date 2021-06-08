@@ -1,19 +1,20 @@
 #!/usr/bin/env node
 
+const archiver = require('archiver');
 const crypto = require('crypto');
 const fs = require('fs');
 const minimist = require('minimist');
 const path = require('path');
 const { promisify } = require('util');
-const zipFolder = promisify(require('zip-folder'));
 
+const createWriteStream = fs.createWriteStream;
 const glob = promisify(require('glob'));
 const lstat = promisify(fs.lstat);
 const mkdir = promisify(fs.mkdir);
 const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
-const writeFile = promisify(fs.writeFile);
 const unlink = promisify(fs.unlink);
+const writeFile = promisify(fs.writeFile);
 
 const supportedLocaleIds = ['en', 'hu'];
 const assetsSourceFolder = path.resolve('src', 'assets-source');
@@ -90,6 +91,26 @@ const processLabFolder = async labFolder => {
       }
       processProjectFolder(projectFolder);
     });
+};
+
+const zipFolder = (sourceFolder, targetFile) => {
+  const archive = archiver('zip', {
+    zlib: {
+      level: 9
+    }
+  });
+  const stream = createWriteStream(targetFile);
+
+  return new Promise((resolve, reject) => {
+    archive
+      .directory(sourceFolder, false)
+      .on('error', error => reject(error))
+      .pipe(stream);
+
+    stream.on('close', () => resolve());
+
+    archive.finalize();
+  });
 };
 
 const processProjectFolder = async projectFolder => {

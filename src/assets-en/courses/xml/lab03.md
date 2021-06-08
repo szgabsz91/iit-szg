@@ -35,7 +35,7 @@ Let's create XML Schemas valid XML documents that show how to handle the followi
 
 ## Exercise 3
 
-Let's create an XML Schema and a valid XML document for Exercise 9 of [Lab 2](/courses/xml/labs/2) such that we don't care about integrity constraints yet, and
+Let's create an XML Schema and a valid XML document for Exercise 9 of <a href="/courses/xml/labs/2" target="_blank">Lab 2</a> such that we don't care about integrity constraints yet, and
 
 <ol type="a">
   <li>we use anonymous types</li>
@@ -217,7 +217,7 @@ What errors are there in the following XML Schemas and XML documents?
 
 ## Exercise 7
 
-Let's create an XML Schema for Exercise 2 of [Lab 2](/courses/xml/labs/2) (business cards) using named types. The following rules should be implemented:
+Let's create an XML Schema for Exercise 2 of <a href="/courses/xml/labs/2" target="_blank">Lab 2</a> (business cards) using named types. The following rules should be implemented:
 
 * The identifiers should be positive integers.
 * The format for the zip codes should be: 2 letters, space, 5 digits. For example: *CA 95014*
