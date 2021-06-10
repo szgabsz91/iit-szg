@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="1.b.xsl" type="text/xsl"?>
+<cars xmlns="NS">
+
+  <car id="1">
+    <manufacturer group="PSA">Citroën</manufacturer>
+    <model>ë-C4</model>
+    <color>blue</color>
+    <price>8.8</price>
+  </car>
+
+  <car id="2">
+    <manufacturer group="Hyundai">Hyundai</manufacturer>
+    <model>Ioniq</model>
+    <color>darkgrey</color>
+    <price>8.5</price>
+  </car>
+
+  <car id="3">
+    <manufacturer group="Hyundai">Hyundai</manufacturer>
+    <model>IONIQ 5</model>
+    <color>black</color>
+    <price>13.5</price>
+  </car>
+
+  <car id="4">
+    <manufacturer group="Hyundai">Hyundai</manufacturer>
+    <model>Kona</model>
+    <color>red</color>
+    <price>7.5</price>
+  </car>
+
+  <car id="5">
+    <manufacturer group="Hyundai">Kia</manufacturer>
+    <model>e-Niro</model>
+    <color>red</color>
+    <price>8.9</price>
+  </car>
+
+  <car id="6">
+    <manufacturer group="Hyundai">Kia</manufacturer>
+    <model>e-Soul</model>
+    <color>green</color>
+    <price>8.5</price>
+  </car>
+
+  <car id="7">
+    <manufacturer group="Hyundai">Kia</manufacturer>
+    <model>EV6</model>
+    <color>grey</color>
+    <price>13.5</price>
+  </car>
+
+  <car id="8">
+    <manufacturer group="PSA">Opel</manufacturer>
+    <model>Corsa-e</model>
+    <color>blue</color>
+    <price>8.2</price>
+  </car>
+
+  <car id="9">
+    <manufacturer group="PSA">Peugeot</manufacturer>
+    <model>e-208</model>
+    <color>gold</color>
+    <price>7.8</price>
+  </car>
+
+  <car id="10">
+    <manufacturer group="PSA">Peugeot</manufacturer>
+    <model>e-2008</model>
+    <color>blue</color>
+    <price>8.6</price>
+  </car>
+
+  <car id="11">
+    <manufacturer group="Volkswagen">Skoda</manufacturer>
+    <model>ENYAQ</model>
+    <color>green</color>
+    <price>12.6</price>
+  </car>
+
+  <car id="12">
+    <manufacturer group="Volkswagen">Volkswagen</manufacturer>
+    <model>ID.3</model>
+    <color>turquoise</color>
+    <price>8.3</price>
+  </car>
+
+  <car id="13">
+    <manufacturer group="Volkswagen">Volkswagen</manufacturer>
+    <model>ID.4</model>
+    <color>gold</color>
+    <price>16.8</price>
+  </car>
+
+  <car id="14">
+    <manufacturer group="Volkswagen">Volkswagen</manufacturer>
+    <model>e-UP!</model>
+    <color>blue</color>
+    <price>5.6</price>
+  </car>
+
+</cars>
