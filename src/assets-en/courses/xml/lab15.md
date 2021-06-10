@@ -2,13 +2,6 @@
   
   <ol>
     <li>
-      �rjunk 2 XPath kifejez�st:
-      <ol class="letters">
-        <li>K�rdezz�k le a 47-es k�rzetsz�m� hallgat�k Neptun-k�dj�t.</li>
-        <li>K�rdezz�k le az 1991-es sz�let�s� hallgat�k l�tsz�m�t.</li>
-      </ol>
-    </li>
-    <li>
       XSLT seg�ts�g�vel alak�tsuk az XML f�jlt HTML f�jll� �gy, hogy
       <ol class="letters">
         <li>A HTML f�jl head szekci�j�ban l�v� title legyen "Hallgat�k"</li>
@@ -22,13 +15,6 @@
   <p>Oldjuk meg a k�vetkez�, data/autok.xml f�jlra vonatkoz� feladatokat. A kezd� Eclipse Project <a href="<?php echo getLink('xml/zh3_start_b.zip'); ?>">itt</a> tal�lhat�.</p>
   
   <ol>
-    <li>
-      �rjunk 2 XPath kifejez�st:
-      <ol class="letters">
-        <li>K�rdezz�k le a met�lozott aut�k rendsz�m�t.</li>
-        <li>K�rdezz�k le 2014-es gy�rt�si �v� aut�k darabsz�m�t.</li>
-      </ol>
-    </li>
     <li>
       XSLT seg�ts�g�vel alak�tsuk az XML f�jlt HTML f�jll� �gy, hogy
       <ol class="letters">
@@ -47,13 +33,6 @@
   <p>Oldjuk meg a k�vetkez�, data/organization.xml f�jlra vonatkoz� feladatokat. A kezd� Eclipse Project <a href="<?php echo getLink('xml/potzh3_start.zip'); ?>">itt</a> tal�lhat�.</p>
   
   <ol>
-    <li>
-      �rjunk 2 XPath kifejez�st:
-      <ol class="letters">
-        <li>K�rdezz�k le az e2-es azonos�t�j� alkalmazott projektj�nek nev�t.</li>
-        <li>K�rdezz�k le a p1-es azonos�t�j� projekt tagjainak azonos�t�it.</li>
-      </ol>
-    </li>
     <li>XSLT seg�ts�g�vel ford�tsuk le az XML f�jl elemeinek �s attrib�tumainak nev�t. A ford�t�sokat a lent tal�lhat� t�bl�zat tartalmazza.</li>
     <li>XQuery seg�ts�g�vel k�rdezz�k le (projektn�v, alkalmazottn�v) p�rokat a kapcsol�d� projektek �s alkalmazottak eset�n. Az elv�rt kimenet a k�vetkez�:</li>
   </ol>

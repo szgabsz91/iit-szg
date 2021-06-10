@@ -1,9 +1,3 @@
-<p>El�felt�telek:</p>
-  
-  <ul>
-    <li><a href="<?php echo getLink('xml/setup-ide.php', 'xmldb'); ?>">XML-DB</a></li>
-  </ul>
-  
   <p class="text-center">
     <img src="xml/gyak12.png" alt="Rel�ci�s modell" title="Rel�ci�s modell">
   </p>
