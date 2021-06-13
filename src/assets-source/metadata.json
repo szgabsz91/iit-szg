@@ -81,6 +81,12 @@
         "en": "XSLT",
         "hu": "XSLT"
       }
+    }, {
+      "index": 12,
+      "title": {
+        "en": "XQuery",
+        "hu": "XQuery"
+      }
     }]
   }]
 }

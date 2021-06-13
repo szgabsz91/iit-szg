@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ns:car-database xmlns:ns="NS">
+
+  <ns:cars>
+    <ns:car license-plate-number="AB12 CDE">
+      <ns:manufacturer>Tesla</ns:manufacturer>
+      <ns:model>Model 3</ns:model>
+      <ns:color>red</ns:color>
+      <ns:price>13.5</ns:price>
+    </ns:car>
+
+    <ns:car license-plate-number="AB12 CDF">
+      <ns:manufacturer>Volkswagen</ns:manufacturer>
+      <ns:model>ID.4</ns:model>
+      <ns:color>silver</ns:color>
+      <ns:price>16.8</ns:price>
+    </ns:car>
+
+    <ns:car license-plate-number="AB12 CDG">
+      <ns:manufacturer>Kia</ns:manufacturer>
+      <ns:model>e-Niro</ns:model>
+      <ns:color>silver</ns:color>
+      <ns:price>8.9</ns:price>
+    </ns:car>
+
+    <ns:car license-plate-number="AB12 CDH">
+      <ns:manufacturer>Volkswagen</ns:manufacturer>
+      <ns:model>ID.3</ns:model>
+      <ns:color>turquoise</ns:color>
+      <ns:price>8.3</ns:price>
+    </ns:car>
+  </ns:cars>
+
+  <ns:owners>
+    <ns:owner id="1">
+      <ns:first-name>John</ns:first-name>
+      <ns:last-name>Doe</ns:last-name>
+      <ns:age>30</ns:age>
+      <ns:owned-cars>
+        <ns:owned-car>AB12 CDE</ns:owned-car>
+        <ns:owned-car>AB12 CDF</ns:owned-car>
+      </ns:owned-cars>
+    </ns:owner>
+
+    <ns:owner id="2">
+      <ns:first-name>Jane</ns:first-name>
+      <ns:last-name>Doe</ns:last-name>
+      <ns:age>46</ns:age>
+      <ns:owned-cars>
+        <ns:owned-car>AB12 CDG</ns:owned-car>
+      </ns:owned-cars>
+    </ns:owner>
+
+    <ns:owner id="3">
+      <ns:first-name>Jack</ns:first-name>
+      <ns:last-name>Brown</ns:last-name>
+      <ns:age>23</ns:age>
+    </ns:owner>
+  </ns:owners>
+
+</ns:car-database>
