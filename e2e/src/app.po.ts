@@ -15,7 +15,8 @@ export class AppPage {
   }
 
   async getSelectedLanguage(): Promise<string> {
-    return $('.mat-select-value-text').getAttribute('textContent');
+    const selectedLanguage = $('.mat-select-value-text span');
+    return browser.executeScript('return arguments[0].textContent;', selectedLanguage);
   }
 
 }
