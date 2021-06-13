@@ -1,6 +1,6 @@
 # iit-szg
 
-[![Build Status](https://github.com/szgabsz91/iit-szg/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/szgabsz91/iit-szg/actions?query=branch%3Amaster)
+[![Build Status](https://github.com/szgabsz91/iit-szg/actions/workflows/release-and-deploy.yml/badge.svg?branch=master)](https://github.com/szgabsz91/iit-szg/actions?query=branch%3Amaster)
 [![Dependencies](https://img.shields.io/david/szgabsz91/iit-szg.svg)](https://david-dm.org/szgabsz91/iit-szg)
 [![License](https://img.shields.io/github/license/szgabsz91/iit-szg.svg)](https://github.com/szgabsz91/iit-szg/blob/master/LICENSE)
 
