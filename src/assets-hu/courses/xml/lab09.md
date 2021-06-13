@@ -101,7 +101,7 @@ A *509088797192998* azonosítójú Facebook alkalmazást használva írjunk olya
 
 ## 4. feladat
 
-Írjunk webes kliens alkalmazást tetszőleges technológiával, amely megjeleníti <a href="http://feeds.hanselman.com/ScottHanselman" target="_blank">Scott Hanselman RSS folyamának</a> bejegyzéseit. Minden elemhez jelenítsük meg a címét és a bejegyzés tartalmát. A címre kattintva új oldalon nyíljon meg a megfelelő YouTube videó.
+Írjunk webes kliens alkalmazást tetszőleges technológiával, amely megjeleníti <a href="https://feeds.hanselman.com/ScottHanselman" target="_blank">Scott Hanselman RSS folyamának</a> bejegyzéseit. Minden elemhez jelenítsük meg a címét és a bejegyzés tartalmát. A címre kattintva új oldalon nyíljon meg a megfelelő YouTube videó.
 
 ## 5. feladat
 

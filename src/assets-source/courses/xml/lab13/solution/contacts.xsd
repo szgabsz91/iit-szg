@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="contacts" type="contactsType"/>
+
+  <xsd:complexType name="contactsType">
+    <xsd:sequence>
+      <xsd:element name="phone-number" type="phoneNumberType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="address" type="addressType" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="email-address" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="website" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:simpleType name="phoneNumberSimpleType">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{3}-\d{4}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="phoneNumberType">
+    <xsd:simpleContent>
+      <xsd:extension base="phoneNumberSimpleType">
+        <xsd:attribute name="area-code" type="areaCodeType" use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+
+  <xsd:simpleType name="areaCodeType">
+    <xsd:restriction base="xsd:positiveInteger">
+      <xsd:totalDigits value="3"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+  <xsd:complexType name="addressType">
+    <xsd:sequence>
+      <xsd:element name="city" type="xsd:string"/>
+      <xsd:element name="street" type="xsd:string"/>
+      <xsd:element name="house-number" type="xsd:positiveInteger"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -101,7 +101,7 @@ Let's create a web client application using an arbitrary technology that display
 
 ## Exercise 4
 
-Let's create a web client application that displays the entries of <a href="http://feeds.hanselman.com/ScottHanselman" target="_blank">Scott Hanselman's RSS feed</a>. For each entry, let's display the title and the content. Clicking the title should navigate to the appropriate YouTube video.
+Let's create a web client application that displays the entries of <a href="https://feeds.hanselman.com/ScottHanselman" target="_blank">Scott Hanselman's RSS feed</a>. For each entry, let's display the title and the content. Clicking the title should navigate to the appropriate YouTube video.
 
 ## Exercise 5
 
