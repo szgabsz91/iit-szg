@@ -43,7 +43,7 @@ export default {
   }),
   async created() {
     const feedResponse = await fetch(
-      "http://feeds.hanselman.com/ScottHanselman"
+      "https://feeds.hanselman.com/ScottHanselman"
     );
     const feedText = await feedResponse.text();
     const feedXml = new window.DOMParser().parseFromString(

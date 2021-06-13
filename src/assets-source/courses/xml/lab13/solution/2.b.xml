@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="contacts.xsd">
+
+  <phone-number area-code="206">123-4567</phone-number>
+  <phone-number area-code="206">123-4568</phone-number>
+  <email-address>john@google.com</email-address>
+  <website>https://john.google.com</website>
+
+</contacts>

@@ -1,0 +1,12 @@
+digraph messages_relational {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=record]; { node[label = "{<name>PersonContacts|<columns>id: int (PK)\lperson: int (FK)\lcontacts: xmltype\l}"] person_contacts_table };
+  node [shape=record]; { node[label = "{<name>People|<columns>id: int (PK)\lname: varchar2(50)\l}"] people_table };
+  node [shape=record]; { node[label = "{<name>Messages|<columns>id: int (PK)\lfrom: int (FK)\lto: int (FK)\ldate: date\lcontent: xmltype\l}"] messages_table };
+
+  edge[arrowhead=none];
+  person_contacts_table:columns -> people_table:name [headlabel="1", taillabel="1", label="person"];
+  people_table:columns -> messages_table:name [headlabel="1", taillabel="1", label="from"];
+  people_table:name -> messages_table:columns [headlabel="1", taillabel="1", label="to"];
+}
