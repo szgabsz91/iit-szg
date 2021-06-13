@@ -12,6 +12,7 @@ import { AnalyticsService } from './analytics.service';
 import { AnalyticsLogger } from './analytics-logger.service';
 import { AnalyticsLoggerMock } from './analytics-logger.mock';
 import { environment } from 'src/environments/environment';
+import { ScrollContentAfterNavigationDirective } from './scroll-content-after-navigation.directive';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void;
@@ -19,7 +20,8 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ScrollContentAfterNavigationDirective
   ],
   imports: [
     BrowserModule,
