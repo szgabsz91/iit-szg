@@ -6,6 +6,12 @@
       "hu": "XML"
     },
     "labs": [{
+      "index": 0,
+      "title": {
+        "en": "Prerequisites",
+        "hu": "Előfeltételek"
+      }
+    }, {
       "index": 1,
       "title": {
         "en": "XDM, XML",
