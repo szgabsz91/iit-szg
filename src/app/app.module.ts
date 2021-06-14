@@ -47,7 +47,7 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
     {
       provide: AnalyticsLogger,
       useFactory: (
-        // eslint-disable-next-line no-shadow, @typescript-eslint/naming-convention
+        // eslint-disable-next-line @typescript-eslint/no-shadow, @typescript-eslint/naming-convention
         gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void,
         googleAnalyticsTrackingId
       ) =>

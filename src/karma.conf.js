@@ -27,7 +27,7 @@ module.exports = function (config) {
         }
       }
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
     preprocessors: {
       '**/*.js': ['coverage']
     },
