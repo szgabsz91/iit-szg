@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/szgabsz91/iit-szg/compare/v1.0.0...v1.0.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* [#161](https://github.com/szgabsz91/iit-szg/issues/161) scroll to the top of the page after navigation ([7454fab](https://github.com/szgabsz91/iit-szg/commit/7454fab47fb7ca6d64638574c53f22d68d4100e8))
+
 # 1.0.0 (2021-06-13)
 
 
