@@ -1,21 +1,27 @@
 #!/usr/bin/env node
 
+const crypto = require('crypto');
 const fs = require('fs');
+const minimist = require('minimist');
 const path = require('path');
 const { promisify } = require('util');
 const zipFolder = promisify(require('zip-folder'));
 
+const glob = promisify(require('glob'));
 const lstat = promisify(fs.lstat);
 const mkdir = promisify(fs.mkdir);
 const readdir = promisify(fs.readdir);
 const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
+const unlink = promisify(fs.unlink);
 
 const supportedLocaleIds = ['en', 'hu'];
 const assetsSourceFolder = path.resolve('src', 'assets-source');
 const metadataJsonPath = path.resolve(assetsSourceFolder, 'metadata.json');
 const coursesSourceFolder = path.resolve(assetsSourceFolder, 'courses');
 const assetsFolder = path.resolve('src', 'assets');
+
+const argv = minimist(process.argv.slice(2));
 
 const keepOneLocaleInMetadata = (metadata, localeId) => {
   return {
@@ -33,12 +39,25 @@ const keepOneLocaleInMetadata = (metadata, localeId) => {
   };
 };
 
+const getMetadataJsonFilename = (content, localeId) => {
+  if (argv.prod) {
+    const md5Hash = crypto.createHash('md5').update(content).digest('hex');
+    return `metadata-${md5Hash}.json`;
+  }
+
+  return 'metadata.json';
+};
+
 const generateMetadataForLocale = (metadata, localeId) => {
   console.log('Generating metadata for locale', localeId);
-  const targetMetadataJsonPath = path.resolve('src', `assets-${localeId}`, 'metadata.json');
   const targetMetadata = keepOneLocaleInMetadata(metadata, localeId);
   const targetMetadataContent = JSON.stringify(targetMetadata);
-  return writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8');
+  const metadataJsonFilename = getMetadataJsonFilename(targetMetadataContent, localeId);
+  const targetMetadataJsonPath = path.resolve('src', `assets-${localeId}`, metadataJsonFilename);
+  return Promise.all([
+    writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8'),
+    writeFile(path.resolve('src', 'app', 'constants', 'app.prod-constants.ts'), `export const METADATA_FILENAME = '${metadataJsonFilename}';\n`, 'UTF-8')
+  ]);
 }
 
 const isFolder = async file => {
@@ -86,9 +105,13 @@ console.log('Generating static content...');
 (async () => {
   // metadata.json
   const metadata = JSON.parse(await readFile(metadataJsonPath, 'UTF-8'));
-  const requiredLocaleId = process.argv[2];
+  const requiredLocaleId = argv._[0];
   const localeIds = requiredLocaleId ? [requiredLocaleId] : supportedLocaleIds;
   localeIds.forEach(async supportedLocaleId => {
+    const metadataJsonFiles = await glob(path.resolve('src', `assets-${supportedLocaleId}`, 'metadata*.json'));
+    for (const metadataJsonFile of metadataJsonFiles) {
+      await unlink(metadataJsonFile);
+    }
     await generateMetadataForLocale(metadata, supportedLocaleId);
   });
 

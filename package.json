@@ -9,7 +9,7 @@
     "start": "ng serve",
     "prestart:hu": "./scripts/generate-graphs.sh && ./scripts/generate-static-content.js hu",
     "start:hu": "ng serve --configuration=hu",
-    "prebuild": "./scripts/generate-graphs.sh && ./scripts/generate-static-content.js",
+    "prebuild": "./scripts/generate-graphs.sh && ./scripts/generate-static-content.js --prod",
     "build": "ng build --configuration production --localize",
     "postbuild": "cp -R ./src/assets-hu/* ./dist/iit-szg/hu/assets",
     "test": "ng test --watch=false --code-coverage",
