@@ -1,5 +1,0 @@
-1. e2-es azonosítójú alkalmazott projektjének neve
-   /organization/project/member[text() = "e2"]/../name/text()
-
-2. p1-es azonosítójú projekt tagjainak azonosítói
-   /organization/project[@pid = "p1"]/member

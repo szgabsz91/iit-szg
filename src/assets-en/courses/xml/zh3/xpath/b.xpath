@@ -1,5 +1,0 @@
-1. Metálozott autók rendszáma
-   /autoDB/auto[szin/@metalozott = "true"]/@rendszam
-
-2. 2014-es autók darabszáma
-   count(/autoDB/auto[gyartasi-ev/text() = "2014"])

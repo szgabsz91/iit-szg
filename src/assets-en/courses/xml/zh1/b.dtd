@@ -1,7 +1,0 @@
-<!ELEMENT autok (auto*)>
-<!ELEMENT auto (marka, gyartasi-datum, szin?)>
-<!ELEMENT marka (#PCDATA)>
-<!ELEMENT gyartasi-datum (#PCDATA)>
-<!ELEMENT szin (#PCDATA)>
-<!ATTLIST szin metalozott (true | false) "false">
-<!ATTLIST auto rendszam ID #REQUIRED>
