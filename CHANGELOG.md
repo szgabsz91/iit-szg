@@ -1,3 +1,11 @@
+# [1.5.0](https://github.com/szgabsz91/iit-szg/compare/v1.4.1...v1.5.0) (2021-06-14)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites to executing Java applications ([d8bdd85](https://github.com/szgabsz91/iit-szg/commit/d8bdd853d921f47caac0730039be4eec024c188b))
+* [#64](https://github.com/szgabsz91/iit-szg/issues/64) Lab 5 of XML course: Java SAX ([9816a3e](https://github.com/szgabsz91/iit-szg/commit/9816a3e6ecdc4511fbf8da67ba513ce0f2bf337c))
+
 ## [1.4.1](https://github.com/szgabsz91/iit-szg/compare/v1.4.0...v1.4.1) (2021-06-14)
 
 
