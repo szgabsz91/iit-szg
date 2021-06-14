@@ -13,3 +13,7 @@ The <a href="https://marketplace.visualstudio.com/items?itemName=joaompinto.vsco
 ## XML, DTD, XML Schema
 
 To edit XML files, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml" target="_blank">XML</a> VSCode extension. This extension makes it possible to easily validate XML documents against DTD and XML Schema files.
+
+## Markdown
+
+To preview Markdown files, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target="_blank">Markdown Preview Enhanced</a> VSCode extension.

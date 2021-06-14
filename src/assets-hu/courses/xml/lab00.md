@@ -13,3 +13,7 @@ A <a href="https://marketplace.visualstudio.com/items?itemName=joaompinto.vscode
 ## XML, DTD, XML séma
 
 XML fájlok szerkesztéséhez telepítsük az <a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml" target="_blank">XML</a> extensiont a VSCode-ban. Ez a kiterjesztés lehetővé teszi XML fájlok egyszerű validációját is DTD és XML séma alapján.
+
+## Markdown
+
+A Markdown fájlok előnézetének megtekintéséhez telepítsük a <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target="_blank">Markdown Preview Enhanced</a> VSCode extensiont.
