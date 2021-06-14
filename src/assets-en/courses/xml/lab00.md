@@ -17,3 +17,10 @@ To edit XML files, let's install the <a href="https://marketplace.visualstudio.c
 ## Markdown
 
 To preview Markdown files, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target="_blank">Markdown Preview Enhanced</a> VSCode extension.
+
+## Java
+
+To execute Java applications, we can use any Java IDEs, for instance
+
+* Visual Studio Code with the [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java) extension, or
+* [IntelliJ IDEA](https://www.jetbrains.com/idea).
