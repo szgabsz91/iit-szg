@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/szgabsz91/iit-szg/compare/v1.1.0...v1.2.0) (2021-06-14)
+
+
+### Features
+
+* [#61](https://github.com/szgabsz91/iit-szg/issues/61) Lab 2 of XML course: DTD ([35a5fd1](https://github.com/szgabsz91/iit-szg/commit/35a5fd12d5f150cd1ed28778a393a1168efaccdc))
+
 # [1.1.0](https://github.com/szgabsz91/iit-szg/compare/v1.0.1...v1.1.0) (2021-06-14)
 
 
