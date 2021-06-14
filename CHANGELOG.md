@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/szgabsz91/iit-szg/compare/v1.3.0...v1.4.0) (2021-06-14)
+
+
+### Features
+
+* [#63](https://github.com/szgabsz91/iit-szg/issues/63) Lab 4 of XML course: XML Schema Namespaces & Integrity Constraints ([947c196](https://github.com/szgabsz91/iit-szg/commit/947c1967539b850b7051ed6139d39bfe869636f6))
+
 # [1.3.0](https://github.com/szgabsz91/iit-szg/compare/v1.2.0...v1.3.0) (2021-06-14)
 
 
