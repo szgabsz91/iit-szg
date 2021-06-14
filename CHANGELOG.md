@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/szgabsz91/iit-szg/compare/v1.0.1...v1.1.0) (2021-06-14)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites for diagrams, XML, DTD and XML Schema ([3033bd6](https://github.com/szgabsz91/iit-szg/commit/3033bd6b0f55dfb6fc5c60d91eb0508755b75762))
+* [#60](https://github.com/szgabsz91/iit-szg/issues/60) Lab 1 of XML course: XDM, XML ([e619ed1](https://github.com/szgabsz91/iit-szg/commit/e619ed10e0bea729612bb3ad707af5b1e35f5342))
+
 ## [1.0.1](https://github.com/szgabsz91/iit-szg/compare/v1.0.0...v1.0.1) (2021-06-14)
 
 
