@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/szgabsz91/iit-szg/compare/v1.2.0...v1.3.0) (2021-06-14)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites to preview Markdown files ([477bcb2](https://github.com/szgabsz91/iit-szg/commit/477bcb23e1af9b3c9a64b962debc804120575859))
+* [#62](https://github.com/szgabsz91/iit-szg/issues/62) Lab 3 of XML course: XML Schema ([a30ba9c](https://github.com/szgabsz91/iit-szg/commit/a30ba9cf4e3d98e9453b8f0f29e35ab94c108ab2))
+
 # [1.2.0](https://github.com/szgabsz91/iit-szg/compare/v1.1.0...v1.2.0) (2021-06-14)
 
 
