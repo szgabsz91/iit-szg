@@ -17,3 +17,10 @@ XML fájlok szerkesztéséhez telepítsük az <a href="https://marketplace.visua
 ## Markdown
 
 A Markdown fájlok előnézetének megtekintéséhez telepítsük a <a href="https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced" target="_blank">Markdown Preview Enhanced</a> VSCode extensiont.
+
+## Java
+
+Java alkalmazások futtatásához bármilyen Java IDE-t használhatunk, például
+
+* Visual Studio Code-ot a [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java) extensionnel, vagy
+* az [IntelliJ IDEA](https://www.jetbrains.com/idea) fejlesztőeszközt.
