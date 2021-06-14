@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/szgabsz91/iit-szg/compare/v1.4.0...v1.4.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* [#174](https://github.com/szgabsz91/iit-szg/issues/174) implement cache busting for metadata.json in prod mode ([a0c0620](https://github.com/szgabsz91/iit-szg/commit/a0c06203536b00c063d681c8cca4af3bd61d5d7d))
+
 # [1.4.0](https://github.com/szgabsz91/iit-szg/compare/v1.3.0...v1.4.0) (2021-06-14)
 
 
