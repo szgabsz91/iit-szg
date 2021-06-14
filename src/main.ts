@@ -5,12 +5,12 @@ import './app/prettify/prettify';
 import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
-import { version } from '../package.json';
+import packageJson from '../package.json';
 
 if (environment.production) {
   enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(() => console.log(`App version ${version} loaded successfully`))
+  .then(() => console.log(`App version ${packageJson.version} loaded successfully`))
   .catch(err => console.error(err));
