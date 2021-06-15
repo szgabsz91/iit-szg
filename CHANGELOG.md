@@ -1,3 +1,11 @@
+# [1.11.0](https://github.com/szgabsz91/iit-szg/compare/v1.10.0...v1.11.0) (2021-06-15)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites to evaluate XSLT files ([93ef35f](https://github.com/szgabsz91/iit-szg/commit/93ef35f0514064574dd901894d8884146713a834))
+* [#70](https://github.com/szgabsz91/iit-szg/issues/70) Lab 11 of XML course: XSLT ([e746d1d](https://github.com/szgabsz91/iit-szg/commit/e746d1df7d5a91538a690c07441cb23330bb0bde))
+
 # [1.10.0](https://github.com/szgabsz91/iit-szg/compare/v1.9.0...v1.10.0) (2021-06-15)
 
 
