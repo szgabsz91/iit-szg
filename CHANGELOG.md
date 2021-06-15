@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/szgabsz91/iit-szg/compare/v1.5.2...v1.6.0) (2021-06-15)
+
+
+### Features
+
+* [#65](https://github.com/szgabsz91/iit-szg/issues/65) Lab 6 of XML course: Java DOM ([77ff401](https://github.com/szgabsz91/iit-szg/commit/77ff40185bbd500942fdd943cf901ed6fc08e551))
+
 ## [1.5.2](https://github.com/szgabsz91/iit-szg/compare/v1.5.1...v1.5.2) (2021-06-15)
 
 
