@@ -1,3 +1,11 @@
+# [1.10.0](https://github.com/szgabsz91/iit-szg/compare/v1.9.0...v1.10.0) (2021-06-15)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites to evaluate XPath expressions ([f4cff3b](https://github.com/szgabsz91/iit-szg/commit/f4cff3b57690cdeb48ad9c9940a91bf231360ba5))
+* [#69](https://github.com/szgabsz91/iit-szg/issues/69) Lab 10 of XML course: XPath ([226bb54](https://github.com/szgabsz91/iit-szg/commit/226bb5430845ee5bdebc1cadefea5ad4388b63a3))
+
 # [1.9.0](https://github.com/szgabsz91/iit-szg/compare/v1.8.0...v1.9.0) (2021-06-15)
 
 
