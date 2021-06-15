@@ -39,9 +39,10 @@ const keepOneLocaleInMetadata = (metadata, localeId) => {
   };
 };
 
-const getMetadataJsonFilename = (content, localeId) => {
+const getMetadataJsonFilename = metadata => {
   if (argv.prod) {
-    const md5Hash = crypto.createHash('md5').update(content).digest('hex');
+    const metadataContent = JSON.stringify(metadata);
+    const md5Hash = crypto.createHash('md5').update(metadataContent).digest('hex');
     return `metadata-${md5Hash}.json`;
   }
 
@@ -52,7 +53,7 @@ const generateMetadataForLocale = (metadata, localeId) => {
   console.log('Generating metadata for locale', localeId);
   const targetMetadata = keepOneLocaleInMetadata(metadata, localeId);
   const targetMetadataContent = JSON.stringify(targetMetadata);
-  const metadataJsonFilename = getMetadataJsonFilename(targetMetadataContent, localeId);
+  const metadataJsonFilename = getMetadataJsonFilename(metadata);
   const targetMetadataJsonPath = path.resolve('src', `assets-${localeId}`, metadataJsonFilename);
   return Promise.all([
     writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8'),
