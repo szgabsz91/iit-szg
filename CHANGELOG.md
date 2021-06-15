@@ -1,3 +1,11 @@
+# [1.12.0](https://github.com/szgabsz91/iit-szg/compare/v1.11.0...v1.12.0) (2021-06-15)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites to execute XQuery files ([3920fe0](https://github.com/szgabsz91/iit-szg/commit/3920fe08684d530caa1e39965735661e8a959665))
+* [#71](https://github.com/szgabsz91/iit-szg/issues/71) Lab 12 of XML course: XQuery ([a52e5b8](https://github.com/szgabsz91/iit-szg/commit/a52e5b85be3c4bfbe82d7dfe2bf2a00fca5aa138))
+
 # [1.11.0](https://github.com/szgabsz91/iit-szg/compare/v1.10.0...v1.11.0) (2021-06-15)
 
 
