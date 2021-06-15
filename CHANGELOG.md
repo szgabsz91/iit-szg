@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/szgabsz91/iit-szg/compare/v1.6.0...v1.7.0) (2021-06-15)
+
+
+### Features
+
+* [#66](https://github.com/szgabsz91/iit-szg/issues/66) Lab 7 of XML course: Java JAXB ([8549cfe](https://github.com/szgabsz91/iit-szg/commit/8549cfecc454e98d11473547a6eb188a1f9e8b72))
+
 # [1.6.0](https://github.com/szgabsz91/iit-szg/compare/v1.5.2...v1.6.0) (2021-06-15)
 
 
