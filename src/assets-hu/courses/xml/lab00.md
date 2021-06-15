@@ -49,3 +49,30 @@ Néhány feladat megoldásához szükségünk lesz egy XPath 2.0 engine-re, amel
 XSLT fájlok végrehajtásához először le kell töltenünk a <a href="https://www.saxonica.com/download/java.xml" target="_blank">Saxon-HE</a> Java libraryt. A feladatok megoldásainak írásakor a legfrissebb verzió a 10-es volt.
 
 Ezek után telepítsük az <a href="https://marketplace.visualstudio.com/items?itemName=WashirePie.vscode-xsl-transform" target="_blank">XSL Transform</a> VSCode extensiont és állítsuk be a leírása alapján, hogy megtalálja a fenti JAR fájlt.
+
+Ezen kívül használhatjuk az <a href="https://www.oxygenxml.com" target="_blank">Oxygen XML Editor</a> beépített XSLT funkcionalitását.
+
+## XQuery
+
+Ahhoz, hogy az összes szükséges XQuery funkcionalitást használni tudjuk, két lehetőségünk van:
+
+* Használhatjuk az <a href="https://www.oxygenxml.com" target="_blank">Oxygen XML Editor</a>t.
+* Használhatjuk az <a href="http://mxquery.org" target="_blank">MXQuery</a> libraryt saját bash scripttel.
+
+Az MXQuery egy vékony XQuery motor, amit JAR fájlként publikáltak.
+
+A szükséges bash script a következő:
+
+<pre class="prettyprint">#!/usr/bin/env bash
+
+java \
+  -jar \
+  mxquery.jar \
+  --xquery11Mode \
+  --updateMode \
+  --updateFiles \
+  --backupUpdates \
+  --queryFile $1
+</pre>
+
+A script input paramétere az XQuery fájl elérési útja. A fenti konfigurációval a script vagy a standard kimenetre fogja kiírni az eredmény XML-t, vagy módosító műveletek esetén felülírja az eredeti XML fájlt, és annak tartalmát lementi egy <i>*.bak</i> fájlba.
