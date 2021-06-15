@@ -22,5 +22,5 @@ A Markdown fájlok előnézetének megtekintéséhez telepítsük a <a href="htt
 
 Java alkalmazások futtatásához bármilyen Java IDE-t használhatunk, például
 
-* Visual Studio Code-ot a [Language Support for Java(TM) by Red Hat](https://marketplace.visualstudio.com/items?itemName=redhat.java) extensionnel, vagy
-* az [IntelliJ IDEA](https://www.jetbrains.com/idea) fejlesztőeszközt.
+* Visual Studio Code-ot a <a href="https://marketplace.visualstudio.com/items?itemName=redhat.java" target="_blank">Language Support for Java(TM) by Red Hat</a> extensionnel, vagy
+* az <a href="https://www.jetbrains.com/idea" target="_blank">IntelliJ IDEA</a> fejlesztőeszközt.
