@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/szgabsz91/iit-szg/compare/v1.5.1...v1.5.2) (2021-06-15)
+
+
+### Bug Fixes
+
+* [#174](https://github.com/szgabsz91/iit-szg/issues/174) use the MD5 hash of the original metadata.json file for cache busting ([dedfdd8](https://github.com/szgabsz91/iit-szg/commit/dedfdd8c73765dc3388ce53513e1d7e646a2286f))
+
 ## [1.5.1](https://github.com/szgabsz91/iit-szg/compare/v1.5.0...v1.5.1) (2021-06-15)
 
 
