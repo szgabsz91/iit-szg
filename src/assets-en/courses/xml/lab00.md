@@ -37,3 +37,9 @@ These C# applications can also be executed on Window, Linux and macOS using <a h
 ## Vue
 
 The solution of <a href="/courses/xml/labs/9" target="_blank">Lab 9</a> contains a Vue web application. For maximal editor support, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">Vetur</a> Visual Studio Code extension.
+
+## XPath
+
+To evaluate XPath expressions, let's install the <a href="https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml" target="_blank">XML Tools</a> VSCode extension that is compatible with XPath 1.0.
+
+For some exercises, we'll need an XPath 2.0 engine that we can find in the <a href="https://www.oxygenxml.com" target="_blank">Oxygen XML Editor</a>.
