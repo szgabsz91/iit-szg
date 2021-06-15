@@ -37,3 +37,9 @@ A C# alkalmazásainkat Windows, Linux és macOS operációs rendszeren is futtat
 ## Vue
 
 A <a href="/courses/xml/labs/9" target="_blank">9. gyakorlat</a> megoldásában a webes kliens alkalmazás a Vue keretrendszer segítségével íródott. A maximális editor supporthoz telepítsük a Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=octref.vetur" target="_blank">Vetur</a> extensionjét.
+
+## XPath
+
+Az XPath kifejezések kiértékeléséhez telepítsük az <a href="https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml" target="_blank">XML Tools</a> VSCode extensiont, amely XPath 1.0 kompatibilis.
+
+Néhány feladat megoldásához szükségünk lesz egy XPath 2.0 engine-re, amelyet például az <a href="https://www.oxygenxml.com" target="_blank">Oxygen XML Editor</a>ban találhatunk.
