@@ -43,3 +43,9 @@ A <a href="/courses/xml/labs/9" target="_blank">9. gyakorlat</a> megoldásában 
 Az XPath kifejezések kiértékeléséhez telepítsük az <a href="https://marketplace.visualstudio.com/items?itemName=DotJoshJohnson.xml" target="_blank">XML Tools</a> VSCode extensiont, amely XPath 1.0 kompatibilis.
 
 Néhány feladat megoldásához szükségünk lesz egy XPath 2.0 engine-re, amelyet például az <a href="https://www.oxygenxml.com" target="_blank">Oxygen XML Editor</a>ban találhatunk.
+
+## XSLT
+
+XSLT fájlok végrehajtásához először le kell töltenünk a <a href="https://www.saxonica.com/download/java.xml" target="_blank">Saxon-HE</a> Java libraryt. A feladatok megoldásainak írásakor a legfrissebb verzió a 10-es volt.
+
+Ezek után telepítsük az <a href="https://marketplace.visualstudio.com/items?itemName=WashirePie.vscode-xsl-transform" target="_blank">XSL Transform</a> VSCode extensiont és állítsuk be a leírása alapján, hogy megtalálja a fenti JAR fájlt.
