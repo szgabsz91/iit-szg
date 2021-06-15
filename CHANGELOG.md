@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/szgabsz91/iit-szg/compare/v1.7.0...v1.8.0) (2021-06-15)
+
+
+### Features
+
+* [#67](https://github.com/szgabsz91/iit-szg/issues/67) Lab 8 of XML course: C# ([4512d9c](https://github.com/szgabsz91/iit-szg/commit/4512d9c3ce95514e01d79f12fcdd82cf9455e6e7))
+
 # [1.7.0](https://github.com/szgabsz91/iit-szg/compare/v1.6.0...v1.7.0) (2021-06-15)
 
 
