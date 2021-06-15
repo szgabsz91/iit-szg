@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/szgabsz91/iit-szg/compare/v1.8.0...v1.9.0) (2021-06-15)
+
+
+### Features
+
+* [#68](https://github.com/szgabsz91/iit-szg/issues/68) Lab 9 of XML course: SVG, RSS, XHTML, JSON ([c495cf9](https://github.com/szgabsz91/iit-szg/commit/c495cf9022eba047127c36a988663bc67d1ae0c0))
+
 # [1.8.0](https://github.com/szgabsz91/iit-szg/compare/v1.7.0...v1.8.0) (2021-06-15)
 
 
