@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/szgabsz91/iit-szg/compare/v1.5.0...v1.5.1) (2021-06-15)
+
+
+### Bug Fixes
+
+* [#64](https://github.com/szgabsz91/iit-szg/issues/64) add the target attribute to the links of Java prerequisites ([5639d7a](https://github.com/szgabsz91/iit-szg/commit/5639d7aa4251861369dbb527cb1d5f50bf49083f))
+
 # [1.5.0](https://github.com/szgabsz91/iit-szg/compare/v1.4.1...v1.5.0) (2021-06-14)
 
 
