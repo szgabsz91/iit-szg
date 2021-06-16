@@ -76,3 +76,9 @@ java \
 </pre>
 
 A script input paramétere az XQuery fájl elérési útja. A fenti konfigurációval a script vagy a standard kimenetre fogja kiírni az eredmény XML-t, vagy módosító műveletek esetén felülírja az eredeti XML fájlt, és annak tartalmát lementi egy <i>*.bak</i> fájlba.
+
+## XML DB
+
+Az XML DB gyakorlat megoldásához először telepítenünk kell az <a href="https://www.oracle.com/database/technologies/xe-downloads.html" target="_blank">Oracle Database XE</a> adatbázist. A feladatok megoldásainak írásakor a 18c XE verziót használtam.
+
+Kliensként használhatjuk az <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">Oracle SQL Developer</a> eszközt, vagy a Visual Studio Code-ot az <a href="https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools" target="_blank">Oracle Developer Tools for VS Code</a> extensionnel.
