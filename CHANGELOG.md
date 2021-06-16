@@ -1,3 +1,11 @@
+# [1.13.0](https://github.com/szgabsz91/iit-szg/compare/v1.12.0...v1.13.0) (2021-06-16)
+
+
+### Features
+
+* [#59](https://github.com/szgabsz91/iit-szg/issues/59) add prerequisites for XML DB ([aa84940](https://github.com/szgabsz91/iit-szg/commit/aa849406f3c2d5fecae6b13691705f2bafed574e))
+* [#72](https://github.com/szgabsz91/iit-szg/issues/72) Lab 13 of XML course: XML DB ([5a5d571](https://github.com/szgabsz91/iit-szg/commit/5a5d5719b87d1ece8fd75911eb9cbb6c41737a8a))
+
 # [1.12.0](https://github.com/szgabsz91/iit-szg/compare/v1.11.0...v1.12.0) (2021-06-15)
 
 
