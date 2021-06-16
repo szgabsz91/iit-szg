@@ -76,3 +76,9 @@ java \
 </pre>
 
 The input parameter of the script is the XQuery file's path. With the above configuration, the script will either print the output XML to the console, or in case of update operations, the original XML file will be overwritten, and its original content will be saved in a <i>*.bak</i> file.
+
+## XML DB
+
+For the XML DB lab, we first need to install <a href="https://www.oracle.com/database/technologies/xe-downloads.html" target="_blank">Oracle Database XE</a>. At the time of writing the solutions, I used the 18c XE version.
+
+For the client, we can use <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">Oracle SQL Developer</a> or Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools" target="_blank">Oracle Developer Tools for VS Code</a> extension.
