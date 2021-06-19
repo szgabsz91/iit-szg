@@ -1,3 +1,11 @@
+# [1.14.0](https://github.com/szgabsz91/iit-szg/compare/v1.13.0...v1.14.0) (2021-06-19)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for LDAP ([b54e6fe](https://github.com/szgabsz91/iit-szg/commit/b54e6fe93642d36a04a1e448483cacd1e7827610))
+* [#76](https://github.com/szgabsz91/iit-szg/issues/76) Lab 1 of Databases course: LDAP ([38d883a](https://github.com/szgabsz91/iit-szg/commit/38d883a4e8505fb73292bf5a399d7426773cb120))
+
 # [1.13.0](https://github.com/szgabsz91/iit-szg/compare/v1.12.0...v1.13.0) (2021-06-16)
 
 
