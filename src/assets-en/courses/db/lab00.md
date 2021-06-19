@@ -30,3 +30,12 @@ After the server starts, we can connect to the OpenLDAP server on localhost.
 For labs that require the Oracle Database, we need to install <a href="https://www.oracle.com/database/technologies/xe-downloads.html" target="_blank">Oracle Database XE</a>. At the time of writing the solutions, I used the 18c XE version.
 
 For the client, we can use <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">Oracle SQL Developer</a> or Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools" target="_blank">Oracle Developer Tools for VS Code</a> extension.
+
+## C#
+
+To execute C# applications, we can use any C# IDEs, for instance
+
+* Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp" target="_blank">C#</a> extension, or
+* <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a>.
+
+These C# applications can also be executed on Window, Linux and macOS using <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> which is a platform independent .NET platform implementation. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">This tutorial</a> explains how to use Visual Studio Code to write .NET Core applications.
