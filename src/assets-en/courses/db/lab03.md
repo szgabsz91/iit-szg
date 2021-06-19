@@ -14,15 +14,15 @@ And given the following cars (license plate number, manufacturer, model, price a
 
 | License plate number | Manufacturer | Model   | Price | Owner         |
 |:---------------------|:-------------|:--------|------:|:--------------|
-| AB12 CDE             | Tesla        | Model 3 | 13.5M | Michael Smith |
-| AB12 CDF             | Volkswagen   | ID.4    | 16.8M | Tom Brown     |
-| AB12 CDG             | Kia          | e-Niro  | 8.9M  | Michael Smith |
-| AB12 CDH             | Volkswagen   | ID.3    | 8.3M  | Emma Jones    |
-| AB12 CDI             | Hyundai      | Ioniq   | 8.5M  | George White  |
-| AB12 CDJ             | Hyundai      | IONIQ 5 | 13.5M | Emma Jones    |
-| AB12 CDK             | Kia          | EV6     | 13.5M | Anne Walker   |
-| AB12 CDL             | Skoda        | ENYAQ   | 12.6M | Tom Brown     |
-| AB12 CDM             | Hyundai      | Kona    | 7.5M  | Michael Smith |
+| AB12 CDE             | Tesla        | Model 3 | 13.5  | Michael Smith |
+| AB12 CDF             | Volkswagen   | ID.4    | 16.8  | Tom Brown     |
+| AB12 CDG             | Kia          | e-Niro  | 8.9   | Michael Smith |
+| AB12 CDH             | Volkswagen   | ID.3    | 8.3   | Emma Jones    |
+| AB12 CDI             | Hyundai      | Ioniq   | 8.5   | George White  |
+| AB12 CDJ             | Hyundai      | IONIQ 5 | 13.5  | Emma Jones    |
+| AB12 CDK             | Kia          | EV6     | 13.5  | Anne Walker   |
+| AB12 CDL             | Skoda        | ENYAQ   | 12.6  | Tom Brown     |
+| AB12 CDM             | Hyundai      | Kona    | 7.5   | Michael Smith |
 
 Let's create a C# application using LINQ that executes a complex query based on the following constraints:
 
