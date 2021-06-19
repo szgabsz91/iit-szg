@@ -1,3 +1,15 @@
+# [1.17.0](https://github.com/szgabsz91/iit-szg/compare/v1.16.0...v1.17.0) (2021-06-19)
+
+
+### Bug Fixes
+
+* [#78](https://github.com/szgabsz91/iit-szg/issues/78) fix the prices in the tables in Lab 3 of Databases course ([e1f799e](https://github.com/szgabsz91/iit-szg/commit/e1f799eb2e629075c869fd9b015073f7f267170e))
+
+
+### Features
+
+* [#79](https://github.com/szgabsz91/iit-szg/issues/79) Lab 4 of Databases course: ORDBMS ([a67b4e6](https://github.com/szgabsz91/iit-szg/commit/a67b4e65d7cb81dee15957e3b60bb79f7c0f53e5))
+
 # [1.16.0](https://github.com/szgabsz91/iit-szg/compare/v1.15.0...v1.16.0) (2021-06-19)
 
 
