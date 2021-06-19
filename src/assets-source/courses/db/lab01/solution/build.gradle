@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.szgabsz91.iit-szg.db.lab01'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+ext {
+    jldapVersion = '2009-10-07'
+    lombokVersion = '1.18.20'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("com.novell.ldap:jldap:${jldapVersion}")
+    compileOnly("org.projectlombok:lombok:${lombokVersion}")
+    annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+}
