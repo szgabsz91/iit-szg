@@ -94,5 +94,24 @@
         "hu": "XML DB"
       }
     }]
+  }, {
+    "id": "db",
+    "name": {
+      "en": "Databases",
+      "hu": "Adatbázisok"
+    },
+    "labs": [{
+      "index": 0,
+      "title": {
+        "en": "Prerequisites",
+        "hu": "Előfeltételek"
+      }
+    }, {
+      "index": 1,
+      "title": {
+        "en": "LDAP",
+        "hu": "LDAP"
+      }
+    }]
   }]
 }
