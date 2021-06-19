@@ -1,3 +1,11 @@
+# [1.15.0](https://github.com/szgabsz91/iit-szg/compare/v1.14.0...v1.15.0) (2021-06-19)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for Oracle Database ([c19b33b](https://github.com/szgabsz91/iit-szg/commit/c19b33bf403cc595a72a115ddf4eb87a09d62870))
+* [#77](https://github.com/szgabsz91/iit-szg/issues/77) Lab 2 of Databases course: JPA ([b88c1b9](https://github.com/szgabsz91/iit-szg/commit/b88c1b90cb501e5673576c04a22b58bf427f6d13))
+
 # [1.14.0](https://github.com/szgabsz91/iit-szg/compare/v1.13.0...v1.14.0) (2021-06-19)
 
 
