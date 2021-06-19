@@ -103,7 +103,10 @@ markdown {
 
   table thead th {
     border-bottom: 2px solid #ddd;
-    text-align: left;
+
+    &:not([align]) {
+      text-align: left;
+    }
   }
 
   table tbody tr td {
