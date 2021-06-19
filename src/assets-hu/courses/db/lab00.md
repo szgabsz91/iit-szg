@@ -24,3 +24,9 @@ A következő parancs elindít egy <a href="https://www.openldap.org" target="_b
   osixia/openldap:1.5.0</pre>
 
 Miután a szerver elindult, csatlakozhatunk az OpenLDAP szerverhez localhoston.
+
+## Oracle Database
+
+Azokhoz a gyakorlatokhoz, amelyek Oracle adatbázist igényelnek, telepítenünk kell az <a href="https://www.oracle.com/database/technologies/xe-downloads.html" target="_blank">Oracle Database XE</a>-t. A feladatok megoldásainak írásakor a 18c XE verziót használtam.
+
+Kliensként használhatjuk az <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">Oracle SQL Developer</a> eszközt, vagy a Visual Studio Code-ot az <a href="https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools" target="_blank">Oracle Developer Tools for VS Code</a> extensionnel.

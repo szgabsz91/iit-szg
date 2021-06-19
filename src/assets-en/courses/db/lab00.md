@@ -24,3 +24,9 @@ The following command starts an <a href="https://www.openldap.org" target="_blan
   osixia/openldap:1.5.0</pre>
 
 After the server starts, we can connect to the OpenLDAP server on localhost.
+
+## Oracle Database
+
+For labs that require the Oracle Database, we need to install <a href="https://www.oracle.com/database/technologies/xe-downloads.html" target="_blank">Oracle Database XE</a>. At the time of writing the solutions, I used the 18c XE version.
+
+For the client, we can use <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">Oracle SQL Developer</a> or Visual Studio Code with the <a href="https://marketplace.visualstudio.com/items?itemName=Oracle.oracledevtools" target="_blank">Oracle Developer Tools for VS Code</a> extension.
