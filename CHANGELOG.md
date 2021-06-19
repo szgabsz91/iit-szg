@@ -1,3 +1,11 @@
+# [1.16.0](https://github.com/szgabsz91/iit-szg/compare/v1.15.0...v1.16.0) (2021-06-19)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for C# ([1884f3b](https://github.com/szgabsz91/iit-szg/commit/1884f3bbfacc25bcf3ae0905a3055d41d3c0f269))
+* [#78](https://github.com/szgabsz91/iit-szg/issues/78) Lab 3 of Databases course: LINQ ([e78a7cd](https://github.com/szgabsz91/iit-szg/commit/e78a7cdc0fb73c889552bf8809655374a54a5f25))
+
 # [1.15.0](https://github.com/szgabsz91/iit-szg/compare/v1.14.0...v1.15.0) (2021-06-19)
 
 
