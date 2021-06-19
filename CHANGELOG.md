@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/szgabsz91/iit-szg/compare/v1.17.0...v1.17.1) (2021-06-19)
+
+
+### Bug Fixes
+
+* [#79](https://github.com/szgabsz91/iit-szg/issues/79) fix the solution.zip file for the Lab 4 of the Databases course ([bd4b659](https://github.com/szgabsz91/iit-szg/commit/bd4b659ac962645f653a11c5b9043fb2fb83f206))
+
 # [1.17.0](https://github.com/szgabsz91/iit-szg/compare/v1.16.0...v1.17.0) (2021-06-19)
 
 
