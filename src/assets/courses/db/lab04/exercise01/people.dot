@@ -1,0 +1,11 @@
+digraph reservation_system_uml {
+  node [style=filled, fillcolor="#7cb0e4", color="#153d66"]
+
+  node [shape=record]; { node[label = "{<name>PersonInfo|- id: int\l- firstName: String\l- lastName: String|<methods>}"] person_info_class };
+  node [shape=record]; { node[label = "{<name>Person|<attributes>- id: int\l- personInfo: PersonInfo\l- cars: CarCollection\l|<methods>}"] person_class };
+  node [shape=record]; { node[label = "{<name>Car|<attributes>- licensePlateNumber: String\l- manufacturer: String\l- model: String\l- price: decimal\l|}"] car_class };
+
+  edge[arrowhead=none];
+  person_info_class:methods -> person_class:name [headlabel="1", taillabel="1"];
+  person_class:methods -> car_class:name [headlabel="0..*", taillabel="1", label="CarCollection"];
+}
