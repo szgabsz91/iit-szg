@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.szgabsz91.iit-szg.db.lab02'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+ext {
+    hibernateVersion = '5.5.2.Final'
+    ojdbc8Version = '21.1.0.0'
+    lombokVersion = '1.18.20'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.hibernate:hibernate-core:${hibernateVersion}")
+    implementation("org.hibernate:hibernate-entitymanager:${hibernateVersion}")
+    implementation("com.oracle.database.jdbc:ojdbc8:${ojdbc8Version}")
+    compileOnly("org.projectlombok:lombok:${lombokVersion}")
+    annotationProcessor("org.projectlombok:lombok:${lombokVersion}")
+}

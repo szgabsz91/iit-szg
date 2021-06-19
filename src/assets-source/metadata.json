@@ -112,6 +112,12 @@
         "en": "LDAP",
         "hu": "LDAP"
       }
+    }, {
+      "index": 2,
+      "title": {
+        "en": "JPA",
+        "hu": "JPA"
+      }
     }]
   }]
 }

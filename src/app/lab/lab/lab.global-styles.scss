@@ -13,6 +13,12 @@ markdown {
     }
   }
 
+  ul {
+    ul {
+      margin: 8px 0 16px;
+    }
+  }
+
   ul li {
     margin-bottom: 4px;
   }
