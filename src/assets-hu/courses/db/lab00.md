@@ -46,3 +46,9 @@ A következő parancs elindít egy <a href="https://www.mongodb.com" target="_bl
 <pre class="prettyprint">docker run -p 27017:27017 --detach mongo:4.4.6</pre>
 
 Az adatbázissal való interakcióhoz használhatjuk a <a href="https://www.mongodb.com/try/download/shell" target="_blank">MongoDB Shell</a>t, vagy ha grafikus felhasználói felületet szeretnénk, letölthetjük a <a href="https://robomongo.org" target="_blank">Robo 3T</a> eszközt.
+
+## Neo4j
+
+A <a href="https://neo4j.com" target="_blank">Neo4j adatbázis</a> használatához letölthetjük a <a href="https://neo4j.com/download" target="_blank">Neo4j Desktop</a> alkalmazást, ami lehetővé teszi adatbázisok létrehozását és kezelését egy grafikus felhasználói felületen keresztül. Az integrált Neo4j Browser pedig még vizuálisan is képes megjeleníteni a Cypher lekérdezéseink eredményét.
+
+Ha VSCode-ban szeretnénk Cypher lekérdezéseket írni, telepíthetjük a <a href="https://marketplace.visualstudio.com/items?itemName=jakeboone02.cypher-query-language" target="_blank">Cypher Query Language</a> VSCode extensiont.
