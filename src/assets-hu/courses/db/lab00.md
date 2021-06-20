@@ -16,7 +16,6 @@ A következő parancs elindít egy <a href="https://www.openldap.org" target="_b
 <pre class="prettyprint">docker run \
   -p 389:389 \
   -p 636:636 \
-  --name ldap-container \
   --env LDAP_READONLY_USER=true \
   --env LDAP_READONLY_USER_USERNAME=admin \
   --env LDAP_READONLY_USER_PASSWORD=password \
@@ -39,3 +38,11 @@ C# alkalmazások futtatásához bármilyen C# IDE-t használhatunk, például
 * a <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a> fejlesztőeszközt.
 
 A C# alkalmazásainkat Windows, Linux és macOS operációs rendszeren is futtathatjuk a <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> segítségével, ami egy platformfüggetlen .NET platform implementáció. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">Ez a tutorial</a> elmagyarázza, hogyan használhatjuk a .NET Core-t Visual Studio Code-ban.
+
+## MongoDB
+
+A következő parancs elindít egy <a href="https://www.mongodb.com" target="_blank">MongoDB</a> adatbázist egy <a href="https://www.docker.com" target="_blank">Docker</a> containerben a hivatalos <a href="https://hub.docker.com/_/mongo" target="_blank">mongo Docker image</a> segítségével, és a szükséges portot megnyitja a host gép számára:
+
+<pre class="prettyprint">docker run -p 27017:27017 --detach mongo:4.4.6</pre>
+
+Az adatbázissal való interakcióhoz használhatjuk a <a href="https://www.mongodb.com/try/download/shell" target="_blank">MongoDB Shell</a>t, vagy ha grafikus felhasználói felületet szeretnénk, letölthetjük a <a href="https://robomongo.org" target="_blank">Robo 3T</a> eszközt.
