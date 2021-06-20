@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://com.github.szgabsz91/iit-szg/courses/db/lab07/cars"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://com.github.szgabsz91/iit-szg/courses/db/lab07/cars">
+    <Prefix name="" IRI="https://com.github.szgabsz91/iit-szg/courses/db/lab07/cars"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Car"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owner"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#firstName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#lastName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#licensePlateNumber"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#price"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AnneWalker"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ENYAQ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EV6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EmmaJones"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ID.3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ID.4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IONIQ5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ioniq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kona"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MichaelSmith"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Model3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TomBrown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#e-Niro"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Car"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#AnneWalker"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#EV6"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#ID.3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#ID.4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#Ioniq"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#Kona"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#Model3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#TomBrown"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Car"/>
+        <NamedIndividual IRI="#e-Niro"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#AnneWalker"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+        <NamedIndividual IRI="#TomBrown"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <NamedIndividual IRI="#EV6"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <NamedIndividual IRI="#Kona"/>
+        <NamedIndividual IRI="#Model3"/>
+        <NamedIndividual IRI="#e-Niro"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <NamedIndividual IRI="#TomBrown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#EV6"/>
+        <NamedIndividual IRI="#AnneWalker"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <NamedIndividual IRI="#TomBrown"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#Kona"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#Model3"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owner"/>
+        <NamedIndividual IRI="#e-Niro"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#AnneWalker"/>
+        <Literal>Anne</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#AnneWalker"/>
+        <Literal>Walker</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <Literal>AB12 CDL</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <Literal>Skoda</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <Literal>ENYAQ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#ENYAQ"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12.6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#EV6"/>
+        <Literal>AB12 CDK</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#EV6"/>
+        <Literal>Kia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#EV6"/>
+        <Literal>EV6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#EV6"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">13.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+        <Literal>Emma</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#EmmaJones"/>
+        <Literal>Jones</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+        <Literal>George</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#GeorgeWhite"/>
+        <Literal>White</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <Literal>AB12 CDH</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <Literal>Volkswagen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <Literal>ID.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#ID.3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <Literal>AB12 CDF</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <Literal>Volkswagen</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <Literal>ID.4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#ID.4"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">16.8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <Literal>AB12 CDJ</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <Literal>Hyundai</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <Literal>IONIQ5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#IONIQ5"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">13.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <Literal>AB12 CDI</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <Literal>Hyundai</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <Literal>Ioniq</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Ioniq"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#Kona"/>
+        <Literal>AB12 CDM</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#Kona"/>
+        <Literal>Hyundai</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#Kona"/>
+        <Literal>Kona</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Kona"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">7.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+        <Literal>Michael</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#MichaelSmith"/>
+        <Literal>Smith</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#Model3"/>
+        <Literal>AB12 CDE</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#Model3"/>
+        <Literal>Tesla</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#Model3"/>
+        <Literal>Model 3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#Model3"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">13.5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#firstName"/>
+        <NamedIndividual IRI="#TomBrown"/>
+        <Literal>Tom</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#lastName"/>
+        <NamedIndividual IRI="#TomBrown"/>
+        <Literal>Brown</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <NamedIndividual IRI="#e-Niro"/>
+        <Literal>AB12 CDG</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#manufacturer"/>
+        <NamedIndividual IRI="#e-Niro"/>
+        <Literal>Kia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#model"/>
+        <NamedIndividual IRI="#e-Niro"/>
+        <Literal>e-Niro</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#price"/>
+        <NamedIndividual IRI="#e-Niro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">8.9</Literal>
+    </DataPropertyAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#owner"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owner"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#owner"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#firstName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#lastName"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#licensePlateNumber"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#manufacturer"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#model"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#price"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#firstName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#firstName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#lastName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#lastName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#licensePlateNumber"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#licensePlateNumber"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#manufacturer"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#manufacturer"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#model"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#model"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </DataPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
