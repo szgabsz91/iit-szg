@@ -1,3 +1,11 @@
+# [1.20.0](https://github.com/szgabsz91/iit-szg/compare/v1.19.0...v1.20.0) (2021-06-20)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for ontologies ([be46a53](https://github.com/szgabsz91/iit-szg/commit/be46a536b0f12c750bf5e6a6b8cc9a9e555d9e22))
+* [#83](https://github.com/szgabsz91/iit-szg/issues/83) Lab 7 of Databases course: Ontologies ([ce6a8bd](https://github.com/szgabsz91/iit-szg/commit/ce6a8bda5fe0148b94944a50be728438ad8d4a44))
+
 # [1.19.0](https://github.com/szgabsz91/iit-szg/compare/v1.18.0...v1.19.0) (2021-06-20)
 
 
