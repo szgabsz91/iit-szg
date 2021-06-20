@@ -16,7 +16,6 @@ The following command starts an <a href="https://www.openldap.org" target="_blan
 <pre class="prettyprint">docker run \
   -p 389:389 \
   -p 636:636 \
-  --name ldap-container \
   --env LDAP_READONLY_USER=true \
   --env LDAP_READONLY_USER_USERNAME=admin \
   --env LDAP_READONLY_USER_PASSWORD=password \
@@ -39,3 +38,11 @@ To execute C# applications, we can use any C# IDEs, for instance
 * <a href="https://visualstudio.microsoft.com" target="_blank">Visual Studio</a>.
 
 These C# applications can also be executed on Window, Linux and macOS using <a href="https://dotnet.microsoft.com/download" target="_blank">.NET Core</a> which is a platform independent .NET platform implementation. <a href="https://code.visualstudio.com/docs/languages/dotnet" target="_blank">This tutorial</a> explains how to use Visual Studio Code to write .NET Core applications.
+
+## MongoDB
+
+The following command starts a <a href="https://www.mongodb.com" target="_blank">MongoDB</a> database in a <a href="https://www.docker.com" target="_blank">Docker</a> container using the official <a href="https://hub.docker.com/_/mongo" target="_blank">mongo Docker image</a>, and opens the necessary port for the host machine:
+
+<pre class="prettyprint">docker run -p 27017:27017 --detach mongo:4.4.6</pre>
+
+To interact with the database, we can use the <a href="https://www.mongodb.com/try/download/shell" target="_blank">MongoDB Shell</a>, or if we need a graphical user interface, we can download <a href="https://robomongo.org" target="_blank">Robo 3T</a>.
