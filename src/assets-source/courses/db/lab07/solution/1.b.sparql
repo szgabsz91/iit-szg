@@ -1,0 +1,20 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX fn: <http://www.w3.org/2005/xpath-functions>
+PREFIX cars: <https://com.github.szgabsz91/iit-szg/courses/db/lab07/cars#>
+
+SELECT ?manufacturer ?model ?price ?firstName ?lastName
+WHERE {
+    ?person rdf:type cars:Person .
+    ?person cars:firstName ?firstName .
+    ?person cars:lastName ?lastName .
+    ?car rdf:type cars:Car .
+    ?car cars:owner ?person .
+    ?car cars:price ?price .
+    ?car cars:manufacturer ?manufacturer .
+    ?car cars:model ?model .
+    FILTER (?price > 9) .
+}
+ORDER BY DESC(?price)
