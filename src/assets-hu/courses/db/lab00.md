@@ -52,3 +52,7 @@ Az adatbázissal való interakcióhoz használhatjuk a <a href="https://www.mong
 A <a href="https://neo4j.com" target="_blank">Neo4j adatbázis</a> használatához letölthetjük a <a href="https://neo4j.com/download" target="_blank">Neo4j Desktop</a> alkalmazást, ami lehetővé teszi adatbázisok létrehozását és kezelését egy grafikus felhasználói felületen keresztül. Az integrált Neo4j Browser pedig még vizuálisan is képes megjeleníteni a Cypher lekérdezéseink eredményét.
 
 Ha VSCode-ban szeretnénk Cypher lekérdezéseket írni, telepíthetjük a <a href="https://marketplace.visualstudio.com/items?itemName=jakeboone02.cypher-query-language" target="_blank">Cypher Query Language</a> VSCode extensiont.
+
+## Ontológiák
+
+Az ontológiák kezeléséhez töltsük le a <a href="https://protege.stanford.edu" target="_blank">Protége</a> nevű eszközt.

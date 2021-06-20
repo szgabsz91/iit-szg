@@ -52,3 +52,7 @@ To interact with the database, we can use the <a href="https://www.mongodb.com/t
 To use the <a href="https://neo4j.com" target="_blank">Neo4j database</a>, we can download the <a href="https://neo4j.com/download" target="_blank">Neo4j Desktop</a> application that makes it possible to create and manage databases from a graphical user interface. The integrated Neo4j Browser can also visualize the results of our Cypher queries.
 
 If we want to write Cypher queries in VSCode, we can also download the <a href="https://marketplace.visualstudio.com/items?itemName=jakeboone02.cypher-query-language" target="_blank">Cypher Query Language</a> VSCode extension.
+
+## Ontologies
+
+To manage ontologies, let's download the <a href="https://protege.stanford.edu" target="_blank">Protége</a> tool.
