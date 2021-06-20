@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.github.szgabsz91.iit-szg.db.lab06'
+version '1.0.0-SNAPSHOT'
+
+sourceCompatibility = 16
+targetCompatibility = 16
+
+ext {
+    neo4jVersion = '4.0.1'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("org.neo4j:neo4j-jdbc-driver:${neo4jVersion}")
+}
