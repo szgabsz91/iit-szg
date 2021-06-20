@@ -46,3 +46,9 @@ The following command starts a <a href="https://www.mongodb.com" target="_blank"
 <pre class="prettyprint">docker run -p 27017:27017 --detach mongo:4.4.6</pre>
 
 To interact with the database, we can use the <a href="https://www.mongodb.com/try/download/shell" target="_blank">MongoDB Shell</a>, or if we need a graphical user interface, we can download <a href="https://robomongo.org" target="_blank">Robo 3T</a>.
+
+## Neo4j
+
+To use the <a href="https://neo4j.com" target="_blank">Neo4j database</a>, we can download the <a href="https://neo4j.com/download" target="_blank">Neo4j Desktop</a> application that makes it possible to create and manage databases from a graphical user interface. The integrated Neo4j Browser can also visualize the results of our Cypher queries.
+
+If we want to write Cypher queries in VSCode, we can also download the <a href="https://marketplace.visualstudio.com/items?itemName=jakeboone02.cypher-query-language" target="_blank">Cypher Query Language</a> VSCode extension.
