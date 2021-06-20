@@ -1,3 +1,11 @@
+# [1.18.0](https://github.com/szgabsz91/iit-szg/compare/v1.17.1...v1.18.0) (2021-06-20)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for MongoDB ([8791441](https://github.com/szgabsz91/iit-szg/commit/8791441fe6195c4d3ea66465107445d53091e5e8))
+* [#80](https://github.com/szgabsz91/iit-szg/issues/80) Lab 5 of Databases course: MongoDB ([123eef2](https://github.com/szgabsz91/iit-szg/commit/123eef221aa80a32b66d36dce3418aa65776b7cb))
+
 ## [1.17.1](https://github.com/szgabsz91/iit-szg/compare/v1.17.0...v1.17.1) (2021-06-19)
 
 
