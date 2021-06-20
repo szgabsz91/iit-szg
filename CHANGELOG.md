@@ -1,3 +1,11 @@
+# [1.19.0](https://github.com/szgabsz91/iit-szg/compare/v1.18.0...v1.19.0) (2021-06-20)
+
+
+### Features
+
+* [#73](https://github.com/szgabsz91/iit-szg/issues/73) add prerequisites for Neo4j ([70d526f](https://github.com/szgabsz91/iit-szg/commit/70d526f9f2afbd2e2e19fe4715289ba7232ecd1b))
+* [#81](https://github.com/szgabsz91/iit-szg/issues/81) Lab 6 of Databases course: Neo4j ([bdaa6af](https://github.com/szgabsz91/iit-szg/commit/bdaa6af179441d39a3200995bb615755f41fe051))
+
 # [1.18.0](https://github.com/szgabsz91/iit-szg/compare/v1.17.1...v1.18.0) (2021-06-20)
 
 
