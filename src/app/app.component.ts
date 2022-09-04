@@ -8,6 +8,8 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { MatSelectChange } from '@angular/material/select';
 import { WINDOW } from './injection-tokens';
 import { hamburgerMenuButtonTrigger } from './animations';
+import { ActivationEnd, Event, Router } from '@angular/router';
+import { filter, first, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -24,6 +26,12 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   readonly mobileQuery: MediaQueryList;
   readonly currentYear: number = new Date().getFullYear();
   readonly courses$: Observable<Course[]> = this.appService.getCourses();
+  readonly activeCourseId$ = this.router.events.pipe(
+    filter((event: Event): event is ActivationEnd => (event instanceof ActivationEnd)),
+    map((event: ActivationEnd) => event.snapshot.params),
+    map((params) => params.courseId),
+    first()
+  );
 
   readonly locales = ['en', 'hu'];
   readonly currentLocale: string;
@@ -39,6 +47,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     readonly media: MediaMatcher,
     @Inject(DOCUMENT) readonly document: Document,
     readonly renderer: Renderer2,
+    private readonly router: Router
   ) {
     this.currentLocale = localeId.substring(0, 2);
     this.selectedLocale = this.currentLocale;

@@ -1,7 +1,16 @@
-@import "./app/lab/lab/lab.global-styles.scss";
+@use "./workshop-theme.scss";
+@use "./app/lab/lab/lab.global-styles.scss";
+@use "./app/app.global-styles.scss";
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 // Language selector
 .mat-option,
