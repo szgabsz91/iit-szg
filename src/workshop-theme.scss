@@ -1,0 +1,82 @@
+@use "@angular/material/_theming" as material;
+@use "./workshop-variables.scss" as variables;
+
+@include material.mat-core();
+
+$color-palette-primary: (
+  50: transparent,
+  100: transparent,
+  200: transparent,
+  300: transparent,
+  400: transparent,
+  500: variables.$primary-color,
+  600: transparent,
+  700: variables.$primary-color,
+  800: transparent,
+  900: transparent,
+  A100: transparent,
+  A200: transparent,
+  A400: transparent,
+  A700: transparent,
+  contrast: (
+    50: transparent,
+    100: transparent,
+    200: transparent,
+    300: transparent,
+    400: transparent,
+    500: white,
+    600: transparent,
+    700: transparent,
+    800: transparent,
+    900: transparent,
+    A100: transparent,
+    A200: transparent,
+    A400: transparent,
+    A700: transparent
+  )
+);
+
+$color-palette-accent: (
+  50: transparent,
+  100: transparent,
+  200: transparent,
+  300: transparent,
+  400: transparent,
+  500: variables.$secondary-color,
+  600: transparent,
+  700: variables.$secondary-color,
+  800: transparent,
+  900: transparent,
+  A100: transparent,
+  A200: transparent,
+  A400: transparent,
+  A700: transparent,
+  contrast: (
+    50: transparent,
+    100: transparent,
+    200: transparent,
+    300: transparent,
+    400: transparent,
+    500: white,
+    600: transparent,
+    700: transparent,
+    800: transparent,
+    900: transparent,
+    A100: transparent,
+    A200: transparent,
+    A400: transparent,
+    A700: transparent
+  )
+);
+
+$workshop-primary: material.mat-palette($color-palette-primary);
+$workshop-accent: material.mat-palette($color-palette-accent);
+
+$workshop-theme: material.mat-light-theme((
+  color: (
+    primary: $workshop-primary,
+    accent: $workshop-accent
+  )
+));
+
+@include material.angular-material-theme($workshop-theme);

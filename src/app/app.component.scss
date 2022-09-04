@@ -1,3 +1,5 @@
+@use "../workshop-variables.scss" as variables;
+
 .container {
   display: flex;
   flex-direction: column;
@@ -8,15 +10,66 @@
   right: 0;
 }
 
+// Toolbar
+
 .is-mobile mat-toolbar {
   position: fixed;
   z-index: 2;
 }
 
-h1 {
+.app-title {
   flex: 1;
   margin-left: 8px;
+  transition: transform 500ms;
+  will-change: transform;
+
+  &.is-mobile {
+    transform: translateX(40px);
+  }
 }
+
+.app-title-link {
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    filter: drop-shadow(1px 0 .1px variables.$primary-color-lighter) drop-shadow(-1px 0 .1px variables.$primary-color-lighter) drop-shadow(0 -1px .1px variables.$primary-color-lighter) drop-shadow(0 1px .1px variables.$primary-color-lighter);
+  }
+}
+
+.language-selector {
+  width: 64px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.language-selector-selected-en {
+  background-image: url('../assets/flags/en.png');
+  background-repeat: no-repeat;
+}
+
+.language-selector-selected-hu {
+  background-image: url('../assets/flags/hu.png');
+  background-repeat: no-repeat;
+}
+
+.hamburger-menu-icon-button {
+  position: absolute;
+  will-change: transform;
+}
+
+// Sidenav
 
 mat-sidenav {
   width: 200px;
@@ -30,16 +83,35 @@ mat-sidenav-container {
   }
 }
 
-footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: smaller;
-  color: #aaa;
+.home-page-link {
+  margin-bottom: 16px;
 }
 
-.course-menu {
-  margin-top: 20px;
+.lab-list {
+  margin: 0 -24px;
 }
+
+.mat-list-item {
+  transition: background-color .2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: variables.$background-color;
+  }
+}
+
+a.mat-list-item.active,
+mat-list-item.active {
+  background-color: variables.$background-color-menu;
+  color: variables.$primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(#5296db, 0.4);
+  }
+}
+
+// Content
 
 mat-sidenav-content {
   display: flex;
@@ -58,42 +130,12 @@ mat-sidenav-content {
   margin: 20px auto 0 auto;
 }
 
+// Footer
+
 footer {
-  padding-bottom: 25px;
-}
-
-.active {
-  background: #f5f5f5;
-}
-
-.language-selector {
-  width: 60px;
-}
-
-.hidden {
-  display: none;
-}
-
-.hamburger-menu-icon-button {
-  position: absolute;
-  will-change: transform;
-}
-
-.app-title {
-  transition: transform 500ms;
-  will-change: transform;
-
-  &.is-mobile {
-    transform: translateX(40px);
-  }
-}
-
-.language-selector-selected-en {
-  background: url('../assets/flags/en.png');
-  background-repeat: no-repeat;
-}
-
-.language-selector-selected-hu {
-  background: url('../assets/flags/hu.png');
-  background-repeat: no-repeat;
+  text-align: center;
+  margin-top: 48px;
+  font-size: smaller;
+  color: #aaa;
+  padding-bottom: 24px;
 }

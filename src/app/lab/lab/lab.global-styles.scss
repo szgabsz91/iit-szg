@@ -1,6 +1,8 @@
+@use "../../../workshop-variables.scss" as variables;
+
 markdown {
   h2 {
-    margin-top: 48px;
+    margin-top: 32px;
   }
 
   ol {
@@ -13,10 +15,8 @@ markdown {
     }
   }
 
-  ul {
-    ul {
-      margin: 8px 0 16px;
-    }
+  ul ul {
+    margin: 8px 0 16px;
   }
 
   ul li {
@@ -24,7 +24,7 @@ markdown {
   }
 
   a {
-    color: #3f51b5;
+    color: variables.$secondary-color;
     text-decoration: none;
 
     &:hover {
@@ -70,7 +70,7 @@ markdown {
 
     .kwd,
     .tag {
-      color: #0066cc;
+      color: variables.$secondary-color;
     }
 
     .com {
@@ -113,8 +113,12 @@ markdown {
     border-bottom: 1px solid #ddd;
   }
 
-  table tbody tr:hover {
-    background-color: #f5f5f5;
+  table tbody tr {
+    transition: background-color .2s ease-in-out;
+
+    &:hover {
+      background-color: variables.$background-color;
+    }
   }
 
   table th,
