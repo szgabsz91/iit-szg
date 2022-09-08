@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/szgabsz91/iit-szg/compare/v1.20.0...v2.0.0) (2022-09-08)
+
+
+### Features
+
+* [#13](https://github.com/szgabsz91/iit-szg/issues/13) create a custom theme for the application ([128fb13](https://github.com/szgabsz91/iit-szg/commit/128fb135b8cfc24b38569fdc60c52cad60212757))
+
+
+### BREAKING CHANGES
+
+* the application has a new custom theme now
+
 # [1.20.0](https://github.com/szgabsz91/iit-szg/compare/v1.19.0...v1.20.0) (2021-06-20)
 
 
