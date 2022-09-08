@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/szgabsz91/iit-szg/compare/v1.21.0...v1.22.0) (2022-09-08)
+
+
+### Features
+
+* [#180](https://github.com/szgabsz91/iit-szg/issues/180) modify the design of Markdown sections, scroll to the top of the page on navigation, improve the menu theme ([ad922ba](https://github.com/szgabsz91/iit-szg/commit/ad922ba8c5ab8b64600fe2c4e32166c0e7ee3dd3))
+
 # [1.21.0](https://github.com/szgabsz91/iit-szg/compare/v1.20.0...v1.21.0) (2022-09-07)
 
 
