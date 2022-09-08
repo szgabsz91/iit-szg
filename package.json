@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "i18n:generate": "ng xi18n --output-path locale",
+    "i18n:generate": "ng extract-i18n --output-path ./src/locale",
     "prestart": "./scripts/generate-graphs.sh && ./scripts/generate-static-content.js en",
     "start": "ng serve",
     "prestart:hu": "./scripts/generate-graphs.sh && ./scripts/generate-static-content.js hu",
@@ -62,6 +62,7 @@
     "eslint-plugin-jsdoc": "^39.3.6",
     "eslint-plugin-prefer-arrow": "^1.2.3",
     "firebase-tools": "^11.8.0",
+    "jasmine-auto-spies": "6.9.9",
     "jasmine-core": "~4.3.0",
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.0",

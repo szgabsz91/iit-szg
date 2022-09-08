@@ -1603,6 +1603,13 @@
     protobufjs "^7.0.0"
     yargs "^16.2.0"
 
+"@hirez_io/auto-spies-core@1.6.7":
+  version "1.6.7"
+  resolved "https://registry.yarnpkg.com/@hirez_io/auto-spies-core/-/auto-spies-core-1.6.7.tgz#432c9628625b2407d5a8277c465928b734524257"
+  integrity sha512-y+Rzu/+92nXBUO03GJmUhUiCFMSWEVGNvi6s8mJNpac41t1rEkhqePJoDA08pK1/or4JjQnNeFPnA+45mrkVnw==
+  dependencies:
+    javascript-stringify "2.1.0"
+
 "@humanwhocodes/config-array@^0.10.4":
   version "0.10.4"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.4.tgz#01e7366e57d2ad104feea63e72248f22015c520c"
@@ -8292,6 +8299,13 @@ jake@^10.8.5:
     filelist "^1.0.1"
     minimatch "^3.0.4"
 
+jasmine-auto-spies@6.9.9:
+  version "6.9.9"
+  resolved "https://registry.yarnpkg.com/jasmine-auto-spies/-/jasmine-auto-spies-6.9.9.tgz#f65510d8ca28c13a6006235546f69233f4c30520"
+  integrity sha512-S+aYQix0YkMJDK61n5fbhUumoH0X9KfObt06X6rScdKK2jybFNzCBNRxtUcFtNrE2TqiHnP64cQuy7pMlDe1XA==
+  dependencies:
+    "@hirez_io/auto-spies-core" "1.6.7"
+
 jasmine-core@^4.1.0, jasmine-core@~4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-4.3.0.tgz#aee841fbe7373c2586ed8d8d48f5cc4a88be8390"
@@ -8327,6 +8341,11 @@ java-properties@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/java-properties/-/java-properties-1.0.2.tgz#ccd1fa73907438a5b5c38982269d0e771fe78211"
   integrity sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==
+
+javascript-stringify@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/javascript-stringify/-/javascript-stringify-2.1.0.tgz#27c76539be14d8bd128219a2d731b09337904e79"
+  integrity sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==
 
 jest-worker@^27.4.5:
   version "27.5.1"

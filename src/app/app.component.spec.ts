@@ -144,7 +144,7 @@ describe('AppComponent', () => {
 
     it('should render the appropriate title', () => {
       const title = compiled.querySelector('h1').textContent;
-      expect(title).toEqual('IIT');
+      expect(title).toEqual('IIT-SZG');
     });
 
     it('should render the appropriate menu items', () => {
