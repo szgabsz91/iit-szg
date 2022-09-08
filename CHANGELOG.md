@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/szgabsz91/iit-szg/compare/v2.1.0...v2.2.0) (2022-09-08)
+
+
+### Features
+
+* [#112](https://github.com/szgabsz91/iit-szg/issues/112) dynamically update the application title on every page ([943d897](https://github.com/szgabsz91/iit-szg/commit/943d897a94e79102bb39049e006efb2a033fd73a))
+
 # [2.1.0](https://github.com/szgabsz91/iit-szg/compare/v2.0.0...v2.1.0) (2022-09-08)
 
 
