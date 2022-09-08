@@ -3,7 +3,9 @@
 Given the following UML diagram:
 
 <p align="center">
-  <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram">
+  <a href="assets/courses/db/lab04/exercise01/people.dot.png" target="_blank">
+    <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram">
+  </a>
 </p>
 
 Based on the above UML diagram, let's execute the following subtasks in an Oracle database:

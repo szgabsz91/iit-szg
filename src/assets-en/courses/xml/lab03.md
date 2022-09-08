@@ -59,7 +59,9 @@ Let's create an XML Schema and a valid XML document for the following subtasks:
 Let's create an XML Schema and a valid XML document for a car database based on the following ER model:
 
 <p align="center">
-  <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER model">
+  <a href="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER model">
+  </a>
 </p>
 
 Let's create the XML Schema in two ways:

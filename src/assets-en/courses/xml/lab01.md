@@ -36,7 +36,9 @@ Let's create an XDM model for the following XML document:
 Let's create an XML document for the following XDM model:
 
 <p align="center">
-  <img src="assets/courses/xml/lab01/exercise02/projects.xdm.dot.png" alt="XDM model">
+  <a href="assets/courses/xml/lab01/exercise02/projects.xdm.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab01/exercise02/projects.xdm.dot.png" alt="XDM model">
+  </a>
 </p>
 
 ## Exercise 3

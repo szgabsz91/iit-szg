@@ -215,7 +215,9 @@ Let's create a valid XML document for the resulting XML Schema.
 Let's create an XML Schema and a valid XML document for the following XDM model:
 
 <p align="center">
-  <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM model">
+  <a href="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM model">
+  </a>
 </p>
 
 The following constraints should be met:
