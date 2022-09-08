@@ -17,7 +17,7 @@ describe('App', () => {
 
   it('should display the appropriate title', async () => {
     const title = await appPage.getTitle();
-    expect(title).toEqual('IIT');
+    expect(title).toEqual('IIT-SZG');
   });
 
   it('should display the language selector with the appropriate title', async () => {

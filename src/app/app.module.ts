@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TitleStrategy } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppMaterialModule } from './app-material.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { AnalyticsLogger } from './analytics-logger.service';
 import { AnalyticsLoggerMock } from './analytics-logger.mock';
 import { environment } from 'src/environments/environment';
 import { ScrollContentAfterNavigationDirective } from './scroll-content-after-navigation.directive';
+import { AppTitleStrategyService } from './app-title-strategy.service';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void;
@@ -62,6 +64,10 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
       useFactory: (analyticsService: AnalyticsService) => () => analyticsService.startLogging(),
       deps: [AnalyticsService],
       multi: true
+    },
+    {
+      provide: TitleStrategy,
+      useClass: AppTitleStrategyService,
     }
   ],
   bootstrap: [AppComponent]
