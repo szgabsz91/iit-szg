@@ -87,6 +87,12 @@ mat-sidenav-container {
   margin-bottom: 16px;
 }
 
+mat-expansion-panel mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]),
+mat-expansion-panel mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]),
+mat-expansion-panel:not(.mat-expanded) mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+  background-color: variables.$background-color-menu;
+}
+
 .lab-list {
   margin: 0 -24px;
 }

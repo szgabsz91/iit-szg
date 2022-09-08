@@ -47,14 +47,17 @@ markdown {
     line-height: 20px;
     margin: 0;
     margin-bottom: 24px;
+    overflow-x: auto;
     padding: 16px;
     position: relative;
+    white-space: pre-wrap;
 
     &[data-label]:after {
       border-top-right-radius: 8px;
       color: #f5f5f5;
       content: attr(data-label);
       background-color: rgba(0, 0, 0, .5);
+      opacity: .7;
       padding: 2px 24px;
       position: absolute;
       right: 0;
@@ -99,6 +102,10 @@ markdown {
 
   table {
     border-spacing: 0;
+
+    @media only screen and (max-width: 820px) {
+      word-break: break-word;
+    }
   }
 
   table thead th {

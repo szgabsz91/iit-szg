@@ -215,7 +215,9 @@ Hozzunk létre egy valid XML dokumentumot az új XML sémához.
 Írjunk XML sémát és valid XML dokumentumot a következő XDM modell alapján:
 
 <p align="center">
-  <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM modell">
+  <a href="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM modell">
+  </a>
 </p>
 
 A következőkre ügyeljünk:
