@@ -3,7 +3,9 @@
 Adott a következő UML diagram:
 
 <p align="center">
-  <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram">
+  <a href="assets/courses/db/lab04/exercise01/people.dot.png" target="_blank">
+    <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram">
+  </a>
 </p>
 
 A fenti UML diagram alapján végezzük el a következő Oracle adatbázishoz kapcsolódó alfeladatokat:

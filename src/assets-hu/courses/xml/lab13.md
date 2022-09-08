@@ -3,7 +3,9 @@
 Adott a következő relációs modell:
 
 <p align="center">
-  <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relációs modell">
+  <a href="assets/courses/xml/lab13/exercise01/messages.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relációs modell">
+  </a>
 </p>
 
 Oldjuk meg a következő alfeladatokat:

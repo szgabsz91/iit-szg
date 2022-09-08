@@ -3,7 +3,9 @@
 Given the following relational model:
 
 <p align="center">
-  <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relational model">
+  <a href="assets/courses/xml/lab13/exercise01/messages.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relational model">
+  </a>
 </p>
 
 Let's execute the following subtasks:
