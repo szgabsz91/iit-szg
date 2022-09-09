@@ -1,7 +1,6 @@
 import { AppPage } from './app.po';
 
 describe('App', () => {
-
   let appPage: AppPage;
 
   beforeEach(() => {
@@ -20,5 +19,4 @@ describe('App', () => {
   it('should display the language selector with the appropriate title', () => {
     appPage.selectedLanguage.should('equal', 'English');
   });
-
 });

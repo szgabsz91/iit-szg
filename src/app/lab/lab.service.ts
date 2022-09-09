@@ -6,7 +6,6 @@ import { Lab } from '../model/lab';
 
 @Injectable()
 export class LabService {
-
   constructor(private readonly courseService: CourseService) {}
 
   getLab(courseId: string, labIndex: number): Observable<Lab> {
@@ -20,5 +19,4 @@ export class LabService {
       })
     );
   }
-
 }

@@ -6,10 +6,6 @@ import { CourseMaterialModule } from './course-material.module';
 
 @NgModule({
   declarations: [CourseComponent],
-  imports: [
-    CommonModule,
-    CourseRoutingModule,
-    CourseMaterialModule
-  ]
+  imports: [CommonModule, CourseRoutingModule, CourseMaterialModule]
 })
 export class CourseModule {}

@@ -14,9 +14,7 @@ declare function prettyPrint(): void;
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LabComponent implements OnInit {
-  readonly lab$: Observable<Lab> = this.activatedRoute.data.pipe(
-    map((data: Data) => data.lab)
-  );
+  readonly lab$: Observable<Lab> = this.activatedRoute.data.pipe(map((data: Data) => data.lab));
   labContent$!: Observable<string>;
 
   constructor(private readonly activatedRoute: ActivatedRoute, private readonly markdownService: MarkdownService) {}
@@ -31,5 +29,4 @@ export class LabComponent implements OnInit {
   onMarkdownReady(): void {
     prettyPrint();
   }
-
 }

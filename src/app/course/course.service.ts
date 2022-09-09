@@ -9,13 +9,9 @@ import { CourseServiceModule } from './course-service.module';
   providedIn: CourseServiceModule
 })
 export class CourseService {
-
   constructor(private readonly appService: AppService) {}
 
   getCourse(courseId: string): Observable<Course> {
-    return this.appService.getCourses().pipe(
-      map(courses => courses.find(course => course.id === courseId))
-    );
+    return this.appService.getCourses().pipe(map(courses => courses.find(course => course.id === courseId)));
   }
-
 }

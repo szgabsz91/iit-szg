@@ -1,6 +1,6 @@
-@use "./workshop-theme.scss";
-@use "./app/lab/lab/lab.global-styles.scss";
-@use "./app/app.global-styles.scss";
+@use './workshop-theme.scss';
+@use './app/lab/lab/lab.global-styles.scss';
+@use './app/app.global-styles.scss';
 
 html,
 body {
@@ -9,7 +9,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 // Language selector

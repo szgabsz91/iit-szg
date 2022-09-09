@@ -58,14 +58,18 @@ const generateMetadataForLocale = (metadata, localeId) => {
   const targetMetadataJsonPath = path.resolve('src', `assets-${localeId}`, metadataJsonFilename);
   return Promise.all([
     writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8'),
-    writeFile(path.resolve('src', 'app', 'constants', 'app.prod-constants.ts'), `export const METADATA_FILENAME = '${metadataJsonFilename}';\n`, 'UTF-8')
+    writeFile(
+      path.resolve('src', 'app', 'constants', 'app.prod-constants.ts'),
+      `export const METADATA_FILENAME = '${metadataJsonFilename}';\n`,
+      'UTF-8'
+    )
   ]);
-}
+};
 
 const isFolder = async file => {
   const stat = await lstat(file);
   return stat.isDirectory();
-}
+};
 
 const processCourseFolder = async courseFolder => {
   const labFolderNames = await readdir(courseFolder);
@@ -120,7 +124,7 @@ const processProjectFolder = async projectFolder => {
   const parentFolder = path.resolve(targetFile, '..');
   await mkdir(parentFolder, { recursive: true });
   await zipFolder(projectFolder, targetFile);
-}
+};
 
 console.log('Generating static content...');
 

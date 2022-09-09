@@ -1,7 +1,6 @@
 import { CoursePage } from './course.po';
 
 describe('Course', () => {
-
   let coursePage: CoursePage;
 
   beforeEach(() => {
@@ -16,5 +15,4 @@ describe('Course', () => {
   it('should display the appropriate labs', () => {
     coursePage.labTitles.should('have.length.above', 0);
   });
-
 });

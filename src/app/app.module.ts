@@ -20,11 +20,7 @@ import { AppTitleStrategyService } from './app-title-strategy.service';
 declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void;
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ScrollContentAfterNavigationDirective
-  ],
+  declarations: [AppComponent, HomeComponent, ScrollContentAfterNavigationDirective],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -52,10 +48,7 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
         // eslint-disable-next-line @typescript-eslint/no-shadow, @typescript-eslint/naming-convention
         gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void,
         googleAnalyticsTrackingId
-      ) =>
-        environment.production ?
-          new AnalyticsLogger(gtag, googleAnalyticsTrackingId) :
-          new AnalyticsLoggerMock(),
+      ) => (environment.production ? new AnalyticsLogger(gtag, googleAnalyticsTrackingId) : new AnalyticsLoggerMock()),
       deps: [GTAG, GOOGLE_ANALYTICS_TRACKING_ID]
     },
     AnalyticsService,
@@ -67,7 +60,7 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
     },
     {
       provide: TitleStrategy,
-      useClass: AppTitleStrategyService,
+      useClass: AppTitleStrategyService
     }
   ],
   bootstrap: [AppComponent]

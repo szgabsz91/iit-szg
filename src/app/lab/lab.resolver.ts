@@ -6,7 +6,6 @@ import { LabService } from './lab.service';
 
 @Injectable()
 export class LabResolver implements Resolve<Lab> {
-
   constructor(private readonly labService: LabService) {}
 
   resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Lab> {
@@ -14,5 +13,4 @@ export class LabResolver implements Resolve<Lab> {
     const labIndex = +activatedRouteSnapshot.paramMap.get('labIndex');
     return this.labService.getLab(courseId, labIndex);
   }
-
 }

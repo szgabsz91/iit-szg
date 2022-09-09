@@ -11,7 +11,6 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { By } from '@angular/platform-browser';
 
 describe('LabComponent', () => {
-
   let fixture: ComponentFixture<LabComponent>;
   let labComponent: LabComponent;
   let markdownService: MarkdownService;
@@ -54,8 +53,7 @@ describe('LabComponent', () => {
           useValue: activatedRoute
         }
       ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -70,42 +68,37 @@ describe('LabComponent', () => {
   });
 
   describe('component', () => {
-
     it('should download the appropriate Markdown file', () => {
       const markdownUrl = `./assets/courses/${mockedLab.courseId}/lab${mockedLab.index.toString().padStart(2, '0')}.md`;
       expect(markdownService.getSource).toHaveBeenCalledOnceWith(markdownUrl);
     });
 
     describe('properties', () => {
-
       it('should contain the appropriate lab', () => {
         labComponent.lab$.subscribe(lab => {
           expect(lab).toEqual(mockedLab);
         });
       });
-
     });
 
     describe('when the ready event is dispatched', () => {
-
       beforeEach(() => {
         prettyPrintSpy.calls.reset();
-        const markdownComponent: MarkdownComponent = fixture.debugElement.query(By.directive(MarkdownComponent)).componentInstance;
+        const markdownComponent: MarkdownComponent = fixture.debugElement.query(
+          By.directive(MarkdownComponent)
+        ).componentInstance;
         markdownComponent.ready.emit();
       });
 
       it('should invoke window.prettyPrint', () => {
         expect(prettyPrintSpy).toHaveBeenCalledTimes(1);
       });
-
     });
-
   });
 
   describe('template', () => {
-
     it('should render the appropriate lab title', () => {
-      const title = compiled.querySelector('mat-card-title').textContent;
+      const title = compiled.querySelector('mat-card-title').textContent.trim();
       expect(title).toEqual(`Lab ${mockedLab.index}: ${mockedLab.titles.long}`);
     });
 
@@ -113,7 +106,5 @@ describe('LabComponent', () => {
       const markdownContentLength = compiled.querySelectorAll('markdown *').length;
       expect(markdownContentLength).toBeGreaterThan(0);
     });
-
   });
-
 });

@@ -1,5 +1,15 @@
 import { DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component, ChangeDetectionStrategy, ChangeDetectorRef, Inject, LOCALE_ID, OnDestroy, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Inject,
+  LOCALE_ID,
+  OnDestroy,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
@@ -19,7 +29,6 @@ import { filter, first, map } from 'rxjs/operators';
   animations: [hamburgerMenuButtonTrigger]
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
-
   @ViewChild(MatSidenav, { static: true })
   readonly sidenav: MatSidenav;
 
@@ -27,9 +36,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   readonly currentYear: number = new Date().getFullYear();
   readonly courses$: Observable<Course[]> = this.appService.getCourses();
   readonly activeCourseId$ = this.router.events.pipe(
-    filter((event: Event): event is ActivationEnd => (event instanceof ActivationEnd)),
+    filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
     map((event: ActivationEnd) => event.snapshot.params),
-    map((params) => params.courseId),
+    map(params => params.courseId),
     first()
   );
 
@@ -57,8 +66,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     this.handleSidenav = (event: MediaQueryListEvent): void => {
       if (!event.matches) {
         this.sidenav.open();
-      }
-      else {
+      } else {
         this.sidenav.close();
       }
       changeDetectorRef.detectChanges();
@@ -98,5 +106,4 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   removeHtmlComments(html: string): string {
     return html.replace(/<!--[\s\S]*?-->/g, '');
   }
-
 }

@@ -10,7 +10,6 @@ import { LabModule } from './lab.module';
 import { CourseServiceModule } from '../course/course-service.module';
 
 describe('LabResolver', () => {
-
   let labResolver: LabResolver;
 
   const mockedLab: Lab = {
@@ -40,12 +39,7 @@ describe('LabResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        LabRoutingModule,
-        LabModule,
-        CourseServiceModule,
-        HttpClientTestingModule
-      ]
+      imports: [LabRoutingModule, LabModule, CourseServiceModule, HttpClientTestingModule]
     });
   });
 
@@ -65,12 +59,11 @@ describe('LabResolver', () => {
     labResolver = TestBed.inject(LabResolver);
   });
 
-  it('should fetch the appropriate Lab model based on the courseId and labIndex route parameters', (done) => {
+  it('should fetch the appropriate Lab model based on the courseId and labIndex route parameters', done => {
     const result = labResolver.resolve(activatedRouteSnapshot);
     result.subscribe((lab: Lab) => {
       expect(lab).toEqual(mockedLab);
       done();
     });
   });
-
 });

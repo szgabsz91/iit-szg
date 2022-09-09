@@ -1,7 +1,6 @@
 import { LabPage } from './lab.po';
 
 describe('Lab', () => {
-
   let labPage: LabPage;
 
   beforeEach(() => {
@@ -16,5 +15,4 @@ describe('Lab', () => {
   it('should display the appropriate markdown content', () => {
     labPage.markdownContent.should('have.length.above', 0);
   });
-
 });

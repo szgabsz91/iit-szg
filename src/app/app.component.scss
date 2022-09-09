@@ -1,4 +1,4 @@
-@use "../workshop-variables.scss" as variables;
+@use '../workshop-variables.scss' as variables;
 
 .container {
   display: flex;
@@ -34,7 +34,10 @@
 
   &:hover {
     cursor: pointer;
-    filter: drop-shadow(1px 0 .1px variables.$primary-color-lighter) drop-shadow(-1px 0 .1px variables.$primary-color-lighter) drop-shadow(0 -1px .1px variables.$primary-color-lighter) drop-shadow(0 1px .1px variables.$primary-color-lighter);
+    filter: drop-shadow(1px 0 0.1px variables.$primary-color-lighter)
+      drop-shadow(-1px 0 0.1px variables.$primary-color-lighter)
+      drop-shadow(0 -1px 0.1px variables.$primary-color-lighter)
+      drop-shadow(0 1px 0.1px variables.$primary-color-lighter);
   }
 }
 
@@ -87,9 +90,9 @@ mat-sidenav-container {
   margin-bottom: 16px;
 }
 
-mat-expansion-panel mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled=true]),
-mat-expansion-panel mat-expansion-panel-header.cdk-program-focused:not([aria-disabled=true]),
-mat-expansion-panel:not(.mat-expanded) mat-expansion-panel-header:hover:not([aria-disabled=true]) {
+mat-expansion-panel mat-expansion-panel-header.cdk-keyboard-focused:not([aria-disabled='true']),
+mat-expansion-panel mat-expansion-panel-header.cdk-program-focused:not([aria-disabled='true']),
+mat-expansion-panel:not(.mat-expanded) mat-expansion-panel-header:hover:not([aria-disabled='true']) {
   background-color: variables.$background-color-menu;
 }
 
@@ -98,7 +101,7 @@ mat-expansion-panel:not(.mat-expanded) mat-expansion-panel-header:hover:not([ari
 }
 
 .mat-list-item {
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover,
   &:focus {
