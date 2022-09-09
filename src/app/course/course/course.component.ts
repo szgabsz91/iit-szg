@@ -12,18 +12,14 @@ import { Lab } from '../../model/lab';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CourseComponent {
-
   readonly columns = ['index', 'title'];
-  readonly course$: Observable<Course> = this.activatedRoute.data.pipe(
-    map((data: Data) => data.course)
-  );
+  readonly course$: Observable<Course> = this.activatedRoute.data.pipe(map((data: Data) => data.course));
 
-  constructor(
-    private readonly activatedRoute: ActivatedRoute,
-    private readonly router: Router) {}
+  constructor(private readonly activatedRoute: ActivatedRoute, private readonly router: Router) {}
 
   navigateToLab(lab: Lab) {
-    return this.router.navigate(['./labs', lab.index], { relativeTo: this.activatedRoute });
+    return this.router.navigate(['./labs', lab.index], {
+      relativeTo: this.activatedRoute
+    });
   }
-
 }

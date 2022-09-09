@@ -13,38 +13,45 @@ import { MatExpansionPanel } from '@angular/material/expansion';
 import { ActivationEnd, Router } from '@angular/router';
 
 describe('AppComponent', () => {
-
   let fixture: ComponentFixture<AppComponent>;
   let appComponent: AppComponent;
   let compiled: HTMLElement;
   let mockWindow: Window;
 
-  const mockedCourses: Course[] = [{
-    id: 'course1',
-    name: 'Course 1',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 1 Lab 1 Short',
-        long: 'Course 1 Lab 1 Long'
-      }
-    }, {
-      index: 2,
-      titles: {
-        long: 'Course 1 Lab 2 Long'
-      }
-    }]
-  }, {
-    id: 'course2',
-    name: 'Course 2',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 2 Lab 1 Short',
-        long: 'Course 2 Lab 1 Long'
-      }
-    }]
-  }];
+  const mockedCourses: Course[] = [
+    {
+      id: 'course1',
+      name: 'Course 1',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 1 Lab 1 Short',
+            long: 'Course 1 Lab 1 Long'
+          }
+        },
+        {
+          index: 2,
+          titles: {
+            long: 'Course 1 Lab 2 Long'
+          }
+        }
+      ]
+    },
+    {
+      id: 'course2',
+      name: 'Course 2',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 2 Lab 1 Short',
+            long: 'Course 2 Lab 1 Long'
+          }
+        }
+      ]
+    }
+  ];
 
   beforeEach(waitForAsync(() => {
     mockWindow = {
@@ -55,11 +62,7 @@ describe('AppComponent', () => {
 
     TestBed.configureTestingModule({
       declarations: [AppComponent],
-      imports: [
-        RouterTestingModule,
-        HttpClientTestingModule,
-        AppMaterialModule
-      ],
+      imports: [RouterTestingModule, HttpClientTestingModule, AppMaterialModule],
       providers: [
         { provide: WINDOW, useValue: mockWindow },
         { provide: LOCALE_ID, useValue: 'hu' }
@@ -72,11 +75,13 @@ describe('AppComponent', () => {
     spyOn(appService, 'getCourses').and.returnValue(of(mockedCourses));
 
     const router = TestBed.inject(Router);
-    (router as any).events = of(new ActivationEnd({
-      params: {
-        courseId: 'course2'
-      }
-    } as any));
+    (router as any).events = of(
+      new ActivationEnd({
+        params: {
+          courseId: 'course2'
+        }
+      } as any)
+    );
 
     fixture = TestBed.createComponent(AppComponent);
     appComponent = fixture.debugElement.componentInstance;
@@ -85,9 +90,7 @@ describe('AppComponent', () => {
   });
 
   describe('component', () => {
-
     describe('properties', () => {
-
       it('should contain the appropriate courses', () => {
         appComponent.courses$.subscribe(courses => {
           expect(courses).toEqual(mockedCourses);
@@ -97,11 +100,9 @@ describe('AppComponent', () => {
       it('should contain the current year', () => {
         expect(appComponent.currentYear).toEqual(new Date().getFullYear());
       });
-
     });
 
     describe('toggleSidenav', () => {
-
       it('should toggle the sidenav', () => {
         spyOn(appComponent.sidenav, 'toggle');
 
@@ -109,11 +110,9 @@ describe('AppComponent', () => {
 
         expect(appComponent.sidenav.toggle).toHaveBeenCalledTimes(1);
       });
-
     });
 
     describe('closeSidenavOnMobile', () => {
-
       it('should close the sidenav on mobile clients', () => {
         spyOn(appComponent.sidenav, 'close');
 
@@ -123,11 +122,9 @@ describe('AppComponent', () => {
           expect(appComponent.sidenav.close).toHaveBeenCalledTimes(1);
         }
       });
-
     });
 
     describe('onSelectedLanguageChanged', () => {
-
       it('should navigate to the appropriate page with the selected language', () => {
         appComponent.onSelectedLanguageChanged({
           value: 'en'
@@ -135,22 +132,25 @@ describe('AppComponent', () => {
 
         expect(mockWindow.location.href).toBe('/en/something');
       });
-
     });
-
   });
 
   describe('template', () => {
-
     it('should render the appropriate title', () => {
-      const title = compiled.querySelector('h1').textContent;
+      const title = compiled.querySelector('h1').textContent.trim();
       expect(title).toEqual('IIT-SZG');
     });
 
     it('should render the appropriate menu items', () => {
       const menuItems = Array.from(compiled.querySelectorAll('[mat-list-item]'));
-      const menuItemLabels = menuItems.map(menuItem => menuItem.textContent).sort();
-      expect(menuItemLabels).toEqual(['Course 1 Lab 1 Short', 'Course 1 Lab 2 Long', 'Course 2 Lab 1 Short', 'Index', 'Index']);
+      const menuItemLabels = menuItems.map(menuItem => menuItem.textContent.trim()).sort();
+      expect(menuItemLabels).toEqual([
+        'Course 1 Lab 1 Short',
+        'Course 1 Lab 2 Long',
+        'Course 2 Lab 1 Short',
+        'Index',
+        'Index'
+      ]);
     });
 
     it('should expand the appropriate course', () => {
@@ -165,7 +165,5 @@ describe('AppComponent', () => {
       const footerContent = compiled.querySelector('footer').textContent;
       expect(footerContent).toEqual(`© Gabor Szabo ${new Date().getFullYear()}`);
     });
-
   });
-
 });

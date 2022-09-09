@@ -14,7 +14,6 @@ class WrapperComponent {
 }
 
 describe('ScrollContentAfterNavigationDirective', () => {
-
   let fixture: ComponentFixture<WrapperComponent>;
   let component: WrapperComponent;
   let eventsSubject$: BehaviorSubject<Event>;
@@ -27,9 +26,7 @@ describe('ScrollContentAfterNavigationDirective', () => {
 
     TestBed.configureTestingModule({
       declarations: [WrapperComponent, ScrollContentAfterNavigationDirective],
-      providers: [
-        { provide: Router, useValue: router }
-      ]
+      providers: [{ provide: Router, useValue: router }]
     }).compileComponents();
   }));
 
@@ -41,7 +38,6 @@ describe('ScrollContentAfterNavigationDirective', () => {
   });
 
   describe('after a NavigationStart event', () => {
-
     beforeEach(() => {
       eventsSubject$.next(new NavigationStart(1, ''));
       fixture.detectChanges();
@@ -50,11 +46,9 @@ describe('ScrollContentAfterNavigationDirective', () => {
     it('should not scroll to top', () => {
       expect(component.content.nativeElement.scrollTo).not.toHaveBeenCalled();
     });
-
   });
 
   describe('after a NavigationEnd event', () => {
-
     beforeEach(() => {
       eventsSubject$.next(new NavigationEnd(1, '', ''));
       fixture.detectChanges();
@@ -63,7 +57,5 @@ describe('ScrollContentAfterNavigationDirective', () => {
     it('should not scroll to top', () => {
       expect(component.content.nativeElement.scrollTo).toHaveBeenCalledOnceWith(0, 0);
     });
-
   });
-
 });

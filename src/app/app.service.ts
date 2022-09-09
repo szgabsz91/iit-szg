@@ -10,16 +10,16 @@ import { Course } from './model/course';
   providedIn: 'root'
 })
 export class AppService {
-
-  private readonly courseCache$: Observable<Course[]> = this.httpClient.get<Metadata>(`./assets/${METADATA_FILENAME}`).pipe(
-    map(metadata => metadata.courses),
-    shareReplay(1)
-  );
+  private readonly courseCache$: Observable<Course[]> = this.httpClient
+    .get<Metadata>(`./assets/${METADATA_FILENAME}`)
+    .pipe(
+      map(metadata => metadata.courses),
+      shareReplay(1)
+    );
 
   constructor(private readonly httpClient: HttpClient) {}
 
   getCourses(): Observable<Course[]> {
     return this.courseCache$;
   }
-
 }

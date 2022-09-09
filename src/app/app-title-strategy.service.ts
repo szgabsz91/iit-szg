@@ -15,7 +15,10 @@ export class AppTitleStrategyService extends TitleStrategy {
 
   constructor(@Inject(DOCUMENT) private readonly document: Document, private readonly appService: AppService) {
     super();
-    this.appService.getCourses().pipe(first()).subscribe((courses: Course[]) => this.courses = courses);
+    this.appService
+      .getCourses()
+      .pipe(first())
+      .subscribe((courses: Course[]) => (this.courses = courses));
   }
 
   updateTitle(snapshot: RouterStateSnapshot): void {

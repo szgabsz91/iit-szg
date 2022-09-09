@@ -7,45 +7,51 @@ import { Course } from '../model/course';
 import { Lab } from '../model/lab';
 
 describe('LabService', () => {
-
   let labService: LabService;
   let httpTestingController: HttpTestingController;
 
-  const mockedCourses: Course[] = [{
-    id: 'course1',
-    name: 'Course 1',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 1 Lab 1 Short',
-        long: 'Course 1 Lab 1 Long'
-      }
-    }, {
-      index: 2,
-      titles: {
-        short: 'Course 1 Lab 2 Short',
-        long: 'Course 1 Lab 2 Long'
-      }
-    }]
-  }, {
-    id: 'course2',
-    name: 'Course 2',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 2 Lab 1 Short',
-        long: 'Course 2 Lab 1 Long'
-      }
-    }]
-  }];
+  const mockedCourses: Course[] = [
+    {
+      id: 'course1',
+      name: 'Course 1',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 1 Lab 1 Short',
+            long: 'Course 1 Lab 1 Long'
+          }
+        },
+        {
+          index: 2,
+          titles: {
+            short: 'Course 1 Lab 2 Short',
+            long: 'Course 1 Lab 2 Long'
+          }
+        }
+      ]
+    },
+    {
+      id: 'course2',
+      name: 'Course 2',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 2 Lab 1 Short',
+            long: 'Course 2 Lab 1 Long'
+          }
+        }
+      ]
+    }
+  ];
 
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [
-      HttpClientTestingModule,
-      CourseServiceModule
-    ],
-    providers: [LabService]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule, CourseServiceModule],
+      providers: [LabService]
+    })
+  );
 
   beforeEach(() => {
     labService = TestBed.inject(LabService);
@@ -57,7 +63,6 @@ describe('LabService', () => {
   });
 
   describe('getLab', () => {
-
     it('should return the lab with the given index in the course with the given id', () => {
       labService.getLab(mockedCourses[0].id, mockedCourses[0].labs[1].index).subscribe(lab => {
         const mockedLab: Lab = {
@@ -74,7 +79,5 @@ describe('LabService', () => {
         courses: mockedCourses
       });
     });
-
   });
-
 });

@@ -9,25 +9,27 @@ import { CourseResolver } from './course.resolver';
 import { CourseService } from './course.service';
 
 describe('CourseResolver', () => {
-
   let courseResolver: CourseResolver;
 
   const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Lab 1 Short',
-        long: 'Lab 1 Long'
+    labs: [
+      {
+        index: 1,
+        titles: {
+          short: 'Lab 1 Short',
+          long: 'Lab 1 Long'
+        }
+      },
+      {
+        index: 2,
+        titles: {
+          short: 'Lab 2 Short',
+          long: 'Lab 2 Long'
+        }
       }
-    }, {
-      index: 2,
-      titles: {
-        short: 'Lab 2 Short',
-        long: 'Lab 2 Long'
-      }
-    }]
+    ]
   };
   const activatedRouteSnapshot: ActivatedRouteSnapshot = {
     paramMap: {
@@ -45,11 +47,7 @@ describe('CourseResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CourseRoutingModule,
-        CourseServiceModule,
-        HttpClientTestingModule
-      ]
+      imports: [CourseRoutingModule, CourseServiceModule, HttpClientTestingModule]
     });
   });
 
@@ -68,12 +66,11 @@ describe('CourseResolver', () => {
     courseResolver = TestBed.inject(CourseResolver);
   });
 
-  it('should fetch the appropriate Course model based on the courseId route parameter', (done) => {
+  it('should fetch the appropriate Course model based on the courseId route parameter', done => {
     const result = courseResolver.resolve(activatedRouteSnapshot);
     result.subscribe((course: Course) => {
       expect(course).toEqual(mockedCourse);
       done();
     });
   });
-
 });

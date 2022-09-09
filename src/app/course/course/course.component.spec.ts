@@ -11,7 +11,6 @@ import { Course } from '../../model/course';
 import { Lab } from '../../model/lab';
 
 describe('CourseComponent', () => {
-
   let fixture: ComponentFixture<CourseComponent>;
   let courseComponent: CourseComponent;
   let compiled: HTMLElement;
@@ -20,19 +19,22 @@ describe('CourseComponent', () => {
   const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Lab 1 Short',
-        long: 'Lab 1 Long'
+    labs: [
+      {
+        index: 1,
+        titles: {
+          short: 'Lab 1 Short',
+          long: 'Lab 1 Long'
+        }
+      },
+      {
+        index: 2,
+        titles: {
+          short: 'Lab 2 Short',
+          long: 'Lab 2 Long'
+        }
       }
-    }, {
-      index: 2,
-      titles: {
-        short: 'Lab 2 Short',
-        long: 'Lab 2 Long'
-      }
-    }]
+    ]
   };
   const activatedRoute = {
     data: of({
@@ -43,18 +45,14 @@ describe('CourseComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [CourseComponent],
-      imports: [
-        RouterTestingModule,
-        HttpClientTestingModule,
-        CourseMaterialModule,
-        CourseServiceModule
-      ],
-      providers: [{
-        provide: ActivatedRoute,
-        useValue: activatedRoute
-      }]
-    })
-    .compileComponents();
+      imports: [RouterTestingModule, HttpClientTestingModule, CourseMaterialModule, CourseServiceModule],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: activatedRoute
+        }
+      ]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -77,9 +75,7 @@ describe('CourseComponent', () => {
   });
 
   describe('component', () => {
-
     describe('properties', () => {
-
       it('should contain the appropriate course', () => {
         courseComponent.course$.subscribe(course => {
           expect(course).toEqual(mockedCourse);
@@ -89,11 +85,9 @@ describe('CourseComponent', () => {
       it('should contain the appropriate columns', () => {
         expect(courseComponent.columns).toEqual(['index', 'title']);
       });
-
     });
 
     describe('navigateToLab', () => {
-
       it('should navigate to the appropriate lab page', () => {
         spyOn(router, 'navigate').and.returnValue(Promise.resolve(true));
 
@@ -109,25 +103,19 @@ describe('CourseComponent', () => {
 
         expect(router.navigate).toHaveBeenCalledWith(['./labs', lab.index], jasmine.any(Object));
       });
-
     });
-
   });
 
   describe('template', () => {
-
     it('should render the appropriate course name', () => {
       const courseName = compiled.querySelector('h2').textContent;
       expect(courseName).toEqual(mockedCourse.name);
     });
 
     it('should render the appropriate labs in a table', () => {
-      const labTitles = Array.from(compiled.querySelectorAll('tbody td:last-child'))
-        .map(el => el.textContent);
+      const labTitles = Array.from(compiled.querySelectorAll('tbody td:last-child')).map(el => el.textContent);
       const expectedLabTitles = mockedCourse.labs.map(lab => lab.titles.long);
       expect(labTitles).toEqual(expectedLabTitles);
     });
-
   });
-
 });

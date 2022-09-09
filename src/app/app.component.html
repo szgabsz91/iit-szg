@@ -1,42 +1,89 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary">
-    <button *ngIf="mobileQuery.matches" @hamburgerMenuButtonTrigger class="hamburger-menu-icon-button" mat-icon-button (click)="toggleSidenav()">
+    <button
+      *ngIf="mobileQuery.matches"
+      @hamburgerMenuButtonTrigger
+      class="hamburger-menu-icon-button"
+      mat-icon-button
+      (click)="toggleSidenav()"
+    >
       <mat-icon>menu</mat-icon>
     </button>
 
     <h1 class="app-title" [class.is-mobile]="mobileQuery.matches">
-      <a routerLink="/" class="app-title-link" i18n="app.title|The title of the application@@appTitle">IIT-SZG</a>
+      <a routerLink="/" class="app-title-link" i18n="app.title|The title of the application@@appTitle"> IIT-SZG </a>
     </h1>
 
-    <mat-select [(value)]="selectedLocale" (selectionChange)="onSelectedLanguageChanged($event)" class="language-selector" [ngClass]="'language-selector-selected-' + selectedLocale">
+    <mat-select
+      [(value)]="selectedLocale"
+      (selectionChange)="onSelectedLanguageChanged($event)"
+      class="language-selector"
+      [ngClass]="'language-selector-selected-' + selectedLocale"
+    >
       <mat-option *ngFor="let locale of locales" [value]="locale">
-        <img
-          [src]="'assets/flags/' + locale + '.png'"
-          [alt]="removeHtmlComments(alt.innerHTML)"
+        <img [src]="'assets/flags/' + locale + '.png'" [alt]="removeHtmlComments(alt.innerHTML)" />
+        <span
+          #alt
+          class="sr-only"
+          i18n="app.languageSelector|The selected language in the language selector@@appLanguageSelector"
         >
-        <span #alt class="sr-only" i18n="app.languageSelector|The selected language in the language selector@@appLanguageSelector">{locale, select, hu {Hungarian} en {English} other {}}</span>
+          {locale, select, hu {Hungarian} en {English} other {}}
+        </span>
       </mat-option>
     </mat-select>
   </mat-toolbar>
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-    <mat-sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+    <mat-sidenav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56"
+    >
       <mat-nav-list class="home-page-link">
-        <mat-list-item class="main-menu-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeSidenavOnMobile()">
+        <mat-list-item
+          class="main-menu-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeSidenavOnMobile()"
+        >
           <mat-icon matListIcon>home</mat-icon>
-          <a matLine i18n="app.menu.home|The label of the home menu item@@appMenuHome">Home</a>
+          <a matLine i18n="app.menu.home|The label of the home menu item@@appMenuHome"> Home </a>
         </mat-list-item>
       </mat-nav-list>
 
       <mat-accordion>
-        <mat-expansion-panel *ngFor="let course of courses$ | async" [expanded]="course.id === (activeCourseId$ | async)">
+        <mat-expansion-panel
+          *ngFor="let course of courses$ | async"
+          [expanded]="course.id === (activeCourseId$ | async)"
+        >
           <mat-expansion-panel-header>
-            <mat-panel-title class="main-menu-link">{{ course.name }}</mat-panel-title>
+            <mat-panel-title class="main-menu-link">
+              {{ course.name }}
+            </mat-panel-title>
           </mat-expansion-panel-header>
 
           <mat-nav-list class="lab-list">
-            <a mat-list-item [routerLink]="['/courses', course.id]" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" i18n="app.course.index|The label of the course index pages@@appCourseIndex" (click)="closeSidenavOnMobile()">Index</a>
-            <a mat-list-item [routerLink]="['/courses', course.id, 'labs', lab.index]" routerLinkActive="active" (click)="closeSidenavOnMobile()" *ngFor="let lab of course.labs">{{ lab.titles.short || lab.titles.long }}</a>
+            <a
+              mat-list-item
+              [routerLink]="['/courses', course.id]"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              i18n="app.course.index|The label of the course index pages@@appCourseIndex"
+              (click)="closeSidenavOnMobile()"
+            >
+              Index
+            </a>
+
+            <a
+              mat-list-item
+              [routerLink]="['/courses', course.id, 'labs', lab.index]"
+              routerLinkActive="active"
+              (click)="closeSidenavOnMobile()"
+              *ngFor="let lab of course.labs"
+            >
+              {{ lab.titles.short || lab.titles.long }}
+            </a>
           </mat-nav-list>
         </mat-expansion-panel>
       </mat-accordion>

@@ -1,5 +1,4 @@
 export class AppPage {
-
   get lang(): Cypress.Chainable<string | string[]> {
     return cy.get('html').attribute('lang');
   }
@@ -15,5 +14,4 @@ export class AppPage {
   navigateTo(): Cypress.Chainable {
     return cy.visit('/');
   }
-
 }

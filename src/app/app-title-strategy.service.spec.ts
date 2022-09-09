@@ -8,38 +8,45 @@ import { AppService } from './app.service';
 import { Course } from './model/course';
 
 describe('AppTitleStrategyService', () => {
-
   let appTitleStrategyService: AppTitleStrategyService;
   let routerStateSnapshot: RouterStateSnapshot;
 
   const document: Document = { title: '' } as Document;
-  const mockedCourses: Course[] = [{
-    id: 'course1',
-    name: 'Course 1',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 1 Lab 1 Short',
-        long: 'Course 1 Lab 1 Long'
-      }
-    }, {
-      index: 2,
-      titles: {
-        short: 'Course 1 Lab 2 Short',
-        long: 'Course 1 Lab 2 Long'
-      }
-    }]
-  }, {
-    id: 'course2',
-    name: 'Course 2',
-    labs: [{
-      index: 1,
-      titles: {
-        short: 'Course 2 Lab 1 Short',
-        long: 'Course 2 Lab 1 Long'
-      }
-    }]
-  }];
+  const mockedCourses: Course[] = [
+    {
+      id: 'course1',
+      name: 'Course 1',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 1 Lab 1 Short',
+            long: 'Course 1 Lab 1 Long'
+          }
+        },
+        {
+          index: 2,
+          titles: {
+            short: 'Course 1 Lab 2 Short',
+            long: 'Course 1 Lab 2 Long'
+          }
+        }
+      ]
+    },
+    {
+      id: 'course2',
+      name: 'Course 2',
+      labs: [
+        {
+          index: 1,
+          titles: {
+            short: 'Course 2 Lab 1 Short',
+            long: 'Course 2 Lab 1 Long'
+          }
+        }
+      ]
+    }
+  ];
 
   beforeEach(() => {
     const appService = createSpyFromClass(AppService);
@@ -119,8 +126,9 @@ describe('AppTitleStrategyService', () => {
 
     it('should set the title to the lab title', () => {
       appTitleStrategyService.updateTitle(routerStateSnapshot);
-      expect(document.title).toBe(`IIT-SZG - ${mockedCourses[0].name} Course - ${mockedCourses[0].labs[1].titles.long}`);
+      expect(document.title).toBe(
+        `IIT-SZG - ${mockedCourses[0].name} Course - ${mockedCourses[0].labs[1].titles.long}`
+      );
     });
   });
-
 });

@@ -1,7 +1,6 @@
 import { HomePage } from './home.po';
 
 describe('Home', () => {
-
   let homePage: HomePage;
 
   beforeEach(() => {
@@ -16,5 +15,4 @@ describe('Home', () => {
   it('should display the appropriate number of paragraphs', () => {
     homePage.paragraphs.should('have.a.lengthOf', 2);
   });
-
 });

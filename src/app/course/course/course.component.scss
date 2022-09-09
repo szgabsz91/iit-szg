@@ -1,4 +1,4 @@
-@use "../../../workshop-variables.scss" as variables;
+@use '../../../workshop-variables.scss' as variables;
 
 table {
   width: 100%;
@@ -6,7 +6,7 @@ table {
 
 tr[mat-row] {
   cursor: pointer;
-  transition: background-color .2s ease-in-out;
+  transition: background-color 0.2s ease-in-out;
 
   &:hover {
     background-color: variables.$background-color;

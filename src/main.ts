@@ -11,6 +11,7 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
   .then(() => console.log(`App version ${packageJson.version} loaded successfully`))
   .catch(err => console.error(err));

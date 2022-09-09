@@ -5,7 +5,6 @@ import { AnalyticsLogger } from './analytics-logger.service';
 
 @Injectable()
 export class AnalyticsService {
-
   private readonly localeId: string;
 
   constructor(
@@ -24,5 +23,4 @@ export class AnalyticsService {
         this.analyticsLogger.log(url);
       });
   }
-
 }

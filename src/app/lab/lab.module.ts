@@ -14,11 +14,11 @@ import { LabService } from './lab.service';
     MarkdownModule.forRoot({
       loader: HttpClient,
       // Note: to keep data attributes for pre[data-label]
-      sanitize: SecurityContext.NONE,
+      sanitize: SecurityContext.NONE
     }),
     LabRoutingModule,
     LabMaterialModule
   ],
-  providers: [LabService]
+  providers: [LabService]
 })
 export class LabModule {}

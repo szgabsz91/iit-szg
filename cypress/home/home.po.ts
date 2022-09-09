@@ -1,5 +1,4 @@
 export class HomePage {
-
   get title(): Cypress.Chainable<string | string[]> {
     return cy.get('mat-card-title').text();
   }
@@ -11,5 +10,4 @@ export class HomePage {
   navigateTo(): Cypress.Chainable {
     return cy.visit('/');
   }
-
 }

@@ -4,7 +4,6 @@ import { BehaviorSubject } from 'rxjs';
 import { AnalyticsLogger } from './analytics-logger.service';
 
 describe('AnalyticsService', () => {
-
   const locale = 'en-US';
 
   let analyticsService: AnalyticsService;
@@ -23,14 +22,11 @@ describe('AnalyticsService', () => {
   });
 
   describe('startLogging', () => {
-
     it('should log a page visit after every NavigationEnd event', () => {
       analyticsService.startLogging();
 
       expect(analyticsLogger.log).toHaveBeenCalledTimes(1);
       expect(analyticsLogger.log).toHaveBeenCalledWith('/en/url');
     });
-
   });
-
 });

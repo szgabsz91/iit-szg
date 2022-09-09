@@ -1,5 +1,5 @@
-@use "@angular/material/_theming" as material;
-@use "./workshop-variables.scss" as variables;
+@use '@angular/material/_theming' as material;
+@use './workshop-variables.scss' as variables;
 
 @include material.mat-core();
 
@@ -72,11 +72,13 @@ $color-palette-accent: (
 $workshop-primary: material.mat-palette($color-palette-primary);
 $workshop-accent: material.mat-palette($color-palette-accent);
 
-$workshop-theme: material.mat-light-theme((
-  color: (
-    primary: $workshop-primary,
-    accent: $workshop-accent
+$workshop-theme: material.mat-light-theme(
+  (
+    color: (
+      primary: $workshop-primary,
+      accent: $workshop-accent
+    )
   )
-));
+);
 
 @include material.angular-material-theme($workshop-theme);
