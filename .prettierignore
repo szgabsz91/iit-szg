@@ -4,5 +4,5 @@ dist
 *.md
 src/assets-source
 src/app/prettify
-src/assets-en/metadata-*.json
-src/assets-hu/metadata-*.json
+src/assets-en/metadata*.json
+src/assets-hu/metadata*.json
