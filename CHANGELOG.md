@@ -1,3 +1,10 @@
+# [2.3.0](https://github.com/szgabsz91/iit-szg/compare/v2.2.0...v2.3.0) (2022-09-10)
+
+
+### Features
+
+* [#21](https://github.com/szgabsz91/iit-szg/issues/21) add an app-shell to the index.html with a loading spinner, minify index.html files ([f3583cd](https://github.com/szgabsz91/iit-szg/commit/f3583cd25b75f52ddc4978227e903cf5883b2fb8))
+
 # [2.2.0](https://github.com/szgabsz91/iit-szg/compare/v2.1.0...v2.2.0) (2022-09-08)
 
 
