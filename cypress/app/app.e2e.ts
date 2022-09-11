@@ -12,7 +12,7 @@ describe('App', () => {
     appPage.lang.should('equal', 'en');
   });
 
-  it('should display the appropriate title', () => {
+  it('should display the appropriate title as the logo alt attribute', () => {
     appPage.title.should('equal', 'IIT-SZG');
   });
 

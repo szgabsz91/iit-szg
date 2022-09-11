@@ -18,30 +18,43 @@
 }
 
 .app-title {
+  align-items: center;
+  display: flex;
   flex: 1;
+  flex-direction: row;
   margin-left: 8px;
   transition: transform 500ms;
   will-change: transform;
 
   &.is-mobile {
-    transform: translateX(40px);
+    transform: translateX(48px);
   }
 }
 
 .app-title-link {
+  align-items: center;
   color: white;
+  display: inline-flex;
+  flex-direction: column;
   text-decoration: none;
+}
+
+.app-logo {
+  height: 36px;
 
   &:hover {
-    cursor: pointer;
-    filter: drop-shadow(1px 0 0.1px variables.$primary-color-lighter)
-      drop-shadow(-1px 0 0.1px variables.$primary-color-lighter)
-      drop-shadow(0 -1px 0.1px variables.$primary-color-lighter)
-      drop-shadow(0 1px 0.1px variables.$primary-color-lighter);
+    filter: drop-shadow(0.1px 0 0.1px variables.$primary-color-lighter)
+      drop-shadow(-0.1px 0 0.1px variables.$primary-color-lighter)
+      drop-shadow(0 -0.1px 0.1px variables.$primary-color-lighter)
+      drop-shadow(0 0.1px 0.1px variables.$primary-color-lighter);
   }
 }
 
 .language-selector {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 32px;
   width: 64px;
 }
 
