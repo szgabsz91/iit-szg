@@ -11,7 +11,9 @@
     </button>
 
     <h1 class="app-title" [class.is-mobile]="mobileQuery.matches">
-      <a routerLink="/" class="app-title-link" i18n="app.title|The title of the application@@appTitle"> IIT-SZG </a>
+      <a routerLink="/" class="app-title-link">
+        <img src="assets/logo.svg" i18n-alt alt="IIT-SZG" class="app-logo" />
+      </a>
     </h1>
 
     <mat-select

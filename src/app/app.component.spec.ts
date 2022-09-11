@@ -136,9 +136,9 @@ describe('AppComponent', () => {
   });
 
   describe('template', () => {
-    it('should render the appropriate title', () => {
-      const title = compiled.querySelector('h1').textContent.trim();
-      expect(title).toEqual('IIT-SZG');
+    it('should render the appropriate title as the logo alt attribute', () => {
+      const logoAlt = compiled.querySelector('h1 img').getAttribute('alt');
+      expect(logoAlt).toEqual('IIT-SZG');
     });
 
     it('should render the appropriate menu items', () => {
