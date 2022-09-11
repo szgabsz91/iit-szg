@@ -1,3 +1,10 @@
+# [2.4.0](https://github.com/szgabsz91/iit-szg/compare/v2.3.0...v2.4.0) (2022-09-11)
+
+
+### Features
+
+* [#91](https://github.com/szgabsz91/iit-szg/issues/91) replace the application title with a custom logo ([17baa02](https://github.com/szgabsz91/iit-szg/commit/17baa023fc9991c9196b9196bbe7c55b8ff81a93))
+
 # [2.3.0](https://github.com/szgabsz91/iit-szg/compare/v2.2.0...v2.3.0) (2022-09-10)
 
 
