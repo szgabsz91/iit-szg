@@ -1,3 +1,10 @@
+# [2.5.0](https://github.com/szgabsz91/iit-szg/compare/v2.4.0...v2.5.0) (2022-09-13)
+
+
+### Features
+
+* [#92](https://github.com/szgabsz91/iit-szg/issues/92) add a custom favicon ([a3ddbfe](https://github.com/szgabsz91/iit-szg/commit/a3ddbfeba1e07274ec852672f74306ac076898e3))
+
 # [2.4.0](https://github.com/szgabsz91/iit-szg/compare/v2.3.0...v2.4.0) (2022-09-11)
 
 
