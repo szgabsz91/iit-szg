@@ -2,13 +2,30 @@
   <mat-card-title i18n="home.title|The title of the home page@@homeTitle"> Home </mat-card-title>
 
   <mat-card-content>
-    <p i18n="home.parapgrahp1|The first paragraph of the home page@@homeParagraph1">
-      This application is a collection of courses of various topics. Each course contains a number of labs.
+    <p i18n="home.paragraph1|The first paragraph of the home page@@homeParagraph1">
+      This application is a collection of courses of various topics. Each course contains a set of labs. The labs are
+      recommended to be completed in order.
     </p>
 
-    <p i18n="home.parapgrahp2|The second paragraph of the home page@@homeParagraph2">
-      The labs contain exercises for the given topic, and optionally a starter project that you can open in an IDE and
-      work on it during the lab.
+    <p i18n="home.paragraph2|The second paragraph of the home page@@homeParagraph2">Currently there are two courses:</p>
+
+    <ul>
+      <li i18n="home.courses.xml|The XML course list item@@homeCoursesXml">
+        <a routerLink="courses/xml">XML</a>: contains topics such as XDM, DTD, XML Schema, XML related Java and C# APIs,
+        JSON, RSS, XHTML, XPath, XSLT, XQuery and XML DB.
+      </li>
+
+      <li i18n="home.courses.db|The Databases course list item@@homeCoursesDatabases">
+        <a routerLink="courses/db">Databases</a>: contains topics such as LDAP, JPA, LINQ, ORDBMS, MongoDB, Neo4j and
+        ontologies.
+      </li>
+    </ul>
+
+    <p i18n="home.paragraph3|The third paragraph of the home page@@homeParagraph3">
+      Each course starts with a <em>Prerequisites</em> virtual lab that introduces the necessary applications and how to
+      set them up. The labs after that contain exercises for the given topics, as well as a solution project that can be
+      used for verification purposes. However, it is recommended to solve the exercises without taking a look at the
+      solution.
     </p>
   </mat-card-content>
 </mat-card>
