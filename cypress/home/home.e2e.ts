@@ -13,6 +13,10 @@ describe('Home', () => {
   });
 
   it('should display the appropriate number of paragraphs', () => {
-    homePage.paragraphs.should('have.a.lengthOf', 2);
+    homePage.paragraphs.should('have.a.lengthOf', 3);
+  });
+
+  it('should display the appropriate number of list items', () => {
+    homePage.listItems.should('have.a.lengthOf', 2);
   });
 });

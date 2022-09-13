@@ -7,6 +7,10 @@ export class HomePage {
     return cy.get('mat-card-content p');
   }
 
+  get listItems(): Cypress.Chainable {
+    return cy.get('mat-card-content li');
+  }
+
   navigateTo(): Cypress.Chainable {
     return cy.visit('/');
   }

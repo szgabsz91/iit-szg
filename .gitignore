@@ -63,3 +63,6 @@ obj
 
 # E2E testing
 /cypress/results
+
+# Deployment
+.firebase

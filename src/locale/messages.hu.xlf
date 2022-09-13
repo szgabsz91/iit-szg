@@ -109,24 +109,54 @@
         <note priority="1" from="meaning">home.title</note>
       </trans-unit>
       <trans-unit id="homeParagraph1" datatype="html">
-        <source> This application is a collection of courses of various topics. Each course contains a number of labs. </source>
-        <target> Ez az alkalmazás különböző gyakorlati anyagokat tartalmaz változó témákban. </target>
+        <source> This application is a collection of courses of various topics. Each course contains a set of labs. The labs are recommended to be completed in order. </source>
+        <target> Ez az alkalmazás különböző kurzusokat tartalmaz változó témákban. Minden kurzus gyakorlati anyagokból áll, melyeket ajánlott a megadott sorrendben elvégezni. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">5,7</context>
+          <context context-type="linenumber">5,8</context>
         </context-group>
         <note priority="1" from="description">The first paragraph of the home page</note>
-        <note priority="1" from="meaning">home.parapgrahp1</note>
+        <note priority="1" from="meaning">home.paragraph1</note>
       </trans-unit>
       <trans-unit id="homeParagraph2" datatype="html">
-        <source> The labs contain exercises for the given topic, and optionally a starter project that you can open in an IDE and work on it during the lab. </source>
-        <target> A gyakorlati anyagok egy adott témábahoz kapcsolódó feladatokból állnak, illetve tartalmazhatnak gyakorlati projekteket. </target>
+        <source>Currently there are two courses:</source>
+        <target>Jelenleg az alkalmazás két kurzust tartalmaz:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">9,12</context>
+          <context context-type="linenumber">10</context>
         </context-group>
         <note priority="1" from="description">The second paragraph of the home page</note>
-        <note priority="1" from="meaning">home.parapgrahp2</note>
+        <note priority="1" from="meaning">home.paragraph2</note>
+      </trans-unit>
+      <trans-unit id="homeCoursesXml" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/xml&quot;&gt;"/>XML<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: contains topics such as XDM, DTD, XML Schema, XML related Java and C# APIs, JSON, RSS, XHTML, XPath, XSLT, XQuery and XML DB. </source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/xml&quot;&gt;"/>XML<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: olyan témaköröket érint, mint az XDM, DTD, XML Schema, XML-hez kapcsolódó Java and C# API-k, JSON, RSS, XHTML, XPath, XSLT, XQuery és XML DB. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+        <note priority="1" from="description">The XML course list item</note>
+        <note priority="1" from="meaning">home.courses.xml</note>
+      </trans-unit>
+      <trans-unit id="homeCoursesDatabases" datatype="html">
+        <source><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/db&quot;&gt;"/>Databases<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: contains topics such as LDAP, JPA, LINQ, ORDBMS, MongoDB, Neo4j and ontologies. </source>
+        <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/db&quot;&gt;"/>Adatbázisok<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: olyan témaköröket érint, mint az LDAP, JPA, LINQ, ORDBMS, MongoDB, Neo4j és ontológiák. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+        <note priority="1" from="description">The Databases course list item</note>
+        <note priority="1" from="meaning">home.courses.db</note>
+      </trans-unit>
+      <trans-unit id="homeParagraph3" datatype="html">
+        <source> Each course starts with a <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Prerequisites<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> virtual lab that introduces the necessary applications and how to set them up. The labs after that contain exercises for the given topics, as well as a solution project that can be used for verification purposes. However, it is recommended to solve the exercises without taking a look at the solution. </source>
+        <target> Minden kurzus egy <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Előfeltételek<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> anyaggal kezdődik, ami bemutatja a szükséges alkalmazásokat és azok beállítását. Ezek után a gyakorlati anyagokban találhatóak a feladatok, témakörönként csoportosítva. Minden gyakorlati anyag végén megtalálható egy lehetséges megoldása a feladatoknak, de ettől függetlenül ajánlott a feladatokat a megoldás nélkül megoldani. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/home/home.component.html</context>
+          <context context-type="linenumber">24,29</context>
+        </context-group>
+        <note priority="1" from="description">The third paragraph of the home page</note>
+        <note priority="1" from="meaning">home.paragraph3</note>
       </trans-unit>
       <trans-unit id="labTitle" datatype="html">
         <source> Lab <x id="INTERPOLATION" equiv-text="{{ lab.index }}"/>: <x id="INTERPOLATION_1" equiv-text="{{ lab.titles.long }}"/> </source>

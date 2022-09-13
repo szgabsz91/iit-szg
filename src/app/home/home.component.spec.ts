@@ -27,7 +27,12 @@ describe('HomeComponent', () => {
 
     it('should render the appropriate paragraphs', () => {
       const paragraphCount = compiled.querySelectorAll('mat-card-content p').length;
-      expect(paragraphCount).toEqual(2);
+      expect(paragraphCount).toEqual(3);
+    });
+
+    it('should render the appropriate list items', () => {
+      const listItemCount = compiled.querySelectorAll('mat-card-content li').length;
+      expect(listItemCount).toEqual(2);
     });
   });
 });

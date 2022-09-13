@@ -19,19 +19,6 @@ markdown {
     margin: 8px 0 16px;
   }
 
-  ul li {
-    margin-bottom: 4px;
-  }
-
-  a {
-    color: variables.$secondary-color;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
   img {
     margin: 24px 0;
     max-width: 100%;

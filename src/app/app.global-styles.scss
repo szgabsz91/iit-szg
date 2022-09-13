@@ -1,6 +1,21 @@
+@use '../workshop-variables.scss' as variables;
+
 mat-nav-list.lab-list a.mat-list-item {
   span.mat-list-item-content {
     padding: 0;
     padding-left: 24px;
+  }
+}
+
+ul li {
+  margin-bottom: 4px;
+}
+
+a {
+  color: variables.$secondary-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
