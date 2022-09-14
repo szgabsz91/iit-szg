@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/szgabsz91/iit-szg/compare/v2.5.0...v2.6.0) (2022-09-14)
+
+
+### Features
+
+* [#104](https://github.com/szgabsz91/iit-szg/issues/104) add proper content for the home page ([cb142dd](https://github.com/szgabsz91/iit-szg/commit/cb142dd07d2208371b3a1810951512c2cbd81ae5))
+
 # [2.5.0](https://github.com/szgabsz91/iit-szg/compare/v2.4.0...v2.5.0) (2022-09-13)
 
 
