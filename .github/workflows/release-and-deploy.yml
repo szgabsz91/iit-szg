@@ -33,11 +33,25 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: yarn release
       - name: Build project
-        run: yarn build --base-href https://iit-szg.web.app/
-      - name: Deploy project to Firebase
+        run: yarn build --base-href https://iit-szg--rc-dw5f2ixx.web.app/
+      - name: Deploy project to Firebase RC channel
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GH_TOKEN }}'
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IIT_SZG }}'
+          projectId: iit-szg
+          channelId: rc
+          expires: 1d
+      - name: Execute Lighthouse analysis
+        run: yarn lighthouse
+        env:
+          LHCI_URL: https://iit-szg--rc-dw5f2ixx.web.app/en/
+      - name: Finalize the base URL for live deployment
+        run: sed -i 's,https://iit-szg--rc-dw5f2ixx.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/*/index.html
+      - name: Deploy project to Firebase live channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_IIT_SZG }}'
           projectId: iit-szg
           channelId: live
