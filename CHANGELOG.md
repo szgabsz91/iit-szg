@@ -1,3 +1,10 @@
+# [3.1.0](https://github.com/szgabsz91/iit-szg/compare/v3.0.0...v3.1.0) (2022-09-15)
+
+
+### Features
+
+* [#246](https://github.com/szgabsz91/iit-szg/issues/246) optimize images ([777c1bc](https://github.com/szgabsz91/iit-szg/commit/777c1bc33c690bde4921ddd805ea2e9475f0af39))
+
 # [3.0.0](https://github.com/szgabsz91/iit-szg/compare/v2.6.0...v3.0.0) (2022-09-15)
 
 
