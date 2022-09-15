@@ -216,7 +216,7 @@ Hozzunk létre egy valid XML dokumentumot az új XML sémához.
 
 <p align="center">
   <a href="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM modell">
+    <img src="assets/courses/xml/lab04/exercise06/reservation-system.dot.png" alt="XDM modell" loading="lazy">
   </a>
 </p>
 

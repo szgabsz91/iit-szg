@@ -60,7 +60,7 @@ Let's create an XML Schema and a valid XML document for a car database based on 
 
 <p align="center">
   <a href="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER model">
+    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER model" loading="lazy">
   </a>
 </p>
 

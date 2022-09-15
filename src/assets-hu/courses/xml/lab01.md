@@ -36,8 +36,8 @@ Hozzunk létre XDM modellt az alábbi XML dokumentumhoz:
 Hozzunk létre XML dokumentumot az alábbi XDM modellhez:
 
 <p align="center">
-  <a href="assets/courses/xml/lab01/exercise02/projects.xdm.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab01/exercise02/projects.xdm.dot.png" alt="XDM modell">
+  <a href="assets/courses/xml/lab01/exercise02/movie-database.xdm.dot.png" target="_blank">
+    <img src="assets/courses/xml/lab01/exercise02/movie-database.xdm.dot.png" alt="XDM modell" loading="lazy">
   </a>
 </p>
 

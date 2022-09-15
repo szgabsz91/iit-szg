@@ -4,7 +4,7 @@ Given the following relational model:
 
 <p align="center">
   <a href="assets/courses/xml/lab13/exercise01/messages.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relational model">
+    <img src="assets/courses/xml/lab13/exercise01/messages.dot.png" alt="Relational model" loading="lazy">
   </a>
 </p>
 
