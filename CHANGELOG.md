@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/szgabsz91/iit-szg/compare/v2.6.0...v3.0.0) (2022-09-15)
+
+
+### Tests
+
+* [#85](https://github.com/szgabsz91/iit-szg/issues/85) integrate Lighthouse analysis ([ca65331](https://github.com/szgabsz91/iit-szg/commit/ca653310c4fbe5635f06be7676cdc7d531bedd79))
+
+
+### BREAKING CHANGES
+
+* the application is now prepared to be a PWA
+
 # [2.6.0](https://github.com/szgabsz91/iit-szg/compare/v2.5.0...v2.6.0) (2022-09-14)
 
 
