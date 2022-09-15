@@ -60,7 +60,7 @@ Hozzunk létre XML sémát és valid XML dokumentumot egy autó nyilvántartó r
 
 <p align="center">
   <a href="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER modell">
+    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER modell" loading="lazy">
   </a>
 </p>
 

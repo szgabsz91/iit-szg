@@ -72,7 +72,7 @@ Given the following XDM model:
 
 <p align="center">
   <a href="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" alt="XDM model">
+    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" alt="XDM model" loading="lazy">
   </a>
 </p>
 
@@ -196,7 +196,7 @@ During the requirement analysis phase, the following ER diagram was created:
 
 <p align="center">
   <a href="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" alt="ER model">
+    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" alt="ER model" loading="lazy">
   </a>
 </p>
 

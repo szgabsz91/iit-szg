@@ -137,7 +137,7 @@ describe('AppComponent', () => {
 
   describe('template', () => {
     it('should render the appropriate title as the logo alt attribute', () => {
-      const logoAlt = compiled.querySelector('h1 img').getAttribute('alt');
+      const logoAlt = compiled.querySelector('svg title').textContent;
       expect(logoAlt).toEqual('IIT-SZG');
     });
 

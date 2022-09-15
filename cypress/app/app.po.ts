@@ -4,7 +4,7 @@ export class AppPage {
   }
 
   get title(): Cypress.Chainable<string | string[]> {
-    return cy.get('mat-toolbar h1 a img').attribute('alt');
+    return cy.get('mat-toolbar h1 a svg title').text();
   }
 
   get selectedLanguage(): Cypress.Chainable<string | string[]> {

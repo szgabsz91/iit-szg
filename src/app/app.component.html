@@ -12,7 +12,88 @@
 
     <h1 class="app-title" [class.is-mobile]="mobileQuery.matches">
       <a routerLink="/" class="app-title-link">
-        <img src="assets/logo.svg" i18n-alt alt="IIT-SZG" class="app-logo" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 156 44"
+          width="127"
+          height="36"
+          class="app-logo"
+          aria-labelledby="application-title"
+        >
+          <title id="application-title" i18n="app.title|The title of the application@@appTitle">IIT-SZG</title>
+          <path
+            d="M74,37h0a5,5,0,0,0,5,5H89a5,5,0,0,0,5-5V27a5,5,0,0,0-5-5H79a5,5,0,0,1-5-5V7a5,5,0,0,1,5-5h41.31A2,2,0,0,1,122,5.09L100,38.91A2,2,0,0,0,101.69,42H141"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <path
+            d="M154,7h0a5,5,0,0,0-5-5H133a5,5,0,0,0-5,5V37a5,5,0,0,0,5,5h16a5,5,0,0,0,5-5V26a5,5,0,0,0-5-5h-8"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <line
+            x1="2"
+            y1="2"
+            x2="2"
+            y2="42"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <line
+            class="a"
+            x1="12"
+            y1="2"
+            x2="12"
+            y2="42"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <line
+            x1="37"
+            y1="2"
+            x2="37"
+            y2="42"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <line
+            x1="22"
+            y1="2"
+            x2="52"
+            y2="2"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+          <line
+            x1="56"
+            y1="22"
+            x2="66"
+            y2="22"
+            fill="none"
+            stroke="#2771bb"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="4"
+          />
+        </svg>
       </a>
     </h1>
 
@@ -23,7 +104,12 @@
       [ngClass]="'language-selector-selected-' + selectedLocale"
     >
       <mat-option *ngFor="let locale of locales" [value]="locale">
-        <img [src]="'assets/flags/' + locale + '.png'" [alt]="removeHtmlComments(alt.innerHTML)" />
+        <img
+          [src]="'assets/flags/' + locale + '.png'"
+          [alt]="removeHtmlComments(alt.innerHTML)"
+          width="32"
+          height="32"
+        />
         <span
           #alt
           class="sr-only"

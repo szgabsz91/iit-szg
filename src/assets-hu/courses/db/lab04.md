@@ -4,7 +4,7 @@ Adott a következő UML diagram:
 
 <p align="center">
   <a href="assets/courses/db/lab04/exercise01/people.dot.png" target="_blank">
-    <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram">
+    <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram" loading="lazy">
   </a>
 </p>
 
