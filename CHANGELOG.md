@@ -1,3 +1,10 @@
+# [3.3.0](https://github.com/szgabsz91/iit-szg/compare/v3.2.0...v3.3.0) (2022-10-10)
+
+
+### Features
+
+* [#190](https://github.com/szgabsz91/iit-szg/issues/190) improve accessibility ([30642d2](https://github.com/szgabsz91/iit-szg/commit/30642d23d4804d1b9c82d58f770f51056ac32d35))
+
 # [3.2.0](https://github.com/szgabsz91/iit-szg/compare/v3.1.0...v3.2.0) (2022-10-10)
 
 
