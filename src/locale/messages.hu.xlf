@@ -2,22 +2,42 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="appMenuToggle" datatype="html">
+        <source>Toggle menu</source>
+        <target>Menü</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">8,11</context>
+        </context-group>
+        <note priority="1" from="description">The aria-label of the hamburger menu button</note>
+        <note priority="1" from="meaning">app.menu.toggle</note>
+      </trans-unit>
       <trans-unit id="appTitle" datatype="html">
         <source>IIT-SZG</source>
         <target>IIT-SZG</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">23,25</context>
+          <context context-type="linenumber">26,28</context>
         </context-group>
         <note priority="1" from="description">The title of the application</note>
         <note priority="1" from="meaning">app.title</note>
+      </trans-unit>
+      <trans-unit id="appLanguageSelectorToggle" datatype="html">
+        <source>Language selector</source>
+        <target>Nyelvválasztó</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">108,111</context>
+        </context-group>
+        <note priority="1" from="description">The aria-label of the language selector</note>
+        <note priority="1" from="meaning">app.languageSelector.toggle</note>
       </trans-unit>
       <trans-unit id="appLanguageSelector" datatype="html">
         <source> <x id="ICU" equiv-text="{locale, select, hu {Hungarian} en {English} other {}}"/> </source>
         <target> <x id="ICU" equiv-text="{locale, select, hu {Magyar} en {Angol} other {}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">118,119</context>
+          <context context-type="linenumber">123,124</context>
         </context-group>
         <note priority="1" from="description">The selected language in the language selector</note>
         <note priority="1" from="meaning">app.languageSelector</note>
@@ -27,7 +47,7 @@
         <target>{VAR_SELECT, select, hu {Magyar} en {Angol} other {}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">118,124</context>
+          <context context-type="linenumber">123,129</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMenuHome" datatype="html">
@@ -35,7 +55,7 @@
         <target> Főoldal </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">139,145</context>
+          <context context-type="linenumber">145,151</context>
         </context-group>
         <note priority="1" from="description">The label of the home menu item</note>
         <note priority="1" from="meaning">app.menu.home</note>
@@ -45,7 +65,7 @@
         <target> Lista </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">163,168</context>
+          <context context-type="linenumber">169,174</context>
         </context-group>
         <note priority="1" from="description">The label of the course index pages</note>
         <note priority="1" from="meaning">app.course.index</note>
@@ -55,7 +75,7 @@
         <target>© Szabó Gábor <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">186,187</context>
+          <context context-type="linenumber">192,193</context>
         </context-group>
         <note priority="1" from="description">The footer of the application</note>
         <note priority="1" from="meaning">app.footer</note>

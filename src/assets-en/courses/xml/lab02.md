@@ -71,8 +71,8 @@ Let's create a DTD for the above XML document such that
 Given the following XDM model:
 
 <p align="center">
-  <a href="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" alt="XDM model" loading="lazy">
+  <a href="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.svg" target="_blank">
+    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.svg" alt="XDM model" loading="lazy">
   </a>
 </p>
 
@@ -195,8 +195,8 @@ A software company would like to store worklog data in XML. The XML file should 
 During the requirement analysis phase, the following ER diagram was created:
 
 <p align="center">
-  <a href="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" alt="ER model" loading="lazy">
+  <a href="assets/courses/xml/lab02/exercise09/worklog.er.dot.svg" target="_blank">
+    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.svg" alt="ER model" loading="lazy">
   </a>
 </p>
 

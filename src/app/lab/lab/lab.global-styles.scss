@@ -55,16 +55,16 @@ markdown {
   pre.prettyprint {
     .str,
     .atv {
-      color: #009f5d;
+      color: #027243;
     }
 
     .kwd,
     .tag {
-      color: variables.$secondary-color;
+      color: #20639a;
     }
 
     .com {
-      color: #797979;
+      color: #686565;
       font-style: italic;
     }
 
@@ -83,7 +83,7 @@ markdown {
     .atn,
     .dec,
     .var {
-      color: #d94d3a;
+      color: #c7250f;
     }
   }
 

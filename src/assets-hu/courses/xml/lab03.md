@@ -59,8 +59,8 @@ Hozzunk létre egy-egy XML sémát és valid XML dokumentumot a következők sze
 Hozzunk létre XML sémát és valid XML dokumentumot egy autó nyilvántartó rendszerhez a következő ER modell alapján:
 
 <p align="center">
-  <a href="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.png" alt="ER modell" loading="lazy">
+  <a href="assets/courses/xml/lab03/exercise05/car-database.er.dot.svg" target="_blank">
+    <img src="assets/courses/xml/lab03/exercise05/car-database.er.dot.svg" alt="ER modell" loading="lazy">
   </a>
 </p>
 

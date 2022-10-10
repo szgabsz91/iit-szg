@@ -50,7 +50,7 @@ Thumbs.db
 /src/assets-en/metadata*.json
 /src/assets-hu/metadata*.json
 /src/assets/**/*.zip
-**/*.dot.png
+**/*.dot.svg
 src/app/constants/app.prod-constants.ts
 build
 .gradle
