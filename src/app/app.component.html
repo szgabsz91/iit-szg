@@ -5,6 +5,9 @@
       @hamburgerMenuButtonTrigger
       class="hamburger-menu-icon-button"
       mat-icon-button
+      aria-label="Toggle menu"
+      i18n-aria-label="app.menu.toggle|The aria-label of the hamburger menu button@@appMenuToggle"
+      [attr.aria-expanded]="sidenav.opened"
       (click)="toggleSidenav()"
     >
       <mat-icon>menu</mat-icon>
@@ -102,6 +105,8 @@
       (selectionChange)="onSelectedLanguageChanged($event)"
       class="language-selector"
       [ngClass]="'language-selector-selected-' + selectedLocale"
+      aria-label="Language selector"
+      i18n-aria-label="app.languageSelector.toggle|The aria-label of the language selector@@appLanguageSelectorToggle"
     >
       <mat-option *ngFor="let locale of locales" [value]="locale">
         <img
@@ -123,6 +128,7 @@
 
   <mat-sidenav-container [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
     <mat-sidenav
+      #sidenav
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"

@@ -3,8 +3,8 @@
 Given the following UML diagram:
 
 <p align="center">
-  <a href="assets/courses/db/lab04/exercise01/people.dot.png" target="_blank">
-    <img src="assets/courses/db/lab04/exercise01/people.dot.png" alt="UML diagram" loading="lazy">
+  <a href="assets/courses/db/lab04/exercise01/people.dot.svg" target="_blank">
+    <img src="assets/courses/db/lab04/exercise01/people.dot.svg" alt="UML diagram" loading="lazy">
   </a>
 </p>
 

@@ -71,8 +71,8 @@ Hozzunk létre DTD-t a fenti XML dokumentumhoz úgy, hogy
 Adott a következő XDM modell:
 
 <p align="center">
-  <a href="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.png" alt="XDM modell" loading="lazy">
+  <a href="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.svg" target="_blank">
+    <img src="assets/courses/xml/lab02/exercise02/business-cards.xdm.dot.svg" alt="XDM modell" loading="lazy">
   </a>
 </p>
 
@@ -195,8 +195,8 @@ Egy szoftverfejlesztő cég XML-ben szeretné tárolni az adminisztrációs adat
 A követelményanalízis során a következő ER diagramot készítették el:
 
 <p align="center">
-  <a href="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" target="_blank">
-    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.png" alt="ER modell" loading="lazy">
+  <a href="assets/courses/xml/lab02/exercise09/worklog.er.dot.svg" target="_blank">
+    <img src="assets/courses/xml/lab02/exercise09/worklog.er.dot.svg" alt="ER modell" loading="lazy">
   </a>
 </p>
 
