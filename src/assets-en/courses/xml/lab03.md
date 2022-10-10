@@ -242,4 +242,4 @@ Let's create an XML Schema and a valid XML document for the following topics:
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab03/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab03/solution.zip).

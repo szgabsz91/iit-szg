@@ -5,29 +5,69 @@
       "en": "XML",
       "hu": "XML"
     },
+    "description": {
+      "en": "The XML course contains 5 main topics. The first part introduces the XDM and XML standards at their core. Then we can get familiar with the DTD and XML Schema standards that let us define the structure of XML documents. The next part of the course discusses the main XML related APIs of the Java and C#, including SAX, DOM, JAXB and LINQ. In the penultimate section, several XML related technologies are introduced, like JSON, RSS, SVG, XHTML, XPath, XSLT and XQuery. Finally, we take a look at the XML DB aspect of the Oracle database.",
+      "hu": "Az XML kurzus 5 fő témát dolgoz fel. Az első rész bemutatja az XDM és XML szabványok alapjait. Ezután megismerkedhetünk a DTD és XML séma szabványokkal, melyek segítségével leírhatjuk az XML dokumentumok struktúráját. A kurzus következő része a Java és C# nyelvek legfontosabb XML-lel kapcsolatos API-jaival foglalkozik, beleértve a SAX-ot, DOM-ot, JAXB-t és LINQ-t. Az utolsó előtti részben számos XML alapú technológia kerül bemutatásra, mint például a JSON, RSS, SVG, XHTML, XPath, XSLT és XQuery. Végül az Oracle adatbázis XML DB aspektusaira vetünk egy pillantást."
+    },
+    "keywords": {
+      "en": ["XML", "XDM", "DTD", "XML Schema", "namespaces", "integrity constraints", "Java", "SAX", "DOM", "JAXB", "C#", "LINQ", "JSON", "web technologies", "RSS", "XHTML", "SVG", "XPath", "XSLT", "XQuery", "XML DB", "Oracle"],
+      "hu": ["XML", "XDM", "DTD", "XML séma", "névterek", "integritási feltételek", "Java", "SAX", "DOM", "JAXB", "C#", "LINQ", "JSON", "web technológiák", "RSS", "XHTML", "SVG", "XPath", "XSLT", "XQuery", "XML DB", "Oracle"]
+    },
     "labs": [{
       "index": 0,
       "title": {
         "en": "Prerequisites",
         "hu": "Előfeltételek"
+      },
+      "description": {
+        "en": "On this page we can find all the prerequisites of the XML course: what software environment and applications are needed to complete the course.",
+        "hu": "Ezen az oldalon találhatjuk az XML kurzus elvégzésének összes előfeltételét: milyen programozási környezetre és alkalmazásokra van szükség a feladatok végrehajtásához."
+      },
+      "keywords": {
+        "en": ["XML", "prerequisites"],
+        "hu": ["XML", "előfeltételek"]
       }
     }, {
       "index": 1,
       "title": {
         "en": "XDM, XML",
         "hu": "XDM, XML"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the XDM and XML standards.",
+        "hu": "Ebben a gyakorlatban az XDM és XML szabványokkal ismerkedhetünk meg."
+      },
+      "keywords": {
+        "en": ["XML", "XDM"],
+        "hu": ["XML", "XDM"]
       }
     }, {
       "index": 2,
       "title": {
         "en": "DTD",
         "hu": "DTD"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the DTD standard.",
+        "hu": "Ebben a gyakorlatban a DTD szabvánnyal ismerkedhetünk meg."
+      },
+      "keywords": {
+        "en": ["XML", "DTD"],
+        "hu": ["XML", "DTD"]
       }
     }, {
       "index": 3,
       "title": {
         "en": "XML Schema",
         "hu": "XML séma"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the basic features of XML Schema, including defining simple and complex types.",
+        "hu": "Ebben a gyakorlatban az XML séma alap elemeivel ismerkedhetünk meg, beleértve az egyszerű és komplex típusok leírását."
+      },
+      "keywords": {
+        "en": ["XML", "XML Schema"],
+        "hu": ["XML", "XML séma"]
       }
     }, {
       "index": 4,
@@ -38,60 +78,140 @@
       "title": {
         "en": "XML Schema - Namespaces & Integrity Constraints",
         "hu": "XML séma - Névterek & Integritási feltételek"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the advanced features of XML Schema, including integrity constraints and namespaces.",
+        "hu": "Ebben a gyakorlatban az XML séma haladó elemeivel ismerkedhetünk meg, beleértve az integritási feltételeket és a névtereket."
+      },
+      "keywords": {
+        "en": ["XML", "XML Schema", "namespaces", "integrity constraints"],
+        "hu": ["XML", "XML séma", "névterek", "integritási feltételek"]
       }
     }, {
       "index": 5,
       "title": {
         "en": "Java SAX",
         "hu": "JAVA SAX"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the Java SAX API that can be used to efficiently query XML documents.",
+        "hu": "Ebben a gyakorlatban a Java SAX API-val ismerkedhetünk meg, amely XML dokumentumok hatékony lekérdezésére használható."
+      },
+      "keywords": {
+        "en": ["XML", "Java", "SAX"],
+        "hu": ["XML", "Java", "SAX"]
       }
     }, {
       "index": 6,
       "title": {
         "en": "Java DOM",
         "hu": "JAVA DOM"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the Java DOM API that can be used to query and modify XML documents.",
+        "hu": "Ebben a gyakorlatban a Java DOM API-val ismerkedhetünk meg, amely XML dokumentumok lekérdezésére és módosítására is alkalmas."
+      },
+      "keywords": {
+        "en": ["XML", "Java", "DOM"],
+        "hu": ["XML", "Java", "DOM"]
       }
     }, {
       "index": 7,
       "title": {
         "en": "Java JAXB",
         "hu": "JAVA JAXB"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the JAXB Java API.",
+        "hu": "Ebben a gyakorlatban a JAXB Java API-val ismerkedhetünk meg."
+      },
+      "keywords": {
+        "en": ["XML", "Java", "JAXB"],
+        "hu": ["XML", "Java", "JAXB"]
       }
     }, {
       "index": 8,
       "title": {
         "en": "C#",
         "hu": "C#"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the XML APIs of the C# language, including LINQ.",
+        "hu": "Ebben a gyakorlatban a C# nyelv XML API-jaival ismerkedhetünk meg, beleértve a LINQ-t."
+      },
+      "keywords": {
+        "en": ["XML", "C#", "LINQ"],
+        "hu": ["XML", "C#", "LINQ"]
       }
     }, {
       "index": 9,
       "title": {
         "en": "XML Technologies",
         "hu": "XML technológiák"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with XML related technologies like JSON, RSS, XHTML, SVG and processing JSON and XML based backend (Facebook) APIs.",
+        "hu": "Ebben a gyakorlatban XML-lel kapcsolatos technológiákkal ismerkedhetünk meg, mint például a JSON, RSS, XHTML, SVG, illetve megtanulhatjuk a JSON és XML alapú backend (Facebook) API-kat feldolgozni."
+      },
+      "keywords": {
+        "en": ["XML", "JSON", "web technologies", "Facebook API", "RSS", "XHTML", "SVG"],
+        "hu": ["XML", "JSON", "web technológiák", "Facebook API", "RSS", "XHTML", "SVG"]
       }
     }, {
       "index": 10,
       "title": {
         "en": "XPath",
         "hu": "XPath"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with querying XML documents with XPath.",
+        "hu": "Ebben a gyakorlatban XML dokumentumokat kérdezhetünk le az XPath nyelv segítségével."
+      },
+      "keywords": {
+        "en": ["XML", "XPath"],
+        "hu": ["XML", "XPath"]
       }
     }, {
       "index": 11,
       "title": {
         "en": "XSLT",
         "hu": "XSLT"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the XSLT language, including querying XML documents, transforming them into a different schema, as well as implementing mathematical functions in XSLT.",
+        "hu": "Ebben a gyakorlatban az XSLT nyelvvel ismerkedhetünk meg, beleértve XML dokumentumok lekérdezését és transzformálását más sémára, valamint matematikai függvények implementálását XSLT-ben."
+      },
+      "keywords": {
+        "en": ["XML", "XSLT"],
+        "hu": ["XML", "XSLT"]
       }
     }, {
       "index": 12,
       "title": {
         "en": "XQuery",
         "hu": "XQuery"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the XQuery language, including querying and modifying XML documents, as well as implementing mathematical functions in XQuery.",
+        "hu": "Ebben a gyakorlatban az XQuery nyelvvel ismerkedhetünk meg, beleértve XML dokumentumok lekérdezését és módosítását, valamint matematikai függvények implementálását XQuery-ben."
+      },
+      "keywords": {
+        "en": ["XML", "XQuery"],
+        "hu": ["XML", "XQuery"]
       }
     }, {
       "index": 13,
       "title": {
         "en": "XML DB",
         "hu": "XML DB"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the XML DB aspects of the Oracle database.",
+        "hu": "Ebben a gyakorlatban az Oracle adatbázis XML DB aspektusaival ismerkedhetünk meg."
+      },
+      "keywords": {
+        "en": ["XML", "XML DB", "Oracle"],
+        "hu": ["XML", "XML DB", "Oracle"]
       }
     }]
   }, {
@@ -100,53 +220,125 @@
       "en": "Databases",
       "hu": "Adatbázisok"
     },
+    "description": {
+      "en": "The Databases course contains 5 main topics. The first part introduces the LDAP protocol and one of its Java APIs. Then we can get familiar with the modern database management APIs of the Java and C# languages: JPA and LINQ. The next section introduces the object-relational (ORDBMS) aspects of the Oracle database. One of the most popular database related topics is NoSQL, so the penultimate section deals with MongoDB, a document-oriented database and Neo4j, a graph database. Finally, we take a look at building and querying ontologies with the Protége system and SPARQL.",
+      "hu": "Az Adatbázisok kurzus 5 fő témát dolgoz fel. Az első rész az LDAP protokollt és annak egyik Java API-ját mutatja be. Ezután megismerkedhetünk a Java és C# nyelvek modern adatbázis management API-jaival, a JPA-val és a LINQ-val. A következő gyakorlat az Oracle adatbázis objektum-relációs (ORDBMS) aspektusát mutatja be. Az egyik legnépszerűbb adatbázisokkal kapcsolatos téma a NoSQL, ezért az utolsó előtti rész a dokumentum orientált MongoDB és a Neo4j gráfadatbázissal foglalkozik. Végül megnézzük, hogyan lehet ontológiát építeni és lekérdezni a Protége rendszerrel és a SPARQL nyelvvel."
+    },
+    "keywords": {
+      "en": ["databases", "LDAP", "Java", "JPA", "C#", "LINQ", "ORDBMS", "object-relational database", "Oracle", "NoSQL", "document-oriented database", "MongoDB", "graph database", "Neo4j", "ontology", "Protége", "SPARQL"],
+      "hu": ["adatbázisok", "LDAP", "Java", "JPA", "C#", "LINQ", "ORDBMS", "objektum-relációs adatbázis", "Oracle", "NoSQL", "dokumentum orientált adatbázis", "MongoDB", "gráfadatbázis", "Neo4j", "ontológia", "Protége", "SPARQL"]
+    },
     "labs": [{
       "index": 0,
       "title": {
         "en": "Prerequisites",
         "hu": "Előfeltételek"
+      },
+      "description": {
+        "en": "On this page we can find all the prerequisites of the Databases course: what software environment and applications are needed to complete the course.",
+        "hu": "Ezen az oldalon találhatjuk az Adatbázisok kurzus elvégzésének összes előfeltételét: milyen programozási környezetre és alkalmazásokra van szükség a feladatok végrehajtásához."
+      },
+      "keywords": {
+        "en": ["databases", "prerequisites"],
+        "hu": ["adatbázisok", "előfeltételek"]
       }
     }, {
       "index": 1,
       "title": {
         "en": "LDAP",
         "hu": "LDAP"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the LDAP protocol and on of its Java APIs.",
+        "hu": "Ebben a gyakorlatban az LDAP protokollal és annak egyik Java API-jával ismerkedhetünk meg."
+      },
+      "keywords": {
+        "en": ["databases", "LDAP"],
+        "hu": ["adatbázisok", "LDAP"]
       }
     }, {
       "index": 2,
       "title": {
         "en": "JPA",
         "hu": "JPA"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the JPA Java API, while managing and querying a database with it in a Java application.",
+        "hu": "Ebben a gyakorlatban a Java programozási nyelv JPA API-jával ismerkedhetünk meg, amint egy adatbázis kezelünk és kérdezünk le egy Java alkalmazáson belül."
+      },
+      "keywords": {
+        "en": ["databases", "JPA", "Java"],
+        "hu": ["adatbázisok", "JPA", "Java"]
       }
     }, {
       "index": 3,
       "title": {
         "en": "LINQ",
         "hu": "LINQ"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the LINQ API in C#. The goal is to use LINQ methods to query lists in a C# application.",
+        "hu": "Ebben a gyakorlatban a C# programozási nyelv LINQ API-jával ismerkedhetünk meg. A cél, hogy LINQ metódusok segítségével kérdezzünk le listákat egy C# alkalmazáson belül."
+      },
+      "keywords": {
+        "en": ["databases", "LINQ", "C#"],
+        "hu": ["adatbázisok", "LINQ", "C#"]
       }
     }, {
       "index": 4,
       "title": {
         "en": "ORDBMS",
         "hu": "ORDBMS"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the ORDBMS aspects of the Oracle database, including user defined types and methods.",
+        "hu": "Ebben a gyakorlatban az Oracle adatbázis ORDBMS aspektusaival ismerkedhetünk meg, beleértve a saját típusokat és metódusokat."
+      },
+      "keywords": {
+        "en": ["databases", "ORDBMS", "object-relational database", "Oracle"],
+        "hu": ["adatbázisok", "ORDBMS", "objektum-relációs adatbázis", "Oracle"]
       }
     }, {
       "index": 5,
       "title": {
         "en": "MongoDB",
         "hu": "MongoDB"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the MongoDB document-oriented database, while building and querying a document database that contains people and cars.",
+        "hu": "Ebben a gyakorlatban a MongoDB dokumentum orientált adatbázissal ismerkedhetünk meg, miközben egy személyek és autók adatait tartalmazó dokumentum adatbázist építünk fel, majd kérdezünk le."
+      },
+      "keywords": {
+        "en": ["databases", "NoSQL", "document-oriented database", "MongoDB"],
+        "hu": ["adatbázisok", "NoSQL", "dokumentum orientált adatbázis", "MongoDB"]
       }
     }, {
       "index": 6,
       "title": {
         "en": "Neo4j",
         "hu": "Neo4j"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the Neo4j graph database. The exercises aim to build graph databases in various topics like movies-actors-directors, movie sequels and people-phones-manufacturers.",
+        "hu": "Ebben a gyakorlatban a Neo4j gráfadatbázissal ismerkedhetünk meg. A feladatok célja, hogy különböző témákban építsünk fel gráfadatbázisokat, amelyek például filmeket-színészeket-rendezőket, film sorozatokat és embereket-telefonokat-gyártókat tartalmaznak."
+      },
+      "keywords": {
+        "en": ["databases", "NoSQL", "graph database", "Neo4j"],
+        "hu": ["adatbázisok", "NoSQL", "gráfadatbázis", "Neo4j"]
       }
     }, {
       "index": 7,
       "title": {
         "en": "Ontologies",
         "hu": "Ontológiák"
+      },
+      "description": {
+        "en": "In this lab we can get familiar with the Protége system, while building a very simple ontology containing people and cars, and querying the ontology with SPARQL.",
+        "hu": "Ebben a gyakorlatban a Protége rendszerrel ismerkedhetünk meg, amiben egy nagyon egyszerű, személyeket és autókat tartalmazó ontológiát építhetünk fel, majd lekérdezhetjük az ontológiát a SPARQL nyelv segítségével."
+      },
+      "keywords": {
+        "en": ["databases", "ontology", "Protége", "SPARQL"],
+        "hu": ["adatbázisok", "ontológia", "Protége", "SPARQL"]
       }
     }]
   }]

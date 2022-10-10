@@ -54,4 +54,4 @@ For the object instances, we should always list the different individuals of the
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/db/lab07/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/db/lab07/solution.zip).

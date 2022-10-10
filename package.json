@@ -21,6 +21,7 @@
     "e2e:watch": "cypress open --config-file cypress/cypress.config.ts --browser chrome --e2e",
     "lighthouse": "lhci autorun",
     "deploy": "firebase deploy",
+    "deploy:rc": "firebase hosting:channel:deploy --expires 1d rc",
     "release": "semantic-release",
     "ci": "yarn lint && yarn test && yarn e2e && yarn build"
   },

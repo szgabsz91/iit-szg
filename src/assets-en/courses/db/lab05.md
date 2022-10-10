@@ -35,4 +35,4 @@ Let's execute the following subtasks in a MongoDB database:
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/db/lab05/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/db/lab05/solution.zip).

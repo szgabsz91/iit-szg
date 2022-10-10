@@ -18,7 +18,9 @@ describe('LabResolver', () => {
     titles: {
       short: 'Lab 2 Short',
       long: 'Lab 2 Long'
-    }
+    },
+    description: 'Lab 2 Description',
+    keywords: ['Lab 2 Keyword']
   };
   const activatedRouteSnapshot: ActivatedRouteSnapshot = {
     paramMap: {

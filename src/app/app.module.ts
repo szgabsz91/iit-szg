@@ -9,12 +9,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CourseServiceModule } from './course/course-service.module';
 import { WINDOW, GTAG, GOOGLE_ANALYTICS_TRACKING_ID } from './injection-tokens';
-import { AnalyticsService } from './analytics.service';
-import { AnalyticsLogger } from './analytics-logger.service';
-import { AnalyticsLoggerMock } from './analytics-logger.mock';
+import { AnalyticsService } from './services/analytics/analytics.service';
+import { AnalyticsLogger } from './services/analytics/analytics-logger.service';
+import { AnalyticsLoggerMock } from './services/analytics/analytics-logger.mock';
 import { environment } from 'src/environments/environment';
-import { ScrollContentAfterNavigationDirective } from './scroll-content-after-navigation.directive';
-import { AppTitleStrategyService } from './app-title-strategy.service';
+import { ScrollContentAfterNavigationDirective } from './directives/scroll-content-after-navigation/scroll-content-after-navigation.directive';
+import { AppTitleStrategyService } from './services/seo/app-title-strategy/app-title-strategy.service';
+import { MetaService } from './services/seo/meta/meta.service';
+import { CanonicalLinkService } from './services/seo/canonical-link/canonical-link.service';
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
 declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: string }) => void;
@@ -61,6 +63,18 @@ declare let gtag: (arg1: string, arg2: string, arg3: { readonly page_path: strin
     {
       provide: TitleStrategy,
       useClass: AppTitleStrategyService
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (metaService: MetaService) => () => metaService.start(),
+      deps: [MetaService],
+      multi: true
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (canonicalLinkService: CanonicalLinkService) => () => canonicalLinkService.start(),
+      deps: [CanonicalLinkService],
+      multi: true
     }
   ],
   bootstrap: [AppComponent]

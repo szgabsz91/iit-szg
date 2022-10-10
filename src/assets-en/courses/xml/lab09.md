@@ -138,4 +138,4 @@ Let's create an SVG image that contains circles and rectangles of different colo
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab09/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab09/solution.zip).

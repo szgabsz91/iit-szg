@@ -25,7 +25,7 @@ jobs:
       - name: Execute E2E tests
         run: yarn e2e
       - name: Build project
-        run: yarn build --base-href https://iit-szg--rc-dw5f2ixx.web.app/
+        run: yarn build --base-href https://iit-szg--rc-pjo9wrkf.web.app/
       - name: Deploy project to Firebase RC channel
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
@@ -37,4 +37,4 @@ jobs:
       - name: Execute Lighthouse analysis
         run: yarn lighthouse
         env:
-          LHCI_URL: https://iit-szg--rc-dw5f2ixx.web.app/en/
+          LHCI_URL: https://iit-szg--rc-pjo9wrkf.web.app/en/

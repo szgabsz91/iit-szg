@@ -99,4 +99,4 @@ Let's execute the following subtasks in a Neo4j database, using the Java JDBC AP
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/db/lab06/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/db/lab06/solution.zip).
