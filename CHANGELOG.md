@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/szgabsz91/iit-szg/compare/v3.3.0...v3.4.0) (2022-10-10)
+
+
+### Features
+
+* [#254](https://github.com/szgabsz91/iit-szg/issues/254) improve performance ([a207578](https://github.com/szgabsz91/iit-szg/commit/a20757818e330aa74914e04a685f93313a17c23f))
+
 # [3.3.0](https://github.com/szgabsz91/iit-szg/compare/v3.2.0...v3.3.0) (2022-10-10)
 
 
