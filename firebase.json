@@ -2,6 +2,7 @@
   "hosting": {
     "public": "dist/iit-szg",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "trailingSlash": false,
     "i18n": {
       "root": "/"
     },
@@ -13,6 +14,35 @@
       {
         "source": "/hu/**",
         "destination": "/hu/index.html"
+      }
+    ],
+    "headers": [
+      {
+        "source": "**/@(main|polyfills|runtime|styles).*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/@(en|hu).*.png",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "**/@(en|hu).png",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
       }
     ]
   }
