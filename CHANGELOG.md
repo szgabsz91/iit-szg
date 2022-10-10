@@ -1,3 +1,10 @@
+# [3.2.0](https://github.com/szgabsz91/iit-szg/compare/v3.1.0...v3.2.0) (2022-10-10)
+
+
+### Features
+
+* [#248](https://github.com/szgabsz91/iit-szg/issues/248) improve SEO ([0bb1597](https://github.com/szgabsz91/iit-szg/commit/0bb15970731f538ab4f2425f19c456fbdb92c149))
+
 # [3.1.0](https://github.com/szgabsz91/iit-szg/compare/v3.0.0...v3.1.0) (2022-09-15)
 
 
