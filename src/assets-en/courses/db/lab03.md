@@ -43,4 +43,4 @@ The query should be implemented in a single step. For simplicity, we can use ano
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/db/lab03/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/db/lab03/solution.zip).

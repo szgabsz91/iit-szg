@@ -158,4 +158,4 @@ Let's create a .NET Core application for the above *car-database.xml* file that 
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab08/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab08/solution.zip).

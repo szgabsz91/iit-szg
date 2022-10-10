@@ -2,42 +2,12 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="appTitlesApp" datatype="html">
-        <source>IIT-SZG</source>
-        <target>IIT-SZG</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app-title-strategy.service.ts</context>
-          <context context-type="linenumber">9</context>
-        </context-group>
-        <note priority="1" from="description">The title of the application</note>
-        <note priority="1" from="meaning">app.titles.app</note>
-      </trans-unit>
-      <trans-unit id="appTitlesHome" datatype="html">
-        <source>Home</source>
-        <target>Főoldal</target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app-title-strategy.service.ts</context>
-          <context context-type="linenumber">10</context>
-        </context-group>
-        <note priority="1" from="description">The title of the home page</note>
-        <note priority="1" from="meaning">app.titles.home</note>
-      </trans-unit>
-      <trans-unit id="appTitlesCourse" datatype="html">
-        <source><x id="courseName" equiv-text="course.name"/> Course</source>
-        <target><x id="courseName" equiv-text="course.name"/></target>
-        <context-group purpose="location">
-          <context context-type="sourcefile">src/app/app-title-strategy.service.ts</context>
-          <context context-type="linenumber">39</context>
-        </context-group>
-        <note priority="1" from="description">The title of a given course</note>
-        <note priority="1" from="meaning">app.titles.course</note>
-      </trans-unit>
       <trans-unit id="appTitle" datatype="html">
         <source>IIT-SZG</source>
         <target>IIT-SZG</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">16,18</context>
+          <context context-type="linenumber">23,25</context>
         </context-group>
         <note priority="1" from="description">The title of the application</note>
         <note priority="1" from="meaning">app.title</note>
@@ -47,7 +17,7 @@
         <target> <x id="ICU" equiv-text="{locale, select, hu {Magyar} en {Angol} other {}}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">111,112</context>
+          <context context-type="linenumber">118,119</context>
         </context-group>
         <note priority="1" from="description">The selected language in the language selector</note>
         <note priority="1" from="meaning">app.languageSelector</note>
@@ -57,7 +27,7 @@
         <target>{VAR_SELECT, select, hu {Magyar} en {Angol} other {}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">111,117</context>
+          <context context-type="linenumber">118,124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMenuHome" datatype="html">
@@ -65,7 +35,7 @@
         <target> Főoldal </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">132,138</context>
+          <context context-type="linenumber">139,145</context>
         </context-group>
         <note priority="1" from="description">The label of the home menu item</note>
         <note priority="1" from="meaning">app.menu.home</note>
@@ -75,7 +45,7 @@
         <target> Lista </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">156,161</context>
+          <context context-type="linenumber">163,168</context>
         </context-group>
         <note priority="1" from="description">The label of the course index pages</note>
         <note priority="1" from="meaning">app.course.index</note>
@@ -85,7 +55,7 @@
         <target>© Szabó Gábor <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">179,180</context>
+          <context context-type="linenumber">186,187</context>
         </context-group>
         <note priority="1" from="description">The footer of the application</note>
         <note priority="1" from="meaning">app.footer</note>
@@ -169,6 +139,154 @@
         </context-group>
         <note priority="1" from="description">The title of the lab</note>
         <note priority="1" from="meaning">lab.title</note>
+      </trans-unit>
+      <trans-unit id="appTitlesApp" datatype="html">
+        <source>IIT-SZG</source>
+        <target>IIT-SZG</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/app-title-strategy/app-title-strategy.service.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <note priority="1" from="description">The title of the application</note>
+        <note priority="1" from="meaning">app.titles.app</note>
+      </trans-unit>
+      <trans-unit id="appTitlesHome" datatype="html">
+        <source>Home</source>
+        <target>Főoldal</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/app-title-strategy/app-title-strategy.service.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description">The title of the home page</note>
+        <note priority="1" from="meaning">app.titles.home</note>
+      </trans-unit>
+      <trans-unit id="appTitlesCourse" datatype="html">
+        <source><x id="courseName" equiv-text="course.name"/> Course</source>
+        <target><x id="courseName" equiv-text="course.name"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/app-title-strategy/app-title-strategy.service.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <note priority="1" from="description">The title of a given course</note>
+        <note priority="1" from="meaning">app.titles.course</note>
+      </trans-unit>
+      <trans-unit id="996769415315580545" datatype="html">
+        <source>IIT-SZG is an application that consists of software engineering related courses. Each course contains a set of labs and their solutions. Currently there are two courses: XML and Databases.</source>
+        <target>Az IIT-SZG egy olyan alkalmazás, amely szoftverfejlesztéssel kapcsolatos kurzusokat tartalmaz. Minden kurzus gyakorlatokból áll. Jelenleg két kurzus található az alkalmazásban: az XML és az Adatbázisok kurzus.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordIitSzg" datatype="html">
+        <source>IIT-SZG</source>
+        <target>IIT-SZG</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of IIT-SZG for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.iit-szg</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordSzg" datatype="html">
+        <source>SZG</source>
+        <target>SZG</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of SZG for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.szg</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordIitSzgabsz91" datatype="html">
+        <source>szgabsz91</source>
+        <target>szgabsz91</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of szgabsz91 for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.szgabsz91</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordIitGaborSzabo" datatype="html">
+        <source>Gabor Szabo</source>
+        <target>Szabó Gábor</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of Gabor Szabo for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.gabor-szabo</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordIT" datatype="html">
+        <source>IT</source>
+        <target>IT</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of IT for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.it</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordInformationTechnology" datatype="html">
+        <source>information technology</source>
+        <target>informatika</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of information technology for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.information-technology</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordSoftwareEngineering" datatype="html">
+        <source>software engineering</source>
+        <target>szoftverfejlesztés</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of software engineering for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.sofware-engineering</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordCourse" datatype="html">
+        <source>course</source>
+        <target>kurzus</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of course for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.course</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordLab" datatype="html">
+        <source>lab</source>
+        <target>gyakorlat</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of lab for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.lab</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordCoursesXml" datatype="html">
+        <source>XML</source>
+        <target>XML</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of the XML course for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.courses.xml</note>
+      </trans-unit>
+      <trans-unit id="appSeoKeywordCoursesDatabases" datatype="html">
+        <source>Databases</source>
+        <target>Adatbázisok</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/services/seo/meta/meta.service.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description">The meta keyword translation of the Databases course for SEO</note>
+        <note priority="1" from="meaning">app.seo.keyword.courses.databases</note>
       </trans-unit>
     </body>
   </file>

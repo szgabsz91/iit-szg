@@ -766,4 +766,4 @@ What errors are there in the following XML Schemas and XML documents?
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab04/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab04/solution.zip).

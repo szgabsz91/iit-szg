@@ -476,4 +476,4 @@ Let's write XSLT to solve the following subtasks:
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab11/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab11/solution.zip).

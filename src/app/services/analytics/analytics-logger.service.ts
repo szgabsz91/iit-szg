@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { GTAG, GOOGLE_ANALYTICS_TRACKING_ID } from './injection-tokens';
+import { GTAG, GOOGLE_ANALYTICS_TRACKING_ID } from '../../injection-tokens';
 
 @Injectable()
 export class AnalyticsLogger {

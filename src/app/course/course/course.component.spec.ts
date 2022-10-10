@@ -19,20 +19,26 @@ describe('CourseComponent', () => {
   const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
+    description: 'Course 1 Description',
+    keywords: ['Course 1 Keyword'],
     labs: [
       {
         index: 1,
         titles: {
           short: 'Lab 1 Short',
           long: 'Lab 1 Long'
-        }
+        },
+        description: 'Lab 1 Description',
+        keywords: ['Lab 1 Keyword']
       },
       {
         index: 2,
         titles: {
           short: 'Lab 2 Short',
           long: 'Lab 2 Long'
-        }
+        },
+        description: 'Lab 2 Description',
+        keywords: ['Lab 2 Keyword']
       }
     ]
   };
@@ -96,7 +102,9 @@ describe('CourseComponent', () => {
           titles: {
             short: 'Lab 1 Short',
             long: 'Lab 1 Long'
-          }
+          },
+          description: 'Lab 1 Description',
+          keywords: ['Lab 1 Keyword']
         };
 
         courseComponent.navigateToLab(lab);

@@ -2,9 +2,9 @@ import { DOCUMENT } from '@angular/common';
 import { Inject, Injectable } from '@angular/core';
 import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AppService } from './app.service';
-import { Course } from './model/course';
-import { Lab } from './model/lab';
+import { AppService } from '../../app/app.service';
+import { Course } from '../../../model/course';
+import { Lab } from '../../../model/lab';
 
 const appTitle = $localize`:app.titles.app|The title of the application@@appTitlesApp:IIT-SZG`;
 const homeTitle = $localize`:app.titles.home|The title of the home page@@appTitlesHome:Home`;

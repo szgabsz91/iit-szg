@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { AppMaterialModule } from './app-material.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { AppService } from './app.service';
+import { AppService } from './services/app/app.service';
 import { of } from 'rxjs';
 import { WINDOW } from './injection-tokens';
 import { DebugElement, LOCALE_ID } from '@angular/core';
@@ -22,32 +22,42 @@ describe('AppComponent', () => {
     {
       id: 'course1',
       name: 'Course 1',
+      description: 'Course 1 Description',
+      keywords: ['Course 1 Keyword'],
       labs: [
         {
           index: 1,
           titles: {
             short: 'Course 1 Lab 1 Short',
             long: 'Course 1 Lab 1 Long'
-          }
+          },
+          description: 'Course 1 Lab 1 Description',
+          keywords: ['Course 1 Lab 1 Keyword']
         },
         {
           index: 2,
           titles: {
             long: 'Course 1 Lab 2 Long'
-          }
+          },
+          description: 'Course 1 Lab 2 Description',
+          keywords: ['Course 1 Lab 2 Keyword']
         }
       ]
     },
     {
       id: 'course2',
       name: 'Course 2',
+      description: 'Course 2 Description',
+      keywords: ['Course 2 Keyword'],
       labs: [
         {
           index: 1,
           titles: {
             short: 'Course 2 Lab 1 Short',
             long: 'Course 2 Lab 1 Long'
-          }
+          },
+          description: 'Course 2 Lab 1 Description',
+          keywords: ['Course 2 Lab 1 Keyword']
         }
       ]
     }

@@ -19,4 +19,4 @@ In the application we should create and annotate a model class so that the readi
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab07/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab07/solution.zip).

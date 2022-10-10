@@ -319,4 +319,4 @@ Let's write XPath expressions for the above XML document that implement the belo
 
 ## Solution
 
-To download the solution of the above exercises, [click here](assets/courses/xml/lab10/solution.zip).
+If you're ready with the exercises above, [check out the solution](assets/courses/xml/lab10/solution.zip).

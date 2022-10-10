@@ -29,12 +29,16 @@ const keepOneLocaleInMetadata = (metadata, localeId) => {
     courses: metadata.courses.map(course => ({
       ...course,
       name: course.name[localeId],
+      description: course.description[localeId],
+      keywords: course.keywords[localeId],
       labs: course.labs.map(lab => ({
         index: lab.index,
         titles: {
           short: lab.shortTitle?.[localeId],
           long: lab.title[localeId]
-        }
+        },
+        description: lab.description[localeId],
+        keywords: lab.keywords[localeId]
       }))
     }))
   };
