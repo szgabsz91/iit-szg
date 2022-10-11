@@ -45,7 +45,7 @@ jobs:
       - name: Execute Lighthouse analysis
         run: yarn lighthouse
         env:
-          LHCI_URL: https://iit-szg--rc-pjo9wrkf.web.app/en
+          LHCI_URL: https://iit-szg--rc-pjo9wrkf.web.app/en/
       - name: Finalize the base URL for live deployment
         run: sed -i 's,https://iit-szg--rc-pjo9wrkf.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/*/index.html
       - name: Deploy project to Firebase live channel
