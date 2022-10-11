@@ -1,3 +1,10 @@
+# [3.5.0](https://github.com/szgabsz91/iit-szg/compare/v3.4.0...v3.5.0) (2022-10-11)
+
+
+### Features
+
+* [#86](https://github.com/szgabsz91/iit-szg/issues/86) convert the app to a PWA ([fbd2fcf](https://github.com/szgabsz91/iit-szg/commit/fbd2fcfe7f77c315cfc8855e7fa51c9f55b8ef13))
+
 # [3.4.0](https://github.com/szgabsz91/iit-szg/compare/v3.3.0...v3.4.0) (2022-10-10)
 
 
