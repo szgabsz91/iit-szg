@@ -5,6 +5,7 @@
     <title>IIT-SZG</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#153d66" />
     <meta
       name="description"
       content="IIT-SZG is an application that consists of software engineering related courses. Each course contains a set of labs and their solutions. Currently there are two courses: XML and Databases."
@@ -14,17 +15,19 @@
       content="IIT-SZG, SZG, szgabsz91, Gabor Szabo, Szabo Gabor, IT, information technology, software engineering, course, lab"
     />
     <link rel="canonical" href="https://iit-szg.web.app/" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/icons/icon-180x180.png" />
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WL7ECCBCW"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      window.gtag = function () {
+      function gtag() {
         window.dataLayer.push(arguments);
-      };
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-1WL7ECCBCW');
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-1WL7ECCBCW');
     </script>
     <style>
       .toolbar-placeholder {

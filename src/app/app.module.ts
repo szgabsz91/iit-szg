@@ -13,6 +13,8 @@ import { ScrollContentAfterNavigationDirective } from './directives/scroll-conte
 import { AppTitleStrategyService } from './services/seo/app-title-strategy/app-title-strategy.service';
 import { MetaService } from './services/seo/meta/meta.service';
 import { CanonicalLinkService } from './services/seo/canonical-link/canonical-link.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ScrollContentAfterNavigationDirective],
@@ -22,7 +24,11 @@ import { CanonicalLinkService } from './services/seo/canonical-link/canonical-li
     HttpClientModule,
     AppRoutingModule,
     AppMaterialModule,
-    CourseServiceModule
+    CourseServiceModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [
     {

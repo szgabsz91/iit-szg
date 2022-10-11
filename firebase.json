@@ -2,7 +2,6 @@
   "hosting": {
     "public": "dist/iit-szg",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "trailingSlash": false,
     "i18n": {
       "root": "/"
     },
