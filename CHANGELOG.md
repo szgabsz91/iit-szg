@@ -1,3 +1,10 @@
+## [3.5.1](https://github.com/szgabsz91/iit-szg/compare/v3.5.0...v3.5.1) (2022-10-11)
+
+
+### Bug Fixes
+
+* [#86](https://github.com/szgabsz91/iit-szg/issues/86) replace the base URL in the ngsw.json file too ([8413ea0](https://github.com/szgabsz91/iit-szg/commit/8413ea0337cd852f471478301210f80d3083507b))
+
 # [3.5.0](https://github.com/szgabsz91/iit-szg/compare/v3.4.0...v3.5.0) (2022-10-11)
 
 
