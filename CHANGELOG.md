@@ -1,3 +1,10 @@
+# [3.6.0](https://github.com/szgabsz91/iit-szg/compare/v3.5.2...v3.6.0) (2022-10-12)
+
+
+### Features
+
+* [#57](https://github.com/szgabsz91/iit-szg/issues/57) make the toolbar grayscale in offline mode ([0dd3a9c](https://github.com/szgabsz91/iit-szg/commit/0dd3a9c8f21d67a4f2373c6a39563624f2bb9fe6))
+
 ## [3.5.2](https://github.com/szgabsz91/iit-szg/compare/v3.5.1...v3.5.2) (2022-10-12)
 
 
