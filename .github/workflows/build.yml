@@ -26,6 +26,8 @@ jobs:
         run: yarn e2e
       - name: Build project
         run: yarn build --base-href https://iit-szg--rc-o3h8l06w.web.app/
+      - name: Recalculate ngsw hash table
+        run: ./scripts/recalculate-ngsw-hash-table.js
       - name: Deploy project to Firebase RC channel
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
