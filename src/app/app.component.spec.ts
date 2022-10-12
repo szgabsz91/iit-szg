@@ -11,6 +11,7 @@ import { Course } from './model/course';
 import { By } from '@angular/platform-browser';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { ActivationEnd, Router } from '@angular/router';
+import { MatToolbar } from '@angular/material/toolbar';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -174,6 +175,32 @@ describe('AppComponent', () => {
     it('should render the appropriate footer', () => {
       const footerContent = compiled.querySelector('footer').textContent;
       expect(footerContent).toEqual(`© Gabor Szabo ${new Date().getFullYear()}`);
+    });
+  });
+
+  describe('when online', () => {
+    beforeEach(() => {
+      window.dispatchEvent(new Event('offline'));
+      fixture.detectChanges();
+      window.dispatchEvent(new Event('online'));
+      fixture.detectChanges();
+    });
+
+    it('should not add the is-offline class to the toolbar', () => {
+      const toolbar = fixture.debugElement.query(By.directive(MatToolbar));
+      expect(toolbar.classes['is-offline']).toBeUndefined();
+    });
+  });
+
+  describe('when offline', () => {
+    beforeEach(() => {
+      window.dispatchEvent(new Event('offline'));
+      fixture.detectChanges();
+    });
+
+    it('should add the is-offline class to the toolbar', () => {
+      const toolbar = fixture.debugElement.query(By.directive(MatToolbar));
+      expect(toolbar.classes['is-offline']).toBe(true);
     });
   });
 });

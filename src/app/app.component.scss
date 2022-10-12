@@ -12,6 +12,14 @@
 
 // Toolbar
 
+mat-toolbar {
+  transition: filter 1s;
+
+  &.is-offline {
+    filter: grayscale(0.7);
+  }
+}
+
 .is-mobile mat-toolbar {
   position: fixed;
   z-index: 2;
