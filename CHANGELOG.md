@@ -1,3 +1,10 @@
+## [3.5.2](https://github.com/szgabsz91/iit-szg/compare/v3.5.1...v3.5.2) (2022-10-12)
+
+
+### Bug Fixes
+
+* [#86](https://github.com/szgabsz91/iit-szg/issues/86) recalculate the ngsw hash table after the build is complete ([dd2c06c](https://github.com/szgabsz91/iit-szg/commit/dd2c06cd9e384a9c85322ecbd3a74d95bef2d868))
+
 ## [3.5.1](https://github.com/szgabsz91/iit-szg/compare/v3.5.0...v3.5.1) (2022-10-11)
 
 
