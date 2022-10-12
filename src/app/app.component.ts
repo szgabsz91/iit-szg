@@ -8,7 +8,8 @@ import {
   LOCALE_ID,
   OnDestroy,
   Renderer2,
-  ViewChild
+  ViewChild,
+  HostListener
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
@@ -45,6 +46,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   readonly locales = ['en', 'hu'];
   readonly currentLocale: string;
   selectedLocale: string;
+  isOffline = false;
 
   private readonly handleSidenav: (mediaQueryListEvent: MediaQueryListEvent) => void;
 
@@ -72,6 +74,16 @@ export class AppComponent implements AfterViewInit, OnDestroy {
       changeDetectorRef.detectChanges();
     };
     this.mobileQuery.addListener(this.handleSidenav);
+  }
+
+  @HostListener('window:offline')
+  onOffline(): void {
+    this.isOffline = true;
+  }
+
+  @HostListener('window:online')
+  onOnline(): void {
+    this.isOffline = false;
   }
 
   ngAfterViewInit(): void {

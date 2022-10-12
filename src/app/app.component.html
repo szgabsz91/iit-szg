@@ -1,5 +1,5 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" [class.is-offline]="isOffline">
     <button
       *ngIf="mobileQuery.matches"
       @hamburgerMenuButtonTrigger
