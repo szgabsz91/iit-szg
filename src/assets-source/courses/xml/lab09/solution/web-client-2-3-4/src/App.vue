@@ -1,90 +1,84 @@
 <template>
-  <div class="page-container">
-    <md-app md-waterfall md-mode="fixed">
-      <md-app-toolbar class="md-primary">
-        <md-button
-          class="md-icon-button menu-toggle-button"
-          @click="onToggleMenu"
-        >
-          <md-icon>menu</md-icon>
-        </md-button>
+  <v-app>
+    <v-card>
+      <v-layout>
+        <v-app-bar color="primary" prominent>
+          <v-app-bar-nav-icon
+            variant="text"
+            @click.stop="isNavigationDrawerOpen = !isNavigationDrawerOpen"
+          ></v-app-bar-nav-icon>
 
-        <span class="md-title">Lab 9 Solution</span>
-      </md-app-toolbar>
+          <v-toolbar-title tag="h1">Lab 9 Solution</v-toolbar-title>
+        </v-app-bar>
 
-      <md-app-drawer md-permanent="clipped" :md-active.sync="isMenuVisible">
-        <md-toolbar class="md-transparent" md-elevation="0">
-          Navigation
-        </md-toolbar>
+        <v-navigation-drawer v-model="isNavigationDrawerOpen" bottom temporary>
+          <v-list nav>
+            <v-list-item
+              v-for="page in pages"
+              :to="page.url"
+              :key="page.url"
+              link
+            >
+              <v-list-item-content>{{ page.title }}</v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-navigation-drawer>
 
-        <md-list>
-          <md-list-item to="/exercises/1">Exercise 1</md-list-item>
-          <md-list-item to="/exercises/2">Exercise 2</md-list-item>
-          <md-list-item to="/exercises/3">Exercise 3</md-list-item>
-          <md-list-item to="/exercises/4">Exercise 4</md-list-item>
-          <md-list-item to="/exercises/5">Exercise 5</md-list-item>
-          <md-list-item to="/exercises/6">Exercise 6</md-list-item>
-        </md-list>
-      </md-app-drawer>
-
-      <md-app-content>
-        <router-view></router-view>
-      </md-app-content>
-    </md-app>
-  </div>
+        <v-main class="main">
+          <div class="content-container">
+            <router-view />
+          </div>
+        </v-main>
+      </v-layout>
+    </v-card>
+  </v-app>
 </template>
 
-<style lang="scss" scoped>
-.md-app {
-  height: 100vh;
+<style scoped>
+.main {
+  min-height: 100vh;
 }
 
-.md-drawer {
-  width: 230px;
-  max-width: calc(100vw - 125px);
-}
-
-@media (min-width: 600px) {
-  .menu-toggle-button {
-    display: none;
-  }
+.content-container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 24px;
 }
 </style>
 
-<script>
-import VueRouter from "vue-router";
+<script lang="ts">
+import { defineComponent } from "vue";
 
-import Exercise1 from "./components/Exercise1.vue";
-import Exercise2 from "./components/Exercise2.vue";
-import Exercise3 from "./components/Exercise3.vue";
-import Exercise4 from "./components/Exercise4.vue";
-import Exercise5 from "./components/Exercise5.vue";
-import Exercise6 from "./components/Exercise6.vue";
-
-const routes = [
-  { path: "/exercises/1", component: Exercise1 },
-  { path: "/exercises/2", component: Exercise2 },
-  { path: "/exercises/3", component: Exercise3 },
-  { path: "/exercises/4", component: Exercise4 },
-  { path: "/exercises/5", component: Exercise5 },
-  { path: "/exercises/6", component: Exercise6 },
-  { path: "*", redirect: "/exercises/1" },
-];
-
-const router = new VueRouter({
-  routes,
-});
-
-export default {
-  name: "Lab9",
-  router,
+export default defineComponent({
+  name: "App",
   data: () => ({
-    isMenuVisible: false,
+    isNavigationDrawerOpen: false,
+    pages: [
+      {
+        title: "Exercise 1",
+        url: "/exercises/1",
+      },
+      {
+        title: "Exercise 2",
+        url: "/exercises/2",
+      },
+      {
+        title: "Exercise 3",
+        url: "/exercises/3",
+      },
+      {
+        title: "Exercise 4",
+        url: "/exercises/4",
+      },
+      {
+        title: "Exercise 5",
+        url: "/exercises/5",
+      },
+      {
+        title: "Exercise 6",
+        url: "/exercises/6",
+      },
+    ],
   }),
-  methods: {
-    onToggleMenu() {
-      this.isMenuVisible = !this.isMenuVisible;
-    },
-  },
-};
+});
 </script>
