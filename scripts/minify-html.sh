@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-npx html-minifier \
-  --config-file .htmlminifierrc.json \
-  --output $1 \
-  $1
+function minify {
+  npx html-minifier \
+    --config-file .htmlminifierrc.json \
+    --output $1 \
+    $1
+}
+
+for filename in `ls ./dist/iit-szg`
+do
+  file="./dist/iit-szg/$filename"
+  if [[ -d $file ]]; then
+    minify "$file/index.html"
+  fi
+done

@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 const fs = require('fs').promises;
-const { writeFile } = require('fs');
 const path = require('path');
 
 function byteAt(str, index) {
@@ -121,17 +120,22 @@ const sha1Binary = buffer => {
   return _sha1(words32, buffer.byteLength * 8);
 };
 
+const removeHost = url => {
+  let newUrl = url;
+  newUrl = newUrl.substring(newUrl.indexOf('/') + 1);
+  newUrl = newUrl.substring(newUrl.indexOf('/') + 1);
+  return newUrl.substring(newUrl.indexOf('/') + 1);
+};
+
 const processFile = async (rootFolder, url) => {
-  const relativePath = url.startsWith('http')
-    ? url.substring(url.indexOf('web.app') + 'web.app/en/'.length)
-    : url.substring('/en/'.length);
+  const relativePath = url.startsWith('http') ? removeHost(url) : url.substring(1);
   const file = path.resolve(rootFolder, relativePath);
   const content = await fs.readFile(file);
   return await sha1Binary(content);
 };
 
-const processLocale = async localeId => {
-  const rootFolder = `./dist/iit-szg/${localeId}`;
+(async () => {
+  const rootFolder = `./dist/iit-szg`;
   const ngswJsonFile = path.resolve(rootFolder, 'ngsw.json');
   const ngswJsonContent = await fs.readFile(ngswJsonFile, 'UTF-8');
   const ngswJsonObject = JSON.parse(ngswJsonContent);
@@ -152,9 +156,4 @@ const processLocale = async localeId => {
   };
   const newNgswJsonContent = JSON.stringify(newNgswJsonObject, null, 2);
   await fs.writeFile(ngswJsonFile, newNgswJsonContent, { encoding: 'UTF-8' });
-};
-
-(async () => {
-  await processLocale('en');
-  await processLocale('hu');
 })();

@@ -25,7 +25,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     AppMaterialModule,
     CourseServiceModule,
-    ServiceWorkerModule.register('ngsw-worker.js', {
+    ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000'
     })
