@@ -1,3 +1,10 @@
+# [3.7.0](https://github.com/szgabsz91/iit-szg/compare/v3.6.0...v3.7.0) (2022-10-16)
+
+
+### Features
+
+* [#243](https://github.com/szgabsz91/iit-szg/issues/243) upgrade the lab09 web app to Vue 3 ([b4028c5](https://github.com/szgabsz91/iit-szg/commit/b4028c5cea4d2f9f2c20a5efa5583970c40933d3))
+
 # [3.6.0](https://github.com/szgabsz91/iit-szg/compare/v3.5.2...v3.6.0) (2022-10-12)
 
 
