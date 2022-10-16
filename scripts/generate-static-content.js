@@ -2,19 +2,13 @@
 
 const archiver = require('archiver');
 const crypto = require('crypto');
-const fs = require('fs');
+const fs = require('fs/promises');
 const minimist = require('minimist');
 const path = require('path');
 const { promisify } = require('util');
 
-const createWriteStream = fs.createWriteStream;
+const { createWriteStream } = require('fs');
 const glob = promisify(require('glob'));
-const lstat = promisify(fs.lstat);
-const mkdir = promisify(fs.mkdir);
-const readdir = promisify(fs.readdir);
-const readFile = promisify(fs.readFile);
-const unlink = promisify(fs.unlink);
-const writeFile = promisify(fs.writeFile);
 
 const supportedLocaleIds = ['en', 'hu'];
 const assetsSourceFolder = path.resolve('src', 'assets-source');
@@ -61,8 +55,8 @@ const generateMetadataForLocale = (metadata, localeId) => {
   const metadataJsonFilename = getMetadataJsonFilename(metadata);
   const targetMetadataJsonPath = path.resolve('src', `assets-${localeId}`, metadataJsonFilename);
   return Promise.all([
-    writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8'),
-    writeFile(
+    fs.writeFile(targetMetadataJsonPath, targetMetadataContent, 'UTF-8'),
+    fs.writeFile(
       path.resolve('src', 'app', 'constants', 'app.prod-constants.ts'),
       `export const METADATA_FILENAME = '${metadataJsonFilename}';\n`,
       'UTF-8'
@@ -71,12 +65,12 @@ const generateMetadataForLocale = (metadata, localeId) => {
 };
 
 const isFolder = async file => {
-  const stat = await lstat(file);
+  const stat = await fs.lstat(file);
   return stat.isDirectory();
 };
 
 const processCourseFolder = async courseFolder => {
-  const labFolderNames = await readdir(courseFolder);
+  const labFolderNames = await fs.readdir(courseFolder);
   labFolderNames
     .map(labFolderName => path.resolve(courseFolder, labFolderName))
     .forEach(async labFolder => {
@@ -89,7 +83,7 @@ const processCourseFolder = async courseFolder => {
 };
 
 const processLabFolder = async labFolder => {
-  const projectFolderNames = await readdir(labFolder);
+  const projectFolderNames = await fs.readdir(labFolder);
   projectFolderNames
     .map(projectFolderName => path.resolve(labFolder, projectFolderName))
     .forEach(async projectFolder => {
@@ -126,7 +120,7 @@ const processProjectFolder = async projectFolder => {
   console.log('Zipping folder', `assets/${relativePath}`);
   const targetFile = path.resolve(assetsFolder, relativePath) + '.zip';
   const parentFolder = path.resolve(targetFile, '..');
-  await mkdir(parentFolder, { recursive: true });
+  await fs.mkdir(parentFolder, { recursive: true });
   await zipFolder(projectFolder, targetFile);
 };
 
@@ -134,19 +128,19 @@ console.log('Generating static content...');
 
 (async () => {
   // metadata.json
-  const metadata = JSON.parse(await readFile(metadataJsonPath, 'UTF-8'));
+  const metadata = JSON.parse(await fs.readFile(metadataJsonPath, 'UTF-8'));
   const requiredLocaleId = argv._[0];
   const localeIds = requiredLocaleId ? [requiredLocaleId] : supportedLocaleIds;
   localeIds.forEach(async supportedLocaleId => {
     const metadataJsonFiles = await glob(path.resolve('src', `assets-${supportedLocaleId}`, 'metadata*.json'));
     for (const metadataJsonFile of metadataJsonFiles) {
-      await unlink(metadataJsonFile);
+      await fs.unlink(metadataJsonFile);
     }
     await generateMetadataForLocale(metadata, supportedLocaleId);
   });
 
   // zip files
-  const courseFolderNames = await readdir(coursesSourceFolder);
+  const courseFolderNames = await fs.readdir(coursesSourceFolder);
   courseFolderNames
     .map(courseFolderName => path.resolve(coursesSourceFolder, courseFolderName))
     .forEach(async courseFolder => {
