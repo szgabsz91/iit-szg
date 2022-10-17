@@ -1,3 +1,10 @@
+# [3.8.0](https://github.com/szgabsz91/iit-szg/compare/v3.7.0...v3.8.0) (2022-10-17)
+
+
+### Features
+
+* [#281](https://github.com/szgabsz91/iit-szg/issues/281) merge locale dependent service workers into a single one ([a785581](https://github.com/szgabsz91/iit-szg/commit/a785581e0f74a4878ed358ed29326a965e2bfddd))
+
 # [3.7.0](https://github.com/szgabsz91/iit-szg/compare/v3.6.0...v3.7.0) (2022-10-16)
 
 
