@@ -26,7 +26,7 @@ jobs:
       - name: Execute E2E tests
         run: yarn e2e
       - name: Build project
-        run: yarn build --base-href https://iit-szg--rc-v5mk4jr1.web.app/
+        run: yarn build --base-href https://iit-szg--rc-fo9murlh.web.app/
       - name: Merge locale dependent service workers
         run: ./scripts/merge-service-workers.js
       - name: Recalculate ngsw hash table
@@ -42,4 +42,4 @@ jobs:
       - name: Execute Lighthouse analysis
         run: yarn lighthouse
         env:
-          LHCI_URL: https://iit-szg--rc-v5mk4jr1.web.app/en/
+          LHCI_URL: https://iit-szg--rc-fo9murlh.web.app/en/
