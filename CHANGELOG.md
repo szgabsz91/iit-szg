@@ -1,3 +1,12 @@
+# [3.9.0](https://github.com/szgabsz91/iit-szg/compare/v3.8.0...v3.9.0) (2022-11-22)
+
+
+### Features
+
+* [#289](https://github.com/szgabsz91/iit-szg/issues/289) upgrade Angular CLI and Core to version 15 ([101735b](https://github.com/szgabsz91/iit-szg/commit/101735b56f21dfb203e2a9e30c12d52794ee9512))
+* [#289](https://github.com/szgabsz91/iit-szg/issues/289) upgrade Angular Material to version 15 ([8635522](https://github.com/szgabsz91/iit-szg/commit/8635522b0a823503ccdb4ccd6ce4cd4e3de5e65e))
+* [#290](https://github.com/szgabsz91/iit-szg/issues/290) upgrade Material components to MDC based version ([d2b99d4](https://github.com/szgabsz91/iit-szg/commit/d2b99d45b32848a18565d08c8df5b983bfabdd6f))
+
 # [3.8.0](https://github.com/szgabsz91/iit-szg/compare/v3.7.0...v3.8.0) (2022-10-17)
 
 
