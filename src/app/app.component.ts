@@ -16,7 +16,7 @@ import { Observable } from 'rxjs';
 import { Course } from './model/course';
 import { AppService } from './services/app/app.service';
 import { MatSidenav } from '@angular/material/sidenav';
-import { MatSelectChange } from '@angular/material/select';
+import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
 import { WINDOW } from './injection-tokens';
 import { hamburgerMenuButtonTrigger } from './animations';
 import { ActivationEnd, Event, Router } from '@angular/router';
