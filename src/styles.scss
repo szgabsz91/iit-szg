@@ -13,13 +13,22 @@ body {
 }
 
 // Language selector
-.mat-option,
+.mat-mdc-option,
 .mat-option .mat-option-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.mat-select-value-text {
+
+.mat-mdc-select-arrow {
+  color: white;
+}
+
+.mat-mdc-select-value-text {
   display: none;
+}
+
+.mat-mdc-select-trigger {
+  height: 48px;
 }

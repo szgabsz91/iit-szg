@@ -1,12 +1,14 @@
 <ng-container *ngIf="labContent$ | async as labContent; else contentLoader">
-  <mat-card *ngIf="lab$ | async as lab">
-    <mat-card-title *ngIf="lab.index > 0; else labTitleWithoutIndex" i18n="lab.title|The title of the lab@@labTitle">
-      Lab {{ lab.index }}: {{ lab.titles.long }}
-    </mat-card-title>
+  <mat-card appearance="outlined" *ngIf="lab$ | async as lab">
+    <mat-card-header>
+      <mat-card-title *ngIf="lab.index > 0; else labTitleWithoutIndex" i18n="lab.title|The title of the lab@@labTitle">
+        Lab {{ lab.index }}: {{ lab.titles.long }}
+      </mat-card-title>
 
-    <ng-template #labTitleWithoutIndex>
-      <mat-card-title>{{ lab.titles.long }}</mat-card-title>
-    </ng-template>
+      <ng-template #labTitleWithoutIndex>
+        <mat-card-title>{{ lab.titles.long }}</mat-card-title>
+      </ng-template>
+    </mat-card-header>
 
     <mat-card-content>
       <markdown [data]="labContent" (ready)="onMarkdownReady()"></markdown>

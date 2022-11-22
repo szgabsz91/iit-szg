@@ -7,7 +7,7 @@
         <target>Menü</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">8,11</context>
+          <context context-type="linenumber">8</context>
         </context-group>
         <note priority="1" from="description">The aria-label of the hamburger menu button</note>
         <note priority="1" from="meaning">app.menu.toggle</note>
@@ -17,7 +17,7 @@
         <target>IIT-SZG</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">26,28</context>
+          <context context-type="linenumber">26</context>
         </context-group>
         <note priority="1" from="description">The title of the application</note>
         <note priority="1" from="meaning">app.title</note>
@@ -27,7 +27,7 @@
         <target>Nyelvválasztó</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">108,111</context>
+          <context context-type="linenumber">108</context>
         </context-group>
         <note priority="1" from="description">The aria-label of the language selector</note>
         <note priority="1" from="meaning">app.languageSelector.toggle</note>
@@ -47,7 +47,7 @@
         <target>{VAR_SELECT, select, hu {Magyar} en {Angol} other {}}</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">123,129</context>
+          <context context-type="linenumber">123</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMenuHome" datatype="html">
@@ -55,7 +55,7 @@
         <target> Főoldal </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">145,151</context>
+          <context context-type="linenumber">145</context>
         </context-group>
         <note priority="1" from="description">The label of the home menu item</note>
         <note priority="1" from="meaning">app.menu.home</note>
@@ -65,7 +65,7 @@
         <target> Lista </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">169,174</context>
+          <context context-type="linenumber">169,170</context>
         </context-group>
         <note priority="1" from="description">The label of the course index pages</note>
         <note priority="1" from="meaning">app.course.index</note>
@@ -85,7 +85,7 @@
         <target> Cím </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course/course/course.component.html</context>
-          <context context-type="linenumber">18,24</context>
+          <context context-type="linenumber">18,19</context>
         </context-group>
         <note priority="1" from="description">The header of the title column on the course page</note>
         <note priority="1" from="meaning">course.table.header.title</note>
@@ -95,7 +95,7 @@
         <target> Főoldal </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">2</context>
+          <context context-type="linenumber">3</context>
         </context-group>
         <note priority="1" from="description">The title of the home page</note>
         <note priority="1" from="meaning">home.title</note>
@@ -105,7 +105,7 @@
         <target> Ez az alkalmazás különböző kurzusokat tartalmaz változó témákban. Minden kurzus gyakorlati anyagokból áll, melyeket ajánlott a megadott sorrendben elvégezni. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">5,8</context>
+          <context context-type="linenumber">7,10</context>
         </context-group>
         <note priority="1" from="description">The first paragraph of the home page</note>
         <note priority="1" from="meaning">home.paragraph1</note>
@@ -115,7 +115,7 @@
         <target>Jelenleg az alkalmazás két kurzust tartalmaz:</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">12</context>
         </context-group>
         <note priority="1" from="description">The second paragraph of the home page</note>
         <note priority="1" from="meaning">home.paragraph2</note>
@@ -125,7 +125,7 @@
         <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/xml&quot;&gt;"/>XML<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: olyan témaköröket érint, mint az XDM, DTD, XML Schema, XML-hez kapcsolódó Java and C# API-k, JSON, RSS, XHTML, XPath, XSLT, XQuery és XML DB. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">14,16</context>
+          <context context-type="linenumber">16,18</context>
         </context-group>
         <note priority="1" from="description">The XML course list item</note>
         <note priority="1" from="meaning">home.courses.xml</note>
@@ -135,7 +135,7 @@
         <target><x id="START_LINK" ctype="x-a" equiv-text="&lt;a routerLink=&quot;courses/db&quot;&gt;"/>Adatbázisok<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>: olyan témaköröket érint, mint az LDAP, JPA, LINQ, ORDBMS, MongoDB, Neo4j és ontológiák. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">19,21</context>
+          <context context-type="linenumber">21,23</context>
         </context-group>
         <note priority="1" from="description">The Databases course list item</note>
         <note priority="1" from="meaning">home.courses.db</note>
@@ -145,7 +145,7 @@
         <target> Minden kurzus egy <x id="START_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;em&gt;"/>Előfeltételek<x id="CLOSE_EMPHASISED_TEXT" ctype="x-em" equiv-text="&lt;/em&gt;"/> anyaggal kezdődik, ami bemutatja a szükséges alkalmazásokat és azok beállítását. Ezek után a gyakorlati anyagokban találhatóak a feladatok, témakörönként csoportosítva. Minden gyakorlati anyag végén megtalálható egy lehetséges megoldása a feladatoknak, de ettől függetlenül ajánlott a feladatokat a megoldás nélkül megoldani. </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/home/home.component.html</context>
-          <context context-type="linenumber">24,29</context>
+          <context context-type="linenumber">26,31</context>
         </context-group>
         <note priority="1" from="description">The third paragraph of the home page</note>
         <note priority="1" from="meaning">home.paragraph3</note>
@@ -155,7 +155,7 @@
         <target> <x id="INTERPOLATION" equiv-text="{{ lab.index }}"/>. gyakorlat: <x id="INTERPOLATION_1" equiv-text="{{ lab.titles.long }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lab/lab/lab.component.html</context>
-          <context context-type="linenumber">4,5</context>
+          <context context-type="linenumber">5,6</context>
         </context-group>
         <note priority="1" from="description">The title of the lab</note>
         <note priority="1" from="meaning">lab.title</note>
