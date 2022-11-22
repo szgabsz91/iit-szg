@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   imports: [MatTableModule],

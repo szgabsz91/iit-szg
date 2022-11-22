@@ -8,7 +8,7 @@ export class AppPage {
   }
 
   get selectedLanguage(): Cypress.Chainable<string | string[]> {
-    return cy.get('.mat-select-value-text span').text();
+    return cy.get('.mat-mdc-select-value-text span').text();
   }
 
   navigateTo(): Cypress.Chainable {
