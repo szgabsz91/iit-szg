@@ -3,10 +3,9 @@ import { AppService } from '../services/app/app.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Course } from '../model/course';
-import { CourseServiceModule } from './course-service.module';
 
 @Injectable({
-  providedIn: CourseServiceModule
+  providedIn: 'root'
 })
 export class CourseService {
   constructor(private readonly appService: AppService) {}

@@ -1,7 +1,6 @@
 import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { AppMaterialModule } from './app-material.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppService } from './services/app/app.service';
 import { of } from 'rxjs';
@@ -12,6 +11,7 @@ import { By } from '@angular/platform-browser';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { ActivationEnd, Router } from '@angular/router';
 import { MatToolbar } from '@angular/material/toolbar';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -72,8 +72,7 @@ describe('AppComponent', () => {
     } as any;
 
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RouterTestingModule, HttpClientTestingModule, AppMaterialModule],
+      imports: [RouterTestingModule, HttpClientTestingModule, NoopAnimationsModule],
       providers: [
         { provide: WINDOW, useValue: mockWindow },
         { provide: LOCALE_ID, useValue: 'hu' }
