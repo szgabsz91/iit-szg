@@ -4,7 +4,8 @@ import { ReplaySubject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
 @Directive({
-  selector: '[appScrollContentAfterNavigation]'
+  selector: '[appScrollContentAfterNavigation]',
+  standalone: true
 })
 export class ScrollContentAfterNavigationDirective implements OnInit, OnDestroy {
   private readonly destroyed$ = new ReplaySubject();

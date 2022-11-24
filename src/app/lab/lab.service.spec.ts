@@ -2,7 +2,6 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { LabService } from './lab.service';
-import { CourseServiceModule } from '../course/course-service.module';
 import { Course } from '../model/course';
 import { Lab } from '../model/lab';
 
@@ -58,7 +57,7 @@ describe('LabService', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule, CourseServiceModule],
+      imports: [HttpClientTestingModule],
       providers: [LabService]
     })
   );

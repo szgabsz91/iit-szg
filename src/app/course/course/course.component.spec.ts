@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CourseComponent } from './course.component';
 import { CourseService } from '../course.service';
-import { CourseMaterialModule } from '../course-material.module';
-import { CourseServiceModule } from '../course-service.module';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -50,8 +48,7 @@ describe('CourseComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [CourseComponent],
-      imports: [RouterTestingModule, HttpClientTestingModule, CourseMaterialModule, CourseServiceModule],
+      imports: [RouterTestingModule, HttpClientTestingModule],
       providers: [
         {
           provide: ActivatedRoute,

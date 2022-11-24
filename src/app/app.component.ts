@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -15,19 +15,40 @@ import { MediaMatcher } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Course } from './model/course';
 import { AppService } from './services/app/app.service';
-import { MatSidenav } from '@angular/material/sidenav';
-import { MatSelectChange } from '@angular/material/select';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
 import { WINDOW } from './injection-tokens';
 import { hamburgerMenuButtonTrigger } from './animations';
-import { ActivationEnd, Event, Router } from '@angular/router';
+import { ActivationEnd, Event, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter, first, map } from 'rxjs/operators';
+import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { ScrollContentAfterNavigationDirective } from './directives/scroll-content-after-navigation/scroll-content-after-navigation.directive';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [hamburgerMenuButtonTrigger]
+  animations: [hamburgerMenuButtonTrigger],
+  standalone: true,
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatListModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    RouterLinkActive,
+    RouterLink,
+    RouterOutlet,
+    ScrollContentAfterNavigationDirective
+  ]
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
   @ViewChild(MatSidenav, { static: true })

@@ -2,11 +2,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
-
 import { ScrollContentAfterNavigationDirective } from './scroll-content-after-navigation.directive';
 
 @Component({
-  template: '<p appScrollContentAfterNavigation #content></p>'
+  template: '<p appScrollContentAfterNavigation #content></p>',
+  standalone: true,
+  imports: [ScrollContentAfterNavigationDirective]
 })
 class WrapperComponent {
   @ViewChild('content')
@@ -25,7 +26,6 @@ describe('ScrollContentAfterNavigationDirective', () => {
     };
 
     TestBed.configureTestingModule({
-      declarations: [WrapperComponent, ScrollContentAfterNavigationDirective],
       providers: [{ provide: Router, useValue: router }]
     }).compileComponents();
   }));

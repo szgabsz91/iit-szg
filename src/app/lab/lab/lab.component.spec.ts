@@ -1,8 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
 import { MarkdownComponent, MarkdownModule, MarkdownService } from 'ngx-markdown';
-import { LabMaterialModule } from '../lab-material.module';
-import { CourseServiceModule } from 'src/app/course/course-service.module';
 import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
@@ -39,14 +37,11 @@ describe('LabComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [LabComponent],
       imports: [
         HttpClientTestingModule,
         MarkdownModule.forRoot({
           loader: HttpClient
-        }),
-        LabMaterialModule,
-        CourseServiceModule
+        })
       ],
       providers: [
         MarkdownService,

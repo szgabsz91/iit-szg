@@ -3,8 +3,6 @@ import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { of, EMPTY } from 'rxjs';
 import { Course } from '../model/course';
-import { CourseRoutingModule } from './course-routing.module';
-import { CourseServiceModule } from './course-service.module';
 import { CourseResolver } from './course.resolver';
 import { CourseService } from './course.service';
 
@@ -53,7 +51,8 @@ describe('CourseResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CourseRoutingModule, CourseServiceModule, HttpClientTestingModule]
+      imports: [HttpClientTestingModule],
+      providers: [CourseResolver]
     });
   });
 

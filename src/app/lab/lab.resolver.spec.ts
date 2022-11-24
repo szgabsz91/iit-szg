@@ -5,9 +5,6 @@ import { of, EMPTY } from 'rxjs';
 import { Lab } from '../model/lab';
 import { LabService } from './lab.service';
 import { LabResolver } from './lab.resolver';
-import { LabRoutingModule } from './lab-routing.module';
-import { LabModule } from './lab.module';
-import { CourseServiceModule } from '../course/course-service.module';
 
 describe('LabResolver', () => {
   let labResolver: LabResolver;
@@ -41,7 +38,8 @@ describe('LabResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [LabRoutingModule, LabModule, CourseServiceModule, HttpClientTestingModule]
+      imports: [HttpClientTestingModule],
+      providers: [LabService, LabResolver]
     });
   });
 
