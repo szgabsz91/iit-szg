@@ -1,9 +1,5 @@
 @use '../iit-szg-variables.scss' as variables;
 
-.main-menu-link .mat-icon {
-  color: variables.$primary-color;
-}
-
 mat-accordion mat-nav-list.lab-list a.mat-mdc-list-item {
   span.mdc-list-item__content {
     padding: 0;
