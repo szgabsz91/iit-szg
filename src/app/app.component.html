@@ -102,6 +102,7 @@
 
     <mat-select
       [(value)]="selectedLocale"
+      [hideSingleSelectionIndicator]="true"
       (selectionChange)="onSelectedLanguageChanged($event)"
       class="language-selector"
       [ngClass]="'language-selector-selected-' + selectedLocale"

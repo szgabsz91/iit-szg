@@ -57,6 +57,8 @@ mat-toolbar {
 }
 
 .language-selector {
+  --mat-select-enabled-arrow-color: white;
+
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -106,6 +108,9 @@ mat-sidenav-container {
 }
 
 .home-page-link {
+  --mdc-list-list-item-leading-icon-color: #{variables.$primary-color};
+  --mdc-list-list-item-hover-leading-icon-color: #{variables.$primary-color};
+
   margin-bottom: 16px;
 }
 
