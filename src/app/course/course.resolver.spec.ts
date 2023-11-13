@@ -1,14 +1,12 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { of, EMPTY } from 'rxjs';
+import { of, EMPTY, Observable } from 'rxjs';
 import { Course } from '../model/course';
-import { CourseResolver } from './course.resolver';
 import { CourseService } from './course.service';
+import { resolveCourse } from './course.resolver';
 
 describe('CourseResolver', () => {
-  let courseResolver: CourseResolver;
-
   const mockedCourse: Course = {
     id: 'course1',
     name: 'Course 1',
@@ -51,8 +49,7 @@ describe('CourseResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [CourseResolver]
+      imports: [HttpClientTestingModule]
     });
   });
 
@@ -67,15 +64,15 @@ describe('CourseResolver', () => {
 
       return EMPTY;
     });
-
-    courseResolver = TestBed.inject(CourseResolver);
   });
 
   it('should fetch the appropriate Course model based on the courseId route parameter', done => {
-    const result = courseResolver.resolve(activatedRouteSnapshot);
-    result.subscribe((course: Course) => {
-      expect(course).toEqual(mockedCourse);
-      done();
+    TestBed.runInInjectionContext(() => {
+      const result = resolveCourse(activatedRouteSnapshot, undefined) as Observable<Course>;
+      result.subscribe((course: Course) => {
+        expect(course).toEqual(mockedCourse);
+        done();
+      });
     });
   });
 });

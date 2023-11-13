@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 import { LabComponent } from './lab/lab.component';
-import { LabResolver } from './lab.resolver';
+import { resolveLab } from './lab.resolver';
 import { LabService } from './lab.service';
 import { importProvidersFrom, SecurityContext } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
@@ -11,10 +11,9 @@ export const labRoutes: Routes = [
     path: '',
     component: LabComponent,
     resolve: {
-      lab: LabResolver
+      lab: resolveLab
     },
     providers: [
-      LabResolver,
       LabService,
       importProvidersFrom(
         MarkdownModule.forRoot({
