@@ -1,16 +1,12 @@
-import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot } from '@angular/router';
+import { inject } from '@angular/core';
+import { ActivatedRouteSnapshot, ResolveFn } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Lab } from '../model/lab';
 import { LabService } from './lab.service';
 
-@Injectable()
-export class LabResolver {
-  constructor(private readonly labService: LabService) {}
-
-  resolve(activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Lab> {
-    const courseId = activatedRouteSnapshot.paramMap.get('courseId');
-    const labIndex = +activatedRouteSnapshot.paramMap.get('labIndex');
-    return this.labService.getLab(courseId, labIndex);
-  }
-}
+export const resolveLab: ResolveFn<Lab> = (activatedRouteSnapshot: ActivatedRouteSnapshot): Observable<Lab> => {
+  const labService = inject(LabService);
+  const courseId = activatedRouteSnapshot.paramMap.get('courseId');
+  const labIndex = +activatedRouteSnapshot.paramMap.get('labIndex');
+  return labService.getLab(courseId, labIndex);
+};

@@ -1,14 +1,12 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot } from '@angular/router';
-import { of, EMPTY } from 'rxjs';
+import { of, EMPTY, Observable } from 'rxjs';
 import { Lab } from '../model/lab';
 import { LabService } from './lab.service';
-import { LabResolver } from './lab.resolver';
+import { resolveLab } from './lab.resolver';
 
-describe('LabResolver', () => {
-  let labResolver: LabResolver;
-
+describe('resolveLab', () => {
   const mockedLab: Lab = {
     courseId: 'course1',
     index: 2,
@@ -39,7 +37,7 @@ describe('LabResolver', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [LabService, LabResolver]
+      providers: [LabService]
     });
   });
 
@@ -55,15 +53,15 @@ describe('LabResolver', () => {
 
       return EMPTY;
     });
-
-    labResolver = TestBed.inject(LabResolver);
   });
 
   it('should fetch the appropriate Lab model based on the courseId and labIndex route parameters', done => {
-    const result = labResolver.resolve(activatedRouteSnapshot);
-    result.subscribe((lab: Lab) => {
-      expect(lab).toEqual(mockedLab);
-      done();
+    TestBed.runInInjectionContext(() => {
+      const result = resolveLab(activatedRouteSnapshot, undefined) as Observable<Lab>;
+      result.subscribe((lab: Lab) => {
+        expect(lab).toEqual(mockedLab);
+        done();
+      });
     });
   });
 });
