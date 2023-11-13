@@ -85,7 +85,8 @@ describe('AppComponent', () => {
     spyOn(appService, 'getCourses').and.returnValue(of(mockedCourses));
 
     const router = TestBed.inject(Router);
-    (router as any).events = of(
+    // eslint-disable-next-line no-underscore-dangle
+    (router as any)._events = of(
       new ActivationEnd({
         params: {
           courseId: 'course2'
