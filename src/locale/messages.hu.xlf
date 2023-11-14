@@ -27,27 +27,27 @@
         <target>Nyelvválasztó</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">108</context>
+          <context context-type="linenumber">109</context>
         </context-group>
         <note priority="1" from="description">The aria-label of the language selector</note>
         <note priority="1" from="meaning">app.languageSelector.toggle</note>
       </trans-unit>
       <trans-unit id="appLanguageSelector" datatype="html">
-        <source> <x id="ICU" equiv-text="{locale, select, hu {Hungarian} en {English} other {}}"/> </source>
-        <target> <x id="ICU" equiv-text="{locale, select, hu {Magyar} en {Angol} other {}}"/> </target>
+        <source> <x id="ICU" equiv-text="{ locale, select, hu {Hungarian} en {English} other {} }"/> </source>
+        <target> <x id="ICU" equiv-text="{ locale, select, hu {Magyar} en {Angol} other {} }"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">123,124</context>
+          <context context-type="linenumber">123,125</context>
         </context-group>
         <note priority="1" from="description">The selected language in the language selector</note>
         <note priority="1" from="meaning">app.languageSelector</note>
       </trans-unit>
-      <trans-unit id="a7701aa14ec6e648324ca9f0106214f342021f3f" datatype="html">
-        <source>{VAR_SELECT, select, hu {Hungarian} en {English} other {}}</source>
-        <target>{VAR_SELECT, select, hu {Magyar} en {Angol} other {}}</target>
+      <trans-unit id="99726446a0b223082faa2f52f43347181b0ef4ed" datatype="html">
+        <source>{ VAR_SELECT, select, hu {Hungarian} en {English} other {} }</source>
+        <target>{ VAR_SELECT, select, hu {Magyar} en {Angol} other {} }</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">123</context>
+          <context context-type="linenumber">124</context>
         </context-group>
       </trans-unit>
       <trans-unit id="appMenuHome" datatype="html">
@@ -55,7 +55,7 @@
         <target> Főoldal </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">145</context>
+          <context context-type="linenumber">146</context>
         </context-group>
         <note priority="1" from="description">The label of the home menu item</note>
         <note priority="1" from="meaning">app.menu.home</note>
@@ -65,7 +65,7 @@
         <target> Lista </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">169,170</context>
+          <context context-type="linenumber">169,171</context>
         </context-group>
         <note priority="1" from="description">The label of the course index pages</note>
         <note priority="1" from="meaning">app.course.index</note>
@@ -75,7 +75,7 @@
         <target>© Szabó Gábor <x id="INTERPOLATION" equiv-text="{{ currentYear }}"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.html</context>
-          <context context-type="linenumber">192,193</context>
+          <context context-type="linenumber">193,194</context>
         </context-group>
         <note priority="1" from="description">The footer of the application</note>
         <note priority="1" from="meaning">app.footer</note>
@@ -85,7 +85,7 @@
         <target> Cím </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/course/course/course.component.html</context>
-          <context context-type="linenumber">18,19</context>
+          <context context-type="linenumber">17,19</context>
         </context-group>
         <note priority="1" from="description">The header of the title column on the course page</note>
         <note priority="1" from="meaning">course.table.header.title</note>
@@ -155,7 +155,7 @@
         <target> <x id="INTERPOLATION" equiv-text="{{ lab.index }}"/>. gyakorlat: <x id="INTERPOLATION_1" equiv-text="{{ lab.titles.long }}"/> </target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/lab/lab/lab.component.html</context>
-          <context context-type="linenumber">5,6</context>
+          <context context-type="linenumber">4,6</context>
         </context-group>
         <note priority="1" from="description">The title of the lab</note>
         <note priority="1" from="meaning">lab.title</note>
@@ -185,7 +185,7 @@
         <target><x id="courseName" equiv-text="course.name"/></target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/services/seo/app-title-strategy/app-title-strategy.service.ts</context>
-          <context context-type="linenumber">39</context>
+          <context context-type="linenumber">42</context>
         </context-group>
         <note priority="1" from="description">The title of a given course</note>
         <note priority="1" from="meaning">app.titles.course</note>
