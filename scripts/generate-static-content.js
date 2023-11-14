@@ -5,10 +5,9 @@ const crypto = require('crypto');
 const fs = require('fs/promises');
 const minimist = require('minimist');
 const path = require('path');
-const { promisify } = require('util');
 
 const { createWriteStream } = require('fs');
-const glob = promisify(require('glob'));
+const { glob } = require('glob');
 
 const supportedLocaleIds = ['en', 'hu'];
 const assetsSourceFolder = path.resolve('src', 'assets-source');
