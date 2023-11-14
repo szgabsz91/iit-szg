@@ -10,7 +10,7 @@ import { Course } from '../../model/course';
   providedIn: 'root'
 })
 export class AppService {
-  private readonly courseCache$: Observable<Course[]> = this.httpClient
+  private readonly courseCache$: Observable<readonly Course[]> = this.httpClient
     .get<Metadata>(`./assets/${METADATA_FILENAME}`)
     .pipe(
       map(metadata => metadata.courses),
@@ -19,7 +19,7 @@ export class AppService {
 
   constructor(private readonly httpClient: HttpClient) {}
 
-  getCourses(): Observable<Course[]> {
+  getCourses(): Observable<readonly Course[]> {
     return this.courseCache$;
   }
 }

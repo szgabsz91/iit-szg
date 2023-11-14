@@ -12,8 +12,6 @@ import {
   HostListener
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { Course } from './model/course';
 import { AppService } from './services/app/app.service';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatSelectChange, MatSelectModule } from '@angular/material/select';
@@ -56,7 +54,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   readonly mobileQuery: MediaQueryList;
   readonly currentYear: number = new Date().getFullYear();
-  readonly courses$: Observable<Course[]> = this.appService.getCourses();
+  readonly courses$ = this.appService.getCourses();
   readonly activeCourseId$ = this.router.events.pipe(
     filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
     map((event: ActivationEnd) => event.snapshot.params),
