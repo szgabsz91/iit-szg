@@ -99,21 +99,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "iit-szg:build"
+            "buildTarget": "iit-szg:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "iit-szg:build:production"
+              "buildTarget": "iit-szg:build:production"
             },
             "hu": {
-              "browserTarget": "iit-szg:build:hu"
+              "buildTarget": "iit-szg:build:hu"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "iit-szg:build"
+            "buildTarget": "iit-szg:build"
           }
         },
         "test": {
