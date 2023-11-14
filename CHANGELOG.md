@@ -1,3 +1,16 @@
+# [3.10.0](https://github.com/szgabsz91/iit-szg/compare/v3.9.0...v3.10.0) (2023-11-14)
+
+
+### Bug Fixes
+
+* [#300](https://github.com/szgabsz91/iit-szg/issues/300) fix the application design after the upgrade ([221e81c](https://github.com/szgabsz91/iit-szg/commit/221e81cb6316e8b6b7abed7ed45b0898cea5499f))
+
+
+### Features
+
+* [#300](https://github.com/szgabsz91/iit-szg/issues/300) upgrade Angular core and CLI to version 16 ([f4c06c6](https://github.com/szgabsz91/iit-szg/commit/f4c06c64113b58feadc0d3c8535c9b34ed4946da))
+* [#300](https://github.com/szgabsz91/iit-szg/issues/300) upgrade Angular Material to version 16 ([3984179](https://github.com/szgabsz91/iit-szg/commit/398417932c34d3b2b90eeec86ec2e749b71d946c))
+
 # [3.9.0](https://github.com/szgabsz91/iit-szg/compare/v3.8.0...v3.9.0) (2022-11-22)
 
 
