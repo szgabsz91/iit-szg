@@ -13,7 +13,10 @@ const homeTitle = $localize`:app.titles.home|The title of the home page@@appTitl
 export class AppTitleStrategyService extends TitleStrategy {
   private courses: Course[];
 
-  constructor(@Inject(DOCUMENT) private readonly document: Document, private readonly appService: AppService) {
+  constructor(
+    @Inject(DOCUMENT) private readonly document: Document,
+    private readonly appService: AppService
+  ) {
     super();
     this.appService
       .getCourses()

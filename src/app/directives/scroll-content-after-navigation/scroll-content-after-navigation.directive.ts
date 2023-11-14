@@ -1,6 +1,6 @@
 import { Directive, ElementRef, OnDestroy, OnInit } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
-import { ReplaySubject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
 @Directive({
@@ -8,9 +8,12 @@ import { filter, takeUntil } from 'rxjs/operators';
   standalone: true
 })
 export class ScrollContentAfterNavigationDirective implements OnInit, OnDestroy {
-  private readonly destroyed$ = new ReplaySubject();
+  private readonly destroyed$ = new Subject<void>();
 
-  constructor(private readonly elementRef: ElementRef, private readonly router: Router) {}
+  constructor(
+    private readonly elementRef: ElementRef,
+    private readonly router: Router
+  ) {}
 
   ngOnInit(): void {
     this.router.events

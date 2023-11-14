@@ -22,7 +22,10 @@ export class LabComponent implements OnInit {
   readonly lab$: Observable<Lab> = this.activatedRoute.data.pipe(map((data: Data) => data.lab));
   labContent$!: Observable<string>;
 
-  constructor(private readonly activatedRoute: ActivatedRoute, private readonly markdownService: MarkdownService) {}
+  constructor(
+    private readonly activatedRoute: ActivatedRoute,
+    private readonly markdownService: MarkdownService
+  ) {}
 
   ngOnInit(): void {
     this.labContent$ = this.lab$.pipe(
