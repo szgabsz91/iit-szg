@@ -99,9 +99,12 @@ describe('LabComponent', () => {
       expect(title).toEqual(`Lab ${mockedLab.index}: ${mockedLab.titles.long}`);
     });
 
-    it('should render the appropriate lab markdown content', () => {
-      const markdownContentLength = compiled.querySelectorAll('markdown *').length;
-      expect(markdownContentLength).toBeGreaterThan(0);
+    it('should render the appropriate lab markdown content', (done: Function) => {
+      setTimeout(() => {
+        const markdownContentLength = compiled.querySelectorAll('markdown *').length;
+        expect(markdownContentLength).toBeGreaterThan(0);
+        done();
+      }, 500);
     });
   });
 });
