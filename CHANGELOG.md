@@ -1,3 +1,20 @@
+# [3.11.0](https://github.com/szgabsz91/iit-szg/compare/v3.10.0...v3.11.0) (2023-11-14)
+
+
+### Bug Fixes
+
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) fix Angular Material related problems ([82dea4c](https://github.com/szgabsz91/iit-szg/commit/82dea4c375200ff5762481a32274dca3a0acb54a))
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) fix i18n problems ([96b3b3c](https://github.com/szgabsz91/iit-szg/commit/96b3b3ce240c3e749d945f54199891e9f7c2a800))
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) fix linting problems ([0622eda](https://github.com/szgabsz91/iit-szg/commit/0622edaad9c367c4abd7ee6fea4da83846e6bb01))
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) fix static content generation compilation problems ([936f13e](https://github.com/szgabsz91/iit-szg/commit/936f13e994dbc44c44bd4354ae5f8cc24aeda101))
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) fix typing problems ([1253688](https://github.com/szgabsz91/iit-szg/commit/1253688880b36b208ee44871408e5dd02f204a31))
+
+
+### Features
+
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) upgrade Angular core and CLI to version 17 ([b36a469](https://github.com/szgabsz91/iit-szg/commit/b36a469764f7b1788db5b78532d8c262c36d9175))
+* [#301](https://github.com/szgabsz91/iit-szg/issues/301) upgrade Angular Material to version 17 ([9f21a3f](https://github.com/szgabsz91/iit-szg/commit/9f21a3fe909aea93bd24e575cb5ba3289f0801dd))
+
 # [3.10.0](https://github.com/szgabsz91/iit-szg/compare/v3.9.0...v3.10.0) (2023-11-14)
 
 
