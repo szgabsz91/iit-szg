@@ -1,7 +1,7 @@
-@use '@angular/material/_theming' as material;
+@use '@angular/material' as material;
 @use './iit-szg-variables.scss' as variables;
 
-@include material.mat-core();
+@include material.core();
 
 $color-palette-primary: (
   50: transparent,
@@ -69,10 +69,10 @@ $color-palette-accent: (
   )
 );
 
-$workshop-primary: material.mat-palette($color-palette-primary);
-$workshop-accent: material.mat-palette($color-palette-accent);
+$workshop-primary: material.define-palette($color-palette-primary);
+$workshop-accent: material.define-palette($color-palette-accent);
 
-$workshop-theme: material.mat-light-theme(
+$workshop-theme: material.define-light-theme(
   (
     color: (
       primary: $workshop-primary,
@@ -81,4 +81,4 @@ $workshop-theme: material.mat-light-theme(
   )
 );
 
-@include material.angular-material-theme($workshop-theme);
+@include material.all-component-themes($workshop-theme);
