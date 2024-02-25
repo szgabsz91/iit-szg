@@ -4,7 +4,9 @@
   <ng-container matColumnDef="index">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let lab">
-      <ng-container *ngIf="lab.index > 0">{{ lab.index }}</ng-container>
+      @if (lab.index > 0) {
+        {{ lab.index }}
+      }
     </td>
   </ng-container>
 

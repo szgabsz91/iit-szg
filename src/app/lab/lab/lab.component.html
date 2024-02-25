@@ -1,16 +1,13 @@
 <ng-container *ngIf="labContent() | async as labContent; else contentLoader">
   <mat-card appearance="outlined">
     <mat-card-header>
-      <mat-card-title
-        *ngIf="lab().index > 0; else labTitleWithoutIndex"
-        i18n="lab.title|The title of the lab@@labTitle"
-      >
-        Lab {{ lab().index }}: {{ lab().titles.long }}
-      </mat-card-title>
-
-      <ng-template #labTitleWithoutIndex>
+      @if (lab().index > 0) {
+        <mat-card-title i18n="lab.title|The title of the lab@@labTitle">
+          Lab {{ lab().index }}: {{ lab().titles.long }}
+        </mat-card-title>
+      } @else {
         <mat-card-title>{{ lab().titles.long }}</mat-card-title>
-      </ng-template>
+      }
     </mat-card-header>
 
     <mat-card-content>
