@@ -1,3 +1,10 @@
+# [3.13.0](https://github.com/szgabsz91/iit-szg/compare/v3.12.0...v3.13.0) (2024-02-25)
+
+
+### Features
+
+* [#312](https://github.com/szgabsz91/iit-szg/issues/312) introduce self-closing tags ([82eefd3](https://github.com/szgabsz91/iit-szg/commit/82eefd316b4088dd45abb618fd59f4daa29bff4c))
+
 # [3.12.0](https://github.com/szgabsz91/iit-szg/compare/v3.11.0...v3.12.0) (2024-02-25)
 
 
