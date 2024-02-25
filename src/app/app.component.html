@@ -1,17 +1,18 @@
 <div class="container" [class.is-mobile]="mobileQuery.matches">
   <mat-toolbar color="primary" [class.is-offline]="isOffline">
-    <button
-      *ngIf="mobileQuery.matches"
-      @hamburgerMenuButtonTrigger
-      class="hamburger-menu-icon-button"
-      mat-icon-button
-      aria-label="Toggle menu"
-      i18n-aria-label="app.menu.toggle|The aria-label of the hamburger menu button@@appMenuToggle"
-      [attr.aria-expanded]="sidenav.opened"
-      (click)="toggleSidenav()"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
+    @if (mobileQuery.matches) {
+      <button
+        @hamburgerMenuButtonTrigger
+        class="hamburger-menu-icon-button"
+        mat-icon-button
+        aria-label="Toggle menu"
+        i18n-aria-label="app.menu.toggle|The aria-label of the hamburger menu button@@appMenuToggle"
+        [attr.aria-expanded]="sidenav.opened"
+        (click)="toggleSidenav()"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+    }
 
     <h1 class="app-title" [class.is-mobile]="mobileQuery.matches">
       <a routerLink="/" class="app-title-link">
@@ -109,21 +110,23 @@
       aria-label="Language selector"
       i18n-aria-label="app.languageSelector.toggle|The aria-label of the language selector@@appLanguageSelectorToggle"
     >
-      <mat-option *ngFor="let locale of locales" [value]="locale">
-        <img
-          [src]="'assets/flags/' + locale + '.png'"
-          [alt]="removeHtmlComments(alt.innerHTML)"
-          width="32"
-          height="32"
-        />
-        <span
-          #alt
-          class="sr-only"
-          i18n="app.languageSelector|The selected language in the language selector@@appLanguageSelector"
-        >
-          { locale, select, hu {Hungarian} en {English} other {} }
-        </span>
-      </mat-option>
+      @for (locale of locales; track locale) {
+        <mat-option [value]="locale" class="language-selector-option">
+          <img
+            [src]="'assets/flags/' + locale + '.png'"
+            [alt]="removeHtmlComments(alt.innerHTML)"
+            width="32"
+            height="32"
+          />
+          <span
+            #alt
+            class="sr-only"
+            i18n="app.languageSelector|The selected language in the language selector@@appLanguageSelector"
+          >
+            { locale, select, hu {Hungarian} en {English} other {} }
+          </span>
+        </mat-option>
+      }
     </mat-select>
   </mat-toolbar>
 
@@ -148,39 +151,39 @@
       </mat-nav-list>
 
       <mat-accordion>
-        <mat-expansion-panel
-          *ngFor="let course of courses$ | async"
-          [expanded]="course.id === (activeCourseId$ | async)"
-        >
-          <mat-expansion-panel-header>
-            <mat-panel-title class="main-menu-link">
-              {{ course.name }}
-            </mat-panel-title>
-          </mat-expansion-panel-header>
+        @for (course of courses$ | async; track course.id) {
+          <mat-expansion-panel [expanded]="course.id === (activeCourseId$ | async)">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="main-menu-link">
+                {{ course.name }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
 
-          <mat-nav-list class="lab-list">
-            <a
-              mat-list-item
-              [routerLink]="['/courses', course.id]"
-              routerLinkActive="active"
-              [routerLinkActiveOptions]="{ exact: true }"
-              i18n="app.course.index|The label of the course index pages@@appCourseIndex"
-              (click)="closeSidenavOnMobile()"
-            >
-              Index
-            </a>
+            <mat-nav-list class="lab-list">
+              <a
+                mat-list-item
+                [routerLink]="['/courses', course.id]"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                i18n="app.course.index|The label of the course index pages@@appCourseIndex"
+                (click)="closeSidenavOnMobile()"
+              >
+                Index
+              </a>
 
-            <a
-              mat-list-item
-              [routerLink]="['/courses', course.id, 'labs', lab.index]"
-              routerLinkActive="active"
-              (click)="closeSidenavOnMobile()"
-              *ngFor="let lab of course.labs"
-            >
-              {{ lab.titles.short || lab.titles.long }}
-            </a>
-          </mat-nav-list>
-        </mat-expansion-panel>
+              @for (lab of course.labs; track lab.index) {
+                <a
+                  mat-list-item
+                  [routerLink]="['/courses', course.id, 'labs', lab.index]"
+                  routerLinkActive="active"
+                  (click)="closeSidenavOnMobile()"
+                >
+                  {{ lab.titles.short || lab.titles.long }}
+                </a>
+              }
+            </mat-nav-list>
+          </mat-expansion-panel>
+        }
       </mat-accordion>
     </mat-sidenav>
 
