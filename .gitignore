@@ -62,6 +62,7 @@ obj
 /src/locale/messages.xlf
 
 # E2E testing
+/cypress/downloads
 /cypress/results
 
 # Deployment
