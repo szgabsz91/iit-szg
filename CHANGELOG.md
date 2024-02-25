@@ -1,3 +1,10 @@
+# [3.16.0](https://github.com/szgabsz91/iit-szg/compare/v3.15.0...v3.16.0) (2024-02-25)
+
+
+### Features
+
+* [#315](https://github.com/szgabsz91/iit-szg/issues/315) lazy-load images in app shell ([e0ce1ab](https://github.com/szgabsz91/iit-szg/commit/e0ce1ab369c1b0de3c2f041e3d5b12002864c14c))
+
 # [3.15.0](https://github.com/szgabsz91/iit-szg/compare/v3.14.0...v3.15.0) (2024-02-25)
 
 
