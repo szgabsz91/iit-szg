@@ -10,7 +10,7 @@ import { provideRouter, RouterModule, TitleStrategy, withComponentInputBinding }
 import { HomeComponent } from './app/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WINDOW } from './app/injection-tokens';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppTitleStrategyService } from './app/services/seo/app-title-strategy/app-title-strategy.service';
 import { MetaService } from './app/services/seo/meta/meta.service';
@@ -48,7 +48,7 @@ bootstrapApplication(AppComponent, {
         registrationStrategy: 'registerWhenStable:30000'
       })
     ),
-    importProvidersFrom(BrowserAnimationsModule),
+    provideAnimationsAsync(),
     importProvidersFrom(HttpClientModule),
     importProvidersFrom(
       RouterModule.forRoot([], {
