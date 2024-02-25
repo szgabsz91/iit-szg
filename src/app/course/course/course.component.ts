@@ -10,7 +10,7 @@ import { Lab } from '../../model/lab';
 @Component({
   selector: 'app-course',
   templateUrl: './course.component.html',
-  styleUrls: ['./course.component.scss'],
+  styleUrl: './course.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [CommonModule, MatTableModule]

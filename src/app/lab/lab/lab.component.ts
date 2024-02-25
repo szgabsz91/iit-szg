@@ -13,7 +13,7 @@ declare function prettyPrint(): void;
 @Component({
   selector: 'app-lab',
   templateUrl: './lab.component.html',
-  styleUrls: ['./lab.component.scss'],
+  styleUrl: './lab.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [CommonModule, MarkdownModule, MatCardModule, MatProgressSpinnerModule]
