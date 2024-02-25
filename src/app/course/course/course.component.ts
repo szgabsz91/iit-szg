@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { ActivatedRoute, Router, Data } from '@angular/router';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../../model/course';
 import { Lab } from '../../model/lab';
 
@@ -17,7 +15,9 @@ import { Lab } from '../../model/lab';
 })
 export class CourseComponent {
   readonly columns = ['index', 'title'];
-  readonly course$: Observable<Course> = this.activatedRoute.data.pipe(map((data: Data) => data.course));
+
+  @Input({ required: true })
+  readonly course!: Course;
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,

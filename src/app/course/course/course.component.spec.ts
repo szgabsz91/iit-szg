@@ -40,11 +40,7 @@ describe('CourseComponent', () => {
       }
     ]
   };
-  const activatedRoute = {
-    data: of({
-      course: mockedCourse
-    })
-  };
+  const activatedRoute = {};
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -72,6 +68,7 @@ describe('CourseComponent', () => {
 
     fixture = TestBed.createComponent(CourseComponent);
     courseComponent = fixture.debugElement.componentInstance;
+    (courseComponent as any).course = mockedCourse;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
     router = TestBed.inject(Router);
@@ -80,9 +77,7 @@ describe('CourseComponent', () => {
   describe('component', () => {
     describe('properties', () => {
       it('should contain the appropriate course', () => {
-        courseComponent.course$.subscribe(course => {
-          expect(course).toEqual(mockedCourse);
-        });
+        expect(courseComponent.course).toEqual(mockedCourse);
       });
 
       it('should contain the appropriate columns', () => {
