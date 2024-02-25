@@ -1,20 +1,20 @@
+import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CourseComponent } from './course.component';
-import { CourseService } from '../course.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { of, EMPTY } from 'rxjs';
 import { Course } from '../../model/course';
 import { Lab } from '../../model/lab';
+import { By } from '@angular/platform-browser';
 
-describe('CourseComponent', () => {
-  let fixture: ComponentFixture<CourseComponent>;
-  let courseComponent: CourseComponent;
-  let compiled: HTMLElement;
-  let router: Router;
-
-  const mockedCourse: Course = {
+@Component({
+  template: ` <app-course [course]="course" /> `,
+  standalone: true,
+  imports: [CourseComponent]
+})
+class CourseWrapperComponent {
+  course: Course = {
     id: 'course1',
     name: 'Course 1',
     description: 'Course 1 Description',
@@ -40,46 +40,36 @@ describe('CourseComponent', () => {
       }
     ]
   };
-  const activatedRoute = {};
+}
+
+describe('CourseComponent', () => {
+  let wrapperFixture: ComponentFixture<CourseWrapperComponent>;
+  let wrapperComponent: CourseWrapperComponent;
+  let courseComponent: CourseComponent;
+  let router: Router;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientTestingModule],
+      imports: [CourseWrapperComponent, RouterTestingModule, HttpClientTestingModule],
       providers: [
         {
           provide: ActivatedRoute,
-          useValue: activatedRoute
+          useValue: {}
         }
       ]
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    const courseService = TestBed.inject(CourseService);
-    spyOn(courseService, 'getCourse').and.callFake((...args) => {
-      const courseId = args[0];
-
-      if (courseId === mockedCourse.id) {
-        return of(mockedCourse);
-      }
-
-      return EMPTY;
-    });
-
-    fixture = TestBed.createComponent(CourseComponent);
-    courseComponent = fixture.debugElement.componentInstance;
-    (courseComponent as any).course = mockedCourse;
-    fixture.detectChanges();
-    compiled = fixture.debugElement.nativeElement;
+    wrapperFixture = TestBed.createComponent(CourseWrapperComponent);
+    wrapperComponent = wrapperFixture.debugElement.componentInstance;
+    courseComponent = wrapperFixture.debugElement.query(By.directive(CourseComponent)).componentInstance;
     router = TestBed.inject(Router);
+    wrapperFixture.detectChanges();
   });
 
   describe('component', () => {
     describe('properties', () => {
-      it('should contain the appropriate course', () => {
-        expect(courseComponent.course).toEqual(mockedCourse);
-      });
-
       it('should contain the appropriate columns', () => {
         expect(courseComponent.columns).toEqual(['index', 'title']);
       });
@@ -108,13 +98,15 @@ describe('CourseComponent', () => {
 
   describe('template', () => {
     it('should render the appropriate course name', () => {
-      const courseName = compiled.querySelector('h2').textContent;
-      expect(courseName).toEqual(mockedCourse.name);
+      const courseName = wrapperFixture.debugElement.query(By.css('h2')).nativeElement.textContent;
+      expect(courseName).toEqual(wrapperComponent.course.name);
     });
 
     it('should render the appropriate labs in a table', () => {
-      const labTitles = Array.from(compiled.querySelectorAll('tbody td:last-child')).map(el => el.textContent);
-      const expectedLabTitles = mockedCourse.labs.map(lab => lab.titles.long);
+      const labTitles = wrapperFixture.debugElement
+        .queryAll(By.css('tbody td:last-child'))
+        .map((el: DebugElement) => el.nativeElement.textContent);
+      const expectedLabTitles = wrapperComponent.course.labs.map(lab => lab.titles.long);
       expect(labTitles).toEqual(expectedLabTitles);
     });
   });

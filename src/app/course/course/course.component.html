@@ -1,6 +1,6 @@
-<h2>{{ course.name }}</h2>
+<h2>{{ course().name }}</h2>
 
-<table mat-table [dataSource]="course.labs" class="mat-elevation-z8">
+<table mat-table [dataSource]="course().labs" class="mat-elevation-z8">
   <ng-container matColumnDef="index">
     <th mat-header-cell *matHeaderCellDef></th>
     <td mat-cell *matCellDef="let lab">
