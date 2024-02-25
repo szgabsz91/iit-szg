@@ -1,3 +1,10 @@
+# [3.12.0](https://github.com/szgabsz91/iit-szg/compare/v3.11.0...v3.12.0) (2024-02-25)
+
+
+### Features
+
+* [#308](https://github.com/szgabsz91/iit-szg/issues/308) introduce the takeUntilDestroyed operator ([f970ca7](https://github.com/szgabsz91/iit-szg/commit/f970ca7b40bae93d22e6b82adbab0542a9573664))
+
 # [3.11.0](https://github.com/szgabsz91/iit-szg/compare/v3.10.0...v3.11.0) (2023-11-14)
 
 
