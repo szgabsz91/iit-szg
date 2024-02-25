@@ -1,3 +1,10 @@
+# [3.17.0](https://github.com/szgabsz91/iit-szg/compare/v3.16.0...v3.17.0) (2024-02-25)
+
+
+### Features
+
+* [#316](https://github.com/szgabsz91/iit-szg/issues/316) lazy load animations module ([1390c5d](https://github.com/szgabsz91/iit-szg/commit/1390c5d32b4a17f3eece4b377ebfce13ae4d6687))
+
 # [3.16.0](https://github.com/szgabsz91/iit-szg/compare/v3.15.0...v3.16.0) (2024-02-25)
 
 
