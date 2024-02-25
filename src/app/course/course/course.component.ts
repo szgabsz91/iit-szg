@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../../model/course';
@@ -16,8 +16,7 @@ import { Lab } from '../../model/lab';
 export class CourseComponent {
   readonly columns = ['index', 'title'];
 
-  @Input({ required: true })
-  readonly course!: Course;
+  readonly course = input.required<Course>();
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, viewChild } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Event, NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
@@ -10,8 +10,7 @@ import { ScrollContentAfterNavigationDirective } from './scroll-content-after-na
   imports: [ScrollContentAfterNavigationDirective]
 })
 class WrapperComponent {
-  @ViewChild('content')
-  content: ElementRef;
+  content = viewChild<ElementRef>('content');
 }
 
 describe('ScrollContentAfterNavigationDirective', () => {
@@ -34,7 +33,7 @@ describe('ScrollContentAfterNavigationDirective', () => {
     fixture = TestBed.createComponent(WrapperComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    spyOn(component.content.nativeElement, 'scrollTo');
+    spyOn(component.content().nativeElement, 'scrollTo');
   });
 
   describe('after a NavigationStart event', () => {
@@ -44,7 +43,7 @@ describe('ScrollContentAfterNavigationDirective', () => {
     });
 
     it('should not scroll to top', () => {
-      expect(component.content.nativeElement.scrollTo).not.toHaveBeenCalled();
+      expect(component.content().nativeElement.scrollTo).not.toHaveBeenCalled();
     });
   });
 
@@ -55,7 +54,7 @@ describe('ScrollContentAfterNavigationDirective', () => {
     });
 
     it('should not scroll to top', () => {
-      expect(component.content.nativeElement.scrollTo).toHaveBeenCalledOnceWith(0, 0);
+      expect(component.content().nativeElement.scrollTo).toHaveBeenCalledOnceWith(0, 0);
     });
   });
 });

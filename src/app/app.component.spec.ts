@@ -115,22 +115,22 @@ describe('AppComponent', () => {
 
     describe('toggleSidenav', () => {
       it('should toggle the sidenav', () => {
-        spyOn(appComponent.sidenav, 'toggle');
+        spyOn(appComponent.sidenav(), 'toggle');
 
         appComponent.toggleSidenav();
 
-        expect(appComponent.sidenav.toggle).toHaveBeenCalledTimes(1);
+        expect(appComponent.sidenav().toggle).toHaveBeenCalledTimes(1);
       });
     });
 
     describe('closeSidenavOnMobile', () => {
       it('should close the sidenav on mobile clients', () => {
-        spyOn(appComponent.sidenav, 'close');
+        spyOn(appComponent.sidenav(), 'close');
 
         appComponent.closeSidenavOnMobile();
 
         if (appComponent.mobileQuery.matches) {
-          expect(appComponent.sidenav.close).toHaveBeenCalledTimes(1);
+          expect(appComponent.sidenav().close).toHaveBeenCalledTimes(1);
         }
       });
     });

@@ -8,8 +8,8 @@ import {
   LOCALE_ID,
   OnDestroy,
   Renderer2,
-  ViewChild,
-  HostListener
+  HostListener,
+  viewChild
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AppService } from './services/app/app.service';
@@ -49,8 +49,7 @@ import { ScrollContentAfterNavigationDirective } from './directives/scroll-conte
   ]
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
-  @ViewChild(MatSidenav, { static: true })
-  readonly sidenav: MatSidenav;
+  readonly sidenav = viewChild<MatSidenav>(MatSidenav);
 
   readonly mobileQuery: MediaQueryList;
   readonly currentYear: number = new Date().getFullYear();
@@ -86,9 +85,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     // istanbul ignore next
     this.handleSidenav = (event: MediaQueryListEvent): void => {
       if (!event.matches) {
-        this.sidenav.open();
+        this.sidenav().open();
       } else {
-        this.sidenav.close();
+        this.sidenav().close();
       }
       changeDetectorRef.detectChanges();
     };
@@ -108,7 +107,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit(): void {
     // istanbul ignore next
     if (!this.mobileQuery.matches) {
-      this.sidenav.open();
+      this.sidenav().open();
     }
   }
 
@@ -117,13 +116,13 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   }
 
   toggleSidenav() {
-    this.sidenav.toggle();
+    this.sidenav().toggle();
   }
 
   closeSidenavOnMobile() {
     // istanbul ignore if
     if (this.mobileQuery.matches) {
-      this.sidenav.close();
+      this.sidenav().close();
     }
   }
 
