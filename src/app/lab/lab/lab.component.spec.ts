@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
 import { MarkdownComponent, MarkdownModule, MarkdownService } from 'ngx-markdown';
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 import { Lab } from '../../model/lab';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -24,11 +23,6 @@ describe('LabComponent', () => {
     description: 'Lab 2 Description',
     keywords: ['Lab 2 Keyword']
   };
-  const activatedRoute = {
-    data: of({
-      lab: mockedLab
-    })
-  };
   const prettyPrintSpy = jasmine.createSpy('prettyPrint');
 
   beforeEach(() => {
@@ -43,13 +37,7 @@ describe('LabComponent', () => {
           loader: HttpClient
         })
       ],
-      providers: [
-        MarkdownService,
-        {
-          provide: ActivatedRoute,
-          useValue: activatedRoute
-        }
-      ]
+      providers: [MarkdownService]
     }).compileComponents();
   }));
 
@@ -60,6 +48,7 @@ describe('LabComponent', () => {
     spyOn(markdownService, 'getSource').and.returnValue(of('Markdown content'));
 
     labComponent = fixture.debugElement.componentInstance;
+    labComponent.lab = mockedLab;
     fixture.detectChanges();
     compiled = fixture.debugElement.nativeElement;
   });
@@ -72,9 +61,7 @@ describe('LabComponent', () => {
 
     describe('properties', () => {
       it('should contain the appropriate lab', () => {
-        labComponent.lab$.subscribe(lab => {
-          expect(lab).toEqual(mockedLab);
-        });
+        expect(labComponent.lab).toEqual(mockedLab);
       });
     });
 

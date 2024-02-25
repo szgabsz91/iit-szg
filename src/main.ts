@@ -6,7 +6,7 @@ import { environment } from './environments/environment';
 import packageJson from '../package.json';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, RouterModule, TitleStrategy } from '@angular/router';
+import { provideRouter, RouterModule, TitleStrategy, withComponentInputBinding } from '@angular/router';
 import { HomeComponent } from './app/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WINDOW } from './app/injection-tokens';
@@ -56,26 +56,29 @@ bootstrapApplication(AppComponent, {
         scrollPositionRestoration: 'enabled'
       })
     ),
-    provideRouter([
-      {
-        path: '',
-        pathMatch: 'full',
-        component: HomeComponent
-      },
-      {
-        path: 'courses/:courseId',
-        children: [
-          {
-            path: '',
-            loadChildren: () => import('./app/course/course.routes').then(m => m.courseRoutes)
-          },
-          {
-            path: 'labs/:labIndex',
-            loadChildren: () => import('./app/lab/lab.routes').then(m => m.labRoutes)
-          }
-        ]
-      }
-    ])
+    provideRouter(
+      [
+        {
+          path: '',
+          pathMatch: 'full',
+          component: HomeComponent
+        },
+        {
+          path: 'courses/:courseId',
+          children: [
+            {
+              path: '',
+              loadChildren: () => import('./app/course/course.routes').then(m => m.courseRoutes)
+            },
+            {
+              path: 'labs/:labIndex',
+              loadChildren: () => import('./app/lab/lab.routes').then(m => m.labRoutes)
+            }
+          ]
+        }
+      ],
+      withComponentInputBinding()
+    )
   ]
 })
   .then(() => console.log(`App version ${packageJson.version} loaded successfully`))
