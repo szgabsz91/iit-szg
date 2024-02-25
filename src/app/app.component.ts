@@ -29,7 +29,7 @@ import { ScrollContentAfterNavigationDirective } from './directives/scroll-conte
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [hamburgerMenuButtonTrigger],
   standalone: true,
