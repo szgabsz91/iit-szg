@@ -1,3 +1,10 @@
+# [3.14.0](https://github.com/szgabsz91/iit-szg/compare/v3.13.0...v3.14.0) (2024-02-25)
+
+
+### Features
+
+* [#319](https://github.com/szgabsz91/iit-szg/issues/319) introduce signals ([a3137e0](https://github.com/szgabsz91/iit-szg/commit/a3137e031fe66348013755b09ef9846037299baf))
+
 # [3.13.0](https://github.com/szgabsz91/iit-szg/compare/v3.12.0...v3.13.0) (2024-02-25)
 
 
