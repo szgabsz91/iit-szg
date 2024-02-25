@@ -1,4 +1,4 @@
-import { CommonModule, DOCUMENT } from '@angular/common';
+import { CommonModule, DOCUMENT, NgOptimizedImage } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -42,6 +42,7 @@ import { ScrollContentAfterNavigationDirective } from './directives/scroll-conte
     MatSelectModule,
     MatSidenavModule,
     MatToolbarModule,
+    NgOptimizedImage,
     RouterLinkActive,
     RouterLink,
     RouterOutlet,

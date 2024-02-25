@@ -113,7 +113,7 @@
       @for (locale of locales; track locale) {
         <mat-option [value]="locale" class="language-selector-option">
           <img
-            [src]="'assets/flags/' + locale + '.png'"
+            [ngSrc]="'assets/flags/' + locale + '.png'"
             [alt]="removeHtmlComments(alt.innerHTML)"
             width="32"
             height="32"
