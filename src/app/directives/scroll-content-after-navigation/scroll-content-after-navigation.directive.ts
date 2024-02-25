@@ -1,33 +1,24 @@
-import { Directive, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Event, NavigationEnd, Router } from '@angular/router';
-import { Subject } from 'rxjs';
-import { filter, takeUntil } from 'rxjs/operators';
+import { filter } from 'rxjs/operators';
 
 @Directive({
   selector: '[appScrollContentAfterNavigation]',
   standalone: true
 })
-export class ScrollContentAfterNavigationDirective implements OnInit, OnDestroy {
-  private readonly destroyed$ = new Subject<void>();
-
+export class ScrollContentAfterNavigationDirective {
   constructor(
-    private readonly elementRef: ElementRef,
-    private readonly router: Router
-  ) {}
-
-  ngOnInit(): void {
-    this.router.events
+    readonly elementRef: ElementRef,
+    readonly router: Router
+  ) {
+    router.events
       .pipe(
         filter((event: Event) => event instanceof NavigationEnd),
-        takeUntil(this.destroyed$)
+        takeUntilDestroyed()
       )
       .subscribe(() => {
-        this.elementRef.nativeElement.scrollTo(0, 0);
+        elementRef.nativeElement.scrollTo(0, 0);
       });
-  }
-
-  ngOnDestroy(): void {
-    this.destroyed$.next();
-    this.destroyed$.complete();
   }
 }

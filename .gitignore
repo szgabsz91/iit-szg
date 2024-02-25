@@ -69,3 +69,6 @@ obj
 
 # Lighthouse
 .lighthouseci
+
+# Nx
+/.nx
