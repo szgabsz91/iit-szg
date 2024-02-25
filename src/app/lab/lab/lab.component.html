@@ -11,11 +11,11 @@
     </mat-card-header>
 
     <mat-card-content>
-      <markdown [data]="labContent" (ready)="onMarkdownReady()"></markdown>
+      <markdown [data]="labContent" (ready)="onMarkdownReady()" />
     </mat-card-content>
   </mat-card>
 </ng-container>
 
 <ng-template #contentLoader>
-  <mat-spinner color="accent"></mat-spinner>
+  <mat-spinner color="accent" />
 </ng-template>
