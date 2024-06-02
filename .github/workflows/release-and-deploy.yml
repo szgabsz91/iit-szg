@@ -53,8 +53,8 @@ jobs:
           LHCI_URL: https://iit-szg--rc-ml5sg9xk.web.app/en/
       - name: Finalize the base URL for live deployment
         run: |
-          sed -i 's,https://iit-szg--rc-ml5sg9xk.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/*/index.html
-          sed -i 's,https://iit-szg--rc-ml5sg9xk.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/ngsw.json
+          sed -i 's,https://iit-szg--rc-ml5sg9xk.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/*/index.html
+          sed -i 's,https://iit-szg--rc-ml5sg9xk.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/ngsw.json
       - name: Recalculate ngsw hash table for live deployment
         run: ./scripts/recalculate-ngsw-hash-table.js
       - name: Deploy project to Firebase live channel
