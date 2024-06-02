@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
 import { MarkdownComponent, MarkdownModule, MarkdownService } from 'ngx-markdown';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { of } from 'rxjs';
 import { Lab } from '../../model/lab';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { By } from '@angular/platform-browser';
 import { MatCardTitle } from '@angular/material/card';
 
@@ -42,12 +42,11 @@ describe('LabComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         LabWrapperComponent,
-        HttpClientTestingModule,
         MarkdownModule.forRoot({
           loader: HttpClient
         })
       ],
-      providers: [MarkdownService]
+      providers: [MarkdownService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
     }).compileComponents();
   }));
 

@@ -4,7 +4,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const getSupportedLocales = require('./get-supported-locales');
 
-const rootFolder = './dist/iit-szg';
+const rootFolder = './dist/iit-szg/browser';
 
 const readJson = async file => {
   const content = await fs.readFile(file, 'UTF-8');

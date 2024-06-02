@@ -7,7 +7,7 @@ function minify {
     $1
 }
 
-for filename in `ls ./dist/iit-szg`
+for filename in `ls ./dist/iit-szg/browser`
 do
   file="./dist/iit-szg/$filename"
   if [[ -d $file ]]; then
