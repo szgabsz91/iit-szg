@@ -1,20 +1,21 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HomeComponent } from './home.component';
 import { provideRouter } from '@angular/router';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('HomeComponent', () => {
   let fixture: ComponentFixture<HomeComponent>;
   let compiled: HTMLElement;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      providers: [provideRouter([])]
-    }).compileComponents();
-  }));
-
   beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [provideRouter([]), provideExperimentalZonelessChangeDetection()]
+    }).compileComponents();
+  });
+
+  beforeEach(async () => {
     fixture = TestBed.createComponent(HomeComponent);
-    fixture.detectChanges();
+    await fixture.whenStable();
     compiled = fixture.debugElement.nativeElement;
   });
 

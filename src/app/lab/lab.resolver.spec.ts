@@ -6,6 +6,7 @@ import { Lab } from '../model/lab';
 import { LabService } from './lab.service';
 import { resolveLab } from './lab.resolver';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('resolveLab', () => {
   const mockedLab: Lab = {
@@ -37,7 +38,12 @@ describe('resolveLab', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [LabService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+      providers: [
+        LabService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideExperimentalZonelessChangeDetection()
+      ]
     });
   });
 

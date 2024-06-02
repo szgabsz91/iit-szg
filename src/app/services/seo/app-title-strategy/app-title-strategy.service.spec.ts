@@ -6,6 +6,7 @@ import { of } from 'rxjs';
 import { AppTitleStrategyService } from './app-title-strategy.service';
 import { AppService } from '../../app/app.service';
 import { Course } from '../../../model/course';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('AppTitleStrategyService', () => {
   let appTitleStrategyService: AppTitleStrategyService;
@@ -66,7 +67,8 @@ describe('AppTitleStrategyService', () => {
       providers: [
         AppTitleStrategyService,
         { provide: AppService, useValue: appService },
-        { provide: DOCUMENT, useValue: document }
+        { provide: DOCUMENT, useValue: document },
+        provideExperimentalZonelessChangeDetection()
       ]
     });
   });

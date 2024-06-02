@@ -5,6 +5,7 @@ import { LabService } from './lab.service';
 import { Course } from '../model/course';
 import { Lab } from '../model/lab';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('LabService', () => {
   let labService: LabService;
@@ -58,7 +59,12 @@ describe('LabService', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      providers: [LabService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+      providers: [
+        LabService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideExperimentalZonelessChangeDetection()
+      ]
     })
   );
 
