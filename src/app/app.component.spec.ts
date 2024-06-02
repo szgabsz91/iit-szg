@@ -103,9 +103,8 @@ describe('AppComponent', () => {
   describe('component', () => {
     describe('properties', () => {
       it('should contain the appropriate courses', () => {
-        appComponent.courses$.subscribe(courses => {
-          expect(courses).toEqual(mockedCourses);
-        });
+        const courses = appComponent.courses();
+        expect(courses).toEqual(mockedCourses);
       });
 
       it('should contain the current year', () => {

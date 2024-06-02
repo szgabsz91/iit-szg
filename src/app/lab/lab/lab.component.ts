@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EffectCleanupRegisterFn, effect, input, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MarkdownModule, MarkdownService } from 'ngx-markdown';
@@ -17,13 +17,22 @@ declare function prettyPrint(): void;
 })
 export class LabComponent {
   lab = input.required<Lab>();
-  labContent = computed(() =>
-    this.markdownService.getSource(
-      `./assets/courses/${this.lab().courseId}/lab${this.lab().index.toString().padStart(2, '0')}.md`
-    )
-  );
+  labContent = signal<string | undefined>(undefined);
 
-  constructor(private readonly markdownService: MarkdownService) {}
+  constructor(private readonly markdownService: MarkdownService) {
+    effect(
+      (onCleanup: EffectCleanupRegisterFn) => {
+        const subscription = this.markdownService
+          .getSource(`./assets/courses/${this.lab().courseId}/lab${this.lab().index.toString().padStart(2, '0')}.md`)
+          .subscribe((labContent: string) => this.labContent.set(labContent));
+
+        onCleanup(() => subscription.unsubscribe());
+      },
+      {
+        allowSignalWrites: true
+      }
+    );
+  }
 
   onMarkdownReady(): void {
     prettyPrint();

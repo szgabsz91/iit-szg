@@ -1,4 +1,4 @@
-<ng-container *ngIf="labContent() | async as labContent; else contentLoader">
+@if (labContent(); as labContent) {
   <mat-card appearance="outlined">
     <mat-card-header>
       @if (lab().index > 0) {
@@ -9,13 +9,10 @@
         <mat-card-title>{{ lab().titles.long }}</mat-card-title>
       }
     </mat-card-header>
-
     <mat-card-content>
       <markdown [data]="labContent" (ready)="onMarkdownReady()" />
     </mat-card-content>
   </mat-card>
-</ng-container>
-
-<ng-template #contentLoader>
+} @else {
   <mat-spinner color="accent" />
-</ng-template>
+}
