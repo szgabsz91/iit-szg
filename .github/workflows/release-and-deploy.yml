@@ -19,8 +19,8 @@ jobs:
       - name: Setup Node.js
         uses: volta-cli/action@v4
         with:
-          node-version: 20.11.1
-          yarn-version: 1.22.21
+          node-version: 20.14.0
+          yarn-version: 1.22.22
       - name: Install dependencies
         run: yarn
       - name: Lint project
