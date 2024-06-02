@@ -69,10 +69,10 @@ $color-palette-accent: (
   )
 );
 
-$workshop-primary: material.define-palette($color-palette-primary);
-$workshop-accent: material.define-palette($color-palette-accent);
+$workshop-primary: material.m2-define-palette($color-palette-primary);
+$workshop-accent: material.m2-define-palette($color-palette-accent);
 
-$workshop-theme: material.define-light-theme(
+$workshop-theme: material.m2-define-light-theme(
   (
     color: (
       primary: $workshop-primary,
