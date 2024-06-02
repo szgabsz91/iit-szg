@@ -1,3 +1,13 @@
+# [3.18.0](https://github.com/szgabsz91/iit-szg/compare/v3.17.0...v3.18.0) (2024-06-02)
+
+
+### Features
+
+* [#334](https://github.com/szgabsz91/iit-szg/issues/334) upgrade 3rdparty dependencies ([404734d](https://github.com/szgabsz91/iit-szg/commit/404734d08ee233cf318e5acdf8339eb6067e7cd1))
+* [#334](https://github.com/szgabsz91/iit-szg/issues/334) upgrade Node.js and yarn versions ([66e7a0f](https://github.com/szgabsz91/iit-szg/commit/66e7a0fff87ae6909c6525c11635e8bf166487a4))
+* [#334](https://github.com/szgabsz91/iit-szg/issues/334) upgrade to Angular Material v18 ([fc162f2](https://github.com/szgabsz91/iit-szg/commit/fc162f2b3796bf674d6d609a10dad30553289e53))
+* [#334](https://github.com/szgabsz91/iit-szg/issues/334) upgrade to Angular v18 ([02e3198](https://github.com/szgabsz91/iit-szg/commit/02e3198619d12894cf5feb265c3ac9df75458eb2))
+
 # [3.17.0](https://github.com/szgabsz91/iit-szg/compare/v3.16.0...v3.17.0) (2024-02-25)
 
 
