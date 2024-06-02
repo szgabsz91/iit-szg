@@ -28,3 +28,31 @@ body {
 .mat-mdc-select-trigger {
   height: 48px;
 }
+
+// View Transitions
+
+.page-title {
+  inset: 50% 0 auto;
+  transform: translateY(-50%);
+  view-transition-name: page-title;
+  width: fit-content;
+}
+
+@keyframes rotate-out {
+  to {
+    transform: rotate(90deg);
+  }
+ }
+ @keyframes rotate-in {
+  from {
+    transform: rotate(-90deg);
+  }
+ }
+ ::view-transition-old(page-title),
+ ::view-transition-new(page-title) {
+  animation-duration: 200ms;
+  animation-name: -ua-view-transition-fade-in, rotate-in;
+ }
+ ::view-transition-old(page-title) {
+  animation-name: -ua-view-transition-fade-out, rotate-out;
+ }

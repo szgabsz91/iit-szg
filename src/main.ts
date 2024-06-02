@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, enableProdMode, importProvidersFrom } from '@angular/core';
+import { APP_INITIALIZER, enableProdMode, importProvidersFrom, inject } from '@angular/core';
 
 import './app/prettify/prettify';
 import { environment } from './environments/environment';
@@ -6,7 +6,7 @@ import { environment } from './environments/environment';
 import packageJson from '../package.json';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, RouterModule, TitleStrategy, withComponentInputBinding } from '@angular/router';
+import { provideRouter, Router, RouterModule, TitleStrategy, withComponentInputBinding, withViewTransitions } from '@angular/router';
 import { HomeComponent } from './app/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WINDOW } from './app/injection-tokens';
@@ -77,7 +77,26 @@ bootstrapApplication(AppComponent, {
           ]
         }
       ],
-      withComponentInputBinding()
+      withComponentInputBinding(),
+      withViewTransitions({
+        onViewTransitionCreated: ({ /*transition*/ }) => {
+          const router = inject(Router);
+          /*const targetUrl = router.getCurrentNavigation()!.finalUrl!;
+          // Skip the transition if the only thing
+          // changing is the fragment and queryParams
+          const config = {
+            paths: 'exact',
+            matrixParams: 'exact',
+            fragment: 'ignored',
+            queryParams: 'ignored',
+          };
+
+          if (router.isActive(targetUrl, config)) {
+            transition.skipTransition();
+          }*/
+          console.log(router.getCurrentNavigation());
+        },
+      })
     )
   ]
 })
