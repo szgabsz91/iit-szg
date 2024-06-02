@@ -1,10 +1,11 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { of, EMPTY, Observable } from 'rxjs';
 import { Course } from '../model/course';
 import { CourseService } from './course.service';
 import { resolveCourse } from './course.resolver';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('CourseResolver', () => {
   const mockedCourse: Course = {
@@ -49,7 +50,7 @@ describe('CourseResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule]
+      providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
     });
   });
 

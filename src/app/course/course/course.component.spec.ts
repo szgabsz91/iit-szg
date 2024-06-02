@@ -1,12 +1,12 @@
 import { Component, DebugElement } from '@angular/core';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { CourseComponent } from './course.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ActivatedRoute, Router } from '@angular/router';
-import { RouterTestingModule } from '@angular/router/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
+import { ActivatedRoute, Router, provideRouter } from '@angular/router';
 import { Course } from '../../model/course';
 import { Lab } from '../../model/lab';
 import { By } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @Component({
   template: ` <app-course [course]="course" /> `,
@@ -50,12 +50,15 @@ describe('CourseComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [CourseWrapperComponent, RouterTestingModule, HttpClientTestingModule],
+      imports: [CourseWrapperComponent],
       providers: [
         {
           provide: ActivatedRoute,
           useValue: {}
-        }
+        },
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideRouter([])
       ]
     }).compileComponents();
   }));

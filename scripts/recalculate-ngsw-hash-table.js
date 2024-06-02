@@ -135,7 +135,7 @@ const processFile = async (rootFolder, url) => {
 };
 
 (async () => {
-  const rootFolder = `./dist/iit-szg`;
+  const rootFolder = `./dist/iit-szg/browser`;
   const ngswJsonFile = path.resolve(rootFolder, 'ngsw.json');
   const ngswJsonContent = await fs.readFile(ngswJsonFile, 'UTF-8');
   const ngswJsonObject = JSON.parse(ngswJsonContent);

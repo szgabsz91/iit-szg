@@ -1,7 +1,6 @@
 import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { AppService } from './services/app/app.service';
 import { of } from 'rxjs';
 import { WINDOW } from './injection-tokens';
@@ -9,9 +8,10 @@ import { DebugElement, LOCALE_ID } from '@angular/core';
 import { Course } from './model/course';
 import { By } from '@angular/platform-browser';
 import { MatExpansionPanel } from '@angular/material/expansion';
-import { ActivationEnd, Router } from '@angular/router';
+import { ActivationEnd, Router, provideRouter } from '@angular/router';
 import { MatToolbar } from '@angular/material/toolbar';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
@@ -72,10 +72,13 @@ describe('AppComponent', () => {
     } as any;
 
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, HttpClientTestingModule, NoopAnimationsModule],
+      imports: [NoopAnimationsModule],
       providers: [
         { provide: WINDOW, useValue: mockWindow },
-        { provide: LOCALE_ID, useValue: 'hu' }
+        { provide: LOCALE_ID, useValue: 'hu' },
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideRouter([])
       ]
     }).compileComponents();
   }));

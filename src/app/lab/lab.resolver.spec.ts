@@ -1,10 +1,11 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRouteSnapshot } from '@angular/router';
 import { of, EMPTY, Observable } from 'rxjs';
 import { Lab } from '../model/lab';
 import { LabService } from './lab.service';
 import { resolveLab } from './lab.resolver';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('resolveLab', () => {
   const mockedLab: Lab = {
@@ -36,8 +37,7 @@ describe('resolveLab', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [LabService]
+      providers: [LabService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
     });
   });
 
