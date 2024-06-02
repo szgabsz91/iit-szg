@@ -1,3 +1,10 @@
+## [3.18.1](https://github.com/szgabsz91/iit-szg/compare/v3.18.0...v3.18.1) (2024-06-02)
+
+
+### Bug Fixes
+
+* [#334](https://github.com/szgabsz91/iit-szg/issues/334) fix the release pipeline ([81cb70b](https://github.com/szgabsz91/iit-szg/commit/81cb70b35d2e17b13d639a1816d0f70d30725d42))
+
 # [3.18.0](https://github.com/szgabsz91/iit-szg/compare/v3.17.0...v3.18.0) (2024-06-02)
 
 
