@@ -59,6 +59,7 @@ describe('LabComponent', () => {
 
     wrapperComponent = wrapperFixture.debugElement.componentInstance;
     wrapperFixture.detectChanges();
+    wrapperFixture.detectChanges();
   });
 
   describe('component', () => {

@@ -19,6 +19,7 @@ import { WINDOW } from './injection-tokens';
 import { hamburgerMenuButtonTrigger } from './animations';
 import { ActivationEnd, Event, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { filter, first, map } from 'rxjs/operators';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
@@ -54,12 +55,14 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   readonly mobileQuery: MediaQueryList;
   readonly currentYear: number = new Date().getFullYear();
-  readonly courses$ = this.appService.getCourses();
-  readonly activeCourseId$ = this.router.events.pipe(
-    filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
-    map((event: ActivationEnd) => event.snapshot.params),
-    map(params => params.courseId),
-    first()
+  readonly courses = toSignal(this.appService.getCourses());
+  readonly activeCourseId = toSignal(
+    this.router.events.pipe(
+      filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
+      map((event: ActivationEnd) => event.snapshot.params),
+      map(params => params.courseId),
+      first()
+    )
   );
 
   readonly locales = ['en', 'hu'];

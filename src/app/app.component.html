@@ -151,8 +151,8 @@
       </mat-nav-list>
 
       <mat-accordion>
-        @for (course of courses$ | async; track course.id) {
-          <mat-expansion-panel [expanded]="course.id === (activeCourseId$ | async)">
+        @for (course of courses(); track course.id) {
+          <mat-expansion-panel [expanded]="course.id === activeCourseId()">
             <mat-expansion-panel-header>
               <mat-panel-title class="main-menu-link">
                 {{ course.name }}

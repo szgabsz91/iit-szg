@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -11,7 +10,7 @@ import { Lab } from '../../model/lab';
   styleUrl: './course.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
-  imports: [CommonModule, MatTableModule]
+  imports: [MatTableModule]
 })
 export class CourseComponent {
   readonly columns = ['index', 'title'];
