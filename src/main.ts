@@ -13,13 +13,13 @@ import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
 import { provideRouter, RouterModule, TitleStrategy, withComponentInputBinding } from '@angular/router';
 import { HomeComponent } from './app/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
 import { WINDOW } from './app/injection-tokens';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppTitleStrategyService } from './app/services/seo/app-title-strategy/app-title-strategy.service';
 import { MetaService } from './app/services/seo/meta/meta.service';
 import { CanonicalLinkService } from './app/services/seo/canonical-link/canonical-link.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 if (environment.production) {
   enableProdMode();
@@ -54,7 +54,6 @@ bootstrapApplication(AppComponent, {
       })
     ),
     provideAnimationsAsync(),
-    importProvidersFrom(HttpClientModule),
     importProvidersFrom(
       RouterModule.forRoot([], {
         paramsInheritanceStrategy: 'always',
@@ -84,7 +83,8 @@ bootstrapApplication(AppComponent, {
       ],
       withComponentInputBinding()
     ),
-    provideExperimentalZonelessChangeDetection()
+    provideExperimentalZonelessChangeDetection(),
+    provideHttpClient(withInterceptorsFromDi())
   ]
 })
   .then(() => console.log(`App version ${packageJson.version} loaded successfully`))
