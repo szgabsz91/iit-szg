@@ -1,3 +1,10 @@
+# [3.19.0](https://github.com/szgabsz91/iit-szg/compare/v3.18.1...v3.19.0) (2024-06-02)
+
+
+### Features
+
+* [#333](https://github.com/szgabsz91/iit-szg/issues/333) remove Zone.js ([d4a8855](https://github.com/szgabsz91/iit-szg/commit/d4a885547fe2ff4ff1462951ed27243b477424ee))
+
 ## [3.18.1](https://github.com/szgabsz91/iit-szg/compare/v3.18.0...v3.18.1) (2024-06-02)
 
 
