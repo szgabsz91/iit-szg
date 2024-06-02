@@ -6,6 +6,7 @@ import { Course } from '../model/course';
 import { CourseService } from './course.service';
 import { resolveCourse } from './course.resolver';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('CourseResolver', () => {
   const mockedCourse: Course = {
@@ -50,7 +51,11 @@ describe('CourseResolver', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+      providers: [
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideExperimentalZonelessChangeDetection()
+      ]
     });
   });
 

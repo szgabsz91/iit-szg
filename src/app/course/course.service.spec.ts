@@ -4,6 +4,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { CourseService } from './course.service';
 import { Course } from '../model/course';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { provideExperimentalZonelessChangeDetection } from '@angular/core';
 
 describe('CourseService', () => {
   let courseService: CourseService;
@@ -57,7 +58,12 @@ describe('CourseService', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      providers: [CourseService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+      providers: [
+        CourseService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideExperimentalZonelessChangeDetection()
+      ]
     })
   );
 

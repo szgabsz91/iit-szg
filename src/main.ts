@@ -1,4 +1,9 @@
-import { APP_INITIALIZER, enableProdMode, importProvidersFrom } from '@angular/core';
+import {
+  APP_INITIALIZER,
+  enableProdMode,
+  importProvidersFrom,
+  provideExperimentalZonelessChangeDetection
+} from '@angular/core';
 
 import './app/prettify/prettify';
 import { environment } from './environments/environment';
@@ -78,7 +83,8 @@ bootstrapApplication(AppComponent, {
         }
       ],
       withComponentInputBinding()
-    )
+    ),
+    provideExperimentalZonelessChangeDetection()
   ]
 })
   .then(() => console.log(`App version ${packageJson.version} loaded successfully`))

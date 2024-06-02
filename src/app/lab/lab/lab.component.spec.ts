@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { Component, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LabComponent } from './lab.component';
 import { MarkdownComponent, MarkdownModule, MarkdownService } from 'ngx-markdown';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
@@ -38,7 +38,7 @@ describe('LabComponent', () => {
     (window as any).prettyPrint = prettyPrintSpy;
   });
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
         LabWrapperComponent,
@@ -46,19 +46,23 @@ describe('LabComponent', () => {
           loader: HttpClient
         })
       ],
-      providers: [MarkdownService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+      providers: [
+        MarkdownService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+        provideExperimentalZonelessChangeDetection()
+      ]
     }).compileComponents();
-  }));
+  });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     wrapperFixture = TestBed.createComponent(LabWrapperComponent);
 
     markdownService = TestBed.inject(MarkdownService);
     spyOn(markdownService, 'getSource').and.returnValue(of('Markdown content'));
 
     wrapperComponent = wrapperFixture.debugElement.componentInstance;
-    wrapperFixture.detectChanges();
-    wrapperFixture.detectChanges();
+    await wrapperFixture.whenStable();
   });
 
   describe('component', () => {

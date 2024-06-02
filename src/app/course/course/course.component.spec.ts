@@ -1,5 +1,5 @@
-import { Component, DebugElement } from '@angular/core';
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { Component, DebugElement, provideExperimentalZonelessChangeDetection } from '@angular/core';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CourseComponent } from './course.component';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { ActivatedRoute, Router, provideRouter } from '@angular/router';
@@ -48,7 +48,7 @@ describe('CourseComponent', () => {
   let courseComponent: CourseComponent;
   let router: Router;
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [CourseWrapperComponent],
       providers: [
@@ -58,17 +58,18 @@ describe('CourseComponent', () => {
         },
         provideHttpClient(withInterceptorsFromDi()),
         provideHttpClientTesting(),
-        provideRouter([])
+        provideRouter([]),
+        provideExperimentalZonelessChangeDetection()
       ]
     }).compileComponents();
-  }));
+  });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     wrapperFixture = TestBed.createComponent(CourseWrapperComponent);
     wrapperComponent = wrapperFixture.debugElement.componentInstance;
     courseComponent = wrapperFixture.debugElement.query(By.directive(CourseComponent)).componentInstance;
     router = TestBed.inject(Router);
-    wrapperFixture.detectChanges();
+    await wrapperFixture.whenStable();
   });
 
   describe('component', () => {

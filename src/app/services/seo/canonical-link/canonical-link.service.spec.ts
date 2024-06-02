@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { LOCALE_ID, RendererFactory2 } from '@angular/core';
+import { LOCALE_ID, RendererFactory2, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { NavigationEnd, Router } from '@angular/router';
 import { createSpyFromClass, Spy } from 'jasmine-auto-spies';
@@ -33,7 +33,8 @@ describe('CanonicalLinkService', () => {
         { provide: Router, useValue: router },
         { provide: LOCALE_ID, useValue: localeId },
         { provide: DOCUMENT, useValue: { querySelector } },
-        { provide: RendererFactory2, useValue: rendererFactory }
+        { provide: RendererFactory2, useValue: rendererFactory },
+        provideExperimentalZonelessChangeDetection()
       ]
     });
   });

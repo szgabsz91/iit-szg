@@ -1,10 +1,10 @@
-import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { AppService } from './services/app/app.service';
 import { of } from 'rxjs';
 import { WINDOW } from './injection-tokens';
-import { DebugElement, LOCALE_ID } from '@angular/core';
+import { DebugElement, LOCALE_ID, provideExperimentalZonelessChangeDetection } from '@angular/core';
 import { Course } from './model/course';
 import { By } from '@angular/platform-browser';
 import { MatExpansionPanel } from '@angular/material/expansion';
@@ -64,7 +64,7 @@ describe('AppComponent', () => {
     }
   ];
 
-  beforeEach(waitForAsync(() => {
+  beforeEach(() => {
     mockWindow = {
       location: {
         href: '/hu/something'
@@ -78,12 +78,13 @@ describe('AppComponent', () => {
         { provide: LOCALE_ID, useValue: 'hu' },
         provideHttpClient(withInterceptorsFromDi()),
         provideHttpClientTesting(),
-        provideRouter([])
+        provideRouter([]),
+        provideExperimentalZonelessChangeDetection()
       ]
     }).compileComponents();
-  }));
+  });
 
-  beforeEach(() => {
+  beforeEach(async () => {
     const appService = TestBed.inject(AppService);
     spyOn(appService, 'getCourses').and.returnValue(of(mockedCourses));
 
@@ -99,7 +100,7 @@ describe('AppComponent', () => {
 
     fixture = TestBed.createComponent(AppComponent);
     appComponent = fixture.debugElement.componentInstance;
-    fixture.detectChanges();
+    await fixture.whenStable();
     compiled = fixture.debugElement.nativeElement;
   });
 
@@ -181,11 +182,11 @@ describe('AppComponent', () => {
   });
 
   describe('when online', () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       window.dispatchEvent(new Event('offline'));
-      fixture.detectChanges();
+      await fixture.whenStable();
       window.dispatchEvent(new Event('online'));
-      fixture.detectChanges();
+      await fixture.whenStable();
     });
 
     it('should not add the is-offline class to the toolbar', () => {
@@ -195,9 +196,9 @@ describe('AppComponent', () => {
   });
 
   describe('when offline', () => {
-    beforeEach(() => {
+    beforeEach(async () => {
       window.dispatchEvent(new Event('offline'));
-      fixture.detectChanges();
+      await fixture.whenStable();
     });
 
     it('should add the is-offline class to the toolbar', () => {
