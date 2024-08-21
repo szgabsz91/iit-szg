@@ -9,7 +9,8 @@ import {
   OnDestroy,
   Renderer2,
   HostListener,
-  viewChild
+  viewChild,
+  Signal
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AppService } from './services/app/app.service';
@@ -26,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { ScrollContentAfterNavigationDirective } from './directives/scroll-content-after-navigation/scroll-content-after-navigation.directive';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -55,15 +57,8 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   readonly mobileQuery: MediaQueryList;
   readonly currentYear: number = new Date().getFullYear();
-  readonly courses = toSignal(this.appService.getCourses());
-  readonly activeCourseId = toSignal(
-    this.router.events.pipe(
-      filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
-      map((event: ActivationEnd) => event.snapshot.params),
-      map(params => params.courseId),
-      first()
-    )
-  );
+  readonly courses: Signal<readonly Course[]>;
+  readonly activeCourseId: Signal<string>;
 
   readonly locales = ['en', 'hu'];
   readonly currentLocale: string;
@@ -82,6 +77,15 @@ export class AppComponent implements AfterViewInit, OnDestroy {
     readonly renderer: Renderer2,
     private readonly router: Router
   ) {
+    this.courses = toSignal(this.appService.getCourses());
+    this.activeCourseId = toSignal(
+      this.router.events.pipe(
+        filter((event: Event): event is ActivationEnd => event instanceof ActivationEnd),
+        map((event: ActivationEnd) => event.snapshot.params),
+        map(params => params.courseId),
+        first()
+      )
+    );
     this.currentLocale = localeId.substring(0, 2);
     this.selectedLocale = this.currentLocale;
     renderer.setAttribute(document.documentElement, 'lang', this.selectedLocale);
