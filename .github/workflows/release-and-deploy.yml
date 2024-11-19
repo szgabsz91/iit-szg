@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node.js
         uses: volta-cli/action@v4
         with:
-          node-version: 20.14.0
+          node-version: 22.11.0
           yarn-version: 1.22.22
       - name: Install dependencies
         run: yarn
