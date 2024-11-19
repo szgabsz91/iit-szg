@@ -27,7 +27,7 @@
               "base": "dist/iit-szg"
             },
             "index": "src/index.html",
-            "polyfills": ["src/polyfills.ts"],
+            "polyfills": ["src/polyfills.ts", "@angular/localize/init"],
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/robots.txt",

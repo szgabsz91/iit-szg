@@ -9,7 +9,6 @@ import { Lab } from '../../model/lab';
   templateUrl: './course.component.html',
   styleUrl: './course.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [MatTableModule]
 })
 export class CourseComponent {

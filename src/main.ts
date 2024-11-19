@@ -1,8 +1,9 @@
 import {
-  APP_INITIALIZER,
   enableProdMode,
   importProvidersFrom,
-  provideExperimentalZonelessChangeDetection
+  provideExperimentalZonelessChangeDetection,
+  inject,
+  provideAppInitializer
 } from '@angular/core';
 
 import './app/prettify/prettify';
@@ -35,18 +36,14 @@ bootstrapApplication(AppComponent, {
       provide: TitleStrategy,
       useClass: AppTitleStrategyService
     },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (metaService: MetaService) => () => metaService.start(),
-      deps: [MetaService],
-      multi: true
-    },
-    {
-      provide: APP_INITIALIZER,
-      useFactory: (canonicalLinkService: CanonicalLinkService) => () => canonicalLinkService.start(),
-      deps: [CanonicalLinkService],
-      multi: true
-    },
+    provideAppInitializer(() => {
+      const metaService = inject(MetaService);
+      metaService.start();
+    }),
+    provideAppInitializer(() => {
+      const canonicalLinkService = inject(CanonicalLinkService);
+      canonicalLinkService.start();
+    }),
     importProvidersFrom(
       ServiceWorkerModule.register('/ngsw-worker.js', {
         enabled: environment.production,

@@ -11,7 +11,6 @@ import { MatCardTitle } from '@angular/material/card';
 
 @Component({
   template: ` <app-lab [lab]="lab" /> `,
-  standalone: true,
   imports: [LabComponent]
 })
 class LabWrapperComponent {
