@@ -6,7 +6,6 @@ import { ScrollContentAfterNavigationDirective } from './scroll-content-after-na
 
 @Component({
   template: '<p appScrollContentAfterNavigation #content></p>',
-  standalone: true,
   imports: [ScrollContentAfterNavigationDirective]
 })
 class WrapperComponent {

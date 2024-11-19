@@ -12,7 +12,6 @@ declare function prettyPrint(): void;
   templateUrl: './lab.component.html',
   styleUrl: './lab.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [CommonModule, MarkdownModule, MatCardModule, MatProgressSpinnerModule]
 })
 export class LabComponent {
@@ -20,18 +19,13 @@ export class LabComponent {
   labContent = signal<string | undefined>(undefined);
 
   constructor(private readonly markdownService: MarkdownService) {
-    effect(
-      (onCleanup: EffectCleanupRegisterFn) => {
-        const subscription = this.markdownService
-          .getSource(`./assets/courses/${this.lab().courseId}/lab${this.lab().index.toString().padStart(2, '0')}.md`)
-          .subscribe((labContent: string) => this.labContent.set(labContent));
+    effect((onCleanup: EffectCleanupRegisterFn) => {
+      const subscription = this.markdownService
+        .getSource(`./assets/courses/${this.lab().courseId}/lab${this.lab().index.toString().padStart(2, '0')}.md`)
+        .subscribe((labContent: string) => this.labContent.set(labContent));
 
-        onCleanup(() => subscription.unsubscribe());
-      },
-      {
-        allowSignalWrites: true
-      }
-    );
+      onCleanup(() => subscription.unsubscribe());
+    });
   }
 
   onMarkdownReady(): void {

@@ -10,7 +10,6 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 
 @Component({
   template: ` <app-course [course]="course" /> `,
-  standalone: true,
   imports: [CourseComponent]
 })
 class CourseWrapperComponent {

@@ -35,7 +35,6 @@ import { Course } from './model/course';
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [hamburgerMenuButtonTrigger],
-  standalone: true,
   imports: [
     CommonModule,
     MatButtonModule,
