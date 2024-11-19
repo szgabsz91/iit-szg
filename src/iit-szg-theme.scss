@@ -1,7 +1,8 @@
 @use '@angular/material' as material;
 @use './iit-szg-variables.scss' as variables;
 
-@include material.core();
+@include material.elevation-classes();
+@include material.app-background();
 
 $color-palette-primary: (
   50: transparent,
