@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -10,9 +10,11 @@ import { Course } from '../../model/course';
   providedIn: 'root'
 })
 export class AppService {
+  private readonly httpClient = inject(HttpClient);
+
   private readonly courseCache$: Observable<readonly Course[]>;
 
-  constructor(private readonly httpClient: HttpClient) {
+  constructor() {
     this.courseCache$ = this.httpClient.get<Metadata>(`./assets/${METADATA_FILENAME}`).pipe(
       map(metadata => metadata.courses),
       shareReplay(1)

@@ -4,13 +4,13 @@ import {
   Component,
   ChangeDetectionStrategy,
   ChangeDetectorRef,
-  Inject,
   LOCALE_ID,
   OnDestroy,
   Renderer2,
   HostListener,
   viewChild,
-  Signal
+  Signal,
+  inject
 } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { AppService } from './services/app/app.service';
@@ -52,6 +52,15 @@ import { Course } from './model/course';
   ]
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
+  private readonly appService = inject(AppService);
+  private readonly localeId = inject(LOCALE_ID);
+  private readonly window = inject<Window>(WINDOW);
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+  private readonly media = inject(MediaMatcher);
+  private readonly document = inject<Document>(DOCUMENT);
+  private readonly renderer = inject(Renderer2);
+  private readonly router = inject(Router);
+
   readonly sidenav = viewChild<MatSidenav>(MatSidenav);
 
   readonly mobileQuery: MediaQueryList;
@@ -66,16 +75,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
 
   private readonly handleSidenav: (mediaQueryListEvent: MediaQueryListEvent) => void;
 
-  constructor(
-    private readonly appService: AppService,
-    @Inject(LOCALE_ID) readonly localeId: string,
-    @Inject(WINDOW) private readonly window: Window,
-    readonly changeDetectorRef: ChangeDetectorRef,
-    readonly media: MediaMatcher,
-    @Inject(DOCUMENT) readonly document: Document,
-    readonly renderer: Renderer2,
-    private readonly router: Router
-  ) {
+  constructor() {
     this.courses = toSignal(this.appService.getCourses());
     this.activeCourseId = toSignal(
       this.router.events.pipe(
@@ -85,10 +85,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
         first()
       )
     );
-    this.currentLocale = localeId.substring(0, 2);
+    this.currentLocale = this.localeId.substring(0, 2);
     this.selectedLocale = this.currentLocale;
-    renderer.setAttribute(document.documentElement, 'lang', this.selectedLocale);
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
+    this.renderer.setAttribute(this.document.documentElement, 'lang', this.selectedLocale);
+    this.mobileQuery = this.media.matchMedia('(max-width: 600px)');
     // istanbul ignore next
     this.handleSidenav = (event: MediaQueryListEvent): void => {
       if (!event.matches) {
@@ -96,7 +96,7 @@ export class AppComponent implements AfterViewInit, OnDestroy {
       } else {
         this.sidenav().close();
       }
-      changeDetectorRef.detectChanges();
+      this.changeDetectorRef.detectChanges();
     };
     this.mobileQuery.addListener(this.handleSidenav);
   }

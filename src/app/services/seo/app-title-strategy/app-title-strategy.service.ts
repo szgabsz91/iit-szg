@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { AppService } from '../../app/app.service';
@@ -11,12 +11,12 @@ const homeTitle = $localize`:app.titles.home|The title of the home page@@appTitl
 
 @Injectable()
 export class AppTitleStrategyService extends TitleStrategy {
+  private readonly document = inject<Document>(DOCUMENT);
+  private readonly appService = inject(AppService);
+
   private courses: Course[];
 
-  constructor(
-    @Inject(DOCUMENT) private readonly document: Document,
-    private readonly appService: AppService
-  ) {
+  constructor() {
     super();
     this.appService
       .getCourses()

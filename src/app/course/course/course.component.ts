@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, inject } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Course } from '../../model/course';
@@ -12,14 +12,12 @@ import { Lab } from '../../model/lab';
   imports: [MatTableModule]
 })
 export class CourseComponent {
+  private readonly activatedRoute = inject(ActivatedRoute);
+  private readonly router = inject(Router);
+
   readonly columns = ['index', 'title'];
 
   readonly course = input.required<Course>();
-
-  constructor(
-    private readonly activatedRoute: ActivatedRoute,
-    private readonly router: Router
-  ) {}
 
   navigateToLab(lab: Lab) {
     return this.router.navigate(['./labs', lab.index], {
