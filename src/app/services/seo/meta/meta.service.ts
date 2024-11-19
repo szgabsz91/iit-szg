@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2, inject } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
 import { of } from 'rxjs';
 import { filter, map, switchMap } from 'rxjs/operators';
@@ -33,14 +33,14 @@ export const defaultSeoInformation: SeoInformation = {
   providedIn: 'root'
 })
 export class MetaService {
+  private readonly router = inject(Router);
+  private readonly appService = inject(AppService);
+  private readonly document = inject<Document>(DOCUMENT);
+
   private renderer: Renderer2;
 
-  constructor(
-    private readonly router: Router,
-    private readonly appService: AppService,
-    @Inject(DOCUMENT) private readonly document: Document,
-    rendererFactory: RendererFactory2
-  ) {
+  constructor() {
+    const rendererFactory = inject(RendererFactory2);
     this.renderer = rendererFactory.createRenderer(undefined, undefined);
   }
 

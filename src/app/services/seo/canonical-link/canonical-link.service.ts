@@ -1,5 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable, LOCALE_ID, Renderer2, RendererFactory2 } from '@angular/core';
+import { Injectable, LOCALE_ID, Renderer2, RendererFactory2, inject } from '@angular/core';
 import { Event, NavigationEnd, Router } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 
@@ -7,14 +7,14 @@ import { filter, map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CanonicalLinkService {
+  private readonly router = inject(Router);
+  private readonly locale = inject(LOCALE_ID);
+  private readonly document = inject<Document>(DOCUMENT);
+
   private readonly renderer!: Renderer2;
 
-  constructor(
-    private readonly router: Router,
-    @Inject(LOCALE_ID) private readonly locale: string,
-    rendererFactory: RendererFactory2,
-    @Inject(DOCUMENT) private readonly document: Document
-  ) {
+  constructor() {
+    const rendererFactory = inject(RendererFactory2);
     this.renderer = rendererFactory.createRenderer(undefined, undefined);
   }
 

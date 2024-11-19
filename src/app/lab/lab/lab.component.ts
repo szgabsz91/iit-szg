@@ -1,5 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { ChangeDetectionStrategy, Component, EffectCleanupRegisterFn, effect, input, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EffectCleanupRegisterFn,
+  effect,
+  input,
+  signal,
+  inject
+} from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MarkdownModule, MarkdownService } from 'ngx-markdown';
@@ -15,10 +23,12 @@ declare function prettyPrint(): void;
   imports: [CommonModule, MarkdownModule, MatCardModule, MatProgressSpinnerModule]
 })
 export class LabComponent {
+  private readonly markdownService = inject(MarkdownService);
+
   lab = input.required<Lab>();
   labContent = signal<string | undefined>(undefined);
 
-  constructor(private readonly markdownService: MarkdownService) {
+  constructor() {
     effect((onCleanup: EffectCleanupRegisterFn) => {
       const subscription = this.markdownService
         .getSource(`./assets/courses/${this.lab().courseId}/lab${this.lab().index.toString().padStart(2, '0')}.md`)

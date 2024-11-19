@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Event, NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -8,17 +8,17 @@ import { filter } from 'rxjs/operators';
   standalone: true
 })
 export class ScrollContentAfterNavigationDirective {
-  constructor(
-    readonly elementRef: ElementRef,
-    readonly router: Router
-  ) {
-    router.events
+  private readonly elementRef = inject(ElementRef);
+  private readonly router = inject(Router);
+
+  constructor() {
+    this.router.events
       .pipe(
         filter((event: Event) => event instanceof NavigationEnd),
         takeUntilDestroyed()
       )
       .subscribe(() => {
-        elementRef.nativeElement.scrollTo(0, 0);
+        this.elementRef.nativeElement.scrollTo(0, 0);
       });
   }
 }
