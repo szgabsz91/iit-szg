@@ -34,7 +34,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: yarn release
       - name: Build project
-        run: yarn build --base-href https://iit-szg--rc-ybbk62nn.web.app/
+        run: yarn build --base-href https://iit-szg--rc-hc13oset.web.app/
       - name: Merge locale dependent service workers
         run: ./scripts/merge-service-workers.js
       - name: Recalculate ngsw hash table for RC deployment
@@ -50,11 +50,11 @@ jobs:
       - name: Execute Lighthouse analysis
         run: yarn lighthouse
         env:
-          LHCI_URL: https://iit-szg--rc-ybbk62nn.web.app/en/
+          LHCI_URL: https://iit-szg--rc-hc13oset.web.app/en/
       - name: Finalize the base URL for live deployment
         run: |
-          sed -i 's,https://iit-szg--rc-ybbk62nn.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/*/index.html
-          sed -i 's,https://iit-szg--rc-ybbk62nn.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/ngsw.json
+          sed -i 's,https://iit-szg--rc-hc13oset.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/*/index.html
+          sed -i 's,https://iit-szg--rc-hc13oset.web.app/,https://iit-szg.web.app/,g' dist/iit-szg/browser/ngsw.json
       - name: Recalculate ngsw hash table for live deployment
         run: ./scripts/recalculate-ngsw-hash-table.js
       - name: Deploy project to Firebase live channel
